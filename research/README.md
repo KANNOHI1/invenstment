@@ -16,6 +16,7 @@
 | `water_cooling_infrastructure` | 水処理、水計測、液冷、水インフラ、データセンター冷却周辺 |
 | `nuclear_power_infrastructure` | 原子力、SMR、先進炉、燃料、既存発電、データセンター電力 |
 | `neocloud_ai_datacenter` | Neocloud、AIクラウド、HPCコロケーション、AIデータセンター運営 |
+| `rare_earth_magnets` | 希土類、永久磁石、重希土類、ロボット/防衛/EV/産業モーター供給網 |
 
 ## 運用ルール
 

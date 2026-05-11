@@ -80,6 +80,25 @@
       ]
     },
     {
+      "ticker": "USAR",
+      "name": "USA Rare Earth",
+      "hill": "rare_earth_magnets",
+      "expected_date": "2026-05-13",
+      "expected_time": "after market close / 17:00 ET call",
+      "priority": "high",
+      "watch_points": ["Serra Verde closing", "Round Top timeline", "Stillwater magnet capacity", "cash burn", "government funding"],
+      "sources": [
+        {
+          "label": "USAR date announcement",
+          "url": "https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results"
+        },
+        {
+          "label": "USAR investor home",
+          "url": "https://investors.usare.com/"
+        }
+      ]
+    },
+    {
       "ticker": "285A",
       "name": "Kioxia Holdings",
       "hill": "memory_storage",

@@ -57,6 +57,8 @@
 | CORZ | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | APLD | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | OSS | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| MP | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| USAR | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | 285A キオクシア | 国内株 | 国内株 | 国内株 | 日本株として購入可能性は高いが、各口座で要確認 |
 
 ## 今日確認できたこと
@@ -164,6 +166,12 @@
 - Yahoo!ファイナンス日本版の各銘柄ページに、マネックス証券への取引導線あり。
 - 楽天証券の公開米国株式取扱リスト001〜020横断では、`NBIS`/`CRWV`/`IREN`/`CIFR`/`CORZ`/`APLD`/`OSS`はヒットせず。
 
+### 希土類 / 磁石候補
+
+- SBI証券の外国株式ページで`MP`/`USAR`を確認。
+- Yahoo!ファイナンス日本版の`MP`/`USAR`ページに、マネックス証券への取引導線あり。
+- 楽天証券の公開米国株式取扱リスト001〜020横断では、`MP`/`USAR`はヒットせず。
+
 ## ソース
 
 - Yahoo!ファイナンス MU: https://finance.yahoo.co.jp/quote/MU
@@ -207,6 +215,8 @@
 - Yahoo!ファイナンス PNR: https://finance.yahoo.co.jp/quote/PNR
 - Yahoo!ファイナンス WTS: https://finance.yahoo.co.jp/quote/WTS
 - Yahoo!ファイナンス BMI: https://finance.yahoo.co.jp/quote/BMI
+- Yahoo!ファイナンス MP: https://finance.yahoo.co.jp/quote/MP
+- Yahoo!ファイナンス USAR: https://finance.yahoo.co.jp/quote/USAR
 - 楽天証券 米国株式取扱銘柄一覧 D: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_004.html
 - 楽天証券 米国株式取扱銘柄一覧 M: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_008.html
 - 楽天証券 米国株式取扱銘柄一覧 N: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_009.html

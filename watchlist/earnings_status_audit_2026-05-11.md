@@ -16,6 +16,7 @@
 | --- | --- | --- | --- |
 | 最高 | OKLO | Q1 2026は2026-05-12米国市場引け後予定 | 原子力山の配分をQ1後に更新 |
 | 最高 | NBIS | Q1 2026は2026-05-13米国市場前予定 | Neocloud山の大型監視をQ1後に再採点 |
+| 最高 | USAR | Q1 2026は2026-05-13米国市場引け後予定 | 希土類/磁石山の`MP` vs `USAR`比較をQ1後に確定 |
 | 最高 | TSEM | Q1 2026は2026-05-13予定 | AI物理/光周辺の未深掘り候補として決算後に確認 |
 | 高 | CEG | Q1 2026は2026-05-11発表済み | 2026-05-11原子力山に反映済み。大型本命確認、購入候補本線外 |
 | 高 | キオクシア | FY2025決算は2026-05-15予定 | メモリ山で決算後に確認 |
@@ -44,6 +45,7 @@
 | --- | --- | --- |
 | OKLO | 2026-05-12米国市場引け後 | 原子力/SMR山の購入候補順位に直結 |
 | NBIS | 2026-05-13米国市場前 | Neocloud山で大型本命を監視から候補化するか判断 |
+| USAR | 2026-05-13米国市場引け後 | 希土類/磁石山でロマン枠本命にできるか判断 |
 | TSEM | 2026-05-13予定 | AI物理/光フォトニクスの未深掘り候補として重要 |
 | キオクシア | 2026-05-15予定 | メモリ/ストレージ山の国内株候補として重要 |
 | NTAP | 2026-05-28米国市場引け後 | 監視/除外寄りだがAIストレージ需要の確認 |
@@ -126,6 +128,13 @@
 | CRWV | Q1 2026は2026-05-07発表 | 反映済み | 大型本命監視 |
 | OSS | Q1 2026は2026-05-06発表 | 反映済み | 防衛/エッジAI山へ |
 
+### 希土類 / 磁石 / ロボット供給網
+
+| 銘柄 | 最新決算/予定 | 状況 | 対応 |
+| --- | --- | --- | --- |
+| MP | Q1 2026は2026-05-07発表 | 2026-05-11希土類山で反映済み | 品質本命。`USAR` Q1後に比較確定 |
+| USAR | Q1 2026は2026-05-13米国市場引け後予定 | 決算待ち | cash burn、株数、Serra Verde、Stillwater進捗を確認 |
+
 ## 更新が必要な既存メモ
 
 ### すぐ更新するべき
@@ -139,6 +148,9 @@
 
 - `watchlist\neocloud_buy_candidate_comparison_2026-05-11.md`
   - `NBIS`の2026-05-13 Q1後に、大型監視のままか候補化するか再判定。
+
+- `watchlist\rare_earth_current_snapshot_2026-05-11.md`
+  - `USAR`の2026-05-13 Q1後に、`MP` vs `USAR`の購入候補比較を確定。
 
 ### 次の山に戻る時に更新
 
@@ -183,4 +195,6 @@
 - Cipher Q1 2026: https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-provides-first-quarter-2026-business-update
 - Applied Digital Q3 FY2026: https://ir.applieddigital.com/news-events/press-releases/detail/148/applied-digital-reports-fiscal-third-quarter-2026-results
 - One Stop Systems Q1 2026: https://www.nasdaq.com/press-release/one-stop-systems-reports-q1-2026-results-2026-05-06
+- MP Materials Q1 2026: https://investors.mpmaterials.com/investor-news/news-details/2026/MP-Materials-Reports-First-Quarter-2026-Results/default.aspx
+- USA Rare Earth Q1 2026日程: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results
 - 今日より前の未反映決算キャッチアップ: `watchlist\pre_today_earnings_catchup_2026-05-11.md`
