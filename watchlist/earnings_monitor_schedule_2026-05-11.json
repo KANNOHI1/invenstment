@@ -99,6 +99,25 @@
       ]
     },
     {
+      "ticker": "ONDS",
+      "name": "Ondas Holdings",
+      "hill": "defense_edge_ai_drones",
+      "expected_date": "2026-05-14",
+      "expected_time": "before market open / 08:30 ET call",
+      "priority": "high",
+      "watch_points": ["Q1 revenue", "backlog", "cash burn", "pro forma share count", "2026 guidance", "Mistral and World View integration"],
+      "sources": [
+        {
+          "label": "ONDS date announcement",
+          "url": "https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may"
+        },
+        {
+          "label": "ONDS investor home",
+          "url": "https://ir.ondas.com/"
+        }
+      ]
+    },
+    {
       "ticker": "285A",
       "name": "Kioxia Holdings",
       "hill": "memory_storage",

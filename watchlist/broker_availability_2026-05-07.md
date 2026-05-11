@@ -59,6 +59,11 @@
 | OSS | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | MP | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | USAR | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| ONDS | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| RCAT | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| AVAV | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| KTOS | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| PLTR | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | 285A キオクシア | 国内株 | 国内株 | 国内株 | 日本株として購入可能性は高いが、各口座で要確認 |
 
 ## 今日確認できたこと
@@ -172,6 +177,12 @@
 - Yahoo!ファイナンス日本版の`MP`/`USAR`ページに、マネックス証券への取引導線あり。
 - 楽天証券の公開米国株式取扱リスト001〜020横断では、`MP`/`USAR`はヒットせず。
 
+### 防衛 / エッジAI / ドローン候補
+
+- SBI証券の外国株式ページで`OSS`/`ONDS`/`RCAT`/`AVAV`/`KTOS`/`PLTR`を確認。
+- Yahoo!ファイナンス日本版の各銘柄ページに、マネックス証券への取引導線あり。
+- 楽天証券の公開米国株式取扱リスト001〜020横断では、`OSS`/`ONDS`/`RCAT`/`AVAV`/`KTOS`/`PLTR`はヒットせず。
+
 ## ソース
 
 - Yahoo!ファイナンス MU: https://finance.yahoo.co.jp/quote/MU
@@ -217,6 +228,11 @@
 - Yahoo!ファイナンス BMI: https://finance.yahoo.co.jp/quote/BMI
 - Yahoo!ファイナンス MP: https://finance.yahoo.co.jp/quote/MP
 - Yahoo!ファイナンス USAR: https://finance.yahoo.co.jp/quote/USAR
+- Yahoo!ファイナンス ONDS: https://finance.yahoo.co.jp/quote/ONDS
+- Yahoo!ファイナンス RCAT: https://finance.yahoo.co.jp/quote/RCAT
+- Yahoo!ファイナンス AVAV: https://finance.yahoo.co.jp/quote/AVAV
+- Yahoo!ファイナンス KTOS: https://finance.yahoo.co.jp/quote/KTOS
+- Yahoo!ファイナンス PLTR: https://finance.yahoo.co.jp/quote/PLTR
 - 楽天証券 米国株式取扱銘柄一覧 D: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_004.html
 - 楽天証券 米国株式取扱銘柄一覧 M: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_008.html
 - 楽天証券 米国株式取扱銘柄一覧 N: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_009.html

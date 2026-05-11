@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-05-12T00:19:50.868202+09:00",
+  "updated_at": "2026-05-12T00:33:28.799280+09:00",
   "sources": {
     "OKLO|OKLO investors|https://oklo.com/investors": {
-      "hash": "01c4c50b67354499e300dd0573a8fbd4087396b76ea39cc4f90108b50fb44532",
-      "last_checked_at": "2026-05-12T00:19:50.868202+09:00",
-      "last_success_at": "2026-05-12T00:19:50.868202+09:00",
+      "hash": "836131b2958ebe194b90a2eeec60c6a67895169389367ba56b1ffff45a547b74",
+      "last_checked_at": "2026-05-12T00:33:28.799280+09:00",
+      "last_success_at": "2026-05-12T00:33:28.799280+09:00",
       "url": "https://oklo.com/investors"
     },
     "OKLO|OKLO date announcement|https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call": {
-      "hash": "6762baeb13278d2c47e1935c0228c7dcb5c5954965d6fcb9dac05219536de0aa",
-      "last_checked_at": "2026-05-12T00:19:50.868202+09:00",
-      "last_success_at": "2026-05-12T00:19:50.868202+09:00",
+      "hash": "0e6ed9ddae0dbbf6c83d205579a40fa1c495c041c3bdcfab721ea0a58204b638",
+      "last_checked_at": "2026-05-12T00:33:28.799280+09:00",
+      "last_success_at": "2026-05-12T00:33:28.799280+09:00",
       "url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
     }
   }

@@ -41,7 +41,9 @@
 - Neocloud/AIデータセンター運営山を購入候補比較まで作成済み。現時点のたたき台は`IREN`40%、`CORZ`25%、`APLD`20%、`CIFR`15%。`NBIS`/`CRWV`は大型本命として監視、`OSS`は防衛/エッジAI山へ回す。
 - 希土類/磁石/ロボット供給網山を開始し、`research\rare_earth_magnets\rare_earth_source_notes_2026-05-11.md`と`watchlist\rare_earth_current_snapshot_2026-05-11.md`を作成済み。`MP`は品質本命、`USAR`はロマン枠本命候補だが、2026-05-13 Q1決算待ち。
 - `MP`/`USAR`はSBI証券とマネックス証券で国内証券フィルター通過扱い。楽天証券の公開米国株式取扱リスト001〜020では未掲載。
-- ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`USAR` 2026-05-13、`TSEM` 2026-05-13、キオクシア 2026-05-15。`CEG` Q1は反映済み。
+- 防衛/エッジAI/ドローン山を開始し、`research\defense_edge_ai_drones\defense_edge_ai_drones_source_notes_2026-05-12.md`と`watchlist\defense_edge_ai_drones_current_snapshot_2026-05-12.md`を作成済み。初期深掘り優先は`OSS`、`RCAT`、`ONDS`。`AVAV`/`KTOS`は大型寄り監視、`PLTR`はテーマ本丸確認。
+- `OSS`/`ONDS`/`RCAT`/`AVAV`/`KTOS`/`PLTR`はSBI証券とマネックス証券で国内証券フィルター通過扱い。楽天証券の公開米国株式取扱リスト001〜020では未掲載。
+- ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`USAR` 2026-05-13、`TSEM` 2026-05-13、`ONDS` 2026-05-14、キオクシア 2026-05-15。`CEG` Q1は反映済み。
 - 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
 - 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
 - 決算監視で検知イベントが出た場合、GitHub Actionsが`Earnings alert: TICKER YYYY-MM-DD`のIssueを作成し、`KANNOHI1`へアサインする。GitHubのIssue/Assignedメール通知を有効にしていればメールで気づける。
@@ -116,6 +118,7 @@
 - 原子力/SMR/データセンター電力山は購入候補比較まで作成済み。次は`OKLO`の2026-05-12 Q1決算、`XE`のIPO後初回10-Q/ロックアップ/株数、`SMR`のENTRA1/TVA契約実効性、`CEG`のPowered Land横展開とFCF正常化を追跡する。
 - Neocloud/AIデータセンター運営山は購入候補比較まで作成済み。次は`NBIS`の2026-05-13 Q1決算、`IREN`のGPU financingとNVIDIA契約粗利率、`CORZ`の4.5GW pipeline契約済み比率、`CIFR`第3campus lease詳細、`APLD`のPolaris/Delta稼働タイムラインを追跡する。
 - 希土類/磁石/ロボット供給網山は`MP`と`USAR`を初期整理済み。次は`USAR`の2026-05-13 Q1決算後に、現金、burn、株数、Serra Verde買収条件、Stillwater 600MTPA rampを確認して購入候補比較を確定する。
+- 防衛/エッジAI/ドローン山は`OSS`、`RCAT`、`ONDS`を初期深掘り候補として整理済み。次は`OSS`を深掘りし、`RCAT`、`ONDS`は順に進める。ただし`ONDS`は2026-05-14 Q1後に判断する。
 - 全山共通で、購入候補比較には次回以降「最新決算日」「次回決算予定日」「決算前に買うか/決算後に買うか」「決算で見る数字」を入れる。
 - 初期スクリーニング表にFCF利回り、EV/EBITDA、売上成長、EBITDA成長、受注残、12か月高値からの距離を追加する。
 - メモリ/ストレージ山は`SNDK`、`WDC`、`MU`、`STX`、`SIMO`、`DELL`、`P`/`NTAP`まで深掘り済み。キオクシアは2026-05-15決算後に更新。
@@ -185,6 +188,7 @@
 - 2026-05-11 CEG Q1 2026を確認し、Adj. operating EPS 2.74ドル、FY2026ガイダンス維持、Freestone/CyrusOne進展を原子力山に反映。大型本命確認だが購入候補配分は変更なし。 [Codex]
 - 2026-05-11 決算監視ワークフローにGitHub Issue通知を追加。検知時に`KANNOHI1`へアサインしたIssueを作成し、GitHubメール通知で気づける形にした。 [Codex]
 - 2026-05-11 希土類/磁石/ロボット供給網山を開始し、MP/USARの現在株価・時価総額・直近決算/イベントを整理。USARの2026-05-13 Q1を決算監視対象に追加し、MP/USARの国内証券フィルターをSBI/マネックス通過扱いに更新。 [Codex]
+- 2026-05-12 防衛/エッジAI/ドローン山を開始し、OSS/RCAT/ONDSを初期深掘り候補、AVAV/KTOSを大型寄り監視、PLTRをテーマ本丸確認として整理。ONDSの2026-05-14 Q1を決算監視対象に追加。 [Codex]
 - 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
 - 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
 - 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]

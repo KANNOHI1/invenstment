@@ -10,6 +10,7 @@ on:
     - cron: "30 12 13 5 *" # NBIS, May 13 2026, after 08:00 ET call start
     - cron: "30 14 13 5 *" # TSEM, May 13 2026, after 10:00 ET call start
     - cron: "30 21 13 5 *" # USAR, May 13 2026, after market close / 17:00 ET call
+    - cron: "00 13 14 5 *" # ONDS, May 14 2026, after 08:30 ET call start
     - cron: "00 07 15 5 *" # Kioxia, May 15 2026, after 15:30 JST release
     - cron: "00 22 28 5 *" # NTAP, May 28 2026, after 17:30 ET webcast start
 
