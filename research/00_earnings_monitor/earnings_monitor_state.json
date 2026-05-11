@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-12T01:01:15.192590+09:00",
+  "updated_at": "2026-05-11T17:34:38.811265+00:00",
   "sources": {
-    "OKLO|OKLO investors|https://oklo.com/investors": {
-      "hash": "6363a8049e350c53d44ce35692743631cc687213cf5f0a64cdefe1f27548e94a",
-      "last_checked_at": "2026-05-12T01:01:15.192590+09:00",
-      "last_success_at": "2026-05-12T01:01:15.192590+09:00",
-      "url": "https://oklo.com/investors"
+    "CEG|CEG investor event|https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/": {
+      "hash": "6ab426d9cdf921307f39c5b700d8ef826d7416a187f0357988de535673127574",
+      "last_checked_at": "2026-05-11T17:34:38.811265+00:00",
+      "last_success_at": "2026-05-11T17:34:38.811265+00:00",
+      "url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
     },
-    "OKLO|OKLO date announcement|https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call": {
-      "hash": "718b66200e3adf695eea748ce498b656e17267e28a2c3aa4f6904cf0b63a05ec",
-      "last_checked_at": "2026-05-12T01:01:15.192590+09:00",
-      "last_success_at": "2026-05-12T01:01:15.192590+09:00",
-      "url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
+    "CEG|CEG investor home|https://investors.constellationenergy.com/": {
+      "hash": "31e50c0cd7369af4553a7ab2095531cc107181e46d1cdb46c7b3066d156fc0a7",
+      "last_checked_at": "2026-05-11T17:34:38.811265+00:00",
+      "last_success_at": "2026-05-11T17:34:38.811265+00:00",
+      "url": "https://investors.constellationenergy.com/"
     }
   }
 }

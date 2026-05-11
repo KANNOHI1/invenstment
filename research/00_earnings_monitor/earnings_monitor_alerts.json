@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-05-12T01:01:15.192590+09:00",
+  "updated_at": "2026-05-11T17:34:38.811265+00:00",
   "alerts": [
     {
-      "timestamp": "2026-05-12 01:01:15",
-      "ticker": "OKLO",
-      "expected_date": "2026-05-12",
-      "expected_time": "after market close / 17:00 ET call",
-      "priority": "highest",
+      "timestamp": "2026-05-11 17:34:38",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
       "hill": "nuclear_power_infrastructure",
       "signal": "changed",
-      "label": "OKLO investors",
-      "source_url": "https://oklo.com/investors",
-      "message": "ページ変化を検出。source: https://oklo.com/investors"
+      "label": "CEG investor event",
+      "source_url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/",
+      "message": "ページ変化を検出。source: https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
     },
     {
-      "timestamp": "2026-05-12 01:01:15",
-      "ticker": "OKLO",
-      "expected_date": "2026-05-12",
-      "expected_time": "after market close / 17:00 ET call",
-      "priority": "highest",
+      "timestamp": "2026-05-11 17:34:38",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
       "hill": "nuclear_power_infrastructure",
       "signal": "results_keyword",
-      "label": "OKLO investors",
-      "source_url": "https://oklo.com/investors",
-      "message": "決算関連キーワードを検出。source: https://oklo.com/investors"
+      "label": "CEG investor event",
+      "source_url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/",
+      "message": "決算関連キーワードを検出。source: https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
     },
     {
-      "timestamp": "2026-05-12 01:01:15",
-      "ticker": "OKLO",
-      "expected_date": "2026-05-12",
-      "expected_time": "after market close / 17:00 ET call",
-      "priority": "highest",
+      "timestamp": "2026-05-11 17:34:38",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
       "hill": "nuclear_power_infrastructure",
       "signal": "changed",
-      "label": "OKLO date announcement",
-      "source_url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call",
-      "message": "ページ変化を検出。source: https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
+      "label": "CEG investor home",
+      "source_url": "https://investors.constellationenergy.com/",
+      "message": "ページ変化を検出。source: https://investors.constellationenergy.com/"
     },
     {
-      "timestamp": "2026-05-12 01:01:15",
-      "ticker": "OKLO",
-      "expected_date": "2026-05-12",
-      "expected_time": "after market close / 17:00 ET call",
-      "priority": "highest",
+      "timestamp": "2026-05-11 17:34:38",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
       "hill": "nuclear_power_infrastructure",
       "signal": "results_keyword",
-      "label": "OKLO date announcement",
-      "source_url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call",
-      "message": "決算関連キーワードを検出。source: https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
+      "label": "CEG investor home",
+      "source_url": "https://investors.constellationenergy.com/",
+      "message": "決算関連キーワードを検出。source: https://investors.constellationenergy.com/"
     }
   ]
 }
