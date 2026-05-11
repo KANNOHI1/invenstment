@@ -15,6 +15,7 @@
 | `scripts\earnings_monitor.ps1` | ローカルPowerShell版の監視スクリプト |
 | `research\00_earnings_monitor\earnings_monitor_status.md` | 最新の監視結果 |
 | `research\00_earnings_monitor\earnings_monitor_state.json` | 差分検出用の状態ファイル |
+| `research\00_earnings_monitor\earnings_monitor_alerts.json` | GitHub Issue通知に使う検知イベント |
 | `research\00_earnings_monitor\raw\` | 変化検出時のHTMLスナップショット |
 | `.github\workflows\earnings-monitor.yml` | GitHub Actionsで既知の決算予定日時だけ巡回する設定 |
 
@@ -35,10 +36,12 @@ python scripts\earnings_monitor.py --lookahead-days 0 --lookback-days 0 --save-r
 - このフォルダをGitリポジトリ化する。
 - GitHubへpushする。
 - GitHub側でActionsを有効にする。
+- GitHubの通知設定で、Issueのメール通知を受け取れる状態にする。
 - `.github\workflows\earnings-monitor.yml`が、既知の決算予定日時だけ監視スクリプトを実行する。
 - 決算直後に急ぎで見たい場合は、GitHub Actionsの`workflow_dispatch`で手動実行する。
 - GitHub cronには年の指定がないため、決算シーズンが終わった古い日付cronは次回メンテナンスで削除する。
-- 変化があれば、`research\00_earnings_monitor\`配下の状態ファイルとスナップショットをコミットする。
+- 検知イベントがあれば、`Earnings alert: TICKER YYYY-MM-DD`というGitHub Issueを作成し、`KANNOHI1`へアサインする。
+- GitHubの通知設定でIssue/Assignedのメール通知が有効なら、メールで気づける。
 - 変化があれば、`research\00_earnings_monitor\`配下のステータスと状態ファイルをコミットする。
 - raw HTMLはGitHubへコミットせず、ローカル確認用にだけ使う。
 
@@ -47,4 +50,5 @@ python scripts\earnings_monitor.py --lookahead-days 0 --lookback-days 0 --save-r
 - 一部IRサイトはCloudflareやbot対策で取得できない場合がある。
 - ページ変化は、決算発表以外の軽微なページ更新でも起きる。
 - `results_keyword`は決算らしい語が含まれるという意味であり、決算本文を読んだことを意味しない。
+- Issue通知は作業キューであり、売買判断ではない。
 - 実際の投資判断に反映する前に、必ず公式リリース、10-Q/決算短信、決算資料を読む。

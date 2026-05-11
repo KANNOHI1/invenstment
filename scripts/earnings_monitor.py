@@ -121,6 +121,7 @@ def run(args: argparse.Namespace) -> int:
     raw_dir = output_dir / "raw"
     state_path = output_dir / "earnings_monitor_state.json"
     status_path = output_dir / "earnings_monitor_status.md"
+    alerts_path = output_dir / "earnings_monitor_alerts.json"
 
     config = read_json(config_path)
     if "events" not in config:
@@ -178,7 +179,13 @@ def run(args: argparse.Namespace) -> int:
                         {
                             "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
                             "ticker": event["ticker"],
+                            "expected_date": event["expected_date"],
+                            "expected_time": event.get("expected_time", ""),
+                            "priority": event.get("priority", ""),
+                            "hill": event.get("hill", ""),
+                            "signal": "changed",
                             "label": source["label"],
+                            "source_url": source["url"],
                             "message": message,
                         }
                     )
@@ -187,6 +194,20 @@ def run(args: argparse.Namespace) -> int:
                 if expected <= today and has_result_keyword(content):
                     signals.append("results_keyword")
                     details.append(f"{source['label']} has results keyword")
+                    alerts.append(
+                        {
+                            "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
+                            "ticker": event["ticker"],
+                            "expected_date": event["expected_date"],
+                            "expected_time": event.get("expected_time", ""),
+                            "priority": event.get("priority", ""),
+                            "hill": event.get("hill", ""),
+                            "signal": "results_keyword",
+                            "label": source["label"],
+                            "source_url": source["url"],
+                            "message": f"決算関連キーワードを検出。source: {source['url']}",
+                        }
+                    )
 
                 new_state["sources"][key] = {
                     "hash": digest,
@@ -218,6 +239,7 @@ def run(args: argparse.Namespace) -> int:
         )
 
     write_json(state_path, new_state)
+    write_json(alerts_path, {"updated_at": now.isoformat(), "alerts": alerts})
     write_status(status_path, rows, alerts, now)
     print(f"Wrote {status_path}")
     return 0

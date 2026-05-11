@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-05-11T23:46:59.859415+09:00",
+  "alerts": [
+    {
+      "timestamp": "2026-05-11 23:46:59",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
+      "hill": "nuclear_power_infrastructure",
+      "signal": "results_keyword",
+      "label": "CEG investor event",
+      "source_url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/",
+      "message": "決算関連キーワードを検出。source: https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
+    },
+    {
+      "timestamp": "2026-05-11 23:46:59",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
+      "hill": "nuclear_power_infrastructure",
+      "signal": "changed",
+      "label": "CEG investor home",
+      "source_url": "https://investors.constellationenergy.com/",
+      "message": "ページ変化を検出。source: https://investors.constellationenergy.com/"
+    },
+    {
+      "timestamp": "2026-05-11 23:46:59",
+      "ticker": "CEG",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
+      "hill": "nuclear_power_infrastructure",
+      "signal": "results_keyword",
+      "label": "CEG investor home",
+      "source_url": "https://investors.constellationenergy.com/",
+      "message": "決算関連キーワードを検出。source: https://investors.constellationenergy.com/"
+    }
+  ]
+}

@@ -42,6 +42,7 @@
 - ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`TSEM` 2026-05-13、キオクシア 2026-05-15。`CEG` Q1は反映済み。
 - 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
 - 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
+- 決算監視で検知イベントが出た場合、GitHub Actionsが`Earnings alert: TICKER YYYY-MM-DD`のIssueを作成し、`KANNOHI1`へアサインする。GitHubのIssue/Assignedメール通知を有効にしていればメールで気づける。
 - GitHub private repo `KANNOHI1/invenstment` を作成し、`main`をpush済み。`Earnings monitor` GitHub Actions workflowはactive。
 - 光通信/フォトニクス山のソースメモは`research\optical_photonics\optical_photonics_source_notes_2026-05-07.md`、現在スナップショットは`watchlist\optical_photonics_current_snapshot_2026-05-07.md`に作成済み。初期優先は`FORM`、`CRDO`、`AAOI`。
 - `FORM`の深掘りメモは`research\optical_photonics\form_deep_dive_2026-05-07.md`に作成済み。HBM/DRAM検査ボトルネックとして購入候補へ進めるが、Q2ガイド年率化PER約61倍で高倍率。
@@ -179,6 +180,7 @@
 - 2026-05-11 決算予定銘柄の自動監視土台として、監視リスト、Python/PowerShellスクリプト、GitHub Actionsワークフロー、監視結果フォルダを作成。ローカルPython実行でステータス生成を確認し、Actions巡回頻度は定期巡回ではなく既知の決算予定日時だけ実行する形へ調整。 [Codex]
 - 2026-05-11 GitHub private repo `KANNOHI1/invenstment` を作成し、初回コミットを`main`へpush。`Earnings monitor` workflowがactiveであることを確認。 [Codex]
 - 2026-05-11 CEG Q1 2026を確認し、Adj. operating EPS 2.74ドル、FY2026ガイダンス維持、Freestone/CyrusOne進展を原子力山に反映。大型本命確認だが購入候補配分は変更なし。 [Codex]
+- 2026-05-11 決算監視ワークフローにGitHub Issue通知を追加。検知時に`KANNOHI1`へアサインしたIssueを作成し、GitHubメール通知で気づける形にした。 [Codex]
 - 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
 - 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
 - 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]
