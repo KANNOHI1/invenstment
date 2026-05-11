@@ -8,16 +8,16 @@ Neocloud山から別山送りにした`OSS`を起点に、防衛AI、エッジAI
 
 ## 今日時点の市場データ
 
-2026-05-11 15:14 UTC前後の確認。
+2026-05-11米国市場終値ベース。株価はStooqの2026-05-11終値、時価総額は同日前後のFinance snapshotを終値で概算更新。
 
 | 銘柄 | 株価 | 時価総額 | PER | 直近決算/予定 |
 | --- | ---: | ---: | ---: | --- |
-| OSS | 15.30ドル | 約3.78億ドル | 約52.8倍 | Q1 2026発表済み |
-| ONDS | 9.28ドル | 約24.15億ドル | N/A | Q1 2026は2026-05-14予定 |
-| RCAT | 11.27ドル | 約13.62億ドル | N/A | Q1 2026発表済み |
-| AVAV | 164.13ドル | 約81.66億ドル | N/A | FY2026 Q3発表済み |
-| KTOS | 56.23ドル | 約100.88億ドル | 約330.8倍 | Q1 2026発表済み |
-| PLTR | 134.46ドル | 約3,457.89億ドル | 約151.1倍 | Q1 2026発表済み |
+| OSS | 15.35ドル | 約3.79億ドル | 約52.8倍 | Q1 2026発表済み |
+| ONDS | 9.335ドル | 約24.29億ドル | N/A | Q1 2026は2026-05-14予定 |
+| RCAT | 11.425ドル | 約13.81億ドル | N/A | Q1 2026発表済み |
+| AVAV | 166.55ドル | 約82.86億ドル | N/A | FY2026 Q3発表済み |
+| KTOS | 56.5424ドル | 約101.44億ドル | 約330.8倍 | Q1 2026発表済み |
+| PLTR | 134.7601ドル | 約3,465.61億ドル | 約151.1倍 | Q1 2026発表済み |
 
 ## 銘柄別メモ
 
@@ -155,4 +155,5 @@ Q1 2026発表日: 2026-05-04
 - AVAV FY2026 Q3: https://investor.avinc.com/news-releases/news-release-details/aerovironment-announces-fiscal-2026-third-quarter-results
 - KTOS Q1 2026: https://www.kratosdefense.com/newsroom/kratos-reports-first-quarter-2026-financial-results-and-increases-fiscal-fy26-financial-guidance
 - PLTR Q1 2026 Business Update: https://investors.palantir.com/files/Palantir%20-%20Q1%202026%20Business%20Update.pdf
-- 2026-05-11株価・時価総額: Finance price snapshot
+- 2026-05-11株価: Stooq close snapshot
+- 2026-05-11時価総額: Finance price snapshotを終値で概算更新
