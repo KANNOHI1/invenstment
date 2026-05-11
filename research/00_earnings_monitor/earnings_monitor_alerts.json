@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-12T00:08:14.491975+09:00",
+  "updated_at": "2026-05-12T00:19:50.868202+09:00",
   "alerts": [
     {
-      "timestamp": "2026-05-12 00:08:14",
+      "timestamp": "2026-05-12 00:19:50",
       "ticker": "OKLO",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
@@ -14,7 +14,7 @@
       "message": "ページ変化を検出。source: https://oklo.com/investors"
     },
     {
-      "timestamp": "2026-05-12 00:08:14",
+      "timestamp": "2026-05-12 00:19:50",
       "ticker": "OKLO",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
@@ -26,7 +26,7 @@
       "message": "決算関連キーワードを検出。source: https://oklo.com/investors"
     },
     {
-      "timestamp": "2026-05-12 00:08:14",
+      "timestamp": "2026-05-12 00:19:50",
       "ticker": "OKLO",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
@@ -38,7 +38,7 @@
       "message": "ページ変化を検出。source: https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
     },
     {
-      "timestamp": "2026-05-12 00:08:14",
+      "timestamp": "2026-05-12 00:19:50",
       "ticker": "OKLO",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
