@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Poll configured earnings sources and write a local status file.
+"""Poll configured earnings/event sources and write a local status file.
 
 This script is intentionally dependency-free so it can run in GitHub Actions.
 It is an alerting aid, not a replacement for reading the official release.
@@ -28,6 +28,13 @@ RESULT_KEYWORDS = (
     "reports third quarter",
     "reports fourth quarter",
     "決算",
+)
+
+EVENT_KEYWORDS = (
+    "investor day",
+    "presentation",
+    "webcast",
+    "イベント",
 )
 
 
@@ -74,21 +81,27 @@ def has_result_keyword(content: str) -> bool:
     return any(keyword in lower for keyword in RESULT_KEYWORDS)
 
 
+def has_event_keyword(content: str) -> bool:
+    lower = content.lower()
+    return any(keyword in lower for keyword in EVENT_KEYWORDS)
+
+
 def write_status(path: pathlib.Path, rows: list[dict], alerts: list[dict], now: dt.datetime) -> None:
     lines: list[str] = []
-    lines.append("# 決算自動監視ステータス")
+    lines.append("# 決算/イベント自動監視ステータス")
     lines.append("")
     lines.append(f"- 最終確認: {now.isoformat(timespec='seconds')}")
-    lines.append("- 監視方式: GitHub Actionsまたはローカル実行で、予定日周辺の公式IR/ニュースページを巡回")
+    lines.append("- 監視方式: GitHub Actionsまたはローカル実行で、予定日周辺の公式IR/ニュース/イベントページを巡回")
     lines.append("- 注意: 自動検出は一次確認の補助。最終判断は公式リリース本文を読んで反映する")
     lines.append("")
     lines.append("## 監視対象")
     lines.append("")
-    lines.append("| 銘柄 | 予定日 | 時刻 | 優先度 | 山 | 状態 | シグナル | 詳細 |")
-    lines.append("| --- | --- | --- | --- | --- | --- | --- | --- |")
+    lines.append("| 銘柄 | 種別 | 予定日 | 時刻 | 優先度 | 山 | 状態 | シグナル | 詳細 |")
+    lines.append("| --- | --- | --- | --- | --- | --- | --- | --- | --- |")
     for row in rows:
         values = [
             row["ticker"],
+            row.get("kind", "earnings"),
             row["expected_date"],
             row.get("expected_time", ""),
             row.get("priority", ""),
@@ -142,6 +155,7 @@ def run(args: argparse.Namespace) -> int:
             rows.append(
                 {
                     "ticker": event["ticker"],
+                    "kind": event.get("kind", "earnings"),
                     "expected_date": event["expected_date"],
                     "expected_time": event.get("expected_time", ""),
                     "priority": event.get("priority", ""),
@@ -179,6 +193,7 @@ def run(args: argparse.Namespace) -> int:
                         {
                             "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
                             "ticker": event["ticker"],
+                            "kind": event.get("kind", "earnings"),
                             "expected_date": event["expected_date"],
                             "expected_time": event.get("expected_time", ""),
                             "priority": event.get("priority", ""),
@@ -191,21 +206,34 @@ def run(args: argparse.Namespace) -> int:
                     )
 
                 expected = dt.date.fromisoformat(event["expected_date"])
-                if expected <= today and has_result_keyword(content):
-                    signals.append("results_keyword")
-                    details.append(f"{source['label']} has results keyword")
+                kind = event.get("kind", "earnings")
+                if kind == "earnings":
+                    keyword_signal = "results_keyword"
+                    keyword_detail = "results keyword"
+                    keyword_message = "決算関連キーワードを検出"
+                    keyword_found = has_result_keyword(content)
+                else:
+                    keyword_signal = "event_keyword"
+                    keyword_detail = "event keyword"
+                    keyword_message = "イベント関連キーワードを検出"
+                    keyword_found = has_event_keyword(content)
+
+                if expected <= today and keyword_found:
+                    signals.append(keyword_signal)
+                    details.append(f"{source['label']} has {keyword_detail}")
                     alerts.append(
                         {
                             "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
                             "ticker": event["ticker"],
+                            "kind": event.get("kind", "earnings"),
                             "expected_date": event["expected_date"],
                             "expected_time": event.get("expected_time", ""),
                             "priority": event.get("priority", ""),
                             "hill": event.get("hill", ""),
-                            "signal": "results_keyword",
+                            "signal": keyword_signal,
                             "label": source["label"],
                             "source_url": source["url"],
-                            "message": f"決算関連キーワードを検出。source: {source['url']}",
+                            "message": f"{keyword_message}。source: {source['url']}",
                         }
                     )
 
@@ -228,6 +256,7 @@ def run(args: argparse.Namespace) -> int:
         rows.append(
             {
                 "ticker": event["ticker"],
+                "kind": event.get("kind", "earnings"),
                 "expected_date": event["expected_date"],
                 "expected_time": event.get("expected_time", ""),
                 "priority": event.get("priority", ""),

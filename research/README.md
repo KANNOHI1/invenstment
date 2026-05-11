@@ -19,6 +19,7 @@
 | `neocloud_ai_datacenter` | Neocloud、AIクラウド、HPCコロケーション、AIデータセンター運営 |
 | `rare_earth_magnets` | 希土類、永久磁石、重希土類、ロボット/防衛/EV/産業モーター供給網 |
 | `defense_edge_ai_drones` | 防衛AI、エッジAI、ドローン、カウンターUAS、自律システム、rugged compute |
+| `healthcare_ai` | 医療AI、精密医療データ、診断、製薬向けデータ/モデル、黒字化前の爆発力枠 |
 
 ## 運用ルール
 

@@ -213,6 +213,30 @@
       ]
     },
     {
+      "ticker": "TEM",
+      "name": "Tempus AI",
+      "hill": "healthcare_ai",
+      "kind": "investor_day",
+      "expected_date": "2026-05-29",
+      "expected_time": "09:00 EDT",
+      "priority": "high",
+      "watch_points": ["Data and Applications long-term model", "Insights growth", "adjusted EBITDA path", "cash burn", "SBC and dilution"],
+      "sources": [
+        {
+          "label": "TEM Investor Day event",
+          "url": "https://investors.tempus.com/events/event-details/tempus-ai-investor-day"
+        },
+        {
+          "label": "TEM Investor Day announcement",
+          "url": "https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026"
+        },
+        {
+          "label": "TEM investor home",
+          "url": "https://investors.tempus.com/"
+        }
+      ]
+    },
+    {
       "ticker": "AVGO",
       "name": "Broadcom",
       "hill": "ai_chips_accelerators",

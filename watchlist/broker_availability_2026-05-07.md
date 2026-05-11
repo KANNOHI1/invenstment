@@ -70,6 +70,7 @@
 | AVAV | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | KTOS | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | PLTR | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| TEM | 最終売買前に注文画面で確認 | 確認 | 最終売買前に注文画面で確認 | 国内証券フィルター通過候補。マネックス導線確認 |
 | 285A キオクシア | 国内株 | 国内株 | 国内株 | 日本株として購入可能性は高いが、各口座で要確認 |
 
 ## 今日確認できたこと
@@ -196,6 +197,11 @@
 - 楽天証券の公開米国株式取扱リスト001〜020横断では、`AMD`/`MRVL`/`DELL`/`ARM`を確認。`SMCI`/`AVGO`/`AMBA`は未掲載。
 - したがって、この山の初期対象は全銘柄が国内証券フィルター通過。ただし売買直前は注文画面で再確認する。
 
+### 医療AI / 精密医療データ候補
+
+- Yahoo!ファイナンス日本版の`TEM`ページに、マネックス証券への取引導線あり。
+- SBI証券と楽天証券は、最終売買前に実際の注文画面で再確認する。
+
 ## ソース
 
 - Yahoo!ファイナンス MU: https://finance.yahoo.co.jp/quote/MU
@@ -252,6 +258,7 @@
 - Yahoo!ファイナンス ARM: https://finance.yahoo.co.jp/quote/ARM
 - Yahoo!ファイナンス AVGO: https://finance.yahoo.co.jp/quote/AVGO
 - Yahoo!ファイナンス AMBA: https://finance.yahoo.co.jp/quote/AMBA
+- Yahoo!ファイナンス TEM: https://finance.yahoo.co.jp/quote/TEM
 - 楽天証券 米国株式取扱銘柄一覧 D: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_004.html
 - 楽天証券 米国株式取扱銘柄一覧 A: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_001.html
 - 楽天証券 米国株式取扱銘柄一覧 M: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_008.html

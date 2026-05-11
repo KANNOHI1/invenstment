@@ -54,6 +54,7 @@
 - 200万円ロマン枠の横断ポジション設計v0を`watchlist\romance_portfolio_position_design_2026-05-12.md`に作成済み。初回投入60万円、決算通過後投入80万円、押し目・上方修正枠60万円に分け、最終保有数は最大10銘柄までとする。
 - 200万円ロマン枠の投資候補ショートリストv0を`watchlist\romance_portfolio_shortlist_2026-05-12.md`に作成済み。現時点の第1群は`MU`、`POWL`、`FORM`、`IREN`、`OSS`。初回60万円の仮配分は`MU`15万円、`POWL`12万円、`FORM`10万円、`IREN`13万円、`OSS`5万円、現金5万円。資金はドルで持っているため、同メモに1株価格、仮株数、必要ドル額、3,000/3,500/4,000ドル枠の簡易案も追加済み。
 - ショートリストでは、`MU`/`POWL`/`FORM`をFCF重視のマルチバガー論文フレームに比較的乗せやすい「論文適合型」、`IREN`/`OSS`をFCFより契約・受注・小型性・転換成功に賭ける「爆発力型」として明示済み。
+- 医療AI/精密医療データ山を独立化し、`TEM`を黒字化前の爆発力枠として`research\healthcare_ai\healthcare_ai_source_notes_2026-05-12.md`と`watchlist\healthcare_ai_current_snapshot_2026-05-12.md`に整理済み。第1群へ即混ぜず、2026-05-29 Investor Dayと次回決算を継続ウォッチする。Investor DayはGitHub Actionsの監視対象にも追加済み。
 - ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`USAR` 2026-05-13、`TSEM` 2026-05-13、`ONDS` 2026-05-14、キオクシア 2026-05-15。`CEG` Q1は反映済み。
 - 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
 - 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
@@ -141,6 +142,7 @@
 - 200万円ロマン枠のポジションサイズと段階的エントリールールはv0作成済み。初回60万円の第1群ショートリストとドル建て株数試算も作成済み。次は売買直前の最新株価・時価総額・注文画面確認、または直近決算通知後の入れ替え。
 - 実際の売買判断前に、仮説崩れ条件と撤退トリガーを定義する。
 - 実際の売買判断前に、候補銘柄がSBI/マネックス/楽天の注文画面で買付可能か再確認する。
+- `TEM`は2026-05-29 Investor Day後に、Data and Applications / Insightsの長期成長、Adjusted EBITDA黒字化確度、cash burn、SBC/希薄化を確認する。
 
 ## 決定事項
 
@@ -210,6 +212,7 @@
 - 2026-05-12 ここまでの山別候補から実際の投資候補ショートリストv0を作成し、第1群をMU/POWL/FORM/IREN/OSSに絞り、初回60万円の仮配分を定義。決算待ち銘柄は自動監視継続とした。 [Codex]
 - 2026-05-12 ショートリストにドル建て試算を追加し、MU/POWL/FORM/IREN/OSSの1株価格、仮株数、必要ドル額、3,000/3,500/4,000ドル枠の簡易案を整理。 [Codex]
 - 2026-05-12 ショートリスト内で、MU/POWL/FORMを論文適合型、IREN/OSSを爆発力型として明示し、FCF重視フレームと例外枠が混ざっていることを見える化。 [Codex]
+- 2026-05-12 医療AI/精密医療データ山を独立化し、TEMを黒字化前の爆発力枠として継続ウォッチ対象に設定。Investor DayをGitHub Actions監視へ追加し、次回決算も主要トリガーにした。 [Codex]
 - 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
 - 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
 - 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]

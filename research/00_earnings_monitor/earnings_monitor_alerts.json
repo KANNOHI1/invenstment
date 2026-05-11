@@ -1,21 +1,10 @@
 {
-  "updated_at": "2026-05-12T01:01:15.192590+09:00",
+  "updated_at": "2026-05-12T02:37:24.199299+09:00",
   "alerts": [
     {
-      "timestamp": "2026-05-12 01:01:15",
+      "timestamp": "2026-05-12 02:37:24",
       "ticker": "OKLO",
-      "expected_date": "2026-05-12",
-      "expected_time": "after market close / 17:00 ET call",
-      "priority": "highest",
-      "hill": "nuclear_power_infrastructure",
-      "signal": "changed",
-      "label": "OKLO investors",
-      "source_url": "https://oklo.com/investors",
-      "message": "ページ変化を検出。source: https://oklo.com/investors"
-    },
-    {
-      "timestamp": "2026-05-12 01:01:15",
-      "ticker": "OKLO",
+      "kind": "earnings",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
       "priority": "highest",
@@ -26,8 +15,9 @@
       "message": "決算関連キーワードを検出。source: https://oklo.com/investors"
     },
     {
-      "timestamp": "2026-05-12 01:01:15",
+      "timestamp": "2026-05-12 02:37:24",
       "ticker": "OKLO",
+      "kind": "earnings",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
       "priority": "highest",
@@ -38,8 +28,9 @@
       "message": "ページ変化を検出。source: https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
     },
     {
-      "timestamp": "2026-05-12 01:01:15",
+      "timestamp": "2026-05-12 02:37:24",
       "ticker": "OKLO",
+      "kind": "earnings",
       "expected_date": "2026-05-12",
       "expected_time": "after market close / 17:00 ET call",
       "priority": "highest",

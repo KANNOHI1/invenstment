@@ -110,6 +110,7 @@ FCF利回りや割安さより、契約、ARR、受注、政策、急成長、�
 | AMD | 大型3倍候補 | Meta/OpenAI 6GWは強いが、現在価格は期待先行。大型補完枠 |
 | SIMO | 小型寄り準主役 | MonTitan次第。ただし時価総額表示とADS換算を売買前に再確認 |
 | RCAT | ドローン候補 | 売上ランプは強いが、粗利率/営業CF/訴訟リスク確認待ち |
+| TEM | 医療AI候補 | 赤字からAdjusted EBITDA黒字化へ向かう爆発力枠。Investor Day後に再評価 |
 
 ## 決算後に第1群へ上がり得る候補
 
@@ -121,6 +122,7 @@ FCF利回りや割安さより、契約、ARR、受注、政策、急成長、�
 | ONDS | Q1 revenue/backlog/guidance/cash burn/株数が良い |
 | MRVL | custom AI siliconとdata center revenueが強く、FY2027 guideが良い |
 | AMBA | edge AI revenueとCV7 rampが明確で、粗利率が崩れない |
+| TEM | Investor DayでData and Applications / Insightsの長期成長、黒字化確度、SBC/希薄化が許容範囲と確認できる |
 
 ## 初回60万円の仮配分
 
@@ -229,3 +231,4 @@ FCF利回りや割安さより、契約、ARR、受注、政策、急成長、�
 - `watchlist\optical_photonics_buy_candidate_comparison_2026-05-08.md`
 - `watchlist\neocloud_buy_candidate_comparison_2026-05-11.md`
 - `watchlist\defense_edge_ai_drones_buy_candidate_comparison_2026-05-12.md`
+- `watchlist\healthcare_ai_current_snapshot_2026-05-12.md`

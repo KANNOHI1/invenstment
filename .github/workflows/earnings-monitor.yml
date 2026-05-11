@@ -15,6 +15,7 @@ on:
     - cron: "15 21 27 5 *" # MRVL, May 27 2026, after 13:45 PT call start
     - cron: "00 21 28 5 *" # DELL/AMBA, May 28 2026, after 15:30 CDT / 13:30 PT call start
     - cron: "00 22 28 5 *" # NTAP, May 28 2026, after 17:30 ET webcast start
+    - cron: "30 14 29 5 *" # TEM Investor Day, May 29 2026, after 09:00 EDT event start
     - cron: "30 21 3 6 *" # AVGO, Jun 3 2026, after 14:00 PT call start
 
 permissions:
@@ -56,16 +57,22 @@ jobs:
           data = json.loads(alerts_path.read_text(encoding="utf-8")) if alerts_path.exists() else {"alerts": []}
           grouped = {}
           for alert in data.get("alerts", []):
-              key = (alert.get("ticker", "UNKNOWN"), alert.get("expected_date", "unknown-date"))
+              key = (
+                  alert.get("ticker", "UNKNOWN"),
+                  alert.get("expected_date", "unknown-date"),
+                  alert.get("kind", "earnings"),
+              )
               grouped.setdefault(key, []).append(alert)
 
           index_lines = []
-          for (ticker, expected_date), alerts in grouped.items():
-              title = f"Earnings alert: {ticker} {expected_date}"
+          for (ticker, expected_date, kind), alerts in grouped.items():
+              title_prefix = "Earnings alert" if kind == "earnings" else "Research event alert"
+              title = f"{title_prefix}: {ticker} {expected_date}"
               body_path = out_dir / f"{ticker}_{expected_date}.md"
               lines = [
-                  f"# Earnings alert: {ticker}",
+                  f"# {title_prefix}: {ticker}",
                   "",
+                  f"- Kind: {kind}",
                   f"- Expected date: {expected_date}",
                   f"- Expected time: {alerts[0].get('expected_time', '')}",
                   f"- Priority: {alerts[0].get('priority', '')}",
@@ -87,7 +94,7 @@ jobs:
                       "",
                       "## Next action",
                       "",
-                      "Open Codex and ask: `決算通知を見て、公式資料を確認して山別メモに反映して`",
+                      "Open Codex and ask: `通知を見て、公式資料を確認して山別メモに反映して`",
                       "",
                       "Monitor status: `research/00_earnings_monitor/earnings_monitor_status.md`",
                   ]
