@@ -36,9 +36,10 @@
 - `PNR`の深掘りメモは`research\water_cooling_infrastructure\pnr_deep_dive_2026-05-11.md`に作成済み。Q1 core sales +1%で成長が地味、データセンター寄与も薄いため購入候補本線から外し監視。
 - `ECL`/`XYL`/`VLTO`のテーマ確認メモは`research\water_cooling_infrastructure\ecl_xyl_vlto_theme_check_2026-05-11.md`に作成済み。`ECL`はCoolIT買収で液冷本丸確認、`XYL`はデータセンター受注確認、`VLTO`は水質監視だが、いずれもロマン枠の購入候補本線からは外す。
 - 水・冷却インフラ山の購入候補比較は`watchlist\water_cooling_buy_candidate_comparison_2026-05-11.md`に作成済み。現時点のたたき台は`WTS`70%、`BMI`30%。
-- 原子力/SMR/データセンター電力山を購入候補比較まで作成済み。現時点のたたき台は`SMR`35%、`XE`30%、`OKLO`25%、`BWXT`10%。`BE`/`VST`/`CEG`は監視、`GEV`はテーマ確認。
+- 原子力/SMR/データセンター電力山を購入候補比較まで作成済み。現時点のたたき台は`SMR`35%、`XE`30%、`OKLO`25%、`BWXT`10%。`BE`/`VST`は監視、`CEG`は大型本命確認、`GEV`はテーマ確認。
+- `CEG`のQ1 2026を`research\nuclear_power_infrastructure\ceg_q1_2026_update_2026-05-11.md`に反映済み。Adj. operating EPS 2.74ドル、FY2026ガイダンス11.00〜12.00ドル維持、Freestone/CyrusOne 380MW + Phase 2を確認。大型本命確認だが購入候補本線外。
 - Neocloud/AIデータセンター運営山を購入候補比較まで作成済み。現時点のたたき台は`IREN`40%、`CORZ`25%、`APLD`20%、`CIFR`15%。`NBIS`/`CRWV`は大型本命として監視、`OSS`は防衛/エッジAI山へ回す。
-- ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`TSEM` 2026-05-13、キオクシア 2026-05-15、`CEG` 2026-05-11公式リリース取得。
+- ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`TSEM` 2026-05-13、キオクシア 2026-05-15。`CEG` Q1は反映済み。
 - 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
 - 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
 - GitHub private repo `KANNOHI1/invenstment` を作成し、`main`をpush済み。`Earnings monitor` GitHub Actions workflowはactive。
@@ -109,7 +110,7 @@
 - 水セクター各社について、データセンター冷却・水処理エクスポージャーが株価に影響するほど大きいか確認する。
 - AI物理インフラ山は`POWL`、`MOD`、`NVT`を深掘り済み。購入候補比較も作成済み。次は別山へ進むか、TSEMの2026-05-13決算後更新を待つ。
 - 水・冷却インフラ山は購入候補比較まで作成済み。次は`WTS`のQ2 data center sales/FCF、`BMI`のQ2/Q3売上逐次改善/PRASA進捗を追跡する。
-- 原子力/SMR/データセンター電力山は購入候補比較まで作成済み。次は`OKLO`の2026-05-12 Q1決算、`CEG`の2026-05-11 Q1決算、`XE`のIPO後初回10-Q/ロックアップ/株数、`SMR`のENTRA1/TVA契約実効性を追跡する。
+- 原子力/SMR/データセンター電力山は購入候補比較まで作成済み。次は`OKLO`の2026-05-12 Q1決算、`XE`のIPO後初回10-Q/ロックアップ/株数、`SMR`のENTRA1/TVA契約実効性、`CEG`のPowered Land横展開とFCF正常化を追跡する。
 - Neocloud/AIデータセンター運営山は購入候補比較まで作成済み。次は`NBIS`の2026-05-13 Q1決算、`IREN`のGPU financingとNVIDIA契約粗利率、`CORZ`の4.5GW pipeline契約済み比率、`CIFR`第3campus lease詳細、`APLD`のPolaris/Delta稼働タイムラインを追跡する。
 - 全山共通で、購入候補比較には次回以降「最新決算日」「次回決算予定日」「決算前に買うか/決算後に買うか」「決算で見る数字」を入れる。
 - 初期スクリーニング表にFCF利回り、EV/EBITDA、売上成長、EBITDA成長、受注残、12か月高値からの距離を追加する。
@@ -173,10 +174,11 @@
 - 2026-05-11 水・冷却インフラ山を購入候補比較まで進め、BMI/PNR/ECL/XYL/VLTOを追加整理。購入候補はWTS70%・BMI30%、PNRは監視、ECL/XYL/VLTOはテーマ確認に分類。 [Codex]
 - 2026-05-11 原子力/SMR/データセンター電力山を購入候補比較まで進め、SMR35%・XE30%・OKLO25%・BWXT10%を暫定配分、BE/VST/CEGを監視、GEVをテーマ確認に分類。 [Codex]
 - 2026-05-11 Neocloud/AIデータセンター運営山を購入候補比較まで進め、IREN40%・CORZ25%・APLD20%・CIFR15%を暫定配分、NBIS/CRWVを大型本命監視、OSSを防衛/エッジAI山送りに分類。 [Codex]
-- 2026-05-11 ここまで扱った銘柄の決算状況を全チェックし、OKLO/NBIS/TSEM/キオクシア/CEGを最優先更新待ち、LITE/COHRを光通信山の再確認候補として整理。 [Codex]
+- 2026-05-11 ここまで扱った銘柄の決算状況を全チェックし、OKLO/NBIS/TSEM/キオクシア/CEGを最優先更新待ち、LITE/COHRを光通信山の再確認候補として整理。その後CEGは同日Q1を反映済み。 [Codex]
 - 2026-05-11 今日より前に決算済みで未反映だったLITE/COHR/HUBB/VRT/PWR/FIXをキャッチアップし、LITE/COHRを大型本命監視、HUBBを比較候補、VRT/PWR/FIXをテーマ本丸確認に整理。購入候補配分は変更なし。 [Codex]
 - 2026-05-11 決算予定銘柄の自動監視土台として、監視リスト、Python/PowerShellスクリプト、GitHub Actionsワークフロー、監視結果フォルダを作成。ローカルPython実行でステータス生成を確認し、Actions巡回頻度は定期巡回ではなく既知の決算予定日時だけ実行する形へ調整。 [Codex]
 - 2026-05-11 GitHub private repo `KANNOHI1/invenstment` を作成し、初回コミットを`main`へpush。`Earnings monitor` workflowがactiveであることを確認。 [Codex]
+- 2026-05-11 CEG Q1 2026を確認し、Adj. operating EPS 2.74ドル、FY2026ガイダンス維持、Freestone/CyrusOne進展を原子力山に反映。大型本命確認だが購入候補配分は変更なし。 [Codex]
 - 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
 - 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
 - 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]

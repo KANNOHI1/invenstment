@@ -97,17 +97,21 @@ Q1後に見るもの:
 
 ### 判断
 
-監視。Q1 2026決算更新後に再確認。
+監視/大型本命確認。Q1 2026決算でテーマ確認度は上がったが、購入候補本線には入れない。
 
 ### 強い点
 
 - 既存原子力発電の大型本命。
-- Crane Clean Energy Centerやデータセンター向け長期電力契約がテーマ化しやすい。
+- Q1 2026 adjusted operating EPS 2.74ドル、FY2026 adjusted operating EPSガイダンス11.00〜12.00ドルを維持。
+- Freestone/CyrusOneで380MW契約とPhase 2追加380MWの独占契約があり、データセンター隣接電力供給の実例が進んだ。
+- Calpine統合で、天然ガス・地熱・顧客基盤・柔軟な電源ポートフォリオが厚くなった。
 
 ### 重い点
 
-- 時価総額約1,100億ドル。
-- Q1 2026は2026-05-11予定で、今日の作業時点では結果未反映。
+- 時価総額は約936.7億ドル。
+- 3倍で約2,810億ドル、5倍で約4,684億ドルが必要。
+- Q1の単純FCFは営業CF4.25億ドル - CapEx12.75億ドルでマイナス。
+- SMR/先進炉の技術オプションではなく、巨大発電ポートフォリオの再評価株。
 
 ## VST
 
@@ -133,7 +137,7 @@ Q1後に見るもの:
 | --- | --- |
 | 購入候補 | SMR, XE, OKLO |
 | 補助候補 | BWXT |
-| 監視 | BE, VST, CEG |
+| 監視/大型本命確認 | BE, VST, CEG |
 | テーマ確認 | GEV |
 
 ## ソース
@@ -144,4 +148,5 @@ Q1後に見るもの:
 - Bloom Energy Q1 2026: https://www.bloomenergy.com/news/bloom-energy-reports-record-first-quarter-2026-results-and-raises-full-year-2026-guidance/
 - GE Vernova Q1 2026: https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_04222026.pdf
 - Vistra Q1 2026: https://investor.vistracorp.com/2026-05-07-Vistra-Reports-First-Quarter-2026-Results
-- Constellation Q1 2026 schedule: https://investors.constellationenergy.com/static-files/3cb022eb-3ef7-47e5-ad00-c5e7b3ddcc51
+- Constellation Q1 2026: https://investors.constellationenergy.com/static-files/b2f33c27-11f6-49d4-982f-6c5b54609f07
+- Constellation Q1 2026 presentation: https://investors.constellationenergy.com/static-files/e5a93793-71b7-453f-a5d3-6a8acb420282
