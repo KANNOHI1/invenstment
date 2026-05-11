@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "created_at": "2026-05-11",
+  "timezone": "Asia/Tokyo",
+  "events": [
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "hill": "nuclear_power_infrastructure",
+      "expected_date": "2026-05-11",
+      "expected_time": "10:00 ET",
+      "priority": "high",
+      "watch_points": ["Calpine integration", "free cash flow", "nuclear/data center power commentary"],
+      "sources": [
+        {
+          "label": "CEG investor event",
+          "url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
+        },
+        {
+          "label": "CEG investor home",
+          "url": "https://investors.constellationenergy.com/"
+        }
+      ]
+    },
+    {
+      "ticker": "OKLO",
+      "name": "Oklo",
+      "hill": "nuclear_power_infrastructure",
+      "expected_date": "2026-05-12",
+      "expected_time": "after market close / 17:00 ET call",
+      "priority": "highest",
+      "watch_points": ["Aurora deployment timeline", "cash burn", "permits", "customer/offtake updates"],
+      "sources": [
+        {
+          "label": "OKLO investors",
+          "url": "https://oklo.com/investors"
+        },
+        {
+          "label": "OKLO date announcement",
+          "url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
+        }
+      ]
+    },
+    {
+      "ticker": "NBIS",
+      "name": "Nebius Group",
+      "hill": "neocloud_ai_datacenter",
+      "expected_date": "2026-05-13",
+      "expected_time": "before market open / 08:00 ET call",
+      "priority": "highest",
+      "watch_points": ["ARR", "contracted revenue", "capex", "GPU financing", "capacity ramp"],
+      "sources": [
+        {
+          "label": "NBIS date announcement",
+          "url": "https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call"
+        },
+        {
+          "label": "NBIS investor hub",
+          "url": "https://nebius.com/investor-hub"
+        }
+      ]
+    },
+    {
+      "ticker": "TSEM",
+      "name": "Tower Semiconductor",
+      "hill": "optical_photonics",
+      "expected_date": "2026-05-13",
+      "expected_time": "10:00 ET call",
+      "priority": "highest",
+      "watch_points": ["silicon photonics", "1.6T PIC capacity", "prepaid commitments", "Q2 guidance"],
+      "sources": [
+        {
+          "label": "TSEM date announcement",
+          "url": "https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html"
+        },
+        {
+          "label": "TSEM investor news",
+          "url": "https://towersemi.com/investor-relations/"
+        }
+      ]
+    },
+    {
+      "ticker": "285A",
+      "name": "Kioxia Holdings",
+      "hill": "memory_storage",
+      "expected_date": "2026-05-15",
+      "expected_time": "15:30 JST",
+      "priority": "highest",
+      "watch_points": ["NAND pricing", "enterprise SSD", "AI storage demand", "FY2026 guidance"],
+      "sources": [
+        {
+          "label": "Kioxia IR calendar",
+          "url": "https://www.kioxia-holdings.com/en-jp/ir/calendar.html"
+        },
+        {
+          "label": "Kioxia IR library",
+          "url": "https://www.kioxia-holdings.com/en-jp/ir/library.html"
+        }
+      ]
+    },
+    {
+      "ticker": "NTAP",
+      "name": "NetApp",
+      "hill": "memory_storage",
+      "expected_date": "2026-05-28",
+      "expected_time": "after market close / 17:30 ET webcast",
+      "priority": "medium",
+      "watch_points": ["AI storage demand", "all-flash growth", "cloud storage", "FY2027 guide"],
+      "sources": [
+        {
+          "label": "NTAP date announcement",
+          "url": "https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx"
+        },
+        {
+          "label": "NTAP event",
+          "url": "https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
+        }
+      ]
+    }
+  ]
+}

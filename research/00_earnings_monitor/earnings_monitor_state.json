@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-05-11T23:26:54.444102+09:00",
+  "sources": {
+    "CEG|CEG investor event|https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/": {
+      "hash": "9c4909a5bdcf0b536296d288e293704cad036bfc7abeec1599038ff19a5e051e",
+      "last_checked_at": "2026-05-11T23:26:54.444102+09:00",
+      "last_success_at": "2026-05-11T23:26:54.444102+09:00",
+      "url": "https://investors.constellationenergy.com/events/event-details/q1-2026-constellation-energy-corporation-earnings-conference-call/"
+    },
+    "CEG|CEG investor home|https://investors.constellationenergy.com/": {
+      "hash": "488404b2bf2ccf197000c5908fe45505bb61f0920cd00797155a7c08639afd32",
+      "last_checked_at": "2026-05-11T23:26:54.444102+09:00",
+      "last_success_at": "2026-05-11T23:26:54.444102+09:00",
+      "url": "https://investors.constellationenergy.com/"
+    }
+  }
+}

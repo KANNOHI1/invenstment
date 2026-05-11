@@ -1,0 +1,47 @@
+name: Earnings monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC. Run only on known earnings dates/times in the current watch schedule.
+    # GitHub cron has no year field, so old entries should be removed after the season.
+    - cron: "30 15 11 5 *" # CEG, May 11 2026, after 10:00 ET event
+    - cron: "30 21 12 5 *" # OKLO, May 12 2026, after market close / 17:00 ET call
+    - cron: "30 12 13 5 *" # NBIS, May 13 2026, after 08:00 ET call start
+    - cron: "30 14 13 5 *" # TSEM, May 13 2026, after 10:00 ET call start
+    - cron: "00 07 15 5 *" # Kioxia, May 15 2026, after 15:30 JST release
+    - cron: "00 22 28 5 *" # NTAP, May 28 2026, after 17:30 ET webcast start
+
+permissions:
+  contents: write
+
+concurrency:
+  group: earnings-monitor
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Poll earnings sources
+        run: python scripts/earnings_monitor.py --lookahead-days 0 --lookback-days 0
+
+      - name: Commit monitor output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/00_earnings_monitor/earnings_monitor_status.md research/00_earnings_monitor/earnings_monitor_state.json
+          if git diff --cached --quiet; then
+            echo "No monitor changes to commit."
+          else
+            git commit -m "chore: update earnings monitor"
+            git push
+          fi

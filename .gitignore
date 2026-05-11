@@ -1,0 +1,16 @@
+# Local/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Agent/session logs can contain verbose private conversation context.
+codex_logs/
+claude_logs/
+
+# Raw downloaded web pages are local evidence only; keep hashes/status in git.
+research/00_earnings_monitor/raw/
+
+# Python caches
+__pycache__/
+*.py[cod]

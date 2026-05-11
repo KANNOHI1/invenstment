@@ -1,0 +1,191 @@
+﻿# 投資戦略 STATUS
+
+## 現在の状態
+
+- 菅野宏勇さんの継続的な投資戦略ワークスペースとして作成済み。
+- 主な対象は、防御的・コア資産とは分離した高リスクの「ロマン枠」。
+- 既存メモ: `memo\HK_investment_strategy_memo.md`
+- 追加のX投稿調査バッチは`research\00_inbox_x_posts\x_posts_2026-05-07_initial_digest.md`に整理済み。
+- X投稿由来の候補銘柄ユニバースは`watchlist\x_post_candidate_universe_2026-05-07.md`に作成済み。
+- 候補全体を床に広げるための全体マップは`research\00_framework\floor_map_2026-05-07.md`に作成済み。水・冷却インフラも独立した山として追加済み。
+- `AMD`などのAIチップ/アクセラレータ/サーバー周辺と、`XE`などの原子力/SMR/データセンター電力を床マップに追加済み。
+- X投稿#1のマルチバガー論文フレームを`research\00_framework\multibagger_screen_framework_2026-05-07.md`に整理済み。
+- 初期候補の現在株価・時価総額・3倍/5倍/10倍数学を`watchlist\multibagger_screen_initial_2026-05-07.md`に作成済み。
+- メモリ/ストレージ山の今日時点の株価・時価総額・直近決算ソースは`research\memory_storage\memory_storage_source_notes_2026-05-07.md`に整理済み。
+- メモリ/ストレージ山の現在スナップショットは`watchlist\memory_storage_current_snapshot_2026-05-07.md`に作成済み。
+- `SNDK`の深掘りメモは`research\memory_storage\sndk_deep_dive_2026-05-07.md`に作成済み。論点は「Q4 EPS 30〜33ドルがピークか、新しい通常運転か」。
+- `SNDK`の10-Q確認で、RPO416億ドル、12か月内売上認識約15%、契約負債5.11億ドル、Q3全社売上増の主因がASP/GB上昇である点を追加済み。
+- `WDC`の深掘りメモは`research\memory_storage\wdc_deep_dive_2026-05-07.md`に作成済み。Cloud売上89%、Cloud exabytes +36%、ASP/exabyte +9%を確認。
+- `WDC`のQ2決算コールで、2026年分の上位7顧客firm POs、2027/2028年LTA、数量・価格条件を確認済み。
+- `MU`の深掘りメモは`research\memory_storage\mu_deep_dive_2026-05-07.md`に作成済み。Q3ガイド年率化PER約8.7倍、価格主導のピーク利益リスク、5年SCAとRPO未確認を整理。
+- `STX`の深掘りメモは`research\memory_storage\stx_deep_dive_2026-05-07.md`に作成済み。HDD供給制約テーマはWDCと整合するが、Q4年率化PER約39倍で非対称性は重い。
+- `SIMO`の深掘りメモは`research\memory_storage\simo_deep_dive_2026-05-07.md`に作成済み。ADSベース推定時価総額は約83.1億ドルで、MonTitan次第の小型寄り準主役候補として整理。
+- `DELL`の深掘りメモは`research\ai_server_infrastructure\dell_deep_dive_2026-05-07.md`に作成済み。AIサーバー/統合インフラ候補であり、メモリ株としては`MU`/`SNDK`/`SIMO`より優先度を下げる。
+- `DELL`はSBI/マネックス/楽天で国内証券フィルター通過として確認済み。
+- `P`/`NTAP`の深掘りメモは`research\memory_storage\p_ntap_deep_dive_2026-05-07.md`に作成済み。`P`は監視候補、`NTAP`は除外寄り。
+- メモリ/ストレージ山の購入候補比較は`watchlist\memory_storage_buy_candidate_comparison_2026-05-07.md`に作成済み。現時点のたたき台は`MU`50%、`SNDK`30%、`SIMO`20%。
+- 光通信/フォトニクス山の購入候補比較は`watchlist\optical_photonics_buy_candidate_comparison_2026-05-08.md`に作成済み。現時点のたたき台は`FORM`45%、`CRDO`35%、`AAOI`20%。
+- AI物理インフラ山のソースメモは`research\ai_physical_infrastructure\ai_physical_infrastructure_source_notes_2026-05-09.md`、現在スナップショットは`watchlist\ai_physical_infrastructure_current_snapshot_2026-05-09.md`に作成済み。初期優先は`POWL`、`MOD`、`NVT`。
+- `POWL`の深掘りメモは`research\ai_physical_infrastructure\powl_deep_dive_2026-05-09.md`に作成済み。Q2新規受注+97%、book-to-bill 1.7倍、18億ドルバックログ、Q2未反映の4億ドル超DC受注を確認。PER約60倍で安くはないが、AI物理インフラ山の購入候補へ進める。
+- `MOD`の深掘りメモは`research\ai_physical_infrastructure\mod_deep_dive_2026-05-10.md`に作成済み。Data Center sales +78%、FY2026 Data Center salesは前年比+70%超見込み、今後2年50〜70%成長見込み、Performance Technologies切り出しによるClimate Solutions純粋化を整理。購入候補へ進めるが、時価総額約144億ドル・概算EV/調整EBITDA約32倍で高倍率。
+- `NVT`の深掘りメモは`research\ai_physical_infrastructure\nvt_deep_dive_2026-05-10.md`に作成済み。Q1売上+53%、organic +34%、organic orders約+40%、backlog 26億ドル、Systems Protection organic +50%を確認。購入候補には残すが、時価総額約279億ドルで3倍数学が重いためAI物理インフラ山の3番手。
+- AI物理インフラ山の購入候補比較は`watchlist\ai_physical_infrastructure_buy_candidate_comparison_2026-05-10.md`に作成済み。現時点のたたき台は`POWL`50%、`MOD`35%、`NVT`15%。
+- 水・冷却インフラ山を開始し、`research\water_cooling_infrastructure\water_cooling_source_notes_2026-05-10.md`と`watchlist\water_cooling_current_snapshot_2026-05-10.md`を作成済み。初期優先は`WTS`、`BMI`、`PNR`。`ECL`はCoolIT買収でAI液冷テーマ確認、`XYL`/`VLTO`は監視/テーマ確認。
+- `WTS`の深掘りメモは`research\water_cooling_infrastructure\wts_deep_dive_2026-05-10.md`に作成済み。Q1売上+21%、organic +12%、data center cooling sales 2倍超、data centerは10億ドル超TAM、margin accretiveを確認。水・冷却インフラ山の購入候補へ進める。
+- `BMI`の深掘りメモは`research\water_cooling_infrastructure\bmi_deep_dive_2026-05-11.md`に作成済み。Q1売上-9%で悪いが、AMI案件谷、PRASA、2.6〜3.6百万接続パイプライン、CEO含むインサイダー買いを反転材料として整理。購入候補2番手に残す。
+- `PNR`の深掘りメモは`research\water_cooling_infrastructure\pnr_deep_dive_2026-05-11.md`に作成済み。Q1 core sales +1%で成長が地味、データセンター寄与も薄いため購入候補本線から外し監視。
+- `ECL`/`XYL`/`VLTO`のテーマ確認メモは`research\water_cooling_infrastructure\ecl_xyl_vlto_theme_check_2026-05-11.md`に作成済み。`ECL`はCoolIT買収で液冷本丸確認、`XYL`はデータセンター受注確認、`VLTO`は水質監視だが、いずれもロマン枠の購入候補本線からは外す。
+- 水・冷却インフラ山の購入候補比較は`watchlist\water_cooling_buy_candidate_comparison_2026-05-11.md`に作成済み。現時点のたたき台は`WTS`70%、`BMI`30%。
+- 原子力/SMR/データセンター電力山を購入候補比較まで作成済み。現時点のたたき台は`SMR`35%、`XE`30%、`OKLO`25%、`BWXT`10%。`BE`/`VST`/`CEG`は監視、`GEV`はテーマ確認。
+- Neocloud/AIデータセンター運営山を購入候補比較まで作成済み。現時点のたたき台は`IREN`40%、`CORZ`25%、`APLD`20%、`CIFR`15%。`NBIS`/`CRWV`は大型本命として監視、`OSS`は防衛/エッジAI山へ回す。
+- ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`TSEM` 2026-05-13、キオクシア 2026-05-15、`CEG` 2026-05-11公式リリース取得。
+- 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
+- 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
+- 光通信/フォトニクス山のソースメモは`research\optical_photonics\optical_photonics_source_notes_2026-05-07.md`、現在スナップショットは`watchlist\optical_photonics_current_snapshot_2026-05-07.md`に作成済み。初期優先は`FORM`、`CRDO`、`AAOI`。
+- `FORM`の深掘りメモは`research\optical_photonics\form_deep_dive_2026-05-07.md`に作成済み。HBM/DRAM検査ボトルネックとして購入候補へ進めるが、Q2ガイド年率化PER約61倍で高倍率。
+- `CRDO`の深掘りメモは`research\optical_photonics\crdo_deep_dive_2026-05-08.md`に作成済み。Q3売上+201.5%、non-GAAP粗利率68.6%で事業モメンタム最強だが、時価総額約362億ドルと顧客集中が重い。
+- `AAOI`の深掘りメモは`research\optical_photonics\aaoi_deep_dive_2026-05-08.md`に作成済み。800G/1.6T受注とQ1データセンター売上+154%は強いが、Q2も損益トントン付近で粗利率改善が未確認。
+- `FN`の深掘りメモは`research\optical_photonics\fn_deep_dive_2026-05-08.md`に作成済み。Q3売上+39.3%、DCI/HPC需要は強いが、粗利率約11.9%の受託製造モデルで購入候補本線ではなく監視。
+- `AXTI`の深掘りメモは`research\optical_photonics\axti_deep_dive_2026-05-09.md`に作成済み。InP材料ロマンとTongmei上場オプションはあるが、増資後概算時価総額約72億ドルで売上規模に対して先行しすぎのため監視。
+- 国内主要ネット証券での取扱確認メモは`watchlist\broker_availability_2026-05-07.md`に作成済み。最終候補はSBI/マネックス/楽天の少なくともいずれかで買えることを必須条件にする。`MU`/`SNDK`はSBI/マネックス/楽天で確認、`SIMO`はSBI/マネックスで確認扱い、楽天公開リストでは未掲載扱い。
+- 現在の作業哲学:
+  - コア資産は別にある
+  - ロマン枠は集中投資も許容する
+  - 目的は一般的な分散投資ではなく、非対称なマルチバガーリターン
+  - 候補は時価総額の数学、触媒、仮説崩れ条件で判断する
+- 維持すべき重要な視点:
+  - Pattern A: 小型バイナリー株
+  - Pattern B: 既存事業のテーマ再評価
+  - Pattern C: すでに勝者として認識された大型株
+  - MU/GEV型の大型・中型マルチバガーも候補から外さない
+
+## 次アクション
+
+- ユーザーの追加調査素材を引き続き取り込む。
+- 最新株価・時価総額を使った候補比較表を作る。
+- 優先して現在データを確認する山:
+- `SNDK` / `MU` / `WDC` / `STX` / `SIMO` / キオクシア: メモリ・ストレージ再評価
+  - `AMD`, `MRVL`, `SMCI`, `DELL`: AIチップ/アクセラレータ/サーバー周辺
+  - `LITE`, `COHR`, `AAOI`, `CRDO`, `AXTI`, `FN`, `FORM`: 光通信・フォトニクス
+- `TSEM`, `NVT`, `HUBB`, `POWL`, `MOD`, `PWR`, `FIX`: AIインフラの物理ボトルネック
+  - `XE`, `OKLO`, `GEV`, `CEG`, `VST`, `BE`: 原子力/SMR/データセンター電力
+  - `XYL`, `ECL`, `VLTO`, `PNR`, `WTS`, `BMI`: 水・冷却インフラ
+  - `NBIS`, `IREN`, `BE`: Neocloud/電力
+  - `MP`, `USAR`: 希土類
+- #1フレーム後の初期深掘り候補:
+  - `SNDK`
+  - `POWL`
+  - `FN`
+  - `FORM`
+  - `TSEM`
+  - `WTS`
+  - `BMI`
+  - `PNR`
+  - `VLTO`
+- 既存メモの優先候補も現在データで再評価する。
+  - `NTLA`
+  - `TEM`
+  - `TMC`
+  - `BEAM`
+  - `TWST`
+  - `XYL`
+  - `FCX`
+  - `MOD`
+  - `AMBA`
+  - MU型の大型・中型再評価候補
+
+## 未解決・保留事項
+
+- 主戦略をどちらに寄せるか決める必要がある。
+  - バイオ・資源系の高アップサイドバイナリー
+  - AIコモディティ化/物理インフラ受益のテーマ再評価
+  - バイナリー1銘柄 + Pattern B再評価1銘柄のバーベル
+- 本格候補ごとに現在株価、時価総額、直近イベントを確認する。
+- X投稿バッチ内のHBF関連メモリ銘柄が何か特定する。
+- Goldmanの光TAMやAI CapEx主張を、一次または信頼できる二次ソースで確認する。
+- 光通信/フォトニクス山は、`FORM`、`CRDO`、`AAOI`を購入候補、`FN`/`AXTI`を監視、`LITE`/`COHR`を大型本命監視として整理した。`FN`/`AXTI`は深掘り済みだが購入候補本線には入れない。現時点の配分たたき台は`FORM`45%、`CRDO`35%、`AAOI`20%。
+- キオクシアをメモリ/ストレージ山の未深掘り候補として確認する。2026-05-15決算後に更新。
+- 水セクター各社について、データセンター冷却・水処理エクスポージャーが株価に影響するほど大きいか確認する。
+- AI物理インフラ山は`POWL`、`MOD`、`NVT`を深掘り済み。購入候補比較も作成済み。次は別山へ進むか、TSEMの2026-05-13決算後更新を待つ。
+- 水・冷却インフラ山は購入候補比較まで作成済み。次は`WTS`のQ2 data center sales/FCF、`BMI`のQ2/Q3売上逐次改善/PRASA進捗を追跡する。
+- 原子力/SMR/データセンター電力山は購入候補比較まで作成済み。次は`OKLO`の2026-05-12 Q1決算、`CEG`の2026-05-11 Q1決算、`XE`のIPO後初回10-Q/ロックアップ/株数、`SMR`のENTRA1/TVA契約実効性を追跡する。
+- Neocloud/AIデータセンター運営山は購入候補比較まで作成済み。次は`NBIS`の2026-05-13 Q1決算、`IREN`のGPU financingとNVIDIA契約粗利率、`CORZ`の4.5GW pipeline契約済み比率、`CIFR`第3campus lease詳細、`APLD`のPolaris/Delta稼働タイムラインを追跡する。
+- 全山共通で、購入候補比較には次回以降「最新決算日」「次回決算予定日」「決算前に買うか/決算後に買うか」「決算で見る数字」を入れる。
+- 初期スクリーニング表にFCF利回り、EV/EBITDA、売上成長、EBITDA成長、受注残、12か月高値からの距離を追加する。
+- メモリ/ストレージ山は`SNDK`、`WDC`、`MU`、`STX`、`SIMO`、`DELL`、`P`/`NTAP`まで深掘り済み。キオクシアは2026-05-15決算後に更新。
+- `SNDK`については、次にNBM契約の変動価格条項、契約期間、顧客別集中の追加開示がないか確認する。
+- メモリ/ストレージ山はいったん`MU`、`SNDK`、`SIMO`を購入候補、`P`を監視、`DELL`を別山、`WDC`/`STX`をテーマ確認、`NTAP`を除外寄りとして整理する。
+- `MU`/`SNDK`/`SIMO`はいずれも52週高値付近のため、一括ではなく段階的エントリーを前提にする。
+- キオクシアは2026-05-15 15:30 JST予定のFY2025決算後に更新する。
+- 200万円ロマン枠のポジションサイズと段階的エントリールールを定義する。
+- 実際の売買判断前に、仮説崩れ条件と撤退トリガーを定義する。
+- 実際の売買判断前に、候補銘柄がSBI/マネックス/楽天の注文画面で買付可能か再確認する。
+
+## 決定事項
+
+- このワークスペースは一過性ではなく、継続的な投資戦略ワークスペースとして維持する。
+- `AGENTS.md`はプロジェクトローカルのCodexルールファイル。
+- `STATUS.md`はCodexとClaude Codeで共有する現在地ファイル。
+- `codex_logs\`、`claude_logs\`、`research\`、`watchlist\`を継続運用する。
+- `research\`は山ごとにサブフォルダ運用する。初期取り込みは`research\00_inbox_x_posts\`、横断フレームは`research\00_framework\`、個別深掘りは各テーマフォルダに置く。
+- `research\ai_physical_infrastructure\`は、配電、電力制御、冷却、施工、AIデータセンター物理ボトルネックの山として運用する。
+- ユーザーは別途防御的資産を持っているため、このワークスペースの分析を一般的な保守的ポートフォリオ助言に薄めない。
+- 今後このワークスペースで作るドキュメントは原則として日本語で作成する。
+- 最終的な購入候補は、SBI証券、マネックス証券、楽天証券の少なくともいずれかで買付可能であることを必須条件にする。
+
+## 教訓・繰り返し注意点
+
+- 小型株だけがマルチバガー候補だと決めつけない。MU/GEV型のサイクル転換・テーマ再評価でも大型/中型株が大きく動く。
+- SNS上の主張は、一次情報と意見を分けるまで鵜呑みにしない。
+- 本格的な銘柄分析では、古い株価・古い時価総額を使わない。
+- 過去の成功銘柄に過剰適合しない。次の候補が同じ力学を持つのか、表面的にテーマが似ているだけなのかを確認する。
+- 英語で整理すると後から使いづらくなるため、ドキュメントは日本語で残す。
+- 現在の`Pure Storage`系候補は、旧`PSTG`ではなく現ティッカー`P`として扱う。`PSTG`は過去資料・検索用の参照名。
+- 日本の証券会社で取扱がない銘柄は、どれだけテーマが良くても最終購入候補から外す。
+- 株式分割があった銘柄は、株価とEPSの比較基準を必ず分割後ベースに揃える。`POWL`は2026-04-06から3-for-1分割後ベース。
+
+## 更新履歴
+
+- 2026-05-07 最終候補の必須条件として、SBI/マネックス/楽天の少なくともいずれかで買付可能であることを追加し、MU/SNDK/SIMOの初期取扱確認メモを作成。 [Codex]
+- 2026-05-07 ユーザー提供のSBI証券SIMO個別銘柄URLを反映し、SIMOをSBI/マネックスで取扱確認扱いに更新。 [Codex]
+- 2026-05-07 楽天証券の公開米国株取扱リストを確認し、SIMOはSリストおよび公開リスト001〜020横断検索で未掲載扱いに更新。 [Codex]
+- 2026-05-07 DELLを深掘りし、AIサーバー受注640億ドル超・バックログ430億ドルを強気材料、AIサーバーミックスによる粗利率低下を主要リスクとして整理。楽天/マネックス取扱確認扱いも追加。 [Codex]
+- 2026-05-07 SBI証券のDELL外国株式ページを確認し、DELLをSBI/マネックス/楽天すべて確認扱いに更新。 [Codex]
+- 2026-05-07 P/NTAPを深掘りし、PはRPO+40%だが成長/FCF利回り面で監視、NTAPは高収益だが売上+4%で除外寄りと整理。PはSBI、NTAPはSBI/マネックス/楽天で取扱確認。 [Codex]
+- 2026-05-07 メモリ/ストレージ山の購入候補をMU/SNDK/SIMOに絞り、配分たたき台をMU50%・SNDK30%・SIMO20%、段階的エントリー前提として整理。 [Codex]
+- 2026-05-07 SBI証券のMU/SNDK外国株式ページ確認を国内証券フィルターに反映し、購入候補比較表の国内証券欄を確認済みベースに更新。 [Codex]
+- 2026-05-07 次の山として光通信/フォトニクスを開始し、LITE/COHR/AAOI/CRDO/AXTI/FN/FORMの今日時点株価・時価総額・直近決算を初期整理。深掘り優先をFORM、CRDO、AAOIに設定。 [Codex]
+- 2026-05-07 FORMを深掘りし、SK hynix 29.5%/NVIDIA 10.2%の顧客集中、DRAM売上+69.7%、Keystone PhotonicsによるSiPh/CPO検査接続、国内証券フィルター通過を整理。 [Codex]
+- 2026-05-07 `research\`直下の調査メモを山ごとのサブフォルダへ整理し、`research\README.md`と`AGENTS.md`に運用ルールを追記。 [Codex]
+- 2026-05-08 CRDOを深掘りし、Q3売上+201.5%、AEC量産ランプ、契約顧客48%/39%とエンド顧客39%/32%/17%の集中、SBI/マネックス取扱確認を整理。 [Codex]
+- 2026-05-08 AAOIを深掘りし、Q1売上1.511億ドル、データセンター売上+154%、800G/1.6T受注、生産能力拡大、SBI/マネックス取扱確認を整理。 [Codex]
+- 2026-05-08 光通信/フォトニクス山の購入候補をFORM/CRDO/AAOIに絞り、配分たたき台をFORM45%・CRDO35%・AAOI20%、段階的エントリー前提として整理。 [Codex]
+- 2026-05-08 FNを深掘りし、Q3売上12.143億ドル、光通信売上73.2%、DCI/HPC成長、低粗利の受託製造モデル、SBI/マネックス取扱確認を整理。購入候補本線ではなく監視に維持。 [Codex]
+- 2026-05-09 AXTIを深掘りし、Q1売上2,692万ドル、InP材料ロマン、Tongmei STAR Market IPO、6.325億ドル資金調達、輸出許可/地政学リスクを整理。購入候補本線ではなく監視に維持。 [Codex]
+- 2026-05-09 次の山としてAI物理インフラを開始し、POWL/NVT/HUBB/VRT/MOD/PWR/FIX/TSEMの今日時点株価・時価総額・直近決算を初期整理。深掘り優先をPOWL、MOD、NVTに設定。 [Codex]
+- 2026-05-09 POWLを深掘りし、3-for-1株式分割後株価309.39ドル、PER約60倍、Q2未反映の4億ドル超DC受注、SBI/マネックス取扱確認を整理。購入候補へ進めるが段階的エントリー前提。 [Codex]
+- 2026-05-10 MODを深掘りし、株価273.00ドル、時価総額約144億ドル、Data Center sales +78%、FY2026 DC売上+70%超見込み、SBI/マネックス/楽天取扱確認を整理。購入候補へ進めるが高倍率のためPOWLより小さめ候補。 [Codex]
+- 2026-05-10 NVTを深掘りし、株価169.95ドル、概算時価総額約279億ドル、Q1 organic +34%、orders +40%、SBI/マネックス取扱確認を整理。購入候補には残すが3倍数学が重いためPOWL/MODより下位。 [Codex]
+- 2026-05-10 AI物理インフラ山の購入候補比較を作成し、配分たたき台をPOWL50%・MOD35%・NVT15%に設定。 [Codex]
+- 2026-05-10 水・冷却インフラ山を開始し、XYL/ECL/VLTO/PNR/WTS/BMIの今日時点データと直近決算を初期整理。深掘り優先をWTS、BMI、PNRに設定。 [Codex]
+- 2026-05-10 WTSを深掘りし、Q1 data center cooling sales 2倍超、10億ドル超TAM、SBI/マネックス取扱確認を整理。2026-05-11に株価296.90ドル、時価総額約99.5億ドルへ更新。水・冷却インフラ山の購入候補へ進める。 [Codex]
+- 2026-05-11 水・冷却インフラ山を購入候補比較まで進め、BMI/PNR/ECL/XYL/VLTOを追加整理。購入候補はWTS70%・BMI30%、PNRは監視、ECL/XYL/VLTOはテーマ確認に分類。 [Codex]
+- 2026-05-11 原子力/SMR/データセンター電力山を購入候補比較まで進め、SMR35%・XE30%・OKLO25%・BWXT10%を暫定配分、BE/VST/CEGを監視、GEVをテーマ確認に分類。 [Codex]
+- 2026-05-11 Neocloud/AIデータセンター運営山を購入候補比較まで進め、IREN40%・CORZ25%・APLD20%・CIFR15%を暫定配分、NBIS/CRWVを大型本命監視、OSSを防衛/エッジAI山送りに分類。 [Codex]
+- 2026-05-11 ここまで扱った銘柄の決算状況を全チェックし、OKLO/NBIS/TSEM/キオクシア/CEGを最優先更新待ち、LITE/COHRを光通信山の再確認候補として整理。 [Codex]
+- 2026-05-11 今日より前に決算済みで未反映だったLITE/COHR/HUBB/VRT/PWR/FIXをキャッチアップし、LITE/COHRを大型本命監視、HUBBを比較候補、VRT/PWR/FIXをテーマ本丸確認に整理。購入候補配分は変更なし。 [Codex]
+- 2026-05-11 決算予定銘柄の自動監視土台として、監視リスト、Python/PowerShellスクリプト、GitHub Actionsワークフロー、監視結果フォルダを作成。ローカルPython実行でステータス生成を確認し、Actions巡回頻度は定期巡回ではなく既知の決算予定日時だけ実行する形へ調整。 [Codex]
+- 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
+- 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
+- 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]
+- 2026-05-07 WDCを深掘りし、Cloud比率89%、Cloud数量成長+36%、顧客集中71%、Q4年率化PERの重さをSNDK比較として整理。 [Codex]
+- 2026-05-07 WDCのQ2決算コールを確認し、2026年firm POsと2027/2028年LTAは会社発言ベースでは確認済み、ただしRPO開示ではないと整理。 [Codex]
+- 2026-05-07 MUを深掘りし、Q3ガイド年率化PER、DRAM/NAND価格主導、データセンター比率、5年SCA、CapEx 250億ドル超のリスクを整理。 [Codex]
+- 2026-05-07 STXを深掘りし、HDD exabytes +39%、HAMR/Mozaic、FY2027末build-to-order契約、WDCとの比較、現在価格からの3倍数学の重さを整理。 [Codex]
+- 2026-05-07 SIMOを深掘りし、ADSベース推定時価総額83.1億ドル、MonTitan、Q2ガイド、営業CFマイナス/在庫増、MU/SNDKとの候補順位を整理。 [Codex]
+- 2026-05-07 作成済みドキュメントを日本語運用に合わせて修正。今後のドキュメントは原則日本語と明記。 [Codex]
+- 2026-05-07 X投稿#1のマルチバガー論文フレームを採点軸に落とし、主要候補の現在株価・時価総額・3倍/5倍/10倍数学で一次スクリーニングを作成。 [Codex]
+- 2026-05-07 `AMD`はメモリではなくAIチップ/アクセラレータ山に整理し、未掲載だった`XE`を原子力/SMR/データセンター電力山に追加。 [Codex]
+- 2026-05-07 候補テーマを床に広げる全体マップを作成し、水・冷却インフラを独立した分析山として追加。 [Codex]
+- 2026-05-07 26件のX投稿と貼り付け長文候補リストを取り込み、ソーステーマと初期候補ユニバースを整理。 [Codex]
+- 2026-05-07 継続運用の土台として、プロジェクトローカル`AGENTS.md`、共有`STATUS.md`、ログ/調査/ウォッチリスト用フォルダを作成。 [Codex]
