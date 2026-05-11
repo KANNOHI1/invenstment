@@ -22,8 +22,11 @@
 | 高 | CEG | Q1 2026は2026-05-11発表済み | 2026-05-11原子力山に反映済み。大型本命確認、購入候補本線外 |
 | 高 | キオクシア | FY2025決算は2026-05-15予定 | メモリ山で決算後に確認 |
 | 中 | NTAP | Q4/FY2026は2026-05-28予定 | 現在は監視/除外寄りだが、決算後に軽く確認 |
-| 中 | DELL | FY2027 Q1は次回発表待ち。FY2026通期は2026-02-26発表済み | AIサーバー山に戻る時に最新化 |
 | 中 | MOD | FY2026 Q4は次回発表待ち。現メモはQ3 FY2026ベース | AI物理インフラ山に戻る時に最新化 |
+| 高 | MRVL | Q1 FY2027は2026-05-27予定 | AIチップ/アクセラレータ山でcustom AI siliconとinterconnectを決算後に再採点 |
+| 高 | DELL | Q1 FY2027は2026-05-28予定 | AIチップ/アクセラレータ山でAI server revenue/backlog/ISG marginを確認 |
+| 中 | AMBA | Q1 FY2027は2026-05-28予定 | AIチップ/アクセラレータ山でedge AI SoC候補化を決算後に判断 |
+| 中 | AVGO | Q2 FY2026は2026-06-03予定 | custom AI accelerator/AI networking本丸として大型テーマ確認 |
 
 ## プロジェクト開始後に発表済み・反映確認が必要な銘柄
 
@@ -50,7 +53,11 @@
 | TSEM | 2026-05-13予定 | AI物理/光フォトニクスの未深掘り候補として重要 |
 | ONDS | 2026-05-14米国市場前 | 防衛/エッジAI山でロールアップ候補にできるか判断 |
 | キオクシア | 2026-05-15予定 | メモリ/ストレージ山の国内株候補として重要 |
+| MRVL | 2026-05-27米国市場引け後 | AIチップ/アクセラレータ山でcustom AI silicon本命候補として重要 |
 | NTAP | 2026-05-28米国市場引け後 | 監視/除外寄りだがAIストレージ需要の確認 |
+| DELL | 2026-05-28予定 | AI server巨大受注の利益率確認 |
+| AMBA | 2026-05-28予定 | edge AI SoCの最軽量候補として重要 |
+| AVGO | 2026-06-03米国市場引け後 | custom AI/AI networking本丸の大型テーマ確認 |
 
 ## 山別の決算状況
 
@@ -148,6 +155,18 @@
 | KTOS | Q1 2026は2026-05-06発表 | 2026-05-12防衛/エッジAI山で反映済み | 大型寄り監視 |
 | PLTR | Q1 2026は2026-05-04発表 | 2026-05-12防衛/エッジAI山で反映済み | テーマ本丸。購入候補本線外 |
 
+### AIチップ / アクセラレータ / AIサーバー周辺
+
+| 銘柄 | 最新決算/予定 | 状況 | 対応 |
+| --- | --- | --- | --- |
+| AMD | Q1 2026は2026-05-05発表 | 2026-05-12 AIチップ山で深掘り済み | Meta/OpenAI 6GW、Data Center +57%、FCFは強い。3倍狙いの大型再評価枠 |
+| MRVL | Q1 FY2027は2026-05-27予定 | 決算待ち | custom AI silicon、data center revenue、Celestial AI/XConn、FY2027 guideを確認 |
+| SMCI | Q3 FY2026は2026-05-05発表 | 2026-05-12 AIチップ山で深掘り済み | 条件付き候補。Q4でgross margin、operating cash flow、inventory/receivables、輸出管理調査を確認 |
+| DELL | Q1 FY2027は2026-05-28予定 | 決算待ち | AI server revenue、backlog、ISG operating margin、cash flowを確認 |
+| ARM | Q4/FY2026は2026-05-06発表 | 2026-05-12 AIチップ山で反映済み | data center royalty、cloud/edge AI royaltyを大型テーマ確認 |
+| AVGO | Q2 FY2026は2026-06-03予定 | 決算待ち | AI semiconductor revenue、custom accelerator demand、AI networkingを確認 |
+| AMBA | Q1 FY2027は2026-05-28予定 | 決算待ち | edge AI revenue、CV7 ramp、gross margin、Q2 guideを確認 |
+
 ## 更新が必要な既存メモ
 
 ### すぐ更新するべき
@@ -167,6 +186,11 @@
 
 - `watchlist\defense_edge_ai_drones_current_snapshot_2026-05-12.md`
   - `ONDS`の2026-05-14 Q1後に、`OSS`/`RCAT`/`ONDS`の購入候補比較を進める。
+
+- `watchlist\ai_chips_accelerators_current_snapshot_2026-05-12.md`
+  - `MRVL`、`DELL`、`AMBA`、`AVGO`は今後の決算後に再採点。AIチップ/アクセラレータ山の購入候補比較は、それらの決算前には確定しない。
+  - `SMCI`は深掘り済み。主軸ではなく条件付き候補。
+  - `AMD`は深掘り済み。3倍狙いの大型再評価枠。
 
 ### 次の山に戻る時に更新
 
@@ -216,4 +240,11 @@
 - Ondas Q1 2026日程: https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may
 - One Stop Systems Q1 2026: https://www.nasdaq.com/press-release/one-stop-systems-reports-q1-2026-results-2026-05-06
 - Red Cat Q1 2026: https://ir.redcatholdings.com/news-events/press-releases/detail/222/red-cat-reports-q1-2026-q1-revenue-growth-of-849-yy-q1-gross-margins-increase-of-64-8-percent-points-yy-gross-margins-increase-199-sequentially-from-q4-2025
+- AMD Q1 2026: https://www.amd.com/en/newsroom/press-releases/2026-5-5-amd-reports-first-quarter-2026-financial-results.html
+- Marvell Q1 FY2027日程: https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results
+- Supermicro Q3 FY2026: https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Third-Quarter-Fiscal-Year-2026-Financial-Results/default.aspx
+- Dell investor events: https://investors.delltechnologies.com/news-events/upcoming-events
+- Arm Q4/FY2026: https://newsroom.arm.com/news/arm-q4-fye26-results
+- Broadcom Q2 FY2026日程: https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday
+- Ambarella investor releases: https://investor.ambarella.com/press-releases
 - 今日より前の未反映決算キャッチアップ: `watchlist\pre_today_earnings_catchup_2026-05-11.md`

@@ -44,6 +44,13 @@
 - 防衛/エッジAI/ドローン山を開始し、`research\defense_edge_ai_drones\defense_edge_ai_drones_source_notes_2026-05-12.md`と`watchlist\defense_edge_ai_drones_current_snapshot_2026-05-12.md`を作成済み。初期深掘り優先は`OSS`、`RCAT`、`ONDS`。`AVAV`/`KTOS`は大型寄り監視、`PLTR`はテーマ本丸確認。
 - 防衛/エッジAI/ドローン山は購入候補比較まで作成済み。現時点の実行可能たたき台は`OSS`60%、`RCAT`40%。`ONDS`は2026-05-14 Q1決算通過後に入れる条件付き候補で、通過後案は`OSS`45%、`RCAT`30%、`ONDS`25%。
 - `OSS`/`ONDS`/`RCAT`/`AVAV`/`KTOS`/`PLTR`はSBI証券とマネックス証券で国内証券フィルター通過扱い。楽天証券の公開米国株式取扱リスト001〜020では未掲載。
+- AIチップ/アクセラレータ/AIサーバー周辺山を開始し、`research\ai_chips_accelerators\ai_chips_accelerators_source_notes_2026-05-12.md`と`watchlist\ai_chips_accelerators_current_snapshot_2026-05-12.md`を作成済み。初期対象は`AMD`/`MRVL`/`SMCI`/`DELL`/`ARM`/`AVGO`/`AMBA`。
+- AIチップ/アクセラレータ山の暫定深掘り順は`SMCI`、`AMBA`、`MRVL`、`AMD`。ただし`AMBA`/`MRVL`/`DELL`/`AVGO`は今後の決算を待って再採点する。
+- `SMCI`の深掘りメモは`research\ai_chips_accelerators\smci_deep_dive_2026-05-12.md`に作成済み。売上規模に対して時価総額は軽いが、粗利率、運転資金、ネットデット、輸出管理・ガバナンスが重いため、主軸ではなく条件付き候補として扱う。
+- `AMD`の深掘りメモは`research\ai_chips_accelerators\amd_deep_dive_2026-05-12.md`に作成済み。Meta/OpenAI 6GW、Data Center +57%、FCF、粗利率は強いが、現在価格は期待先行。3倍狙いの大型再評価枠として残す。
+- `AMD`/`MRVL`/`SMCI`/`DELL`/`ARM`/`AVGO`/`AMBA`はSBI証券とマネックス証券で国内証券フィルター通過扱い。`AMD`/`MRVL`/`DELL`/`ARM`は楽天証券公開リストでも確認、`SMCI`/`AVGO`/`AMBA`は公開リスト001〜020では未掲載。
+- 決算監視に`MRVL` 2026-05-27、`DELL`/`AMBA` 2026-05-28、`AVGO` 2026-06-03を追加済み。
+- AIチップ/アクセラレータ山は、`MRVL`/`DELL`/`AMBA`/`AVGO`の決算待ちのため購入候補比較をまだ確定しない。次にこの山へ戻るトリガーは、GitHub Issue通知またはユーザーからの決算通知。
 - ここまで扱った銘柄の決算状況を`watchlist\earnings_status_audit_2026-05-11.md`に監査済み。最優先更新待ちは`OKLO` 2026-05-12、`NBIS` 2026-05-13、`USAR` 2026-05-13、`TSEM` 2026-05-13、`ONDS` 2026-05-14、キオクシア 2026-05-15。`CEG` Q1は反映済み。
 - 今日より前に決算済みで未反映だった`LITE`/`COHR`/`HUBB`/`VRT`/`PWR`/`FIX`は`watchlist\pre_today_earnings_catchup_2026-05-11.md`で確認済み。購入候補配分は光通信山`FORM`45%・`CRDO`35%・`AAOI`20%、AI物理インフラ山`POWL`50%・`MOD`35%・`NVT`15%を維持。
 - 今後の決算監視用に`watchlist\earnings_monitor_schedule_2026-05-11.json`、`scripts\earnings_monitor.py`、`.github\workflows\earnings-monitor.yml`、`research\00_earnings_monitor\`を作成済み。GitHubリポジトリ化してpushすれば、既知の決算予定日時だけActions巡回できる。
@@ -120,6 +127,7 @@
 - Neocloud/AIデータセンター運営山は購入候補比較まで作成済み。次は`NBIS`の2026-05-13 Q1決算、`IREN`のGPU financingとNVIDIA契約粗利率、`CORZ`の4.5GW pipeline契約済み比率、`CIFR`第3campus lease詳細、`APLD`のPolaris/Delta稼働タイムラインを追跡する。
 - 希土類/磁石/ロボット供給網山は`MP`と`USAR`を初期整理済み。次は`USAR`の2026-05-13 Q1決算後に、現金、burn、株数、Serra Verde買収条件、Stillwater 600MTPA rampを確認して購入候補比較を確定する。
 - 防衛/エッジAI/ドローン山は購入候補比較まで作成済み。次は`ONDS`の2026-05-14 Q1後に、正式配分へ入れるか判断する。`OSS`はQ2以降のbook-to-bill/RPO/FCF、`RCAT`はgross margin/営業CF/SRR追加POを追跡する。
+- AIチップ/アクセラレータ山は`SMCI`と`AMD`まで深掘り済み。`MRVL` 2026-05-27、`DELL`/`AMBA` 2026-05-28、`AVGO` 2026-06-03の決算待ちとして一時停止し、決算後に購入候補比較へ反映する。
 - 全山共通で、購入候補比較には次回以降「最新決算日」「次回決算予定日」「決算前に買うか/決算後に買うか」「決算で見る数字」を入れる。
 - 初期スクリーニング表にFCF利回り、EV/EBITDA、売上成長、EBITDA成長、受注残、12か月高値からの距離を追加する。
 - メモリ/ストレージ山は`SNDK`、`WDC`、`MU`、`STX`、`SIMO`、`DELL`、`P`/`NTAP`まで深掘り済み。キオクシアは2026-05-15決算後に更新。
@@ -191,6 +199,10 @@
 - 2026-05-11 希土類/磁石/ロボット供給網山を開始し、MP/USARの現在株価・時価総額・直近決算/イベントを整理。USARの2026-05-13 Q1を決算監視対象に追加し、MP/USARの国内証券フィルターをSBI/マネックス通過扱いに更新。 [Codex]
 - 2026-05-12 防衛/エッジAI/ドローン山を開始し、OSS/RCAT/ONDSを初期深掘り候補、AVAV/KTOSを大型寄り監視、PLTRをテーマ本丸確認として整理。ONDSの2026-05-14 Q1を決算監視対象に追加。 [Codex]
 - 2026-05-12 防衛/エッジAI/ドローン山を購入候補比較まで進め、決算前の実行可能たたき台をOSS60%・RCAT40%、ONDS決算通過後案をOSS45%・RCAT30%・ONDS25%として整理。 [Codex]
+- 2026-05-12 AIチップ/アクセラレータ/AIサーバー周辺山を開始し、AMD/MRVL/SMCI/DELL/ARM/AVGO/AMBAの現在株価・時価総額・直近決算/予定と国内証券フィルターを整理。MRVL/DELL/AMBA/AVGOを決算監視に追加し、初期深掘り順をSMCI、AMBA、MRVL、AMDに設定。 [Codex]
+- 2026-05-12 SMCIを深掘りし、FY2026売上ガイドに対するP/Sの軽さを爆益材料、gross margin 8〜10%台・営業CF大幅マイナス・在庫/売掛金・輸出管理調査を主要リスクとして整理。主軸ではなく条件付き候補に分類。 [Codex]
+- 2026-05-12 AMDを深掘りし、Meta/OpenAI 6GW、Data Center +57%、Q1 FCF 26億ドルを強気材料、現在時価総額約7,650億ドルと高期待バリュエーション、MI450/MI455実行リスク、OpenAIワラント希薄化を主要リスクとして整理。3倍狙いの大型再評価枠に分類。 [Codex]
+- 2026-05-12 AIチップ/アクセラレータ山はMRVL/DELL/AMBA/AVGOの決算待ちで購入候補比較を保留することを、現在スナップショット・決算監査・STATUSに明記。 [Codex]
 - 2026-05-07 メモリ/ストレージ山について、今日時点の株価・時価総額・直近決算ソースを確認し、PSTGを現ティッカーPとして扱うよう整理。 [Codex]
 - 2026-05-07 SNDKの深掘りを開始し、Q4ガイド年率化PER、NBM契約、3倍/5倍/10倍数学、ピークサイクル崩れ条件を整理。 [Codex]
 - 2026-05-07 SNDKの10-Qを確認し、RPO416億ドルと契約負債5.11億ドルを強気材料、全社ASP依存と12か月内認識15%を警戒材料として追記。 [Codex]

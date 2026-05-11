@@ -11,6 +11,7 @@
 | `00_earnings_monitor` | 決算予定銘柄の公式IR巡回結果、自動監視ステータス、HTMLスナップショット |
 | `memory_storage` | メモリ、ストレージ、HDD/SSD、NAND/DRAM関連 |
 | `optical_photonics` | 光通信、フォトニクス、CPO、SiPh、検査 |
+| `ai_chips_accelerators` | AIチップ、GPU/アクセラレータ、カスタムASIC、AIサーバー、エッジAI SoC |
 | `ai_server_infrastructure` | AIサーバー、統合インフラ、サーバーベンダー |
 | `ai_physical_infrastructure` | 配電、電力制御、冷却、施工、AIデータセンター物理ボトルネック |
 | `water_cooling_infrastructure` | 水処理、水計測、液冷、水インフラ、データセンター冷却周辺 |

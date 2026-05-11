@@ -154,6 +154,82 @@
           "url": "https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
         }
       ]
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "hill": "ai_chips_accelerators",
+      "expected_date": "2026-05-27",
+      "expected_time": "after market close / 13:45 PT call",
+      "priority": "high",
+      "watch_points": ["custom AI silicon", "data center revenue", "Celestial AI and XConn integration", "FY2027 guide", "optical interconnect"],
+      "sources": [
+        {
+          "label": "MRVL date announcement",
+          "url": "https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results"
+        },
+        {
+          "label": "MRVL investor home",
+          "url": "https://investor.marvell.com/"
+        }
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "hill": "ai_chips_accelerators",
+      "expected_date": "2026-05-28",
+      "expected_time": "15:30 CDT",
+      "priority": "high",
+      "watch_points": ["AI-optimized server revenue", "AI backlog", "ISG operating margin", "FY2027 AI server guide", "cash flow"],
+      "sources": [
+        {
+          "label": "DELL investor home",
+          "url": "https://investors.delltechnologies.com/"
+        },
+        {
+          "label": "DELL upcoming events",
+          "url": "https://investors.delltechnologies.com/news-events/upcoming-events"
+        }
+      ]
+    },
+    {
+      "ticker": "AMBA",
+      "name": "Ambarella",
+      "hill": "ai_chips_accelerators",
+      "expected_date": "2026-05-28",
+      "expected_time": "13:30 PT",
+      "priority": "medium",
+      "watch_points": ["edge AI revenue", "CV7 ramp", "gross margin", "automotive and IoT demand", "FY2027 Q2 guide"],
+      "sources": [
+        {
+          "label": "AMBA date announcement",
+          "url": "https://investor.ambarella.com/press-releases"
+        },
+        {
+          "label": "AMBA investor home",
+          "url": "https://investor.ambarella.com/"
+        }
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "hill": "ai_chips_accelerators",
+      "expected_date": "2026-06-03",
+      "expected_time": "after market close / 14:00 PT call",
+      "priority": "medium",
+      "watch_points": ["AI semiconductor revenue", "custom accelerator demand", "AI networking", "Q3 guide", "customer concentration"],
+      "sources": [
+        {
+          "label": "AVGO date announcement",
+          "url": "https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday"
+        },
+        {
+          "label": "AVGO investor home",
+          "url": "https://investors.broadcom.com/"
+        }
+      ]
     }
   ]
 }

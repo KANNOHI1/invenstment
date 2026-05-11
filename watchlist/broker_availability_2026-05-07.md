@@ -28,6 +28,12 @@
 | P | 確認 | 未確認 | 公開リストでは未掲載 | 国内証券フィルター通過。ただしSBI中心 |
 | NTAP | 確認 | 確認 | 確認 | 国内証券フィルター通過 |
 | DELL | 確認 | 確認扱い | 確認 | 国内証券フィルター通過 |
+| AMD | 確認 | 確認 | 確認 | 国内証券フィルター通過 |
+| MRVL | 確認 | 確認 | 確認 | 国内証券フィルター通過 |
+| SMCI | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| ARM | 確認 | 確認 | 確認 | 国内証券フィルター通過 |
+| AVGO | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
+| AMBA | 確認 | 確認 | 公開リスト001〜020では未掲載 | 国内証券フィルター通過 |
 | FORM | 確認 | 確認 | 公開リストでは未掲載 | 国内証券フィルター通過 |
 | CRDO | 確認 | 確認 | 公開リストでは未掲載 | 国内証券フィルター通過 |
 | AAOI | 確認 | 確認 | 公開リストでは未掲載 | 国内証券フィルター通過 |
@@ -183,6 +189,13 @@
 - Yahoo!ファイナンス日本版の各銘柄ページに、マネックス証券への取引導線あり。
 - 楽天証券の公開米国株式取扱リスト001〜020横断では、`OSS`/`ONDS`/`RCAT`/`AVAV`/`KTOS`/`PLTR`はヒットせず。
 
+### AIチップ / アクセラレータ / AIサーバー周辺候補
+
+- SBI証券の外国株式ページで`AMD`/`MRVL`/`SMCI`/`DELL`/`ARM`/`AVGO`/`AMBA`を確認。
+- Yahoo!ファイナンス日本版の各銘柄ページに、マネックス証券への取引導線あり。
+- 楽天証券の公開米国株式取扱リスト001〜020横断では、`AMD`/`MRVL`/`DELL`/`ARM`を確認。`SMCI`/`AVGO`/`AMBA`は未掲載。
+- したがって、この山の初期対象は全銘柄が国内証券フィルター通過。ただし売買直前は注文画面で再確認する。
+
 ## ソース
 
 - Yahoo!ファイナンス MU: https://finance.yahoo.co.jp/quote/MU
@@ -233,7 +246,14 @@
 - Yahoo!ファイナンス AVAV: https://finance.yahoo.co.jp/quote/AVAV
 - Yahoo!ファイナンス KTOS: https://finance.yahoo.co.jp/quote/KTOS
 - Yahoo!ファイナンス PLTR: https://finance.yahoo.co.jp/quote/PLTR
+- Yahoo!ファイナンス AMD: https://finance.yahoo.co.jp/quote/AMD
+- Yahoo!ファイナンス MRVL: https://finance.yahoo.co.jp/quote/MRVL
+- Yahoo!ファイナンス SMCI: https://finance.yahoo.co.jp/quote/SMCI
+- Yahoo!ファイナンス ARM: https://finance.yahoo.co.jp/quote/ARM
+- Yahoo!ファイナンス AVGO: https://finance.yahoo.co.jp/quote/AVGO
+- Yahoo!ファイナンス AMBA: https://finance.yahoo.co.jp/quote/AMBA
 - 楽天証券 米国株式取扱銘柄一覧 D: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_004.html
+- 楽天証券 米国株式取扱銘柄一覧 A: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_001.html
 - 楽天証券 米国株式取扱銘柄一覧 M: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_008.html
 - 楽天証券 米国株式取扱銘柄一覧 N: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_009.html
 - 楽天証券 米国株式取扱銘柄一覧 S: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_011.html
