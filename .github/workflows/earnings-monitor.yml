@@ -102,7 +102,10 @@ jobs:
               body_path.write_text("\n".join(lines), encoding="utf-8")
               index_lines.append(f"{title}\t{body_path}")
 
-          pathlib.Path(".tmp_earnings_issues/index.tsv").write_text("\n".join(index_lines), encoding="utf-8")
+          index_text = "\n".join(index_lines)
+          if index_text:
+              index_text += "\n"
+          pathlib.Path(".tmp_earnings_issues/index.tsv").write_text(index_text, encoding="utf-8")
           PY
 
           if [ ! -s .tmp_earnings_issues/index.tsv ]; then
@@ -110,7 +113,7 @@ jobs:
             exit 0
           fi
 
-          while IFS=$'\t' read -r title body_file; do
+          while IFS=$'\t' read -r title body_file || [ -n "$title" ]; do
             if gh issue list --state open --search "$title in:title" --json title --jq '.[].title' | grep -Fx "$title" >/dev/null; then
               echo "Issue already exists: $title"
             else
