@@ -6,6 +6,8 @@
 
 2026-05-13追記: `NBIS`のQ1 2026決算が出たため、`NBIS`は「大型本命監視」から「大型でも候補化を検討」に格上げする。詳細は`research/neocloud_ai_datacenter/nbis_q1_2026_update_2026-05-13.md`。
 
+2026-05-13追記2: `CRWV`と`IREN`をNBISと同じ物差しで深掘り。`CRWV`は大型勝者枠、`IREN`はNeocloud山の主力ロマン候補という扱いを維持。詳細は`research/neocloud_ai_datacenter/crwv_deep_dive_2026-05-13.md`と`research/neocloud_ai_datacenter/iren_deep_dive_2026-05-13.md`。
+
 | 順位 | 銘柄 | 暫定配分 | 理由 |
 | ---: | --- | ---: | --- |
 | 1 | IREN | 40% | NVIDIA 34億ドル契約、31億ドル契約済みARR、5GW pipeline。AI Cloud転換の主役 |
@@ -13,7 +15,7 @@
 | 3 | APLD | 20% | 100MW稼働済み、CoreWeave lease、Delta/Polaris pipeline。実行確認が進む |
 | 4 | CIFR | 15% | 3件目AI campus lease、Barber Lake/Black Pearl進捗。高リスク高オプション |
 
-`NBIS`はQ1通過後に候補化を検討。`CRWV`は大型本命として監視。`OSS`はNeocloudではなく、防衛/エッジAI山へ回す。
+`NBIS`はQ1通過後に候補化を検討。`CRWV`は大型勝者枠として少量候補。`IREN`は主力候補を維持。`OSS`はNeocloudではなく、防衛/エッジAI山へ回す。
 
 ## 比較表
 
@@ -34,6 +36,8 @@
 この山の中心は「電力とデータセンターをAI売上に変える能力」。`IREN`はNVIDIA契約、契約済みARR、5GW secured powerの3点が揃う。
 
 時価総額はすでに約204億ドルだが、31億ドル契約済みARRと37億ドルARR目標が本当に立つなら、3倍の数学はまだ議論できる。
+
+2026-05-13更新: 今日時点の時価総額は約124億ドル。ARR under contract 31億ドルに対するEV/ARRは約4.4倍、2026年末ARR目標37億ドルに対しては約3.7倍。`NBIS`/`CRWV`より実行リスクは高いが、成功シナリオに対する株価の軽さは一番ある。
 
 ### CORZを2位にする理由
 
@@ -67,7 +71,9 @@ Q1 2026で売上3.99億ドル、前年比+684%、adjusted EBITDA 1.295億ドル�
 
 事業規模は最強。Q1売上20.78億ドル、backlog 994億ドル、active power 1GW超。
 
-ただし時価総額約602億ドルで、Q1 net lossやinterest expenseも大きい。大型勝者枠で監視。
+2026-05-13更新: 今日時点の時価総額は約486億ドル、通常EVは約702億ドル、リース込みEVは約802億ドル。FY2026売上120〜130億ドルに対するEV/Salesは通常EVで約5.4〜5.8倍。backlogに対するEVは約0.7〜0.8倍で、backlogが本当に利益に変わるなら割高とは言い切れない。
+
+ただしQ1 net loss 7.40億ドル、interest expense 5.36億ドル、Q1 PPE購入76.95億ドル。大型勝者枠として少量候補だが、ロマン枠の主力爆発候補ではない。
 
 ### OSS
 
