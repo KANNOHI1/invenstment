@@ -1,21 +1,8 @@
 {
-  "updated_at": "2026-05-13T15:20:06.727669+00:00",
+  "updated_at": "2026-05-13T16:40:00.808605+00:00",
   "alerts": [
     {
-      "timestamp": "2026-05-13 15:20:06",
-      "ticker": "NBIS",
-      "kind": "earnings",
-      "expected_date": "2026-05-13",
-      "expected_time": "before market open / 08:00 ET call",
-      "priority": "highest",
-      "hill": "neocloud_ai_datacenter",
-      "signal": "changed",
-      "label": "NBIS date announcement",
-      "source_url": "https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call",
-      "message": "ページ変化を検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call"
-    },
-    {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "NBIS",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -28,7 +15,7 @@
       "message": "決算関連キーワードを検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "NBIS",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -41,7 +28,7 @@
       "message": "ページ変化を検出。source: https://nebius.com/investor-hub"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "NBIS",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -54,7 +41,7 @@
       "message": "決算関連キーワードを検出。source: https://nebius.com/investor-hub"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "TSEM",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -67,7 +54,7 @@
       "message": "ページ変化を検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "TSEM",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -80,7 +67,7 @@
       "message": "決算関連キーワードを検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "TSEM",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -93,7 +80,7 @@
       "message": "ページ変化を検出。source: https://towersemi.com/investor-relations/"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "USAR",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -106,7 +93,7 @@
       "message": "ページ変化を検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "USAR",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -119,7 +106,7 @@
       "message": "決算関連キーワードを検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "USAR",
       "kind": "earnings",
       "expected_date": "2026-05-13",
@@ -132,7 +119,7 @@
       "message": "ページ変化を検出。source: https://investors.usare.com/"
     },
     {
-      "timestamp": "2026-05-13 15:20:06",
+      "timestamp": "2026-05-13 16:40:00",
       "ticker": "USAR",
       "kind": "earnings",
       "expected_date": "2026-05-13",
