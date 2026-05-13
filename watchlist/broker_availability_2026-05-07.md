@@ -166,6 +166,13 @@
 - Yahoo!ファイナンス日本版の各銘柄ページに、マネックス証券への取引導線あり。
 - 楽天証券の公開米国株式取扱リスト001〜020横断では、`XYL`/`ECL`/`VLTO`/`PNR`/`WTS`/`BMI`はヒットせず。
 
+### 水・冷却インフラ拡張候補
+
+- 2026-05-13に、Yahoo!ファイナンス日本版の各銘柄ページでマネックス証券への取引導線を確認。
+- 対象: `TTI`/`TTEK`/`DCI`/`MWA`/`WMS`/`ZWS`/`CECO`/`GHM`/`FLS`/`IEX`/`GGG`/`ITT`/`AOS`。
+- このうち、現時点で水山の購入候補に加えるのは`TTI`のみ。`TTEK`/`MWA`/`ZWS`/`DCI`/`WMS`は監視。
+- SBI証券と楽天証券は未確認。最終売買前に注文画面で再確認する。
+
 ### 原子力 / SMR / データセンター電力候補
 
 - SBI証券の外国株式ページで`XE`/`OKLO`/`GEV`/`CEG`/`VST`/`BE`/`BWXT`/`SMR`を確認。
@@ -259,6 +266,19 @@
 - Yahoo!ファイナンス AVGO: https://finance.yahoo.co.jp/quote/AVGO
 - Yahoo!ファイナンス AMBA: https://finance.yahoo.co.jp/quote/AMBA
 - Yahoo!ファイナンス TEM: https://finance.yahoo.co.jp/quote/TEM
+- Yahoo!ファイナンス TTI: https://finance.yahoo.co.jp/quote/TTI
+- Yahoo!ファイナンス TTEK: https://finance.yahoo.co.jp/quote/TTEK
+- Yahoo!ファイナンス DCI: https://finance.yahoo.co.jp/quote/DCI
+- Yahoo!ファイナンス MWA: https://finance.yahoo.co.jp/quote/MWA
+- Yahoo!ファイナンス WMS: https://finance.yahoo.co.jp/quote/WMS
+- Yahoo!ファイナンス ZWS: https://finance.yahoo.co.jp/quote/ZWS
+- Yahoo!ファイナンス CECO: https://finance.yahoo.co.jp/quote/CECO
+- Yahoo!ファイナンス GHM: https://finance.yahoo.co.jp/quote/GHM
+- Yahoo!ファイナンス FLS: https://finance.yahoo.co.jp/quote/FLS
+- Yahoo!ファイナンス IEX: https://finance.yahoo.co.jp/quote/IEX
+- Yahoo!ファイナンス GGG: https://finance.yahoo.co.jp/quote/GGG
+- Yahoo!ファイナンス ITT: https://finance.yahoo.co.jp/quote/ITT
+- Yahoo!ファイナンス AOS: https://finance.yahoo.co.jp/quote/AOS
 - 楽天証券 米国株式取扱銘柄一覧 D: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_004.html
 - 楽天証券 米国株式取扱銘柄一覧 A: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_001.html
 - 楽天証券 米国株式取扱銘柄一覧 M: https://www.rakuten-sec.co.jp/ITS/foreign/stock_info/us_description_list_008.html
