@@ -1,6 +1,6 @@
 # 決算/イベント自動監視ステータス
 
-- 最終確認: 2026-05-13T22:46:44+09:00
+- 最終確認: 2026-05-13T15:20:06+00:00
 - 監視方式: GitHub Actionsまたはローカル実行で、予定日周辺の公式IR/ニュース/イベントページを巡回
 - 注意: 自動検出は一次確認の補助。最終判断は公式リリース本文を読んで反映する
 
@@ -24,14 +24,14 @@
 
 ## 検出ログ
 
-- 2026-05-13 22:46:44 `NBIS` NBIS date announcement: ページ変化を検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call
-- 2026-05-13 22:46:44 `NBIS` NBIS date announcement: 決算関連キーワードを検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call
-- 2026-05-13 22:46:44 `NBIS` NBIS investor hub: ページ変化を検出。source: https://nebius.com/investor-hub
-- 2026-05-13 22:46:44 `NBIS` NBIS investor hub: 決算関連キーワードを検出。source: https://nebius.com/investor-hub
-- 2026-05-13 22:46:44 `TSEM` TSEM date announcement: ページ変化を検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html
-- 2026-05-13 22:46:44 `TSEM` TSEM date announcement: 決算関連キーワードを検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html
-- 2026-05-13 22:46:44 `TSEM` TSEM investor news: ページ変化を検出。source: https://towersemi.com/investor-relations/
-- 2026-05-13 22:46:44 `USAR` USAR date announcement: ページ変化を検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results
-- 2026-05-13 22:46:44 `USAR` USAR date announcement: 決算関連キーワードを検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results
-- 2026-05-13 22:46:44 `USAR` USAR investor home: ページ変化を検出。source: https://investors.usare.com/
-- 2026-05-13 22:46:44 `USAR` USAR investor home: 決算関連キーワードを検出。source: https://investors.usare.com/
+- 2026-05-13 15:20:06 `NBIS` NBIS date announcement: ページ変化を検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call
+- 2026-05-13 15:20:06 `NBIS` NBIS date announcement: 決算関連キーワードを検出。source: https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call
+- 2026-05-13 15:20:06 `NBIS` NBIS investor hub: ページ変化を検出。source: https://nebius.com/investor-hub
+- 2026-05-13 15:20:06 `NBIS` NBIS investor hub: 決算関連キーワードを検出。source: https://nebius.com/investor-hub
+- 2026-05-13 15:20:06 `TSEM` TSEM date announcement: ページ変化を検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html
+- 2026-05-13 15:20:06 `TSEM` TSEM date announcement: 決算関連キーワードを検出。source: https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html
+- 2026-05-13 15:20:06 `TSEM` TSEM investor news: ページ変化を検出。source: https://towersemi.com/investor-relations/
+- 2026-05-13 15:20:06 `USAR` USAR date announcement: ページ変化を検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results
+- 2026-05-13 15:20:06 `USAR` USAR date announcement: 決算関連キーワードを検出。source: https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results
+- 2026-05-13 15:20:06 `USAR` USAR investor home: ページ変化を検出。source: https://investors.usare.com/
+- 2026-05-13 15:20:06 `USAR` USAR investor home: 決算関連キーワードを検出。source: https://investors.usare.com/
