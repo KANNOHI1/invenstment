@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-05-12T22:41:20.391080+00:00",
+  "updated_at": "2026-05-13T22:46:44.423836+09:00",
   "sources": {
-    "OKLO|OKLO investors|https://oklo.com/investors": {
-      "hash": "a75cdfd1cbdb087faf951bf3a3039aca62b918dd670f40e5940ac6419d924d76",
-      "last_checked_at": "2026-05-12T22:41:20.391080+00:00",
-      "last_success_at": "2026-05-12T22:41:20.391080+00:00",
-      "url": "https://oklo.com/investors"
+    "NBIS|NBIS date announcement|https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call": {
+      "hash": "ed72c29b17af34349c5ce0dbc817bb8c8aff8c7722b0e4495cc55c7fc8c6e36b",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call"
     },
-    "OKLO|OKLO date announcement|https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call": {
-      "hash": "0b01c6895dd5616750f92c6fd391b3a4310174c89067c211f664b12979357c12",
-      "last_checked_at": "2026-05-12T22:41:20.391080+00:00",
-      "last_success_at": "2026-05-12T22:41:20.391080+00:00",
-      "url": "https://www.nasdaq.com/press-release/oklo-announces-date-first-quarter-2026-financial-results-and-business-update-call"
+    "NBIS|NBIS investor hub|https://nebius.com/investor-hub": {
+      "hash": "2fa2df8bdd75a310303cd3cf362914a90e927cd327fcade2e21391652a3553c9",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://nebius.com/investor-hub"
+    },
+    "TSEM|TSEM date announcement|https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html": {
+      "hash": "173a4241589fe3cf2de15c7c63dad7d537ea6277cc184cdf736731cb8f8a234c",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html"
+    },
+    "TSEM|TSEM investor news|https://towersemi.com/investor-relations/": {
+      "hash": "d3d60a61c15f9f726ac52447cf93f683ccf72294ab21d170d231997d3dafeec3",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://towersemi.com/investor-relations/"
+    },
+    "USAR|USAR date announcement|https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results": {
+      "hash": "7e5fe91009079d99926973e4bcb0e8a6026cccc5652e832054f77d7737205022",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results"
+    },
+    "USAR|USAR investor home|https://investors.usare.com/": {
+      "hash": "6e8c03ea399431b94ff419e8f5897712f8de609d1c79bec39fe5535a96857ab5",
+      "last_checked_at": "2026-05-13T22:46:44.423836+09:00",
+      "last_success_at": "2026-05-13T22:46:44.423836+09:00",
+      "url": "https://investors.usare.com/"
     }
   }
 }

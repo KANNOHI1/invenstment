@@ -4,6 +4,8 @@
 
 この山の購入候補は、現時点では以下。
 
+2026-05-13追記: `NBIS`のQ1 2026決算が出たため、`NBIS`は「大型本命監視」から「大型でも候補化を検討」に格上げする。詳細は`research/neocloud_ai_datacenter/nbis_q1_2026_update_2026-05-13.md`。
+
 | 順位 | 銘柄 | 暫定配分 | 理由 |
 | ---: | --- | ---: | --- |
 | 1 | IREN | 40% | NVIDIA 34億ドル契約、31億ドル契約済みARR、5GW pipeline。AI Cloud転換の主役 |
@@ -11,7 +13,7 @@
 | 3 | APLD | 20% | 100MW稼働済み、CoreWeave lease、Delta/Polaris pipeline。実行確認が進む |
 | 4 | CIFR | 15% | 3件目AI campus lease、Barber Lake/Black Pearl進捗。高リスク高オプション |
 
-`NBIS`と`CRWV`は大型本命として監視。`OSS`はNeocloudではなく、防衛/エッジAI山へ回す。
+`NBIS`はQ1通過後に候補化を検討。`CRWV`は大型本命として監視。`OSS`はNeocloudではなく、防衛/エッジAI山へ回す。
 
 ## 比較表
 
@@ -55,9 +57,11 @@ AI campus leaseと開発進捗は面白いが、Q1売上3,500万ドル・adjuste
 
 ### NBIS
 
-NVIDIA/Meta契約は非常に強い。ただしQ1 2026が2026-05-13予定で未確認。時価総額も約461億ドル。
+Q1 2026で売上3.99億ドル、前年比+684%、adjusted EBITDA 1.295億ドルを確認。現金92.982億ドル、deferred revenue増加も強い。
 
-Q1後に、ARR進捗と資金調達/希薄化を確認してから再採点する。
+一方で、Q1のPPE/無形資産購入は24.729億ドル、non-current debtは84.32億ドル。本業営業損益はまだ赤字で、GAAP純利益は投資有価証券再評価益の影響が大きい。
+
+決算後に株価が52週高値近辺まで急騰しているため、候補化はするが、初回から大きく買うより押し目/追加開示待ち。
 
 ### CRWV
 
@@ -87,7 +91,7 @@ Q1後に、ARR進捗と資金調達/希薄化を確認してから再採点す�
 
 ## 次アクション
 
-- `NBIS`: 2026-05-13 Q1決算後に再評価。
+- `NBIS`: Q1 2026通過で候補化を検討。急騰後なので初回サイズは抑え、押し目/追加開示待ち。
 - `IREN`: NVIDIA契約の粗利率、GPU financing、1.2GW buildの資金計画を確認。
 - `CORZ`: 4.5GW pipelineの契約済み比率とCoreWeave依存を確認。
 - `CIFR`: 3件目campus leaseの規模と収益開始時期を確認。
