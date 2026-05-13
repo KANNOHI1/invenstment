@@ -16,3 +16,13 @@ research/00_earnings_monitor/raw/
 __pycache__/
 *.py[cod]
 .venv/
+
+# Investment dashboard local/private data
+dashboard/data/positions.local.json
+dashboard/data/user-settings.local.json
+dashboard/data/market.local.json
+dashboard/data/imports/
+dashboard/.next/
+dashboard/node_modules/
+dashboard/out/
+dashboard/output/

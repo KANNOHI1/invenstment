@@ -1,0 +1,642 @@
+:root {
+  --bg: #08090a;
+  --panel: rgba(255, 255, 255, 0.03);
+  --panel-strong: rgba(255, 255, 255, 0.055);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-soft: rgba(255, 255, 255, 0.05);
+  --text: #f7f8f8;
+  --muted: #8a8f98;
+  --soft: #d0d6e0;
+  --faint: #62666d;
+  --accent: #7170ff;
+  --accent-bg: #5e6ad2;
+  --green: #10b981;
+  --red: #fb7185;
+  --amber: #f59e0b;
+  --cyan: #22d3ee;
+  --radius: 8px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(113, 112, 255, 0.12), transparent 220px),
+    var(--bg);
+  color: var(--text);
+  font-family: "Inter Variable", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-feature-settings: "cv01", "ss03";
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.shell {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + 16px) 12px calc(env(safe-area-inset-bottom) + 96px);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: -16px -12px 12px;
+  padding: calc(env(safe-area-inset-top) + 14px) 12px 12px;
+  background: rgba(8, 9, 10, 0.88);
+  border-bottom: 1px solid var(--line-soft);
+  backdrop-filter: blur(18px);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 4px;
+  color: var(--faint);
+  font-family: "Berkeley Mono", "SF Mono", Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(24px, 7vw, 36px);
+  font-weight: 510;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 590;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+.topbar__status {
+  display: none;
+  min-width: 148px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.topbar__status span,
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.topbar__status strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--soft);
+  font-size: 13px;
+  font-weight: 510;
+}
+
+.section {
+  scroll-margin-top: 80px;
+  margin-top: 14px;
+}
+
+.hero-grid,
+.split-grid,
+.position-grid,
+.alert-grid,
+.memo-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.panel,
+.position-card,
+.alert-card,
+.memo-card,
+.earnings-row {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.015);
+}
+
+.panel {
+  padding: 14px;
+}
+
+.panel__header,
+.position-card__top,
+.alert-card__top,
+.section-title,
+.footer,
+.alert-row,
+.compact-list__row,
+.boundary-list > div,
+.metric-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.hero-panel {
+  background:
+    linear-gradient(135deg, rgba(113, 112, 255, 0.16), transparent 42%),
+    var(--panel);
+}
+
+.hero-number {
+  margin-top: 18px;
+  font-size: clamp(42px, 14vw, 78px);
+  font-weight: 510;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hero-subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.metric {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.metric span,
+.metric-line span,
+.boundary-list span,
+.compact-list span,
+.earnings-row span,
+.note-text,
+.risk-note,
+.alert-card p,
+.section-title p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.metric strong,
+.metric-line strong,
+.boundary-list strong,
+.compact-list strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 510;
+  line-height: 1.35;
+}
+
+.risk-note {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.alert-stack,
+.compact-list,
+.boundary-list,
+.earnings-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.alert-row,
+.compact-list__row {
+  min-height: 52px;
+  padding: 9px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.alert-row > div,
+.compact-list__row > div {
+  min-width: 0;
+  flex: 1;
+}
+
+.alert-row strong,
+.alert-row span {
+  display: block;
+}
+
+.alert-row span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 510;
+}
+
+.badge--ok,
+.badge--buy {
+  color: #d1fae5;
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.32);
+}
+
+.badge--danger {
+  color: #ffe4e6;
+  background: rgba(251, 113, 133, 0.12);
+  border-color: rgba(251, 113, 133, 0.34);
+}
+
+.badge--event {
+  color: #e0f2fe;
+  background: rgba(34, 211, 238, 0.1);
+  border-color: rgba(34, 211, 238, 0.32);
+}
+
+.badge--hot {
+  color: #ffedd5;
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.32);
+}
+
+.badge--wait {
+  color: var(--soft);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.section-title {
+  justify-content: flex-start;
+  margin: 22px 0 10px;
+}
+
+.section-title svg {
+  color: var(--accent);
+}
+
+.position-card {
+  padding: 13px;
+}
+
+.ticker {
+  font-family: "Berkeley Mono", "SF Mono", Consolas, monospace;
+  font-size: 20px;
+  font-weight: 590;
+}
+
+.position-card__top p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.position-card__value {
+  margin: 16px 0;
+  font-size: 30px;
+  font-weight: 510;
+  line-height: 1;
+}
+
+.metric-line {
+  padding: 8px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.allocation-bar {
+  height: 6px;
+  margin: 10px 0;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.allocation-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+}
+
+.watch-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  -webkit-overflow-scrolling: touch;
+}
+
+.watch-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.watch-table th,
+.watch-table td {
+  padding: 10px 9px;
+  border-bottom: 1px solid var(--line-soft);
+  text-align: left;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.watch-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--muted);
+  background: #0f1011;
+  font-weight: 510;
+}
+
+.ticker-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticker-cell strong {
+  font-family: "Berkeley Mono", "SF Mono", Consolas, monospace;
+  font-size: 13px;
+}
+
+.ticker-cell a,
+.earnings-row a {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.alert-grid {
+  grid-template-columns: 1fr;
+}
+
+.alert-card {
+  padding: 12px;
+}
+
+.alert-card p {
+  margin-top: 10px;
+  min-height: 34px;
+}
+
+.alert-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.alert-card__stats span {
+  padding: 4px 7px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  color: var(--soft);
+  font-size: 11px;
+}
+
+.earnings-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  padding: 12px;
+}
+
+.earnings-row strong,
+.earnings-row span {
+  display: block;
+}
+
+.earnings-row__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.memo-grid {
+  grid-template-columns: 1fr;
+}
+
+.memo-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.memo-card span {
+  color: var(--accent);
+  font-size: 11px;
+  font-family: "Berkeley Mono", "SF Mono", Consolas, monospace;
+}
+
+.memo-card strong {
+  font-size: 14px;
+  font-weight: 510;
+}
+
+.memo-card small {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer {
+  align-items: flex-start;
+  margin-top: 28px;
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer div {
+  display: flex;
+  gap: 6px;
+}
+
+.bottom-tabs {
+  position: fixed;
+  right: 10px;
+  bottom: calc(env(safe-area-inset-bottom) + 10px);
+  left: 10px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(15, 16, 17, 0.88);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(18px);
+}
+
+.bottom-tabs a {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.bottom-tabs a:focus,
+.bottom-tabs a:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.value-up {
+  color: var(--green) !important;
+}
+
+.value-down {
+  color: var(--red) !important;
+}
+
+.value-neutral {
+  color: var(--soft) !important;
+}
+
+.memo-reader {
+  min-height: 100vh;
+  padding: calc(env(safe-area-inset-top) + 12px) 12px 40px;
+  background: var(--bg);
+}
+
+.memo-reader__bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  background: rgba(8, 9, 10, 0.88);
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 12px;
+  backdrop-filter: blur(18px);
+}
+
+.memo-reader__bar a {
+  color: var(--accent);
+}
+
+.memo-reader__body {
+  width: min(920px, 100%);
+  margin: 16px auto 0;
+  padding: 14px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--soft);
+  font-family: "Berkeley Mono", "SF Mono", Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+@media (min-width: 620px) {
+  .shell {
+    padding-inline: 18px;
+  }
+
+  .topbar {
+    margin-inline: -18px;
+    padding-inline: 18px;
+  }
+
+  .topbar__status {
+    display: block;
+  }
+
+  .hero-grid,
+  .split-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  }
+
+  .position-grid,
+  .alert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .memo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 980px) {
+  .shell {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+
+  .position-grid,
+  .alert-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .memo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .earnings-row {
+    grid-template-columns: 0.8fr 1fr 0.8fr 1.2fr;
+    align-items: center;
+  }
+
+  .bottom-tabs {
+    top: 86px;
+    right: auto;
+    bottom: auto;
+    left: max(16px, calc((100vw - 1280px) / 2 + 16px));
+    width: 84px;
+    grid-template-columns: 1fr;
+  }
+
+  .shell {
+    padding-left: 112px;
+  }
+}
