@@ -1,41 +1,17 @@
 {
-  "updated_at": "2026-05-13T22:42:17.941596+00:00",
+  "updated_at": "2026-05-14T15:14:45.348527+00:00",
   "sources": {
-    "NBIS|NBIS date announcement|https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call": {
-      "hash": "ecaa7eca873a2958600af1fbd49221cb00fcf64a5f2512c99975def7cfda9d78",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://nebius.com/newsroom/nebius-group-announces-date-of-first-quarter-2026-results-and-conference-call"
+    "ONDS|ONDS date announcement|https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may": {
+      "hash": "e04447e3642f3014341496e12ef2f1cda7eee5b4b401a38e19c500d8ed228ec4",
+      "last_checked_at": "2026-05-14T15:14:45.348527+00:00",
+      "last_success_at": "2026-05-14T15:14:45.348527+00:00",
+      "url": "https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may"
     },
-    "NBIS|NBIS investor hub|https://nebius.com/investor-hub": {
-      "hash": "470d84b5d63bf5b3fafae0638361d38969dc412292610d36f49d3c8685a55fcc",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://nebius.com/investor-hub"
-    },
-    "TSEM|TSEM date announcement|https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html": {
-      "hash": "0ff61ba56ede136b062b09255ded86d2367ff66dd3d08c62f2b763d8814d9d43",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://www.globenewswire.com/news-release/2026/04/20/3276797/0/en/tower-semiconductor-announces-first-quarter-2026-financial-results-and-conference-call.html"
-    },
-    "TSEM|TSEM investor news|https://towersemi.com/investor-relations/": {
-      "hash": "5ea92a33f86de3c14021021aefae47fcb69503253763c94c77d7e3cef22549d2",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://towersemi.com/investor-relations/"
-    },
-    "USAR|USAR date announcement|https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results": {
-      "hash": "b5e952ad1015a6c06975cc5a8dee1434b9b44718a3d339dda1cc8194d84d8019",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://investors.usare.com/news-releases/news-release-details/usa-rare-earth-announces-date-release-first-quarter-2026-results"
-    },
-    "USAR|USAR investor home|https://investors.usare.com/": {
-      "hash": "9f751662a967bf102828b3bdd460e13a7d8cb883f875e2491abe647e8149e9e6",
-      "last_checked_at": "2026-05-13T22:42:17.941596+00:00",
-      "last_success_at": "2026-05-13T22:42:17.941596+00:00",
-      "url": "https://investors.usare.com/"
+    "ONDS|ONDS investor home|https://ir.ondas.com/": {
+      "hash": "07aa0b7e245221cbab2eb59b54c922a263a5786a655c4799aac36a22552586f6",
+      "last_checked_at": "2026-05-14T15:14:45.348527+00:00",
+      "last_success_at": "2026-05-14T15:14:45.348527+00:00",
+      "url": "https://ir.ondas.com/"
     }
   }
 }
