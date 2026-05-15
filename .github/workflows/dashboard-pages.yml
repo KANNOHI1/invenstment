@@ -51,6 +51,9 @@ jobs:
       - name: Refresh market data
         run: npm run market:update
 
+      - name: Refresh Fear and Greed data
+        run: npm run fear-greed:update
+
       - name: Run tests
         run: npm test
 

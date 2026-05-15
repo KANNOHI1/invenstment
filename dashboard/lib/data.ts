@@ -10,6 +10,12 @@ import {
   type PositionInput,
   type SignalLevel
 } from "./dashboard-model";
+import {
+  getFearGreedDisplay,
+  selectFearGreedSnapshot,
+  type FearGreedDisplay,
+  type FearGreedSnapshot
+} from "./fear-greed";
 import { getMarketFreshness, type MarketFreshness } from "./market-freshness";
 import { selectPositionsFile, type PositionsFile } from "./static-export";
 import { MEMO_LINKS, WATCH_UNIVERSE, type WatchMeta } from "./watch-universe";
@@ -71,6 +77,7 @@ export type DashboardData = {
   marketSource: string;
   marketFreshness: MarketFreshness;
   marketErrors: { ticker: string; message: string }[];
+  fearGreed: FearGreedDisplay;
   portfolio: ReturnType<typeof buildPortfolioRows>;
   watchRows: WatchRow[];
   buyAlerts: WatchRow[];
@@ -115,6 +122,11 @@ export function getDashboardData(): DashboardData {
     {}
   );
   const localMarket = readJson<LocalMarketFile>("dashboard/data/market.local.json", {});
+  const localFearGreed = readJson<FearGreedSnapshot>("dashboard/data/fear-greed.local.json", {});
+  const fallbackFearGreed = readFirstJson<FearGreedSnapshot>(
+    ["dashboard/data/fear-greed.public.json", "watchlist/00_market_snapshots/fear-greed.snapshot.json"],
+    {}
+  );
   const localPositions = readJson<PositionsFile>("dashboard/data/positions.local.json", {});
   const publicPositions = readJson<PositionsFile>("dashboard/data/positions.public.json", {});
   const positionsFile = selectPositionsFile(localPositions, publicPositions);
@@ -194,6 +206,7 @@ export function getDashboardData(): DashboardData {
     marketSource: localMarket.source ?? "tracked snapshot fallback",
     marketFreshness: getMarketFreshness(localMarket.updatedAt ?? ""),
     marketErrors: localMarket.errors ?? [],
+    fearGreed: getFearGreedDisplay(selectFearGreedSnapshot(localFearGreed, fallbackFearGreed)),
     portfolio,
     watchRows,
     buyAlerts: watchRows.filter((row) => row.signal.level !== "WAIT").slice(0, 12),

@@ -9,7 +9,8 @@
     "start": "npx http-server out -p 4175 -c-",
     "test": "vitest run",
     "check": "npm test && npm run build",
-    "market:update": "node scripts/update-market-data.mjs"
+    "market:update": "node scripts/update-market-data.mjs",
+    "fear-greed:update": "node scripts/update-fear-greed.mjs"
   },
   "dependencies": {
     "lucide-react": "1.14.0",

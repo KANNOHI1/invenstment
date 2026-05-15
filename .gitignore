@@ -21,6 +21,7 @@ __pycache__/
 dashboard/data/positions.local.json
 dashboard/data/user-settings.local.json
 dashboard/data/market.local.json
+dashboard/data/fear-greed.local.json
 dashboard/data/imports/
 dashboard/.next/
 dashboard/node_modules/

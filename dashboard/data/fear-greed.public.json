@@ -1,0 +1,47 @@
+{
+  "value": 64.7,
+  "rating": "greed",
+  "previousClose": 66.1,
+  "previousWeek": 66.7,
+  "previousMonth": 56.2,
+  "updatedAt": "2026-05-15T18:35:36.000Z",
+  "source": "tracked fallback snapshot from CNN Fear & Greed Index",
+  "sourceUrl": "https://www.cnn.com/markets/fear-and-greed",
+  "components": [
+    {
+      "name": "Market Momentum",
+      "value": 98.4,
+      "rating": "extreme greed"
+    },
+    {
+      "name": "Stock Price Strength",
+      "value": 49,
+      "rating": "neutral"
+    },
+    {
+      "name": "Stock Price Breadth",
+      "value": 33.2,
+      "rating": "fear"
+    },
+    {
+      "name": "Put/Call Options",
+      "value": 96.2,
+      "rating": "extreme greed"
+    },
+    {
+      "name": "Junk Bond Demand",
+      "value": 35,
+      "rating": "fear"
+    },
+    {
+      "name": "Market Volatility",
+      "value": 50,
+      "rating": "neutral"
+    },
+    {
+      "name": "Safe Haven Demand",
+      "value": 90.6,
+      "rating": "extreme greed"
+    }
+  ]
+}

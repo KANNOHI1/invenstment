@@ -6,6 +6,7 @@ import {
   computeRsi14,
   mergeMarketRows
 } from "../lib/dashboard-model";
+import { classifyFearGreed, getFearGreedDisplay, selectFearGreedSnapshot } from "../lib/fear-greed";
 import { getMarkdownReadingMeta } from "../lib/markdown";
 import { getMarketFreshness } from "../lib/market-freshness";
 import { getMemoHref, selectPositionsFile } from "../lib/static-export";
@@ -194,5 +195,50 @@ describe("dashboard model", () => {
     expect(getMemoHref("watchlist/00_portfolio/romance_portfolio_shortlist_2026-05-12.md", "/invenstment")).toBe(
       "/invenstment/memo/watchlist/00_portfolio/romance_portfolio_shortlist_2026-05-12.md/"
     );
+  });
+
+  test("classifies CNN Fear and Greed scores with stable boundaries", () => {
+    expect(classifyFearGreed(0)).toBe("Extreme Fear");
+    expect(classifyFearGreed(24)).toBe("Extreme Fear");
+    expect(classifyFearGreed(25)).toBe("Fear");
+    expect(classifyFearGreed(44)).toBe("Fear");
+    expect(classifyFearGreed(45)).toBe("Neutral");
+    expect(classifyFearGreed(55)).toBe("Neutral");
+    expect(classifyFearGreed(56)).toBe("Greed");
+    expect(classifyFearGreed(75)).toBe("Greed");
+    expect(classifyFearGreed(76)).toBe("Extreme Greed");
+    expect(classifyFearGreed(100)).toBe("Extreme Greed");
+  });
+
+  test("builds romance-sleeve guidance from Fear and Greed data", () => {
+    const display = getFearGreedDisplay(
+      {
+        value: 82,
+        previousClose: 76,
+        previousWeek: 64,
+        previousMonth: 51,
+        updatedAt: "2026-05-15T20:30:00.000Z",
+        source: "CNN Fear & Greed Index"
+      },
+      new Date("2026-05-15T21:00:00.000Z")
+    );
+
+    expect(display.rating).toBe("Extreme Greed");
+    expect(display.tone).toBe("extreme-greed");
+    expect(display.guidance).toContain("一括買い");
+    expect(display.deltas).toMatchObject({
+      previousClose: 6,
+      previousWeek: 18,
+      previousMonth: 31
+    });
+    expect(display.freshness.level).toBe("aging");
+  });
+
+  test("prefers generated local Fear and Greed data over tracked fallback", () => {
+    const fallback = { value: 31, updatedAt: "2026-05-14T00:00:00.000Z", source: "tracked fallback" };
+    const local = { value: 52, updatedAt: "2026-05-15T00:00:00.000Z", source: "local update" };
+
+    expect(selectFearGreedSnapshot({}, fallback)).toBe(fallback);
+    expect(selectFearGreedSnapshot(local, fallback)).toBe(local);
   });
 });
