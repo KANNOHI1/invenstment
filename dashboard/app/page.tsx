@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { getDashboardData, type WatchRow } from "@/lib/data";
 import { buildAllocationSegments, type PortfolioPosition } from "@/lib/dashboard-model";
-import type { FearGreedDisplay } from "@/lib/fear-greed";
+import { classifyFearGreed, type FearGreedDisplay } from "@/lib/fear-greed";
 import { getMemoHref } from "@/lib/static-export";
 import { MarketRefreshButton } from "./market-refresh-button";
 
@@ -376,9 +376,15 @@ export default function DashboardPage() {
 }
 
 const chartColors = ["#7170ff", "#10b981", "#22d3ee", "#f59e0b", "#fb7185"];
+const fearGreedSegments = [
+  { label: "EXTREME\nFEAR", start: 0, end: 24, className: "fear-gauge__segment--extreme-fear" },
+  { label: "FEAR", start: 25, end: 44, className: "fear-gauge__segment--fear" },
+  { label: "NEUTRAL", start: 45, end: 55, className: "fear-gauge__segment--neutral" },
+  { label: "GREED", start: 56, end: 75, className: "fear-gauge__segment--greed" },
+  { label: "EXTREME\nGREED", start: 76, end: 100, className: "fear-gauge__segment--extreme-greed" }
+];
 
 function FearGreedCard({ fearGreed }: { fearGreed: FearGreedDisplay }) {
-  const meterWidth = fearGreed.value === null ? 0 : fearGreed.value;
   return (
     <section className="section market-environment" aria-label="市場環境">
       <article className={`panel fear-greed fear-greed--${fearGreed.tone}`}>
@@ -391,25 +397,19 @@ function FearGreedCard({ fearGreed }: { fearGreed: FearGreedDisplay }) {
             {fearGreed.freshness.label}
           </span>
         </div>
-        <div className="fear-greed__body">
-          <div className="fear-greed__score">
-            <strong>{fearGreed.value === null ? "--" : Math.round(fearGreed.value)}</strong>
-            <span>{fearGreed.rating}</span>
+        <div className="fear-greed__layout">
+          <div>
+            <FearGreedGauge fearGreed={fearGreed} />
+            <div className="fear-greed__meta fear-greed__meta--gauge">
+              <span>最終更新: {formatDateTime(fearGreed.updatedAt)}</span>
+              <a href={fearGreed.sourceUrl}>{fearGreed.source}</a>
+            </div>
           </div>
-          <div className="fear-greed__meter" aria-label="Fear and Greed score 0 to 100">
-            <span style={{ width: `${meterWidth}%` }} />
+          <div className="fear-greed__side">
+            <FearGreedComparisons fearGreed={fearGreed} />
+            <p className="fear-greed__guidance">{fearGreed.guidance}</p>
+            {fearGreed.error ? <span className="fear-greed__error">取得メモ: {fearGreed.error}</span> : null}
           </div>
-          <div className="fear-greed__scale" aria-hidden="true">
-            <span>Extreme Fear</span>
-            <span>Neutral</span>
-            <span>Extreme Greed</span>
-          </div>
-        </div>
-        <p className="fear-greed__guidance">{fearGreed.guidance}</p>
-        <div className="fear-greed__deltas" aria-label="前回比較">
-          <Metric label="前日比" value={formatSignedPoint(fearGreed.deltas.previousClose)} />
-          <Metric label="1週比" value={formatSignedPoint(fearGreed.deltas.previousWeek)} />
-          <Metric label="1か月比" value={formatSignedPoint(fearGreed.deltas.previousMonth)} />
         </div>
         {fearGreed.components.length > 0 ? (
           <div className="fear-greed__components" aria-label="構成指標">
@@ -421,13 +421,81 @@ function FearGreedCard({ fearGreed }: { fearGreed: FearGreedDisplay }) {
             ))}
           </div>
         ) : null}
-        <div className="fear-greed__meta">
-          <span>最終更新: {formatDateTime(fearGreed.updatedAt)}</span>
-          <a href={fearGreed.sourceUrl}>{fearGreed.source}</a>
-          {fearGreed.error ? <span>取得メモ: {fearGreed.error}</span> : null}
-        </div>
       </article>
     </section>
+  );
+}
+
+function FearGreedGauge({ fearGreed }: { fearGreed: FearGreedDisplay }) {
+  const value = fearGreed.value ?? 0;
+  const needleAngle = 180 - value * 1.8;
+  const needleEnd = polarPoint(260, 246, 184, needleAngle);
+  return (
+    <div className="fear-gauge" aria-label={`Fear and Greed score ${fearGreed.value ?? "unknown"} of 100`}>
+      <svg viewBox="0 0 520 300" role="img">
+        <title>CNN Fear and Greed semicircle gauge</title>
+        {fearGreedSegments.map((segment) => (
+          <g key={segment.label}>
+            <path
+              className={`fear-gauge__segment ${segment.className}`}
+              d={describeArc(260, 246, 210, 180 - segment.start * 1.8, 180 - segment.end * 1.8)}
+            />
+            <text
+              className="fear-gauge__label"
+              x={polarPoint(260, 246, 208, 180 - ((segment.start + segment.end) / 2) * 1.8).x}
+              y={polarPoint(260, 246, 208, 180 - ((segment.start + segment.end) / 2) * 1.8).y}
+              textAnchor="middle"
+            >
+              {segment.label.split("\n").map((line, index) => (
+                <tspan key={line} x={polarPoint(260, 246, 208, 180 - ((segment.start + segment.end) / 2) * 1.8).x} dy={index === 0 ? 0 : 28}>
+                  {line}
+                </tspan>
+              ))}
+            </text>
+          </g>
+        ))}
+        {[0, 25, 50, 75, 100].map((tick) => {
+          const point = polarPoint(260, 246, 144, 180 - tick * 1.8);
+          return (
+            <text className="fear-gauge__tick" key={tick} x={point.x} y={point.y} textAnchor="middle">
+              {tick}
+            </text>
+          );
+        })}
+        <line className="fear-gauge__needle" x1="260" y1="246" x2={needleEnd.x} y2={needleEnd.y} />
+        <circle className="fear-gauge__hub" cx="260" cy="246" r="70" />
+        <text className="fear-gauge__value" x="260" y="246" textAnchor="middle">
+          {fearGreed.value === null ? "--" : Math.round(fearGreed.value)}
+        </text>
+      </svg>
+    </div>
+  );
+}
+
+function FearGreedComparisons({ fearGreed }: { fearGreed: FearGreedDisplay }) {
+  const rows = [
+    { label: "Previous close", delta: fearGreed.deltas.previousClose },
+    { label: "1 week ago", delta: fearGreed.deltas.previousWeek },
+    { label: "1 month ago", delta: fearGreed.deltas.previousMonth }
+  ];
+  return (
+    <div className="fear-greed__comparisons" aria-label="Fear and Greed comparisons">
+      {rows.map((row) => {
+        const score = previousFearGreedScore(fearGreed.value, row.delta);
+        return (
+          <div className="fear-greed__comparison" key={row.label}>
+            <div>
+              <span>{row.label}</span>
+              <strong>{score === null ? "-" : classifyFearGreed(score)}</strong>
+            </div>
+            <div className="fear-greed__comparison-score">
+              <span>{score === null ? "--" : Math.round(score)}</span>
+              <small>{formatSignedPoint(row.delta)}</small>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
@@ -564,4 +632,24 @@ function formatDateTime(value: string): string {
 function valueClass(value: number | null | undefined): string {
   if (typeof value !== "number" || !Number.isFinite(value) || value === 0) return "value-neutral";
   return value > 0 ? "value-up" : "value-down";
+}
+
+function previousFearGreedScore(current: number | null, delta: number | null): number | null {
+  if (typeof current !== "number" || typeof delta !== "number") return null;
+  return Math.max(0, Math.min(100, current - delta));
+}
+
+function describeArc(cx: number, cy: number, radius: number, startAngle: number, endAngle: number): string {
+  const start = polarPoint(cx, cy, radius, startAngle);
+  const end = polarPoint(cx, cy, radius, endAngle);
+  const largeArcFlag = Math.abs(endAngle - startAngle) <= 180 ? "0" : "1";
+  return `M ${start.x} ${start.y} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${end.x} ${end.y}`;
+}
+
+function polarPoint(cx: number, cy: number, radius: number, angle: number): { x: number; y: number } {
+  const radians = (angle * Math.PI) / 180;
+  return {
+    x: Number((cx + radius * Math.cos(radians)).toFixed(2)),
+    y: Number((cy - radius * Math.sin(radians)).toFixed(2))
+  };
 }
