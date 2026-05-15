@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-14T15:14:45.348527+00:00",
+  "updated_at": "2026-05-15T09:38:25.753885+00:00",
   "sources": {
-    "ONDS|ONDS date announcement|https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may": {
-      "hash": "e04447e3642f3014341496e12ef2f1cda7eee5b4b401a38e19c500d8ed228ec4",
-      "last_checked_at": "2026-05-14T15:14:45.348527+00:00",
-      "last_success_at": "2026-05-14T15:14:45.348527+00:00",
-      "url": "https://ir.ondas.com/press-releases/detail/305/ondas-to-report-first-quarter-2026-financial-results-on-may"
+    "285A|Kioxia IR calendar|https://www.kioxia-holdings.com/en-jp/ir/calendar.html": {
+      "hash": "7900e089f364512ef4366fff201025aaecbd573ff71daee2684c7552d7fe9cfb",
+      "last_checked_at": "2026-05-15T09:38:25.753885+00:00",
+      "last_success_at": "2026-05-15T09:38:25.753885+00:00",
+      "url": "https://www.kioxia-holdings.com/en-jp/ir/calendar.html"
     },
-    "ONDS|ONDS investor home|https://ir.ondas.com/": {
-      "hash": "07aa0b7e245221cbab2eb59b54c922a263a5786a655c4799aac36a22552586f6",
-      "last_checked_at": "2026-05-14T15:14:45.348527+00:00",
-      "last_success_at": "2026-05-14T15:14:45.348527+00:00",
-      "url": "https://ir.ondas.com/"
+    "285A|Kioxia IR library|https://www.kioxia-holdings.com/en-jp/ir/library.html": {
+      "hash": "5a0ae6ae9bcbcaa39460d1df7d96ed52f3616638ab4005ee3a6d86f3249c372d",
+      "last_checked_at": "2026-05-15T09:38:25.753885+00:00",
+      "last_success_at": "2026-05-15T09:38:25.753885+00:00",
+      "url": "https://www.kioxia-holdings.com/en-jp/ir/library.html"
     }
   }
 }
