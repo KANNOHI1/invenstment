@@ -1,10 +1,14 @@
 import { describe, expect, test } from "vitest";
 import {
+  buildAllocationSegments,
   buildPortfolioRows,
   classifyBuySignal,
   computeRsi14,
   mergeMarketRows
 } from "../lib/dashboard-model";
+import { getMarkdownReadingMeta } from "../lib/markdown";
+import { getMarketFreshness } from "../lib/market-freshness";
+import { getMemoHref, selectPositionsFile } from "../lib/static-export";
 
 describe("dashboard model", () => {
   test("computes RSI14 from closing prices", () => {
@@ -33,6 +37,30 @@ describe("dashboard model", () => {
     expect(rows.positions[0].profitLoss).toBeCloseTo(145, 2);
     expect(rows.positions[1].profitLossRate).toBeCloseTo(-13.43, 2);
     expect(rows.positions[0].allocation).toBeCloseTo(75.21, 2);
+  });
+
+  test("builds allocation segments for chart-first portfolio display", () => {
+    const portfolio = buildPortfolioRows(
+      [
+        { ticker: "IREN", shares: 58, averageCost: 54 },
+        { ticker: "NBIS", shares: 6, averageCost: 207.93 }
+      ],
+      new Map([
+        ["IREN", { ticker: "IREN", price: 56.5 }],
+        ["NBIS", { ticker: "NBIS", price: 180 }]
+      ])
+    );
+
+    const segments = buildAllocationSegments(portfolio.positions);
+
+    expect(segments).toHaveLength(2);
+    expect(segments[0]).toMatchObject({
+      ticker: "IREN",
+      start: 0
+    });
+    expect(segments[0].end).toBeCloseTo(75.21, 2);
+    expect(segments[1].start).toBeCloseTo(75.21, 2);
+    expect(segments[1].end).toBe(100);
   });
 
   test("classifies buy signal from RSI, drawdown, event, and breakage inputs", () => {
@@ -114,5 +142,57 @@ describe("dashboard model", () => {
     expect(merged.get("IREN")?.price).toBe(54);
     expect(merged.get("IREN")?.marketCapUsdB).toBe(12.3);
     expect(merged.get("IREN")?.rsi14).toBe(43);
+  });
+
+  test("extracts readable metadata from markdown notes", () => {
+    const meta = getMarkdownReadingMeta(`# IREN深掘り\n\n## 結論\n\n- NVIDIA契約を追跡\n\n| 銘柄 | 状態 |\n| --- | --- |\n| IREN | 保有 |`);
+
+    expect(meta.title).toBe("IREN深掘り");
+    expect(meta.headingCount).toBe(2);
+    expect(meta.tableCount).toBe(1);
+    expect(meta.bulletCount).toBe(1);
+  });
+
+  test("classifies market freshness so old prices cannot look current", () => {
+    const now = new Date("2026-05-14T10:00:00.000Z");
+
+    expect(getMarketFreshness("2026-05-14T09:52:00.000Z", now)).toMatchObject({
+      level: "fresh",
+      minutes: 8
+    });
+    expect(getMarketFreshness("2026-05-14T09:25:00.000Z", now)).toMatchObject({
+      level: "aging",
+      minutes: 35
+    });
+    expect(getMarketFreshness("2026-05-14T08:30:00.000Z", now)).toMatchObject({
+      level: "stale",
+      minutes: 90
+    });
+    expect(getMarketFreshness("2026-05-13 JST / US latest shown by Yahoo Japan pages", now)).toMatchObject({
+      level: "stale",
+      minutes: null
+    });
+  });
+
+  test("uses local positions first and falls back to public positions for static Pages builds", () => {
+    const publicPositions = {
+      positions: [{ ticker: "IREN", shares: 58, averageCost: 54 }]
+    };
+
+    expect(selectPositionsFile({}, publicPositions)).toBe(publicPositions);
+    expect(selectPositionsFile({ positions: [] }, publicPositions)).toBe(publicPositions);
+    expect(selectPositionsFile({ positions: [{ ticker: "NBIS", shares: 6, averageCost: 207.93 }] }, publicPositions))
+      .toMatchObject({
+        positions: [{ ticker: "NBIS" }]
+      });
+  });
+
+  test("builds GitHub Pages safe memo hrefs without Next Link normalization", () => {
+    expect(getMemoHref("research/water_cooling_infrastructure/bmi_deep_dive_2026-05-11.md", "")).toBe(
+      "/memo/research/water_cooling_infrastructure/bmi_deep_dive_2026-05-11.md/"
+    );
+    expect(getMemoHref("watchlist/00_portfolio/romance_portfolio_shortlist_2026-05-12.md", "/invenstment")).toBe(
+      "/invenstment/memo/watchlist/00_portfolio/romance_portfolio_shortlist_2026-05-12.md/"
+    );
   });
 });

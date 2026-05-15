@@ -46,6 +46,15 @@ export type PortfolioSummary = {
   positions: PortfolioPosition[];
 };
 
+export type AllocationSegment = {
+  ticker: string;
+  start: number;
+  end: number;
+  value: number;
+  allocation: number;
+  profitLossRate: number;
+};
+
 export type SignalInput = {
   ticker: string;
   rsi14?: number | null;
@@ -127,6 +136,23 @@ export function buildPortfolioRows(
       allocation: totalValue === 0 ? 0 : (row.marketValue / totalValue) * 100
     }))
   };
+}
+
+export function buildAllocationSegments(positions: PortfolioPosition[]): AllocationSegment[] {
+  let cursor = 0;
+  return positions.map((position, index) => {
+    const start = round(cursor, 2);
+    const end = index === positions.length - 1 ? 100 : round(cursor + position.allocation, 2);
+    cursor = end;
+    return {
+      ticker: position.ticker,
+      start,
+      end,
+      value: position.marketValue,
+      allocation: position.allocation,
+      profitLossRate: position.profitLossRate
+    };
+  });
 }
 
 export function classifyBuySignal(input: SignalInput): SignalResult {

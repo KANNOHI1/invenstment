@@ -1,9 +1,13 @@
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
 import path from "node:path";
 
 const dashboardRoot = process.cwd();
 const projectRoot = path.resolve(dashboardRoot, "..");
-const snapshotPath = path.join(projectRoot, "watchlist", "market_price_snapshot_2026-05-13.json");
+const snapshotPath = firstExistingPath([
+  path.join(projectRoot, "watchlist", "00_market_snapshots", "market_price_snapshot_2026-05-13.json"),
+  path.join(projectRoot, "watchlist", "market_price_snapshot_2026-05-13.json")
+]);
 const outputPath = path.join(dashboardRoot, "data", "market.local.json");
 const explicitTickers = process.argv.slice(2).map((ticker) => ticker.toUpperCase());
 
@@ -165,9 +169,19 @@ function round(value, digits = 2) {
 }
 
 async function readJson(filePath, fallback) {
+  if (!filePath) return fallback;
   try {
     return JSON.parse(await fs.readFile(filePath, "utf8"));
   } catch {
     return fallback;
   }
+}
+
+function firstExistingPath(filePaths) {
+  for (const filePath of filePaths) {
+    if (fsSync.existsSync(filePath)) {
+      return filePath;
+    }
+  }
+  return filePaths[0];
 }

@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 import {
   buildPortfolioRows,
@@ -10,6 +10,8 @@ import {
   type PositionInput,
   type SignalLevel
 } from "./dashboard-model";
+import { getMarketFreshness, type MarketFreshness } from "./market-freshness";
+import { selectPositionsFile, type PositionsFile } from "./static-export";
 import { MEMO_LINKS, WATCH_UNIVERSE, type WatchMeta } from "./watch-universe";
 
 const dashboardRoot = process.cwd();
@@ -25,11 +27,6 @@ type LocalMarketFile = {
   source?: string;
   rows?: MarketInput[];
   errors?: { ticker: string; message: string }[];
-};
-
-type PositionsFile = {
-  currency?: string;
-  positions?: PositionInput[];
 };
 
 type EarningsSchedule = {
@@ -72,6 +69,7 @@ export type DashboardData = {
   positionsPath: string;
   marketUpdatedAt: string;
   marketSource: string;
+  marketFreshness: MarketFreshness;
   marketErrors: { ticker: string; message: string }[];
   portfolio: ReturnType<typeof buildPortfolioRows>;
   watchRows: WatchRow[];
@@ -109,16 +107,33 @@ const fallbackPositions: PositionInput[] = [
 ];
 
 export function getDashboardData(): DashboardData {
-  const snapshot = readJson<SnapshotFile>("watchlist/market_price_snapshot_2026-05-13.json", {});
+  const snapshot = readFirstJson<SnapshotFile>(
+    [
+      "watchlist/00_market_snapshots/market_price_snapshot_2026-05-13.json",
+      "watchlist/market_price_snapshot_2026-05-13.json"
+    ],
+    {}
+  );
   const localMarket = readJson<LocalMarketFile>("dashboard/data/market.local.json", {});
-  const positionsFile = readJson<PositionsFile>("dashboard/data/positions.local.json", {});
-  const schedule = readJson<EarningsSchedule>("watchlist/earnings_monitor_schedule_2026-05-11.json", {});
+  const localPositions = readJson<PositionsFile>("dashboard/data/positions.local.json", {});
+  const publicPositions = readJson<PositionsFile>("dashboard/data/positions.public.json", {});
+  const positionsFile = selectPositionsFile(localPositions, publicPositions);
+  const schedule = readFirstJson<EarningsSchedule>(
+    [
+      "watchlist/00_earnings_monitor/earnings_monitor_schedule_2026-05-11.json",
+      "watchlist/earnings_monitor_schedule_2026-05-11.json"
+    ],
+    {}
+  );
   const alertsFile = readJson<{ updated_at?: string; alerts?: { ticker: string; signal: string }[] }>(
     "research/00_earnings_monitor/earnings_monitor_alerts.json",
     {}
   );
   const statusText = readText("research/00_earnings_monitor/earnings_monitor_status.md");
-  const auditText = readText("watchlist/earnings_status_audit_2026-05-11.md");
+  const auditText = readFirstText([
+    "watchlist/00_earnings_monitor/earnings_status_audit_2026-05-11.md",
+    "watchlist/earnings_status_audit_2026-05-11.md"
+  ]);
 
   const market = mergeMarketRows(snapshot.rows ?? [], localMarket.rows ?? []);
   const events = schedule.events ?? [];
@@ -174,9 +189,10 @@ export function getDashboardData(): DashboardData {
 
   return {
     generatedAt: new Date().toISOString(),
-    positionsPath: path.join(projectRoot, "dashboard", "data", "positions.local.json"),
+    positionsPath: "dashboard/data/positions.local.json -> dashboard/data/positions.public.json",
     marketUpdatedAt: localMarket.updatedAt ?? snapshot.as_of ?? "未更新",
     marketSource: localMarket.source ?? "tracked snapshot fallback",
+    marketFreshness: getMarketFreshness(localMarket.updatedAt ?? ""),
     marketErrors: localMarket.errors ?? [],
     portfolio,
     watchRows,
@@ -194,6 +210,20 @@ export function readProjectMarkdown(relativePath: string): string | null {
   const resolved = safeProjectPath(relativePath);
   if (!resolved || !resolved.endsWith(".md") || !fs.existsSync(resolved)) return null;
   return fs.readFileSync(resolved, "utf8");
+}
+
+export function getStaticMemoPaths(): string[] {
+  const paths = new Set<string>();
+
+  for (const entry of MEMO_LINKS) paths.add(entry.path);
+  for (const entry of WATCH_UNIVERSE) {
+    if (entry.memoPath) paths.add(entry.memoPath);
+  }
+  for (const entry of listMarkdownFiles(["research", "watchlist"])) {
+    paths.add(entry.path);
+  }
+
+  return [...paths].filter((entry) => Boolean(readProjectMarkdown(entry)));
 }
 
 function getMemoEntries(): MemoEntry[] {
@@ -228,7 +258,7 @@ function walk(current: string, files: MemoEntry[]): void {
     files.push({
       title: entry.name.replace(/_/g, " ").replace(/\.md$/, ""),
       path: relative,
-      group: relative.startsWith("watchlist") ? "watchlist" : relative.split("/")[1] ?? "research",
+      group: relative.split("/")[1] ?? (relative.startsWith("watchlist") ? "watchlist" : "research"),
       updatedAt: fs.statSync(full).mtime.toISOString()
     });
   }
@@ -262,10 +292,28 @@ function readJson<T>(relativePath: string, fallback: T): T {
   return JSON.parse(fs.readFileSync(resolved, "utf8")) as T;
 }
 
+function readFirstJson<T>(relativePaths: string[], fallback: T): T {
+  for (const relativePath of relativePaths) {
+    const resolved = safeProjectPath(relativePath);
+    if (resolved && fs.existsSync(resolved)) {
+      return JSON.parse(fs.readFileSync(resolved, "utf8")) as T;
+    }
+  }
+  return fallback;
+}
+
 function readText(relativePath: string): string {
   const resolved = safeProjectPath(relativePath);
   if (!resolved || !fs.existsSync(resolved)) return "";
   return fs.readFileSync(resolved, "utf8");
+}
+
+function readFirstText(relativePaths: string[]): string {
+  for (const relativePath of relativePaths) {
+    const text = readText(relativePath);
+    if (text) return text;
+  }
+  return "";
 }
 
 function getMtime(relativePath: string): string | undefined {

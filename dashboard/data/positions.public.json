@@ -1,0 +1,21 @@
+{
+  "currency": "USD",
+  "positions": [
+    {
+      "ticker": "IREN",
+      "shares": 58,
+      "averageCost": 54.0,
+      "openedAt": "2026-05-13",
+      "role": "Neocloudロマン主力",
+      "notes": "Microsoft/NVIDIA契約の稼働、AI Cloud売上、GPU financingを追跡"
+    },
+    {
+      "ticker": "NBIS",
+      "shares": 6,
+      "averageCost": 207.93,
+      "openedAt": "2026-05-13",
+      "role": "大型Neocloud本命",
+      "notes": "ARR成長、CapEx、debt、Q2でのEBITDA継続を追跡"
+    }
+  ]
+}

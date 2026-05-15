@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
+import { getAppBasePath } from "@/lib/static-export";
 import "./globals.css";
+
+const basePath = getAppBasePath();
 
 export const metadata: Metadata = {
   title: "ロマン枠 作戦司令室",
   description: "個人用ロマン枠投資ダッシュボード",
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg"
+    icon: `${basePath}/icon.svg`,
+    apple: `${basePath}/icon.svg`
   },
   appleWebApp: {
     capable: true,

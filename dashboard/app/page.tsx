@@ -12,11 +12,10 @@ import {
   TrendingDown,
   TrendingUp
 } from "lucide-react";
-import Link from "next/link";
 import { getDashboardData, type WatchRow } from "@/lib/data";
-
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
+import { buildAllocationSegments, type PortfolioPosition } from "@/lib/dashboard-model";
+import { getMemoHref } from "@/lib/static-export";
+import { MarketRefreshButton } from "./market-refresh-button";
 
 const tabs = [
   { href: "#home", label: "ホーム", icon: BarChart3 },
@@ -30,6 +29,7 @@ export default function DashboardPage() {
   const data = getDashboardData();
   const firstPosition = data.portfolio.positions[0];
   const urgentEarnings = data.earnings.events.filter((event) => event.detected || !event.reflected).slice(0, 5);
+  const allocationSegments = buildAllocationSegments(data.portfolio.positions);
 
   return (
     <main className="shell">
@@ -38,11 +38,28 @@ export default function DashboardPage() {
           <p className="eyebrow">ROMANCE ALLOCATION COMMAND</p>
           <h1>ロマン枠 作戦司令室</h1>
         </div>
-        <div className="topbar__status">
-          <span>市場データ</span>
-          <strong>{formatDateTime(data.marketUpdatedAt)}</strong>
+        <div className="topbar__actions">
+          <div className={`topbar__status topbar__status--${data.marketFreshness.level}`}>
+            <span>市場データ</span>
+            <strong>{data.marketFreshness.label}</strong>
+          </div>
+          <MarketRefreshButton />
         </div>
       </header>
+
+      <section className={`market-warning market-warning--${data.marketFreshness.level}`} aria-live="polite">
+        <div className="market-warning__main">
+          <strong>{data.marketFreshness.message}</strong>
+          <span>
+            最終更新: {formatDateTime(data.marketUpdatedAt)}
+            {data.marketErrors.length > 0 ? ` / 取得失敗 ${data.marketErrors.length}銘柄` : ""}
+          </span>
+        </div>
+        <div className="market-warning__side">
+          <span>{data.marketSource}</span>
+          <MarketRefreshButton />
+        </div>
+      </section>
 
       <section id="home" className="section hero-grid">
         <article className="panel hero-panel">
@@ -52,7 +69,33 @@ export default function DashboardPage() {
               {formatSignedUsd(data.portfolio.totalProfitLoss)} / {formatPercent(data.portfolio.totalProfitLossRate)}
             </span>
           </div>
-          <div className="hero-number">{formatUsd(data.portfolio.totalValue)}</div>
+          <div className="portfolio-visual">
+            <AllocationDonut positions={data.portfolio.positions} />
+            <div className="portfolio-visual__main">
+              <div className="hero-number">{formatUsd(data.portfolio.totalValue)}</div>
+              <div className="allocation-stack">
+                {data.portfolio.positions.map((position, index) => (
+                  <div className="allocation-item" key={`top-${position.ticker}`}>
+                    <div className="allocation-item__label">
+                      <span>
+                        <i style={{ background: chartColors[index % chartColors.length] }} />
+                        {position.ticker}
+                      </span>
+                      <strong>{formatPercent(position.allocation)}</strong>
+                    </div>
+                    <div className="allocation-track">
+                      <span
+                        style={{
+                          width: `${Math.max(3, position.allocation)}%`,
+                          background: chartColors[index % chartColors.length]
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="hero-subgrid">
             <Metric label="投下元本" value={formatUsd(data.portfolio.totalCost)} />
             <Metric
@@ -60,6 +103,18 @@ export default function DashboardPage() {
               value={firstPosition ? `${firstPosition.ticker} ${formatPercent(firstPosition.allocation)}` : "-"}
             />
             <Metric label="保有銘柄" value={`${data.portfolio.positions.length}銘柄`} />
+          </div>
+          <div className="segment-strip" aria-label="保有比率">
+            {allocationSegments.map((segment, index) => (
+              <span
+                key={segment.ticker}
+                title={`${segment.ticker} ${formatPercent(segment.allocation)}`}
+                style={{
+                  width: `${Math.max(3, segment.end - segment.start)}%`,
+                  background: chartColors[index % chartColors.length]
+                }}
+              />
+            ))}
           </div>
           <p className="risk-note">
             自動売買ではありません。売買直前は証券会社画面で価格、取扱、注文条件を確認します。
@@ -125,7 +180,7 @@ export default function DashboardPage() {
       <section id="positions" className="section">
         <SectionTitle icon={CircleDollarSign} title="保有ポジション" sub="手入力JSONを評価額と損益へ変換" />
         <div className="position-grid">
-          {data.portfolio.positions.map((position) => (
+          {data.portfolio.positions.map((position, index) => (
             <article className="position-card" key={position.ticker}>
               <div className="position-card__top">
                 <div>
@@ -136,7 +191,32 @@ export default function DashboardPage() {
                   {formatPercent(position.profitLossRate)}
                 </Badge>
               </div>
-              <div className="position-card__value">{formatUsd(position.marketValue)}</div>
+              <div className="position-chart">
+                <div
+                  className="position-chart__ring"
+                  style={{
+                    background: `conic-gradient(${chartColors[index % chartColors.length]} 0deg ${Math.max(
+                      4,
+                      position.allocation * 3.6
+                    )}deg, rgba(255,255,255,0.06) ${Math.max(4, position.allocation * 3.6)}deg 360deg)`
+                  }}
+                >
+                  <span>{formatPercent(position.allocation)}</span>
+                </div>
+                <div>
+                  <div className="position-card__value">{formatUsd(position.marketValue)}</div>
+                  <div className="pnl-track">
+                    <span
+                      className={position.profitLoss >= 0 ? "pnl-track__up" : "pnl-track__down"}
+                      style={{ width: `${Math.min(100, Math.max(8, Math.abs(position.profitLossRate) * 4))}%` }}
+                    />
+                  </div>
+                  <div className="position-chart__caption">
+                    <span>損益</span>
+                    <strong className={valueClass(position.profitLoss)}>{formatSignedUsd(position.profitLoss)}</strong>
+                  </div>
+                </div>
+              </div>
               <div className="metric-line">
                 <span>株数</span>
                 <strong>{position.shares}</strong>
@@ -152,9 +232,6 @@ export default function DashboardPage() {
               <div className="metric-line">
                 <span>損益</span>
                 <strong className={valueClass(position.profitLoss)}>{formatSignedUsd(position.profitLoss)}</strong>
-              </div>
-              <div className="allocation-bar">
-                <span style={{ width: `${Math.max(4, position.allocation)}%` }} />
               </div>
               <p className="note-text">{position.notes}</p>
             </article>
@@ -187,8 +264,9 @@ export default function DashboardPage() {
                     <div className="ticker-cell">
                       <strong>{row.ticker}</strong>
                       {row.memoPath ? (
-                        <Link href={`/memo?path=${encodeURIComponent(row.memoPath)}`}>memo</Link>
+                        <a href={getMemoHref(row.memoPath)}>memo</a>
                       ) : null}
+                      {row.market?.stale ? <span className="stale-pill">STALE</span> : null}
                     </div>
                   </td>
                   <td>{row.hillLabel}</td>
@@ -250,7 +328,7 @@ export default function DashboardPage() {
                 <Badge tone={event.detected ? "event" : "wait"}>{event.detected ? "alert検知" : event.monitorSignal}</Badge>
                 <Badge tone={event.reflected ? "ok" : "danger"}>{event.reflected ? "反映済み" : "未反映"}</Badge>
                 {event.memoPath ? (
-                  <Link href={`/memo?path=${encodeURIComponent(event.memoPath)}`}>memo</Link>
+                  <a href={getMemoHref(event.memoPath)}>memo</a>
                 ) : null}
               </div>
             </article>
@@ -262,11 +340,11 @@ export default function DashboardPage() {
         <SectionTitle icon={BookOpen} title="メモリンク" sub="深掘りメモ、比較表、仮説崩れ条件へ移動" />
         <div className="memo-grid">
           {data.memos.map((memo) => (
-            <Link className="memo-card" href={`/memo?path=${encodeURIComponent(memo.path)}`} key={memo.path}>
+            <a className="memo-card" href={getMemoHref(memo.path)} key={memo.path}>
               <span>{memo.group}</span>
               <strong>{memo.title}</strong>
               <small>{memo.path}</small>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -274,9 +352,9 @@ export default function DashboardPage() {
       <footer className="footer">
         <div>
           <RefreshCw size={15} />
-          <span>価格更新: dashboardで `npm run market:update`</span>
+          <span>価格更新: GitHub Actions またはローカルで `npm run market:update`</span>
         </div>
-        <span>positions.local.json と market.local.json はgitignore対象</span>
+        <span>GitHub Pages版は公開データを静的ビルドに焼き込み</span>
       </footer>
 
       <nav className="bottom-tabs" aria-label="主要タブ">
@@ -291,6 +369,27 @@ export default function DashboardPage() {
         })}
       </nav>
     </main>
+  );
+}
+
+const chartColors = ["#7170ff", "#10b981", "#22d3ee", "#f59e0b", "#fb7185"];
+
+function AllocationDonut({ positions }: { positions: PortfolioPosition[] }) {
+  let cursor = 0;
+  const slices = positions.map((position, index) => {
+    const start = cursor;
+    const end = cursor + position.allocation * 3.6;
+    cursor = end;
+    return `${chartColors[index % chartColors.length]} ${start}deg ${end}deg`;
+  });
+  const background = positions.length > 0 ? `conic-gradient(${slices.join(", ")})` : "rgba(255,255,255,0.06)";
+  return (
+    <div className="allocation-donut" style={{ background }} aria-label="保有比率チャート">
+      <div>
+        <span>Allocation</span>
+        <strong>{positions.length}</strong>
+      </div>
+    </div>
   );
 }
 

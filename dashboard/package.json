@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx http-server out -p 4175 -c-",
     "test": "vitest run",
+    "check": "npm test && npm run build",
     "market:update": "node scripts/update-market-data.mjs"
   },
   "dependencies": {
     "lucide-react": "1.14.0",
     "next": "16.2.6",
     "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react-dom": "19.2.6",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "25.7.0",
