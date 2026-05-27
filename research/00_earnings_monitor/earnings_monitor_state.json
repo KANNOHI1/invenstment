@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-15T09:38:25.753885+00:00",
+  "updated_at": "2026-05-27T22:50:44.004342+00:00",
   "sources": {
-    "285A|Kioxia IR calendar|https://www.kioxia-holdings.com/en-jp/ir/calendar.html": {
-      "hash": "7900e089f364512ef4366fff201025aaecbd573ff71daee2684c7552d7fe9cfb",
-      "last_checked_at": "2026-05-15T09:38:25.753885+00:00",
-      "last_success_at": "2026-05-15T09:38:25.753885+00:00",
-      "url": "https://www.kioxia-holdings.com/en-jp/ir/calendar.html"
+    "MRVL|MRVL date announcement|https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results": {
+      "hash": "afc627d2b49326b88ec18e552310a08a93256890b51f9d7da73a16f746aa6aa4",
+      "last_checked_at": "2026-05-27T22:50:44.004342+00:00",
+      "last_success_at": "2026-05-27T22:50:44.004342+00:00",
+      "url": "https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results"
     },
-    "285A|Kioxia IR library|https://www.kioxia-holdings.com/en-jp/ir/library.html": {
-      "hash": "5a0ae6ae9bcbcaa39460d1df7d96ed52f3616638ab4005ee3a6d86f3249c372d",
-      "last_checked_at": "2026-05-15T09:38:25.753885+00:00",
-      "last_success_at": "2026-05-15T09:38:25.753885+00:00",
-      "url": "https://www.kioxia-holdings.com/en-jp/ir/library.html"
+    "MRVL|MRVL investor home|https://investor.marvell.com/": {
+      "hash": "b1cd77c49a93a979cde106ce3c2b44f24f49d3f7550588b42fe681a56b5d392a",
+      "last_checked_at": "2026-05-27T22:50:44.004342+00:00",
+      "last_success_at": "2026-05-27T22:50:44.004342+00:00",
+      "url": "https://investor.marvell.com/"
     }
   }
 }
