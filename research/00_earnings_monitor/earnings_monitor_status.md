@@ -1,6 +1,6 @@
 # 決算/イベント自動監視ステータス
 
-- 最終確認: 2026-05-28T22:24:17+00:00
+- 最終確認: 2026-05-28T23:07:59+00:00
 - 監視方式: GitHub Actionsまたはローカル実行で、予定日周辺の公式IR/ニュース/イベントページを巡回
 - 注意: 自動検出は一次確認の補助。最終判断は公式リリース本文を読んで反映する
 
@@ -24,15 +24,15 @@
 
 ## 検出ログ
 
-- 2026-05-28 22:24:17 `NTAP` NTAP date announcement: ページ変化を検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx
-- 2026-05-28 22:24:17 `NTAP` NTAP date announcement: 決算関連キーワードを検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx
-- 2026-05-28 22:24:17 `NTAP` NTAP event: ページ変化を検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx
-- 2026-05-28 22:24:17 `NTAP` NTAP event: 決算関連キーワードを検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx
-- 2026-05-28 22:24:17 `DELL` DELL investor home: ページ変化を検出。source: https://investors.delltechnologies.com/
-- 2026-05-28 22:24:17 `DELL` DELL investor home: 決算関連キーワードを検出。source: https://investors.delltechnologies.com/
-- 2026-05-28 22:24:17 `DELL` DELL upcoming events: ページ変化を検出。source: https://investors.delltechnologies.com/news-events/upcoming-events
-- 2026-05-28 22:24:17 `DELL` DELL upcoming events: 決算関連キーワードを検出。source: https://investors.delltechnologies.com/news-events/upcoming-events
-- 2026-05-28 22:24:17 `AMBA` AMBA date announcement: ページ変化を検出。source: https://investor.ambarella.com/press-releases
-- 2026-05-28 22:24:17 `AMBA` AMBA date announcement: 決算関連キーワードを検出。source: https://investor.ambarella.com/press-releases
-- 2026-05-28 22:24:17 `AMBA` AMBA investor home: ページ変化を検出。source: https://investor.ambarella.com/
-- 2026-05-28 22:24:17 `AMBA` AMBA investor home: 決算関連キーワードを検出。source: https://investor.ambarella.com/
+- 2026-05-28 23:07:59 `NTAP` NTAP date announcement: ページ変化を検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx
+- 2026-05-28 23:07:59 `NTAP` NTAP date announcement: 決算関連キーワードを検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx
+- 2026-05-28 23:07:59 `NTAP` NTAP event: ページ変化を検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx
+- 2026-05-28 23:07:59 `NTAP` NTAP event: 決算関連キーワードを検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx
+- 2026-05-28 23:07:59 `DELL` DELL investor home: ページ変化を検出。source: https://investors.delltechnologies.com/
+- 2026-05-28 23:07:59 `DELL` DELL investor home: 決算関連キーワードを検出。source: https://investors.delltechnologies.com/
+- 2026-05-28 23:07:59 `DELL` DELL upcoming events: ページ変化を検出。source: https://investors.delltechnologies.com/news-events/upcoming-events
+- 2026-05-28 23:07:59 `DELL` DELL upcoming events: 決算関連キーワードを検出。source: https://investors.delltechnologies.com/news-events/upcoming-events
+- 2026-05-28 23:07:59 `AMBA` AMBA date announcement: ページ変化を検出。source: https://investor.ambarella.com/press-releases
+- 2026-05-28 23:07:59 `AMBA` AMBA date announcement: 決算関連キーワードを検出。source: https://investor.ambarella.com/press-releases
+- 2026-05-28 23:07:59 `AMBA` AMBA investor home: ページ変化を検出。source: https://investor.ambarella.com/
+- 2026-05-28 23:07:59 `AMBA` AMBA investor home: 決算関連キーワードを検出。source: https://investor.ambarella.com/

@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-28T22:24:17.401863+00:00",
+  "updated_at": "2026-05-28T23:07:59.834646+00:00",
   "alerts": [
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "NTAP",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -15,7 +15,7 @@
       "message": "ページ変化を検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "NTAP",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -28,7 +28,7 @@
       "message": "決算関連キーワードを検出。source: https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "NTAP",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -41,7 +41,7 @@
       "message": "ページ変化を検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "NTAP",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -54,7 +54,7 @@
       "message": "決算関連キーワードを検出。source: https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "DELL",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -67,7 +67,7 @@
       "message": "ページ変化を検出。source: https://investors.delltechnologies.com/"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "DELL",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -80,7 +80,7 @@
       "message": "決算関連キーワードを検出。source: https://investors.delltechnologies.com/"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "DELL",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -93,7 +93,7 @@
       "message": "ページ変化を検出。source: https://investors.delltechnologies.com/news-events/upcoming-events"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "DELL",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -106,7 +106,7 @@
       "message": "決算関連キーワードを検出。source: https://investors.delltechnologies.com/news-events/upcoming-events"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "AMBA",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -119,7 +119,7 @@
       "message": "ページ変化を検出。source: https://investor.ambarella.com/press-releases"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "AMBA",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -132,7 +132,7 @@
       "message": "決算関連キーワードを検出。source: https://investor.ambarella.com/press-releases"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "AMBA",
       "kind": "earnings",
       "expected_date": "2026-05-28",
@@ -145,7 +145,7 @@
       "message": "ページ変化を検出。source: https://investor.ambarella.com/"
     },
     {
-      "timestamp": "2026-05-28 22:24:17",
+      "timestamp": "2026-05-28 23:07:59",
       "ticker": "AMBA",
       "kind": "earnings",
       "expected_date": "2026-05-28",
