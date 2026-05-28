@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-05-27T22:50:44.004342+00:00",
+  "updated_at": "2026-05-28T22:24:17.401863+00:00",
   "sources": {
-    "MRVL|MRVL date announcement|https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results": {
-      "hash": "afc627d2b49326b88ec18e552310a08a93256890b51f9d7da73a16f746aa6aa4",
-      "last_checked_at": "2026-05-27T22:50:44.004342+00:00",
-      "last_success_at": "2026-05-27T22:50:44.004342+00:00",
-      "url": "https://investor.marvell.com/news-events/press-releases/detail/1021/marvell-technology-inc-announces-conference-call-to-review-first-quarter-of-fiscal-year-2027-financial-results"
+    "NTAP|NTAP date announcement|https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx": {
+      "hash": "b9d757f460716ed564ffb1720638d2cadb7b007b47b752be6859bb0a062321f8",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx"
     },
-    "MRVL|MRVL investor home|https://investor.marvell.com/": {
-      "hash": "b1cd77c49a93a979cde106ce3c2b44f24f49d3f7550588b42fe681a56b5d392a",
-      "last_checked_at": "2026-05-27T22:50:44.004342+00:00",
-      "last_success_at": "2026-05-27T22:50:44.004342+00:00",
-      "url": "https://investor.marvell.com/"
+    "NTAP|NTAP event|https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx": {
+      "hash": "8684cc34a9dffebadf048df17e780f4ef63ad9bd29d1f64d8006f387d2c711e4",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
+    },
+    "DELL|DELL investor home|https://investors.delltechnologies.com/": {
+      "hash": "5821a58f585b2007e9f99d034cf465bc35a28c19bb0a176a323a56680417a23c",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investors.delltechnologies.com/"
+    },
+    "DELL|DELL upcoming events|https://investors.delltechnologies.com/news-events/upcoming-events": {
+      "hash": "0c0aef086f57c4aacef7ca9650727b30d8e54cb6a737aba6dc41eba18a81ed4c",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investors.delltechnologies.com/news-events/upcoming-events"
+    },
+    "AMBA|AMBA date announcement|https://investor.ambarella.com/press-releases": {
+      "hash": "17051e31b9c271f3b321ef80ebb3d6f57c65f09b98b11ec7085deebad4d7ba6d",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investor.ambarella.com/press-releases"
+    },
+    "AMBA|AMBA investor home|https://investor.ambarella.com/": {
+      "hash": "aca321547658d274b792d9f0bb3f4673791346dac67e16dab297491eed591fd0",
+      "last_checked_at": "2026-05-28T22:24:17.401863+00:00",
+      "last_success_at": "2026-05-28T22:24:17.401863+00:00",
+      "url": "https://investor.ambarella.com/"
     }
   }
 }
