@@ -1,41 +1,23 @@
 {
-  "updated_at": "2026-05-28T23:07:59.834646+00:00",
+  "updated_at": "2026-05-29T17:47:45.154278+00:00",
   "sources": {
-    "NTAP|NTAP date announcement|https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx": {
-      "hash": "f6d9e6f4ccb20dc57e6e14f063bcf0ad2d080e3de61242a4cd77a33b1fb2f30b",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investors.netapp.com/news/news-details/2026/NetApp-Hosts-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results-Webcast/default.aspx"
+    "TEM|TEM Investor Day event|https://investors.tempus.com/events/event-details/tempus-ai-investor-day": {
+      "hash": "ed3156b63e600915d7c23914fe535d06033d8eacff7f33b4210bc7843e6ff2a5",
+      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
+      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
+      "url": "https://investors.tempus.com/events/event-details/tempus-ai-investor-day"
     },
-    "NTAP|NTAP event|https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx": {
-      "hash": "e268d1156ed0eba19c12bfa2249c052b3848953426fd6c5a1b60096dc10744e9",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investors.netapp.com/events-and-presentations/event-details/2026/NetApp-Fourth-Quarter-and-Fiscal-Year-2026-Results/default.aspx"
+    "TEM|TEM Investor Day announcement|https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026": {
+      "hash": "d81f0236550133b09e0ad5741c59bda456c265c5481a87c36a0689d137eebdf7",
+      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
+      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
+      "url": "https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026"
     },
-    "DELL|DELL investor home|https://investors.delltechnologies.com/": {
-      "hash": "0f1867f4fe6288d6b2ccf7af967f8a28c627c58b529c02a61824ca1777f585b8",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investors.delltechnologies.com/"
-    },
-    "DELL|DELL upcoming events|https://investors.delltechnologies.com/news-events/upcoming-events": {
-      "hash": "01c652091104060fd3a3aee9cf98d74c75373c9d98dac528985375c7de064e2e",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investors.delltechnologies.com/news-events/upcoming-events"
-    },
-    "AMBA|AMBA date announcement|https://investor.ambarella.com/press-releases": {
-      "hash": "43e972df612a5724eeb437e31f68bd715cd4e87354d4ca95ce374c4b19b32e33",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investor.ambarella.com/press-releases"
-    },
-    "AMBA|AMBA investor home|https://investor.ambarella.com/": {
-      "hash": "eca2f6e52d85d00e867413025caaa4895a273335f0375fcef0c5007163c16606",
-      "last_checked_at": "2026-05-28T23:07:59.834646+00:00",
-      "last_success_at": "2026-05-28T23:07:59.834646+00:00",
-      "url": "https://investor.ambarella.com/"
+    "TEM|TEM investor home|https://investors.tempus.com/": {
+      "hash": "172e31ae16df717322cd261bc5b6698bdf284486dee391c2531f0508d519768d",
+      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
+      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
+      "url": "https://investors.tempus.com/"
     }
   }
 }
