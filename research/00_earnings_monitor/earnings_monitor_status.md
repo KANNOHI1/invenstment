@@ -1,6 +1,6 @@
 # 決算/イベント自動監視ステータス
 
-- 最終確認: 2026-05-29T17:47:45+00:00
+- 最終確認: 2026-06-03T23:18:29+00:00
 - 監視方式: GitHub Actionsまたはローカル実行で、予定日周辺の公式IR/ニュース/イベントページを巡回
 - 注意: 自動検出は一次確認の補助。最終判断は公式リリース本文を読んで反映する
 
@@ -19,14 +19,12 @@
 | MRVL | earnings | 2026-05-27 | after market close / 13:45 PT call | high | ai_chips_accelerators | skip | outside_window | 巡回対象期間外 |
 | DELL | earnings | 2026-05-28 | 15:30 CDT | high | ai_chips_accelerators | skip | outside_window | 巡回対象期間外 |
 | AMBA | earnings | 2026-05-28 | 13:30 PT | medium | ai_chips_accelerators | skip | outside_window | 巡回対象期間外 |
-| TEM | investor_day | 2026-05-29 | 09:00 EDT | high | healthcare_ai | checked | changed, event_keyword | TEM Investor Day event updated; TEM Investor Day event has event keyword; TEM Investor Day announcement updated; TEM Investor Day announcement has event keyword; TEM investor home updated; TEM investor home has event keyword |
-| AVGO | earnings | 2026-06-03 | after market close / 14:00 PT call | medium | ai_chips_accelerators | skip | outside_window | 巡回対象期間外 |
+| TEM | investor_day | 2026-05-29 | 09:00 EDT | high | healthcare_ai | skip | outside_window | 巡回対象期間外 |
+| AVGO | earnings | 2026-06-03 | after market close / 14:00 PT call | medium | ai_chips_accelerators | checked | changed, results_keyword | AVGO date announcement updated; AVGO date announcement has results keyword; AVGO investor home updated; AVGO investor home has results keyword |
 
 ## 検出ログ
 
-- 2026-05-29 17:47:45 `TEM` TEM Investor Day event: ページ変化を検出。source: https://investors.tempus.com/events/event-details/tempus-ai-investor-day
-- 2026-05-29 17:47:45 `TEM` TEM Investor Day event: イベント関連キーワードを検出。source: https://investors.tempus.com/events/event-details/tempus-ai-investor-day
-- 2026-05-29 17:47:45 `TEM` TEM Investor Day announcement: ページ変化を検出。source: https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026
-- 2026-05-29 17:47:45 `TEM` TEM Investor Day announcement: イベント関連キーワードを検出。source: https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026
-- 2026-05-29 17:47:45 `TEM` TEM investor home: ページ変化を検出。source: https://investors.tempus.com/
-- 2026-05-29 17:47:45 `TEM` TEM investor home: イベント関連キーワードを検出。source: https://investors.tempus.com/
+- 2026-06-03 23:18:29 `AVGO` AVGO date announcement: ページ変化を検出。source: https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday
+- 2026-06-03 23:18:29 `AVGO` AVGO date announcement: 決算関連キーワードを検出。source: https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday
+- 2026-06-03 23:18:29 `AVGO` AVGO investor home: ページ変化を検出。source: https://investors.broadcom.com/
+- 2026-06-03 23:18:29 `AVGO` AVGO investor home: 決算関連キーワードを検出。source: https://investors.broadcom.com/

@@ -1,23 +1,17 @@
 {
-  "updated_at": "2026-05-29T17:47:45.154278+00:00",
+  "updated_at": "2026-06-03T23:18:29.208544+00:00",
   "sources": {
-    "TEM|TEM Investor Day event|https://investors.tempus.com/events/event-details/tempus-ai-investor-day": {
-      "hash": "ed3156b63e600915d7c23914fe535d06033d8eacff7f33b4210bc7843e6ff2a5",
-      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
-      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
-      "url": "https://investors.tempus.com/events/event-details/tempus-ai-investor-day"
+    "AVGO|AVGO date announcement|https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday": {
+      "hash": "d2075799dcfba2ff49bcf5aa15c4082a05cf935873d6f68184227ef617f5c0b2",
+      "last_checked_at": "2026-06-03T23:18:29.208544+00:00",
+      "last_success_at": "2026-06-03T23:18:29.208544+00:00",
+      "url": "https://www.nasdaq.com/press-release/broadcom-inc-announce-second-quarter-fiscal-year-2026-financial-results-wednesday"
     },
-    "TEM|TEM Investor Day announcement|https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026": {
-      "hash": "d81f0236550133b09e0ad5741c59bda456c265c5481a87c36a0689d137eebdf7",
-      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
-      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
-      "url": "https://investors.tempus.com/news-releases/news-release-details/tempus-host-inaugural-investor-day-may-29-2026"
-    },
-    "TEM|TEM investor home|https://investors.tempus.com/": {
-      "hash": "172e31ae16df717322cd261bc5b6698bdf284486dee391c2531f0508d519768d",
-      "last_checked_at": "2026-05-29T17:47:45.154278+00:00",
-      "last_success_at": "2026-05-29T17:47:45.154278+00:00",
-      "url": "https://investors.tempus.com/"
+    "AVGO|AVGO investor home|https://investors.broadcom.com/": {
+      "hash": "acb56060ee80c9bc16e4364bfe257a3c2d88747cdb118da8306cf7690460cfb4",
+      "last_checked_at": "2026-06-03T23:18:29.208544+00:00",
+      "last_success_at": "2026-06-03T23:18:29.208544+00:00",
+      "url": "https://investors.broadcom.com/"
     }
   }
 }
