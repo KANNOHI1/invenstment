@@ -8,7 +8,7 @@
 ## 1\. ユーザープロファイル
 
 ```yaml
-name: 菅野 宏勇 (Hirotake Kanno)
+name: (非公開)
 ```
 
 \---

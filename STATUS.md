@@ -2,7 +2,7 @@
 
 ## 現在の状態
 
-- 菅野宏勇さんの継続的な投資戦略ワークスペースとして作成済み。
+- 継続的な投資戦略ワークスペースとして作成済み。
 - 主な対象は、防御的・コア資産とは分離した高リスクの「ロマン枠」。
 - 既存メモ: `memo\HK_investment_strategy_memo.md`
 - 追加のX投稿調査バッチは`research\00_inbox_x_posts\x_posts_2026-05-07_initial_digest.md`に整理済み。
