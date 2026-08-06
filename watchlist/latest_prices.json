@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-06T00:19:30.977Z",
+  "fetchedAt": "2026-08-06T00:35:05.003Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
@@ -14,6 +14,18 @@
       "quoteTime": "2026-08-05T20:00:01.000Z",
       "fiftyTwoWeekHigh": 76.87,
       "fiftyTwoWeekLow": 16.66,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 29.31,
+        "pctFromLow": 32.69,
+        "highDate": "2026-06-15",
+        "highClose": 60.85,
+        "pctFromHigh": -36.09,
+        "pct5d": 32.69,
+        "pct20d": -9.58,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -192,6 +204,18 @@
       "quoteTime": "2026-08-05T20:00:01.000Z",
       "fiftyTwoWeekHigh": 299.86,
       "fiftyTwoWeekLow": 53.95,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 148.22,
+        "pctFromLow": 47.75,
+        "highDate": "2026-06-18",
+        "highClose": 286.69,
+        "pctFromHigh": -23.61,
+        "pct5d": 47.75,
+        "pct20d": 1.16,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -370,6 +394,18 @@
       "quoteTime": "2026-08-05T20:00:00.000Z",
       "fiftyTwoWeekHigh": 1255,
       "fiftyTwoWeekLow": 106.75,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 739,
+        "pctFromLow": 20.86,
+        "highDate": "2026-06-25",
+        "highClose": 1213.56,
+        "pctFromHigh": -26.4,
+        "pct5d": 20.86,
+        "pct20d": -5.86,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -548,6 +584,18 @@
       "quoteTime": "2026-08-05T20:00:00.000Z",
       "fiftyTwoWeekHigh": 355,
       "fiftyTwoWeekLow": 71.35,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 209.68,
+        "pctFromLow": 17.63,
+        "highDate": "2026-06-22",
+        "highClose": 336.9,
+        "pctFromHigh": -26.79,
+        "pct5d": 17.63,
+        "pct20d": -21.27,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -726,6 +774,18 @@
       "quoteTime": "2026-08-05T20:00:02.000Z",
       "fiftyTwoWeekHigh": 323.25,
       "fiftyTwoWeekLow": 111.18,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 178.04,
+        "pctFromLow": 9.31,
+        "highDate": "2026-06-18",
+        "highClose": 297.37,
+        "pctFromHigh": -34.56,
+        "pct5d": 9.31,
+        "pct20d": -17.41,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -904,6 +964,18 @@
       "quoteTime": "2026-08-05T20:00:01.000Z",
       "fiftyTwoWeekHigh": 153.2,
       "fiftyTwoWeekLow": 60.55,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 60.82,
+        "pctFromLow": 47.8,
+        "highDate": "2026-06-18",
+        "highClose": 117.95,
+        "pctFromHigh": -23.79,
+        "pct5d": 47.8,
+        "pct20d": -0.12,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -1082,6 +1154,18 @@
       "quoteTime": "2026-08-05T20:00:00.000Z",
       "fiftyTwoWeekHigh": 328,
       "fiftyTwoWeekLow": 69,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 186.39,
+        "pctFromLow": 11.77,
+        "highDate": "2026-06-25",
+        "highClose": 309.2,
+        "pctFromHigh": -32.62,
+        "pct5d": 11.77,
+        "pct20d": -10.14,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -1260,6 +1344,18 @@
       "quoteTime": "2026-08-05T20:00:01.000Z",
       "fiftyTwoWeekHigh": 2354.39,
       "fiftyTwoWeekLow": 40.53,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 1015.89,
+        "pctFromLow": 32.94,
+        "highDate": "2026-06-25",
+        "highClose": 2335,
+        "pctFromHigh": -42.16,
+        "pct5d": 32.94,
+        "pct20d": -21.81,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
@@ -1438,6 +1534,18 @@
       "quoteTime": "2026-08-05T20:00:00.000Z",
       "fiftyTwoWeekHigh": 236.54,
       "fiftyTwoWeekLow": 164.07,
+      "trajectory": {
+        "periodDays": 41,
+        "lowDate": "2026-07-29",
+        "lowClose": 190.01,
+        "pctFromLow": 15.37,
+        "highDate": "2026-08-05",
+        "highClose": 219.22,
+        "pctFromHigh": 0,
+        "pct5d": 15.37,
+        "pct20d": 7.4,
+        "direction": "5日で上昇"
+      },
       "history": [
         {
           "date": "2026-06-08",
