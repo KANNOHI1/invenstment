@@ -1,0 +1,49 @@
+name: Price snapshot
+
+# 実行環境（Claude Code のコンテナ）からは金融データAPIが egress ポリシーで遮断されるため、
+# GitHub Actions のランナー上で株価を取得し、結果をリポジトリにコミットする。
+# 更新したいときは watchlist/.price-refresh-trigger を更新して push する。
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/price-snapshot.yml"
+      - "scripts/fetch_prices.mjs"
+      - "watchlist/.price-refresh-trigger"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: price-snapshot-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch prices
+        run: node scripts/fetch_prices.mjs
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add watchlist/latest_prices.json
+          if git diff --cached --quiet; then
+            echo "No price changes to commit."
+          else
+            git commit -m "chore: update price snapshot"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
