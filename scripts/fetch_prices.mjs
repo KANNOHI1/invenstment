@@ -47,7 +47,16 @@ for (const ticker of TICKERS) {
       quoteTime: meta.regularMarketTime ? new Date(meta.regularMarketTime * 1000).toISOString() : null,
       fiftyTwoWeekHigh: round(meta.fiftyTwoWeekHigh),
       fiftyTwoWeekLow: round(meta.fiftyTwoWeekLow),
-      // 直近2ヶ月の日次終値。仮説検証を憶測でなく軌跡で行うために必ず残す。
+      // 軌跡（線）。点だけを見て方向を語る誤りを防ぐため、計算済みの値を必ず添える。
+      trajectory: buildTrajectory(
+        (result.timestamp ?? [])
+          .map((ts, i) => ({
+            date: new Date(ts * 1000).toISOString().slice(0, 10),
+            close: round(result.indicators?.quote?.[0]?.close?.[i])
+          }))
+          .filter((d) => d.close !== null),
+        price
+      ),
       history: (result.timestamp ?? [])
         .map((ts, i) => ({
           date: new Date(ts * 1000).toISOString().slice(0, 10),
@@ -81,4 +90,35 @@ if (errors.length) {
 
 function round(v) {
   return typeof v === "number" && Number.isFinite(v) ? Math.round(v * 100) / 100 : null;
+}
+
+// 「点」ではなく「線」を必ず提示するための計算。
+// 現値だけを見て方向を語ると誤る（2026-08-06に実際に誤った）ため、
+// 底値・高値・そこからの距離・短中期のトレンドを常に添える。
+function buildTrajectory(hist, price) {
+  if (!hist.length || price === null) return null;
+  const low = hist.reduce((a, b) => (b.close < a.close ? b : a));
+  const high = hist.reduce((a, b) => (b.close > a.close ? b : a));
+  const back = (n) => (hist.length > n ? hist[hist.length - 1 - n] : hist[0]);
+  const pct = (from) => (from && from.close ? round(((price / from.close) - 1) * 100) : null);
+  return {
+    periodDays: hist.length,
+    lowDate: low.date,
+    lowClose: low.close,
+    pctFromLow: pct(low),
+    highDate: high.date,
+    highClose: high.close,
+    pctFromHigh: pct(high),
+    pct5d: pct(back(5)),
+    pct20d: pct(back(20)),
+    // 方向の要約。単独で使わず必ず上の数値と日付を添えて報告すること。
+    direction:
+      pct(back(5)) === null
+        ? null
+        : pct(back(5)) > 3
+          ? "5日で上昇"
+          : pct(back(5)) < -3
+            ? "5日で下落"
+            : "5日で横ばい"
+  };
 }
