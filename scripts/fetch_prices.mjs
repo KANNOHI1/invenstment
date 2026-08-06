@@ -14,7 +14,7 @@ const errors = [];
 
 for (const ticker of TICKERS) {
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=5d&interval=1d`;
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=2mo&interval=1d`;
     const res = await fetch(url, {
       headers: { "User-Agent": "Mozilla/5.0 price-snapshot/1.0", Accept: "application/json" }
     });
@@ -46,7 +46,14 @@ for (const ticker of TICKERS) {
       // 取得時点を必ず残す。これが無い数値は使わない。
       quoteTime: meta.regularMarketTime ? new Date(meta.regularMarketTime * 1000).toISOString() : null,
       fiftyTwoWeekHigh: round(meta.fiftyTwoWeekHigh),
-      fiftyTwoWeekLow: round(meta.fiftyTwoWeekLow)
+      fiftyTwoWeekLow: round(meta.fiftyTwoWeekLow),
+      // 直近2ヶ月の日次終値。仮説検証を憶測でなく軌跡で行うために必ず残す。
+      history: (result.timestamp ?? [])
+        .map((ts, i) => ({
+          date: new Date(ts * 1000).toISOString().slice(0, 10),
+          close: round(result.indicators?.quote?.[0]?.close?.[i])
+        }))
+        .filter((d) => d.close !== null)
     });
     process.stdout.write(".");
   } catch (e) {
