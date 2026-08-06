@@ -12,26 +12,33 @@ const TICKERS = process.argv.slice(2).length
 const rows = [];
 const errors = [];
 
+// 期間は「答えたい問い」に合わせる。単一の窓しか見ないと、
+// 短期では正しく長期では誤った判断になる（2026-08-06に実際に発生）。
+const HORIZONS = [
+  { key: "short", range: "3mo", interval: "1d", label: "執行・レジーム判断用（日次3ヶ月）" },
+  { key: "long", range: "5y", interval: "1wk", label: "ポジション・サイクル判断用（週次5年）" }
+];
+
 for (const ticker of TICKERS) {
   try {
-    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=2mo&interval=1d`;
-    const res = await fetch(url, {
-      headers: { "User-Agent": "Mozilla/5.0 price-snapshot/1.0", Accept: "application/json" }
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const json = await res.json();
-    const result = json.chart?.result?.[0];
-    if (!result) throw new Error(json.chart?.error?.description ?? "empty result");
+    const series = {};
+    for (const h of HORIZONS) {
+      const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=${h.range}&interval=${h.interval}`;
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0 price-snapshot/1.0", Accept: "application/json" }
+      });
+      if (!res.ok) throw new Error(`${h.key}: HTTP ${res.status}`);
+      const json = await res.json();
+      const result = json.chart?.result?.[0];
+      if (!result) throw new Error(`${h.key}: ${json.chart?.error?.description ?? "empty result"}`);
+      series[h.key] = result;
+    }
 
-    const meta = result.meta ?? {};
+    const meta = series.short.meta ?? {};
     const price = meta.regularMarketPrice ?? null;
-    // meta.chartPreviousClose はレンジ開始前の終値なので日次騰落には使えない。
-    // 実際の前営業日終値は closes 配列の末尾から2番目を使う。
-    const closes = (result.indicators?.quote?.[0]?.close ?? []).filter((v) => typeof v === "number");
-    const prev =
-      closes.length >= 2 && Math.abs(closes[closes.length - 1] - price) < 0.01
-        ? closes[closes.length - 2]
-        : (closes.length >= 1 ? closes[closes.length - 1] : null) ?? meta.previousClose ?? null;
+    const shortHist = toHist(series.short);
+    const longHist = toHist(series.long);
+    const prev = shortHist.length >= 2 ? shortHist[shortHist.length - 2].close : null;
     const change = price !== null && prev !== null ? price - prev : null;
     const changePct = change !== null && prev ? (change / prev) * 100 : null;
 
@@ -42,27 +49,15 @@ for (const ticker of TICKERS) {
       change: round(change),
       changePct: round(changePct),
       currency: meta.currency ?? null,
-      marketState: meta.marketState ?? null,
-      // 取得時点を必ず残す。これが無い数値は使わない。
       quoteTime: meta.regularMarketTime ? new Date(meta.regularMarketTime * 1000).toISOString() : null,
       fiftyTwoWeekHigh: round(meta.fiftyTwoWeekHigh),
       fiftyTwoWeekLow: round(meta.fiftyTwoWeekLow),
-      // 軌跡（線）。点だけを見て方向を語る誤りを防ぐため、計算済みの値を必ず添える。
-      trajectory: buildTrajectory(
-        (result.timestamp ?? [])
-          .map((ts, i) => ({
-            date: new Date(ts * 1000).toISOString().slice(0, 10),
-            close: round(result.indicators?.quote?.[0]?.close?.[i])
-          }))
-          .filter((d) => d.close !== null),
-        price
-      ),
-      history: (result.timestamp ?? [])
-        .map((ts, i) => ({
-          date: new Date(ts * 1000).toISOString().slice(0, 10),
-          close: round(result.indicators?.quote?.[0]?.close?.[i])
-        }))
-        .filter((d) => d.close !== null)
+      // 短期の線: 執行タイミングとレジーム判断用
+      trajectory: buildTrajectory(shortHist, price),
+      // 長期の線: 「この値段から3倍は妥当か」「サイクルのどこか」を判断するため。
+      // 短期窓だけで見ると、既に大きく上昇した後の調整を「安い」と誤認する。
+      longTerm: buildLongTerm(longHist, price),
+      history: shortHist
     });
     process.stdout.write(".");
   } catch (e) {
@@ -120,5 +115,38 @@ function buildTrajectory(hist, price) {
           : pct(back(5)) < -3
             ? "5日で下落"
             : "5日で横ばい"
+  };
+}
+
+function toHist(result) {
+  return (result.timestamp ?? [])
+    .map((ts, i) => ({
+      date: new Date(ts * 1000).toISOString().slice(0, 10),
+      close: round(result.indicators?.quote?.[0]?.close?.[i])
+    }))
+    .filter((d) => d.close !== null);
+}
+
+// 長期の線。年単位でどこにいるかを常に添える。
+function buildLongTerm(hist, price) {
+  if (!hist.length || price === null) return null;
+  const low = hist.reduce((a, b) => (b.close < a.close ? b : a));
+  const high = hist.reduce((a, b) => (b.close > a.close ? b : a));
+  const agoWeeks = (w) => (hist.length > w ? hist[hist.length - 1 - w] : hist[0]);
+  const pct = (from) => (from && from.close ? round(((price / from.close) - 1) * 100) : null);
+  const range = high.close - low.close;
+  return {
+    periodWeeks: hist.length,
+    low5y: low.close,
+    low5yDate: low.date,
+    high5y: high.close,
+    high5yDate: high.date,
+    pctFrom5yLow: pct(low),
+    pctFrom5yHigh: pct(high),
+    // 5年レンジ内の位置（0%=安値, 100%=高値）。高いほど「既に上げ切っている」。
+    rangePosition: range > 0 ? round(((price - low.close) / range) * 100) : null,
+    pct1y: pct(agoWeeks(52)),
+    pct2y: pct(agoWeeks(104)),
+    pct3y: pct(agoWeeks(156))
   };
 }
