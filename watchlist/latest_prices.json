@@ -1,0 +1,116 @@
+{
+  "fetchedAt": "2026-08-06T00:07:38.058Z",
+  "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
+  "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
+  "rows": [
+    {
+      "ticker": "IREN",
+      "price": 38.89,
+      "previousClose": 29.31,
+      "change": 9.58,
+      "changePct": 32.69,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:01.000Z",
+      "fiftyTwoWeekHigh": 76.87,
+      "fiftyTwoWeekLow": 16.66
+    },
+    {
+      "ticker": "NBIS",
+      "price": 218.99,
+      "previousClose": 148.22,
+      "change": 70.77,
+      "changePct": 47.75,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:01.000Z",
+      "fiftyTwoWeekHigh": 299.86,
+      "fiftyTwoWeekLow": 53.95
+    },
+    {
+      "ticker": "MU",
+      "price": 893.19,
+      "previousClose": 739,
+      "change": 154.19,
+      "changePct": 20.86,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:00.000Z",
+      "fiftyTwoWeekHigh": 1255,
+      "fiftyTwoWeekLow": 106.75
+    },
+    {
+      "ticker": "SIMO",
+      "price": 246.65,
+      "previousClose": 209.68,
+      "change": 36.97,
+      "changePct": 17.63,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:00.000Z",
+      "fiftyTwoWeekHigh": 355,
+      "fiftyTwoWeekLow": 71.35
+    },
+    {
+      "ticker": "MOD",
+      "price": 194.61,
+      "previousClose": 178.04,
+      "change": 16.57,
+      "changePct": 9.31,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:02.000Z",
+      "fiftyTwoWeekHigh": 323.25,
+      "fiftyTwoWeekLow": 111.18
+    },
+    {
+      "ticker": "CRWV",
+      "price": 89.89,
+      "previousClose": 60.82,
+      "change": 29.07,
+      "changePct": 47.8,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:01.000Z",
+      "fiftyTwoWeekHigh": 153.2,
+      "fiftyTwoWeekLow": 60.55
+    },
+    {
+      "ticker": "POWL",
+      "price": 208.33,
+      "previousClose": 186.39,
+      "change": 21.94,
+      "changePct": 11.77,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:00.000Z",
+      "fiftyTwoWeekHigh": 328,
+      "fiftyTwoWeekLow": 69
+    },
+    {
+      "ticker": "SNDK",
+      "price": 1350.5,
+      "previousClose": 1015.89,
+      "change": 334.61,
+      "changePct": 32.94,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:01.000Z",
+      "fiftyTwoWeekHigh": 2354.39,
+      "fiftyTwoWeekLow": 40.53
+    },
+    {
+      "ticker": "NVDA",
+      "price": 219.22,
+      "previousClose": 190.01,
+      "change": 29.21,
+      "changePct": 15.37,
+      "currency": "USD",
+      "marketState": null,
+      "quoteTime": "2026-08-05T20:00:00.000Z",
+      "fiftyTwoWeekHigh": 236.54,
+      "fiftyTwoWeekLow": 164.07
+    }
+  ],
+  "errors": []
+}
