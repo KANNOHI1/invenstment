@@ -25,7 +25,13 @@ for (const ticker of TICKERS) {
 
     const meta = result.meta ?? {};
     const price = meta.regularMarketPrice ?? null;
-    const prev = meta.chartPreviousClose ?? meta.previousClose ?? null;
+    // meta.chartPreviousClose はレンジ開始前の終値なので日次騰落には使えない。
+    // 実際の前営業日終値は closes 配列の末尾から2番目を使う。
+    const closes = (result.indicators?.quote?.[0]?.close ?? []).filter((v) => typeof v === "number");
+    const prev =
+      closes.length >= 2 && Math.abs(closes[closes.length - 1] - price) < 0.01
+        ? closes[closes.length - 2]
+        : (closes.length >= 1 ? closes[closes.length - 1] : null) ?? meta.previousClose ?? null;
     const change = price !== null && prev !== null ? price - prev : null;
     const changePct = change !== null && prev ? (change / prev) * 100 : null;
 
