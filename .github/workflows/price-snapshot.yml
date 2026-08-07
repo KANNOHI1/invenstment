@@ -11,6 +11,13 @@ on:
       - ".github/workflows/price-snapshot.yml"
       - "scripts/fetch_prices.mjs"
       - "watchlist/.price-refresh-trigger"
+  # 定時実行。エージェントが更新を忘れても常に鮮度が保たれる状態にする。
+  # 時刻はUTC。日本時間はUTC+9。
+  schedule:
+    - cron: "5 20 * * 1-5"   # 米国通常取引の終了直後（JST 翌05:05）
+    - cron: "5 0 * * 2-6"    # 米国時間外の終了後（JST 09:05）＝日本の朝
+    - cron: "0 4 * * 1-5"    # JST 13:00 ＝日本の昼
+    - cron: "0 12 * * 1-5"   # JST 21:00 ＝米国寄り付き前、日本の夜
 
 permissions:
   contents: write
