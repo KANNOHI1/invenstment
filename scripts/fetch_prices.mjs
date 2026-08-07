@@ -16,14 +16,20 @@ const errors = [];
 // 短期では正しく長期では誤った判断になる（2026-08-06に実際に発生）。
 const HORIZONS = [
   { key: "short", range: "3mo", interval: "1d", label: "執行・レジーム判断用（日次3ヶ月）" },
-  { key: "long", range: "5y", interval: "1wk", label: "ポジション・サイクル判断用（週次5年）" }
+  { key: "long", range: "5y", interval: "1wk", label: "ポジション・サイクル判断用（週次5年）" },
+  // 時間外（プレ／アフター）。日本から見ると米国の通常取引時間は深夜であり、
+  // 注文を出す時点では時間外の値しか見えないことが多い。執行判断に直結するため必ず取る。
+  { key: "extended", range: "1d", interval: "1m", label: "時間外を含む当日1分足", includePrePost: true }
 ];
 
 for (const ticker of TICKERS) {
   try {
     const series = {};
     for (const h of HORIZONS) {
-      const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?range=${h.range}&interval=${h.interval}`;
+      const url =
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}` +
+        `?range=${h.range}&interval=${h.interval}` +
+        (h.includePrePost ? "&includePrePost=true" : "");
       const res = await fetch(url, {
         headers: { "User-Agent": "Mozilla/5.0 price-snapshot/1.0", Accept: "application/json" }
       });
@@ -57,6 +63,8 @@ for (const ticker of TICKERS) {
       // 長期の線: 「この値段から3倍は妥当か」「サイクルのどこか」を判断するため。
       // 短期窓だけで見ると、既に大きく上昇した後の調整を「安い」と誤認する。
       longTerm: buildLongTerm(longHist, price),
+      // 時間外。日本時間の日中に注文を検討する際、これが唯一の生きた値になる。
+      extended: buildExtended(series.extended, price),
       history: shortHist
     });
     process.stdout.write(".");
@@ -148,5 +156,31 @@ function buildLongTerm(hist, price) {
     pct1y: pct(agoWeeks(52)),
     pct2y: pct(agoWeeks(104)),
     pct3y: pct(agoWeeks(156))
+  };
+}
+
+// 時間外（プレ／アフターマーケット）の最終値。
+// 日本から注文を出す時間帯には通常取引が閉まっているため、執行判断にはこちらが要る。
+function buildExtended(result, regularPrice) {
+  if (!result) return null;
+  const ts = result.timestamp ?? [];
+  const closes = result.indicators?.quote?.[0]?.close ?? [];
+  let lastIdx = -1;
+  for (let i = closes.length - 1; i >= 0; i--) {
+    if (typeof closes[i] === "number") { lastIdx = i; break; }
+  }
+  if (lastIdx < 0) return null;
+  const period = result.meta?.currentTradingPeriod ?? {};
+  const t = ts[lastIdx];
+  const session =
+    period.post && t >= period.post.start ? "post"
+    : period.pre && t < period.pre.end ? "pre"
+    : "regular";
+  const last = round(closes[lastIdx]);
+  return {
+    price: last,
+    session,
+    time: new Date(t * 1000).toISOString(),
+    vsRegularClose: regularPrice ? round(((last / regularPrice) - 1) * 100) : null
   };
 }
