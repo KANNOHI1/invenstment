@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-07T00:49:23.302Z",
+  "fetchedAt": "2026-08-07T01:01:40.153Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
