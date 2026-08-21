@@ -1,5 +1,7 @@
 // 保有・監視銘柄の株価を取得して watchlist/latest_prices.json に書き出す。
 // GitHub Actions のランナー上で実行する前提（実行環境のプロキシ制限を回避するため）。
+// **ローカル（Claude Codeのコンテナ）で実行しないこと。** egress遮断で全銘柄403になる。
+// 更新は watchlist/.price-refresh-trigger を書き換えて push する。
 // 依存パッケージなし。Node 20+ の fetch を使用。
 
 import fs from "node:fs/promises";
@@ -93,6 +95,14 @@ const out = {
 };
 
 const outPath = path.join(process.cwd(), "watchlist", "latest_prices.json");
+// 全滅した取得結果で正常なスナップショットを上書きしない。
+// 2026-08-21、Claude Code のコンテナ内でこのスクリプトを実行してしまい（egress遮断で全銘柄403）、
+// rows:0 のファイルが良好なスナップショットを潰した。空データは無いデータより危険（誤った判断に直結する）。
+if (rows.length === 0) {
+  console.error("取得が全滅したため latest_prices.json を上書きしない。既存のスナップショットを維持する。");
+  console.error("Errors:", JSON.stringify(errors, null, 2));
+  process.exit(1);
+}
 await fs.mkdir(path.dirname(outPath), { recursive: true });
 await fs.writeFile(outPath, JSON.stringify(out, null, 2) + "\n", "utf8");
 process.stdout.write(`\nWrote ${outPath} (${rows.length} rows, ${errors.length} errors)\n`);
@@ -123,7 +133,11 @@ try {
       rows: scanRows,
       errors: scanErrors
     };
+    if (scanRows.length === 0) {
+      console.error("スキャンが全滅したため scan_prices.json を上書きしない。");
+    } else {
     await fs.writeFile(SCAN_OUT_PATH, JSON.stringify(scanOut, null, 2) + "\n", "utf8");
+    }
     process.stdout.write(`\nWrote ${SCAN_OUT_PATH} (${scanRows.length} rows, ${scanErrors.length} errors)\n`);
   }
 } catch (e) {
