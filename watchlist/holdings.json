@@ -2,21 +2,60 @@
   "asOf": "2026-08-21",
   "note": "保有と予算の唯一の機械可読ソース。株数・取得単価・口座区分はユーザーの証券アプリ画面が一次ソース。手打ちで再入力しない。",
   "positions": [
-    { "ticker": "IREN", "shares": 112, "cost": 49.28, "account": "NISA", "since": "2026-07-31", "note": "ネオクラウドのコア。8/27決算" },
-    { "ticker": "POWL", "shares": 15, "cost": 207.01, "account": "NISA7+特定8", "since": "2026-08-13", "note": "装備側1位" },
-    { "ticker": "SIMO", "shares": 10, "cost": 254.86, "account": "NISA", "since": "2026-07-31", "note": "グレー分類。撤退線209.68" },
-    { "ticker": "MOD", "shares": 10, "cost": 200.72, "account": "NISA6+特定4", "since": "2026-08-13", "note": "装備側2位" },
-    { "ticker": "MU", "shares": 2, "cost": 682.00, "account": "NISA", "since": "2026-05", "note": "メモリのサイクル完走枠" }
+    {
+      "ticker": "IREN",
+      "shares": 112,
+      "cost": 49.28,
+      "account": "NISA",
+      "since": "2026-07-31",
+      "note": "ネオクラウドのコア。8/27決算"
+    },
+    {
+      "ticker": "POWL",
+      "shares": 15,
+      "cost": 207.01,
+      "account": "NISA7+特定8",
+      "since": "2026-08-13",
+      "note": "装備側1位"
+    },
+    {
+      "ticker": "SIMO",
+      "shares": 10,
+      "cost": 254.86,
+      "account": "NISA",
+      "since": "2026-07-31",
+      "note": "グレー分類。撤退線209.68"
+    },
+    {
+      "ticker": "MOD",
+      "shares": 10,
+      "cost": 200.72,
+      "account": "NISA6+特定4",
+      "since": "2026-08-13",
+      "note": "装備側2位"
+    },
+    {
+      "ticker": "MU",
+      "shares": 2,
+      "cost": 682.0,
+      "account": "NISA",
+      "since": "2026-05",
+      "note": "メモリのサイクル完走枠"
+    }
   ],
-  "cash": { "usd": 8730.03, "jpy": 306699, "nisaRemainingJpy": 19965, "asOfApp": "2026-08-18T10:31+09:00" },
+  "cash": {
+    "usd": 4335.01,
+    "jpy": 34780,
+    "nisaRemainingJpy": 19965,
+    "asOfApp": "2026-08-21T22:38+09:00",
+    "note": "円転・出金が実行済み。予備費¥100万は口座外に確保。証券口座のUSD余力$4,335.01がそのまま執行可能額。"
+  },
   "budget": {
     "reserveJpy": 1000000,
-    "fxBufferPct": 3,
-    "execCapUsd": 4250,
-    "execCapUsdIfYenConverted": 4330,
-    "yenConversionPlannedUsd": 4400,
-    "yenConversionDone": false,
-    "note": "予備費¥100万＝円貨¥306,699＋ドル側ロック。執行日はその日のアプリ為替で再計算する。これを超える買い提案は出さない。"
+    "reserveLocation": "口座外（確保済み）",
+    "execCapUsd": 4335.01,
+    "yenConversionDone": true,
+    "note": "予備費は口座外へ移した。口座内USD余力=執行可能額。これを超える買い提案は出さない。"
   },
   "lines": {
     "NVDA_thesisC_floor": 202.77,

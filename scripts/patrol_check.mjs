@@ -86,7 +86,7 @@ for (const p of holdings.positions) {
 }
 out.push(`  評価額合計 $${total.toFixed(0)}／現金 $${holdings.cash.usd}＋¥${holdings.cash.jpy}`);
 const b = holdings.budget;
-out.push(`  執行上限 $${b.yenConversionDone ? b.execCapUsdIfYenConverted : b.execCapUsd}（円転${b.yenConversionDone ? "済" : "未実行"}）`);
+out.push(`  執行上限 $${b.execCapUsd}（予備費¥${b.reserveJpy.toLocaleString()}は${b.reserveLocation ?? "口座内"}）`);
 out.push("");
 
 // ── 週次（土曜のみ）: 仮説A「借りる側 vs 稼ぐ側」──────────────────
