@@ -1,0 +1,39 @@
+# ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。
+# 1行1ティッカー。# はコメント。latest_prices.json とは別に scan_prices.json へ出力する。
+# 電力・配電・装備側
+NVT
+VRT
+ETN
+PWR
+STRL
+IESC
+AZZ
+ATKR
+GEV
+# 半導体装置・検査
+CAMT
+ONTO
+ACMR
+KLAC
+LRCX
+AMAT
+# 光・接続・インターコネクト
+AAOI
+COHR
+LITE
+CRDO
+ALAB
+# メモリ・ストレージ
+WDC
+STX
+# コンピュート・ネオクラウド
+AMD
+TSM
+AVGO
+SMCI
+APLD
+# 電力供給・原子力
+VST
+TLN
+CEG
+OKLO

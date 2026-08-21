@@ -9,6 +9,12 @@ const TICKERS = process.argv.slice(2).length
   ? process.argv.slice(2).map((t) => t.toUpperCase())
   : ["IREN", "NBIS", "MU", "SIMO", "MOD", "CRWV", "POWL", "SNDK", "NVDA"];
 
+// ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。
+// watchlist/.scan-tickers があれば、その銘柄も取得して scan_prices.json に別出しする。
+// latest_prices.json を膨らませないのは、巡回のたびに読むファイルを軽く保つため。
+const SCAN_LIST_PATH = path.join(process.cwd(), "watchlist", ".scan-tickers");
+const SCAN_OUT_PATH = path.join(process.cwd(), "watchlist", "scan_prices.json");
+
 const rows = [];
 const errors = [];
 
@@ -22,7 +28,10 @@ const HORIZONS = [
   { key: "extended", range: "1d", interval: "1m", label: "時間外を含む当日1分足", includePrePost: true }
 ];
 
-for (const ticker of TICKERS) {
+await fetchInto(TICKERS, rows, errors);
+
+async function fetchInto(tickers, rowsOut, errorsOut) {
+for (const ticker of tickers) {
   try {
     const series = {};
     for (const h of HORIZONS) {
@@ -48,7 +57,7 @@ for (const ticker of TICKERS) {
     const change = price !== null && prev !== null ? price - prev : null;
     const changePct = change !== null && prev ? (change / prev) * 100 : null;
 
-    rows.push({
+    rowsOut.push({
       ticker,
       price: round(price),
       previousClose: round(prev),
@@ -69,9 +78,10 @@ for (const ticker of TICKERS) {
     });
     process.stdout.write(".");
   } catch (e) {
-    errors.push({ ticker, message: e instanceof Error ? e.message : String(e) });
+    errorsOut.push({ ticker, message: e instanceof Error ? e.message : String(e) });
     process.stdout.write("x");
   }
+}
 }
 
 const out = {
@@ -89,6 +99,37 @@ process.stdout.write(`\nWrote ${outPath} (${rows.length} rows, ${errors.length} 
 
 if (errors.length) {
   console.error("Errors:", JSON.stringify(errors, null, 2));
+}
+
+// スキャン用の候補宇宙。存在すれば取得する。失敗しても本編の出力は壊さない。
+try {
+  const raw = await fs.readFile(SCAN_LIST_PATH, "utf8");
+  const scanTickers = raw
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"))
+    .map((t) => t.toUpperCase());
+  if (scanTickers.length) {
+    const scanRows = [];
+    const scanErrors = [];
+    process.stdout.write(`Scanning ${scanTickers.length} candidates\n`);
+    await fetchInto(scanTickers, scanRows, scanErrors);
+    // history は本編だけで足りるため、スキャン側は落としてファイルを軽くする。
+    for (const r of scanRows) delete r.history;
+    const scanOut = {
+      fetchedAt: new Date().toISOString(),
+      source: "Yahoo Finance chart endpoint (GitHub Actions runner)",
+      note: "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
+      rows: scanRows,
+      errors: scanErrors
+    };
+    await fs.writeFile(SCAN_OUT_PATH, JSON.stringify(scanOut, null, 2) + "\n", "utf8");
+    process.stdout.write(`\nWrote ${SCAN_OUT_PATH} (${scanRows.length} rows, ${scanErrors.length} errors)\n`);
+  }
+} catch (e) {
+  if (e && e.code !== "ENOENT") {
+    console.error("Scan list error:", e instanceof Error ? e.message : String(e));
+  }
 }
 
 function round(v) {

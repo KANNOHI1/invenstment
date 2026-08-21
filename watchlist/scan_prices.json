@@ -1,0 +1,132 @@
+{
+  "fetchedAt": "2026-08-21T13:15:52.550Z",
+  "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
+  "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
+  "rows": [],
+  "errors": [
+    {
+      "ticker": "NVT",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "VRT",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "ETN",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "PWR",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "STRL",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "IESC",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "AZZ",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "ATKR",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "GEV",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "CAMT",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "ONTO",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "ACMR",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "KLAC",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "LRCX",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "AMAT",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "AAOI",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "COHR",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "LITE",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "CRDO",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "ALAB",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "WDC",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "STX",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "AMD",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "TSM",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "AVGO",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "SMCI",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "APLD",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "VST",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "TLN",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "CEG",
+      "message": "short: HTTP 403"
+    },
+    {
+      "ticker": "OKLO",
+      "message": "short: HTTP 403"
+    }
+  ]
+}
