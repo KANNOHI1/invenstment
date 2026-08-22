@@ -71,9 +71,6 @@ out.push("");
 // ── 距離（監視線） ─────────────────────────────────────────
 out.push("【距離】監視線まで");
 if (rows.SIMO) out.push(`  SIMO 撤退線$${L.SIMO_exit}: 現値$${rows.SIMO.price}、あと${f(pct(rows.SIMO.price, L.SIMO_exit))}`);
-// 弾薬（MMFスリーブ）の発射条件。holdings.json の budget.ammo と対応。
-if (rows.IREN) out.push(`  弾薬① IREN $36.99以下: 現値$${rows.IREN.price}、あと${f(pct(rows.IREN.price, 36.99))}${rows.IREN.price <= 36.99 ? " ★発射" : ""}`);
-if (nvda) out.push(`  弾薬② NVDA終値$${L.NVDA_thesisC_floor}割れ: ${nvda.price < L.NVDA_thesisC_floor ? "★発射" : "未達"}（時限 2026-09-30）`);
 out.push("");
 
 // ── 保有（点ではなく線）─────────────────────────────────────

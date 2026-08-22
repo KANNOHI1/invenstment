@@ -1,0 +1,36 @@
+# ローテーション観測の計器一式。rotation_prices.json へ出力する。
+# 「今どの象限にいて、資金がどのセクターにあるか」を測るための道具であって、売買候補リストではない。
+# 11セクターETF（GICS）
+XLK
+XLF
+XLE
+XLV
+XLP
+XLU
+XLI
+XLB
+XLY
+XLRE
+XLC
+# ベンチマークとリスク選好（小型/大型で景気の強弱、QQQ/SPYでグロース選好）
+SPY
+QQQ
+IWM
+# 金利
+^TNX
+^TYX
+^IRX
+# コモディティ・通貨
+CL=F
+GC=F
+DX-Y.NYB
+# クレジット選好（景気の先行指標）
+HYG
+LQD
+# ボラティリティ
+^VIX
+# テーマ内サブセクター（主役の中身を見る）
+SMH
+IGV
+URA
+XME

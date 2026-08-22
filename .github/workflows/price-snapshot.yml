@@ -12,6 +12,7 @@ on:
       - "scripts/fetch_prices.mjs"
       - "watchlist/.price-refresh-trigger"
       - "watchlist/.scan-tickers"
+      - "watchlist/.rotation-tickers"
   # 定時実行。エージェントが更新を忘れても常に鮮度が保たれる状態にする。
   # 時刻はUTC。日本時間はUTC+9。
   schedule:
@@ -48,7 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add watchlist/latest_prices.json watchlist/scan_prices.json
+          git add watchlist/latest_prices.json watchlist/scan_prices.json watchlist/rotation_prices.json
           if git diff --cached --quiet; then
             echo "No price changes to commit."
           else

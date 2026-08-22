@@ -54,18 +54,7 @@
     "reserveJpy": 1000000,
     "reserveLocation": "口座外（確保済み）",
     "execCapUsd": 4335.01,
-    "yenConversionDone": true,
-    "plan": "IREN35+CAMT35+MMF30（zenpen_saihaichi_2026-08-21.md改訂版）",
-    "ammo": {
-      "targetUsd": 5500,
-      "vehicle": "米ドルMMF",
-      "triggers": [
-        "IREN<=36.99",
-        "NVDA_close<202.77",
-        "deadline 2026-09-30 全額投下"
-      ]
-    },
-    "note": "口座内USD余力=執行可能額。これを超える買い提案は出さない。"
+    "note": "口座内USD余力。売買はユーザーが決定する。こちらから執行提案はしない。保有の変更はユーザーからの連絡でのみ更新する。"
   },
   "lines": {
     "NVDA_thesisC_floor": 202.77,

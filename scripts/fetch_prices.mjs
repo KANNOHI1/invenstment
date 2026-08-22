@@ -17,6 +17,11 @@ const TICKERS = process.argv.slice(2).length
 const SCAN_LIST_PATH = path.join(process.cwd(), "watchlist", ".scan-tickers");
 const SCAN_OUT_PATH = path.join(process.cwd(), "watchlist", "scan_prices.json");
 
+// ローテーション観測の計器。セクターETF・金利・原油・ドル・クレジット・VIX。
+// 「今どの象限か」「資金がどこにあるか」を測るためのもので、売買候補ではない。
+const ROTATION_LIST_PATH = path.join(process.cwd(), "watchlist", ".rotation-tickers");
+const ROTATION_OUT_PATH = path.join(process.cwd(), "watchlist", "rotation_prices.json");
+
 const rows = [];
 const errors = [];
 
@@ -143,6 +148,38 @@ try {
 } catch (e) {
   if (e && e.code !== "ENOENT") {
     console.error("Scan list error:", e instanceof Error ? e.message : String(e));
+  }
+}
+
+// ローテーション観測。history は相対強度の計算に使うので残す。
+try {
+  const raw = await fs.readFile(ROTATION_LIST_PATH, "utf8");
+  const rotTickers = raw
+    .split("\n")
+    .map((l) => l.trim())
+    .filter((l) => l && !l.startsWith("#"));
+  if (rotTickers.length) {
+    const rotRows = [];
+    const rotErrors = [];
+    process.stdout.write(`Rotation: ${rotTickers.length} instruments\n`);
+    await fetchInto(rotTickers, rotRows, rotErrors);
+    if (rotRows.length === 0) {
+      console.error("ローテーション取得が全滅したため rotation_prices.json を上書きしない。");
+    } else {
+      const rotOut = {
+        fetchedAt: new Date().toISOString(),
+        source: "Yahoo Finance chart endpoint (GitHub Actions runner)",
+        note: "ローテーション観測の計器。セクターETF・金利・原油・ドル・クレジット・VIX。売買候補ではない。",
+        rows: rotRows,
+        errors: rotErrors
+      };
+      await fs.writeFile(ROTATION_OUT_PATH, JSON.stringify(rotOut, null, 2) + "\n", "utf8");
+      process.stdout.write(`Wrote ${ROTATION_OUT_PATH} (${rotRows.length} rows, ${rotErrors.length} errors)\n`);
+    }
+  }
+} catch (e) {
+  if (e && e.code !== "ENOENT") {
+    console.error("Rotation list error:", e instanceof Error ? e.message : String(e));
   }
 }
 
