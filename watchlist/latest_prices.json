@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-22T00:42:12.739Z",
+  "fetchedAt": "2026-08-22T02:19:49.138Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
@@ -12,7 +12,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:01.000Z",
       "fiftyTwoWeekHigh": 76.87,
-      "fiftyTwoWeekLow": 18.87,
+      "fiftyTwoWeekLow": 20.74,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
@@ -900,7 +900,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:00.000Z",
       "fiftyTwoWeekHigh": 355,
-      "fiftyTwoWeekLow": 73.58,
+      "fiftyTwoWeekLow": 76.09,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
@@ -1788,7 +1788,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:00.000Z",
       "fiftyTwoWeekHigh": 328,
-      "fiftyTwoWeekLow": 83.02,
+      "fiftyTwoWeekLow": 83.85,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",

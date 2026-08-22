@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-22T00:42:25.962Z",
+  "fetchedAt": "2026-08-22T02:19:57.250Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
   "rows": [
@@ -222,7 +222,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:00.000Z",
       "fiftyTwoWeekHigh": 816.51,
-      "fiftyTwoWeekLow": 323.64,
+      "fiftyTwoWeekLow": 333.26,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
@@ -726,7 +726,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:01.000Z",
       "fiftyTwoWeekHigh": 1085.68,
-      "fiftyTwoWeekLow": 115.89,
+      "fiftyTwoWeekLow": 119.25,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
@@ -852,7 +852,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:00.000Z",
       "fiftyTwoWeekHigh": 799.87,
-      "fiftyTwoWeekLow": 74.57,
+      "fiftyTwoWeekLow": 76.7,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-08-07",
@@ -894,7 +894,7 @@
       "currency": "USD",
       "quoteTime": "2026-08-21T20:00:00.000Z",
       "fiftyTwoWeekHigh": 1145,
-      "fiftyTwoWeekLow": 154.22,
+      "fiftyTwoWeekLow": 158.68,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-16",
