@@ -1,28 +1,28 @@
 {
-  "fetchedAt": "2026-08-24T14:47:58.724Z",
+  "fetchedAt": "2026-08-24T23:07:09.943Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
     {
       "ticker": "IREN",
-      "price": 40.36,
+      "price": 39.81,
       "previousClose": 41.88,
-      "change": -1.52,
-      "changePct": -3.62,
+      "change": -2.07,
+      "changePct": -4.94,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:54.000Z",
+      "quoteTime": "2026-08-24T20:00:01.000Z",
       "fiftyTwoWeekHigh": 76.87,
       "fiftyTwoWeekLow": 20.74,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 29.31,
-        "pctFromLow": 37.71,
+        "pctFromLow": 35.82,
         "highDate": "2026-05-27",
         "highClose": 67.84,
-        "pctFromHigh": -40.5,
-        "pct5d": -10.1,
-        "pct20d": 11.22,
+        "pctFromHigh": -41.32,
+        "pct5d": -11.34,
+        "pct20d": 9.7,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -31,18 +31,18 @@
         "low5yDate": "2022-12-19",
         "high5y": 63.54,
         "high5yDate": "2026-05-25",
-        "pctFrom5yLow": 3291.85,
-        "pctFrom5yHigh": -36.48,
-        "rangePosition": 62.83,
-        "pct1y": 52.43,
-        "pct2y": 410.28,
-        "pct3y": 787.1
+        "pctFrom5yLow": 3245.38,
+        "pctFrom5yHigh": -37.35,
+        "rangePosition": 61.94,
+        "pct1y": 50.34,
+        "pct2y": 403.29,
+        "pct3y": 774.95
       },
       "extended": {
-        "price": 40.36,
-        "session": "regular",
-        "time": "2026-08-24T14:47:54.000Z",
-        "vsRegularClose": -0.01
+        "price": 39.83,
+        "session": "post",
+        "time": "2026-08-24T23:06:57.000Z",
+        "vsRegularClose": 0.05
       },
       "history": [
         {
@@ -295,30 +295,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 40.36
+          "close": 39.81
         }
       ]
     },
     {
       "ticker": "NBIS",
-      "price": 204.87,
+      "price": 210.91,
       "previousClose": 219.13,
-      "change": -14.26,
-      "changePct": -6.51,
+      "change": -8.22,
+      "changePct": -3.75,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:51.000Z",
+      "quoteTime": "2026-08-24T20:00:00.000Z",
       "fiftyTwoWeekHigh": 299.86,
       "fiftyTwoWeekLow": 63.26,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 148.22,
-        "pctFromLow": 38.22,
+        "pctFromLow": 42.3,
         "highDate": "2026-06-18",
         "highClose": 286.69,
-        "pctFromHigh": -28.54,
-        "pct5d": -23.8,
-        "pct20d": 9.04,
+        "pctFromHigh": -26.43,
+        "pct5d": -21.55,
+        "pct20d": 12.26,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -327,18 +327,18 @@
         "low5yDate": "2024-11-11",
         "high5y": 286.69,
         "high5yDate": "2026-06-15",
-        "pctFrom5yLow": 1064.01,
-        "pctFrom5yHigh": -28.54,
-        "rangePosition": 69.59,
-        "pct1y": 199.86,
-        "pct2y": 946.83,
-        "pct3y": 946.83
+        "pctFrom5yLow": 1098.35,
+        "pctFrom5yHigh": -26.43,
+        "rangePosition": 71.84,
+        "pct1y": 208.71,
+        "pct2y": 977.72,
+        "pct3y": 977.72
       },
       "extended": {
-        "price": 204.87,
-        "session": "regular",
-        "time": "2026-08-24T14:47:51.000Z",
-        "vsRegularClose": 0
+        "price": 211.37,
+        "session": "post",
+        "time": "2026-08-24T23:06:50.000Z",
+        "vsRegularClose": 0.22
       },
       "history": [
         {
@@ -591,30 +591,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 204.87
+          "close": 210.91
         }
       ]
     },
     {
       "ticker": "MU",
-      "price": 901.58,
+      "price": 910.43,
       "previousClose": 966.78,
-      "change": -65.2,
-      "changePct": -6.74,
+      "change": -56.35,
+      "changePct": -5.83,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:54.000Z",
+      "quoteTime": "2026-08-24T20:00:01.000Z",
       "fiftyTwoWeekHigh": 1255,
       "fiftyTwoWeekLow": 114.25,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 739,
-        "pctFromLow": 22,
+        "pctFromLow": 23.2,
         "highDate": "2026-06-25",
         "highClose": 1213.56,
-        "pctFromHigh": -25.71,
-        "pct5d": -10.89,
-        "pct20d": 0.15,
+        "pctFromHigh": -24.98,
+        "pct5d": -10.01,
+        "pct20d": 1.14,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -623,18 +623,18 @@
         "low5yDate": "2022-12-26",
         "high5y": 1133.99,
         "high5yDate": "2026-06-15",
-        "pctFrom5yLow": 1703.88,
-        "pctFrom5yHigh": -20.49,
-        "rangePosition": 78.56,
-        "pct1y": 657.57,
-        "pct2y": 836.8,
-        "pct3y": 1180.84
+        "pctFrom5yLow": 1721.59,
+        "pctFrom5yHigh": -19.71,
+        "rangePosition": 79.38,
+        "pct1y": 665,
+        "pct2y": 846,
+        "pct3y": 1193.41
       },
       "extended": {
-        "price": 902.1,
-        "session": "regular",
-        "time": "2026-08-24T14:47:55.000Z",
-        "vsRegularClose": 0.06
+        "price": 906.12,
+        "session": "post",
+        "time": "2026-08-24T23:07:06.000Z",
+        "vsRegularClose": -0.47
       },
       "history": [
         {
@@ -887,30 +887,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 901.58
+          "close": 910.43
         }
       ]
     },
     {
       "ticker": "SIMO",
-      "price": 240.39,
+      "price": 243.18,
       "previousClose": 258.36,
-      "change": -17.97,
-      "changePct": -6.96,
+      "change": -15.18,
+      "changePct": -5.88,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:55.000Z",
+      "quoteTime": "2026-08-24T20:00:00.000Z",
       "fiftyTwoWeekHigh": 355,
       "fiftyTwoWeekLow": 76.09,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 209.68,
-        "pctFromLow": 14.65,
+        "pctFromLow": 15.98,
         "highDate": "2026-06-22",
         "highClose": 336.9,
-        "pctFromHigh": -28.65,
-        "pct5d": -11.85,
-        "pct20d": -1.66,
+        "pctFromHigh": -27.82,
+        "pct5d": -10.83,
+        "pct20d": -0.52,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -919,18 +919,18 @@
         "low5yDate": "2025-04-14",
         "high5y": 326.35,
         "high5yDate": "2026-07-06",
-        "pctFrom5yLow": 512.93,
-        "pctFrom5yHigh": -26.34,
-        "rangePosition": 70.06,
-        "pct1y": 201.69,
-        "pct2y": 278.15,
-        "pct3y": 341.24
+        "pctFrom5yLow": 520.04,
+        "pctFrom5yHigh": -25.48,
+        "rangePosition": 71.03,
+        "pct1y": 205.2,
+        "pct2y": 282.54,
+        "pct3y": 346.37
       },
       "extended": {
-        "price": 240.39,
-        "session": "regular",
-        "time": "2026-08-24T14:47:55.000Z",
-        "vsRegularClose": 0
+        "price": 243,
+        "session": "post",
+        "time": "2026-08-24T23:01:39.000Z",
+        "vsRegularClose": -0.07
       },
       "history": [
         {
@@ -1183,30 +1183,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 240.39
+          "close": 243.18
         }
       ]
     },
     {
       "ticker": "MOD",
-      "price": 186.69,
+      "price": 188.37,
       "previousClose": 197.68,
-      "change": -10.99,
-      "changePct": -5.56,
+      "change": -9.31,
+      "changePct": -4.71,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:53.000Z",
+      "quoteTime": "2026-08-24T20:00:02.000Z",
       "fiftyTwoWeekHigh": 323.25,
       "fiftyTwoWeekLow": 111.18,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 178.04,
-        "pctFromLow": 4.86,
+        "pctFromLow": 5.8,
         "highDate": "2026-06-02",
         "highClose": 306.89,
-        "pctFromHigh": -39.17,
-        "pct5d": -13.87,
-        "pct20d": -18.97,
+        "pctFromHigh": -38.62,
+        "pct5d": -13.09,
+        "pct20d": -18.24,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -1215,18 +1215,18 @@
         "low5yDate": "2022-04-25",
         "high5y": 297.37,
         "high5yDate": "2026-06-15",
-        "pctFrom5yLow": 2263.16,
-        "pctFrom5yHigh": -37.22,
-        "rangePosition": 61.76,
-        "pct1y": 37.14,
-        "pct2y": 53.59,
-        "pct3y": 281.39
+        "pctFrom5yLow": 2284.43,
+        "pctFrom5yHigh": -36.65,
+        "rangePosition": 62.34,
+        "pct1y": 38.38,
+        "pct2y": 54.97,
+        "pct3y": 284.82
       },
       "extended": {
-        "price": 186.69,
-        "session": "regular",
-        "time": "2026-08-24T14:47:53.000Z",
-        "vsRegularClose": 0
+        "price": 188.51,
+        "session": "post",
+        "time": "2026-08-24T23:06:02.000Z",
+        "vsRegularClose": 0.07
       },
       "history": [
         {
@@ -1479,30 +1479,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 186.69
+          "close": 188.37
         }
       ]
     },
     {
       "ticker": "CRWV",
-      "price": 84.08,
+      "price": 86.25,
       "previousClose": 87.85,
-      "change": -3.77,
-      "changePct": -4.29,
+      "change": -1.6,
+      "changePct": -1.82,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:56.000Z",
+      "quoteTime": "2026-08-24T20:00:01.000Z",
       "fiftyTwoWeekHigh": 153.2,
       "fiftyTwoWeekLow": 60.55,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 60.82,
-        "pctFromLow": 38.24,
+        "pctFromLow": 41.81,
         "highDate": "2026-06-01",
         "highClose": 124.82,
-        "pctFromHigh": -32.64,
-        "pct5d": -20.68,
-        "pct20d": 18.77,
+        "pctFromHigh": -30.9,
+        "pct5d": -18.63,
+        "pct20d": 21.84,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -1511,18 +1511,18 @@
         "low5yDate": "2025-04-14",
         "high5y": 183.58,
         "high5yDate": "2025-06-16",
-        "pctFrom5yLow": 115.09,
-        "pctFrom5yHigh": -54.2,
-        "rangePosition": 31.14,
-        "pct1y": -18.4,
-        "pct2y": 110.2,
-        "pct3y": 110.2
+        "pctFrom5yLow": 120.64,
+        "pctFrom5yHigh": -53.02,
+        "rangePosition": 32.64,
+        "pct1y": -16.29,
+        "pct2y": 115.63,
+        "pct3y": 115.63
       },
       "extended": {
-        "price": 84.08,
-        "session": "regular",
-        "time": "2026-08-24T14:47:56.000Z",
-        "vsRegularClose": 0
+        "price": 85.92,
+        "session": "post",
+        "time": "2026-08-24T23:07:01.000Z",
+        "vsRegularClose": -0.38
       },
       "history": [
         {
@@ -1775,30 +1775,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 84.08
+          "close": 86.25
         }
       ]
     },
     {
       "ticker": "POWL",
-      "price": 188.37,
+      "price": 188.98,
       "previousClose": 197.67,
-      "change": -9.3,
-      "changePct": -4.7,
+      "change": -8.69,
+      "changePct": -4.4,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:17.000Z",
+      "quoteTime": "2026-08-24T20:00:00.000Z",
       "fiftyTwoWeekHigh": 328,
       "fiftyTwoWeekLow": 83.85,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 186.39,
-        "pctFromLow": 1.06,
+        "pctFromLow": 1.39,
         "highDate": "2026-06-25",
         "highClose": 309.2,
-        "pctFromHigh": -39.08,
-        "pct5d": -13.88,
-        "pct20d": -14.08,
+        "pctFromHigh": -38.88,
+        "pct5d": -13.6,
+        "pct20d": -13.8,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -1807,18 +1807,18 @@
         "low5yDate": "2022-04-25",
         "high5y": 309.39,
         "high5yDate": "2026-05-04",
-        "pctFrom5yLow": 2829.55,
-        "pctFrom5yHigh": -39.12,
-        "rangePosition": 60.05,
-        "pct1y": 112.32,
-        "pct2y": 237.52,
-        "pct3y": 567.98
+        "pctFrom5yLow": 2839.04,
+        "pctFrom5yHigh": -38.92,
+        "rangePosition": 60.26,
+        "pct1y": 113.01,
+        "pct2y": 238.61,
+        "pct3y": 570.14
       },
       "extended": {
-        "price": 188.37,
-        "session": "regular",
-        "time": "2026-08-24T14:47:17.000Z",
-        "vsRegularClose": 0
+        "price": 188.5,
+        "session": "post",
+        "time": "2026-08-24T22:40:28.000Z",
+        "vsRegularClose": -0.25
       },
       "history": [
         {
@@ -2071,30 +2071,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 188.37
+          "close": 188.98
         }
       ]
     },
     {
       "ticker": "SNDK",
-      "price": 1453.5,
+      "price": 1493.12,
       "previousClose": 1596.08,
-      "change": -142.58,
-      "changePct": -8.93,
+      "change": -102.96,
+      "changePct": -6.45,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:57.000Z",
+      "quoteTime": "2026-08-24T20:00:00.000Z",
       "fiftyTwoWeekHigh": 2354.39,
       "fiftyTwoWeekLow": 46.01,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 1015.89,
-        "pctFromLow": 43.08,
+        "pctFromLow": 46.98,
         "highDate": "2026-06-25",
         "highClose": 2335,
-        "pctFromHigh": -37.75,
-        "pct5d": -18.66,
-        "pct20d": 13.71,
+        "pctFromHigh": -36.05,
+        "pct5d": -16.44,
+        "pct20d": 16.81,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -2103,18 +2103,18 @@
         "low5yDate": "2025-03-31",
         "high5y": 2184.75,
         "high5yDate": "2026-06-15",
-        "pctFrom5yLow": 4727.3,
-        "pctFrom5yHigh": -33.47,
-        "rangePosition": 66.06,
-        "pct1y": 2670.15,
-        "pct2y": 3865.89,
-        "pct3y": 3865.89
+        "pctFrom5yLow": 4858.88,
+        "pctFrom5yHigh": -31.66,
+        "rangePosition": 67.9,
+        "pct1y": 2745.66,
+        "pct2y": 3974,
+        "pct3y": 3974
       },
       "extended": {
-        "price": 1453.5,
-        "session": "regular",
-        "time": "2026-08-24T14:47:57.000Z",
-        "vsRegularClose": 0
+        "price": 1479.1,
+        "session": "post",
+        "time": "2026-08-24T23:07:01.000Z",
+        "vsRegularClose": -0.94
       },
       "history": [
         {
@@ -2367,30 +2367,30 @@
         },
         {
           "date": "2026-08-24",
-          "close": 1453.5
+          "close": 1493.12
         }
       ]
     },
     {
       "ticker": "NVDA",
-      "price": 209.76,
+      "price": 208.48,
       "previousClose": 214.72,
-      "change": -4.96,
-      "changePct": -2.31,
+      "change": -6.24,
+      "changePct": -2.91,
       "currency": "USD",
-      "quoteTime": "2026-08-24T14:47:57.000Z",
+      "quoteTime": "2026-08-24T20:00:00.000Z",
       "fiftyTwoWeekHigh": 236.54,
       "fiftyTwoWeekLow": 164.07,
       "trajectory": {
         "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 190.01,
-        "pctFromLow": 10.39,
+        "pctFromLow": 9.72,
         "highDate": "2026-08-13",
         "highClose": 225.3,
-        "pctFromHigh": -6.9,
-        "pct5d": -6.78,
-        "pct20d": 6.74,
+        "pctFromHigh": -7.47,
+        "pct5d": -7.35,
+        "pct20d": 6.09,
         "direction": "5日で下落"
       },
       "longTerm": {
@@ -2399,18 +2399,18 @@
         "low5yDate": "2022-10-10",
         "high5y": 225.32,
         "high5yDate": "2026-05-11",
-        "pctFrom5yLow": 1767.85,
-        "pctFrom5yHigh": -6.91,
-        "rangePosition": 92.73,
-        "pct1y": 20.43,
-        "pct2y": 75.72,
-        "pct3y": 332.41
+        "pctFrom5yLow": 1756.46,
+        "pctFrom5yHigh": -7.47,
+        "rangePosition": 92.13,
+        "pct1y": 19.69,
+        "pct2y": 74.65,
+        "pct3y": 329.77
       },
       "extended": {
-        "price": 209.77,
-        "session": "regular",
-        "time": "2026-08-24T14:47:58.000Z",
-        "vsRegularClose": 0
+        "price": 208.74,
+        "session": "post",
+        "time": "2026-08-24T23:07:06.000Z",
+        "vsRegularClose": 0.12
       },
       "history": [
         {
@@ -2663,7 +2663,7 @@
         },
         {
           "date": "2026-08-24",
-          "close": 209.76
+          "close": 208.48
         }
       ]
     }
