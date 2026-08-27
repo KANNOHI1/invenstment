@@ -40,6 +40,33 @@ const pct = (r, days) => {
   return from ? ((r.price / from) - 1) * 100 : null;
 };
 const f = (v, d = 1) => (v === null || v === undefined ? "n/a" : (v >= 0 ? "+" : "") + v.toFixed(d) + "%");
+// 週足ベースの変化率。20日窓は基準日の入れ替わりで符号が反転しうるため、
+// 大局の判定はこちらで行う（2026-08-24〜26に原油の20日変化が+3.0%→-3.1%と反転した）。
+const wpct = (r, weeks) => {
+  const h = r?.historyWeekly ?? [];
+  if (h.length <= weeks) return null;
+  const from = h[h.length - 1 - weeks].close;
+  return from ? ((r.price / from) - 1) * 100 : null;
+};
+// 40週移動平均（≒200日線）と、その傾き（直近13週で上向きか）
+const ma = (r, weeks, backWeeks = 0) => {
+  const h = r?.historyWeekly ?? [];
+  const end = h.length - backWeeks;
+  if (end < weeks) return null;
+  const slice = h.slice(end - weeks, end);
+  return slice.reduce((s, x) => s + x.close, 0) / slice.length;
+};
+const trendOf = (r) => {
+  const m40 = ma(r, 40), m40prev = ma(r, 40, 13);
+  if (m40 === null || m40prev === null) return null;
+  const above = r.price > m40;
+  const rising = m40 > m40prev;
+  if (above && rising) return "上昇トレンド";
+  if (!above && !rising) return "下降トレンド";
+  if (above && !rising) return "反発中（均線はまだ下向き）";
+  return "調整中（均線は上向き）";
+};
+
 const out = [];
 
 out.push(`rotation fetchedAt ${rot.fetchedAt}`);
@@ -135,7 +162,26 @@ out.push(`  実際の下位3: ${ranked.slice(-3).map((r) => r.name).join("・")}
 out.push(`  → ${verdict}`);
 out.push("");
 
-// ── ⑤テーマ内サブセクター ────────────────────────────────
+// ── ⑤大局（週足）──────────────────────────────────────
+// 短期の窓だけを見ると、数日の戦争・決算のボラで趨勢を見失う。
+out.push("【大局】週足の趨勢（13週=約3ヶ月／52週=1年／40週線=約200日線）");
+out.push("  計器          13週     52週  40週線との位置");
+for (const [t, name] of [["^TNX", "10年金利"], ["^TYX", "30年金利"], ["CL=F", "WTI原油"], ["DX-Y.NYB", "ドル指数"], ["^VIX", "VIX"], ["GC=F", "金"]]) {
+  const r = R[t];
+  if (!r || !r.historyWeekly) continue;
+  const tr = trendOf(r);
+  out.push(`  ${name.padEnd(9, "　")} ${f(wpct(r, 13)).padStart(7)} ${f(wpct(r, 52)).padStart(8)}  ${tr ?? "n/a"}`);
+}
+out.push("");
+out.push("  主要セクターの週足（13週／52週）");
+for (const [t, name] of [["XLK", "情報技術"], ["XLE", "エネルギー"], ["XLI", "資本財"], ["XLV", "ヘルスケア"], ["XLU", "公益"], ["SMH", "半導体"]]) {
+  const r = R[t];
+  if (!r || !r.historyWeekly) continue;
+  out.push(`  ${name.padEnd(9, "　")} ${f(wpct(r, 13)).padStart(7)} ${f(wpct(r, 52)).padStart(8)}  ${trendOf(r) ?? "n/a"}`);
+}
+out.push("");
+
+// ── ⑥テーマ内サブセクター ────────────────────────────────
 out.push("【テーマ内の中身】20日");
 for (const [t, name] of [["SMH", "半導体"], ["IGV", "ソフトウェア"], ["URA", "ウラン"], ["XME", "資源"], ["QQQ", "ナスダック100"]]) {
   if (R[t]) out.push(`  ${name.padEnd(10, "　")} ${f(pct(R[t], 20)).padStart(7)}`);
