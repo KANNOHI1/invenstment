@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-26T23:06:07.045Z",
+  "fetchedAt": "2026-08-27T00:26:16.133Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
   "rows": [
@@ -39,10 +39,10 @@
         "pct3y": 169.78
       },
       "extended": {
-        "price": 157.75,
+        "price": 157.9,
         "session": "post",
-        "time": "2026-08-26T23:02:38.000Z",
-        "vsRegularClose": 1.62
+        "time": "2026-08-26T23:53:13.000Z",
+        "vsRegularClose": 1.72
       }
     },
     {
@@ -81,10 +81,10 @@
         "pct3y": 572.98
       },
       "extended": {
-        "price": 273,
+        "price": 273.5,
         "session": "post",
-        "time": "2026-08-26T23:05:55.000Z",
-        "vsRegularClose": 3.48
+        "time": "2026-08-26T23:59:34.000Z",
+        "vsRegularClose": 3.67
       }
     },
     {
@@ -123,10 +123,10 @@
         "pct3y": 77.63
       },
       "extended": {
-        "price": 425.5,
+        "price": 426.01,
         "session": "post",
-        "time": "2026-08-26T23:04:16.000Z",
-        "vsRegularClose": 1.44
+        "time": "2026-08-26T23:59:32.000Z",
+        "vsRegularClose": 1.57
       }
     },
     {
@@ -165,10 +165,10 @@
         "pct3y": 198.66
       },
       "extended": {
-        "price": 620,
+        "price": 625.5,
         "session": "post",
-        "time": "2026-08-26T23:05:11.000Z",
-        "vsRegularClose": 0.53
+        "time": "2026-08-26T23:59:08.000Z",
+        "vsRegularClose": 1.42
       }
     },
     {
@@ -207,10 +207,10 @@
         "pct3y": 533.8
       },
       "extended": {
-        "price": 507,
+        "price": 508.84,
         "session": "post",
-        "time": "2026-08-26T23:01:10.000Z",
-        "vsRegularClose": 1.93
+        "time": "2026-08-26T23:58:37.000Z",
+        "vsRegularClose": 2.3
       }
     },
     {
@@ -249,10 +249,10 @@
         "pct3y": 357.85
       },
       "extended": {
-        "price": 338,
+        "price": 339.5,
         "session": "post",
-        "time": "2026-08-26T22:58:16.000Z",
-        "vsRegularClose": 1.97
+        "time": "2026-08-26T23:58:16.000Z",
+        "vsRegularClose": 2.42
       }
     },
     {
@@ -293,7 +293,7 @@
       "extended": {
         "price": 140.5,
         "session": "post",
-        "time": "2026-08-26T22:31:34.000Z",
+        "time": "2026-08-26T23:30:01.000Z",
         "vsRegularClose": -0.15
       }
     },
@@ -335,7 +335,7 @@
       "extended": {
         "price": 93.63,
         "session": "post",
-        "time": "2026-08-26T21:05:00.000Z",
+        "time": "2026-08-26T23:30:02.000Z",
         "vsRegularClose": 0
       }
     },
@@ -375,10 +375,10 @@
         "pct3y": 596.96
       },
       "extended": {
-        "price": 975.26,
+        "price": 975.01,
         "session": "post",
-        "time": "2026-08-26T23:05:59.000Z",
-        "vsRegularClose": 2.33
+        "time": "2026-08-26T23:59:45.000Z",
+        "vsRegularClose": 2.3
       }
     },
     {
@@ -417,10 +417,10 @@
         "pct3y": 149.56
       },
       "extended": {
-        "price": 144.85,
+        "price": 143.25,
         "session": "post",
-        "time": "2026-08-26T22:13:31.000Z",
-        "vsRegularClose": 1.12
+        "time": "2026-08-26T23:30:02.000Z",
+        "vsRegularClose": 0
       }
     },
     {
@@ -459,10 +459,10 @@
         "pct3y": 127.04
       },
       "extended": {
-        "price": 301.84,
+        "price": 303,
         "session": "post",
-        "time": "2026-08-26T22:58:17.000Z",
-        "vsRegularClose": 3.41
+        "time": "2026-08-26T23:58:02.000Z",
+        "vsRegularClose": 3.81
       }
     },
     {
@@ -501,10 +501,10 @@
         "pct3y": 322.37
       },
       "extended": {
-        "price": 81.65,
+        "price": 81.04,
         "session": "post",
-        "time": "2026-08-26T22:43:00.000Z",
-        "vsRegularClose": 3.21
+        "time": "2026-08-26T23:59:22.000Z",
+        "vsRegularClose": 2.44
       }
     },
     {
@@ -543,10 +543,10 @@
         "pct3y": 269.36
       },
       "extended": {
-        "price": 188.5,
+        "price": 189.1,
         "session": "post",
-        "time": "2026-08-26T23:05:09.000Z",
-        "vsRegularClose": 2.54
+        "time": "2026-08-26T23:59:38.000Z",
+        "vsRegularClose": 2.87
       }
     },
     {
@@ -585,10 +585,10 @@
         "pct3y": 367.75
       },
       "extended": {
-        "price": 320.61,
+        "price": 321.27,
         "session": "post",
-        "time": "2026-08-26T23:05:52.000Z",
-        "vsRegularClose": 2.47
+        "time": "2026-08-26T23:59:56.000Z",
+        "vsRegularClose": 2.68
       }
     },
     {
@@ -627,10 +627,10 @@
         "pct3y": 225.19
       },
       "extended": {
-        "price": 488.5,
+        "price": 491,
         "session": "post",
-        "time": "2026-08-26T23:05:40.000Z",
-        "vsRegularClose": 1.82
+        "time": "2026-08-26T23:59:54.000Z",
+        "vsRegularClose": 2.34
       }
     },
     {
@@ -669,10 +669,10 @@
         "pct3y": 864.07
       },
       "extended": {
-        "price": 118.29,
+        "price": 118.88,
         "session": "post",
-        "time": "2026-08-26T23:06:01.000Z",
-        "vsRegularClose": 3.98
+        "time": "2026-08-26T23:59:55.000Z",
+        "vsRegularClose": 4.5
       }
     },
     {
@@ -711,10 +711,10 @@
         "pct3y": 786.66
       },
       "extended": {
-        "price": 304,
+        "price": 304.23,
         "session": "post",
-        "time": "2026-08-26T23:05:55.000Z",
-        "vsRegularClose": 3.27
+        "time": "2026-08-26T23:59:58.000Z",
+        "vsRegularClose": 3.35
       }
     },
     {
@@ -753,10 +753,10 @@
         "pct3y": 1790.92
       },
       "extended": {
-        "price": 964.16,
+        "price": 967,
         "session": "post",
-        "time": "2026-08-26T23:05:57.000Z",
-        "vsRegularClose": 2.68
+        "time": "2026-08-26T23:59:54.000Z",
+        "vsRegularClose": 2.98
       }
     },
     {
@@ -795,10 +795,10 @@
         "pct3y": 1329.86
       },
       "extended": {
-        "price": 234.66,
+        "price": 235,
         "session": "post",
-        "time": "2026-08-26T23:05:53.000Z",
-        "vsRegularClose": 3.61
+        "time": "2026-08-26T23:59:48.000Z",
+        "vsRegularClose": 3.76
       }
     },
     {
@@ -837,10 +837,10 @@
         "pct3y": 314.71
       },
       "extended": {
-        "price": 299.97,
+        "price": 300.75,
         "session": "post",
-        "time": "2026-08-26T23:05:35.000Z",
-        "vsRegularClose": 3.33
+        "time": "2026-08-26T23:59:27.000Z",
+        "vsRegularClose": 3.6
       }
     },
     {
@@ -879,10 +879,10 @@
         "pct3y": 1326.9
       },
       "extended": {
-        "price": 482,
+        "price": 484.5,
         "session": "post",
-        "time": "2026-08-26T23:06:00.000Z",
-        "vsRegularClose": 2.8
+        "time": "2026-08-26T23:59:59.000Z",
+        "vsRegularClose": 3.33
       }
     },
     {
@@ -921,10 +921,10 @@
         "pct3y": 1194.74
       },
       "extended": {
-        "price": 874.34,
+        "price": 875.05,
         "session": "post",
-        "time": "2026-08-26T23:05:16.000Z",
-        "vsRegularClose": 3.3
+        "time": "2026-08-26T23:59:53.000Z",
+        "vsRegularClose": 3.39
       }
     },
     {
@@ -963,10 +963,10 @@
         "pct3y": 353.32
       },
       "extended": {
-        "price": 482.55,
+        "price": 485.06,
         "session": "post",
-        "time": "2026-08-26T23:06:01.000Z",
-        "vsRegularClose": 0.34
+        "time": "2026-08-26T23:59:53.000Z",
+        "vsRegularClose": 0.86
       }
     },
     {
@@ -1005,10 +1005,10 @@
         "pct3y": 365.96
       },
       "extended": {
-        "price": 423.9,
+        "price": 424.9,
         "session": "post",
-        "time": "2026-08-26T23:06:02.000Z",
-        "vsRegularClose": 1.49
+        "time": "2026-08-26T23:59:54.000Z",
+        "vsRegularClose": 1.73
       }
     },
     {
@@ -1047,10 +1047,10 @@
         "pct3y": 314.68
       },
       "extended": {
-        "price": 358.45,
+        "price": 362.13,
         "session": "post",
-        "time": "2026-08-26T23:06:02.000Z",
-        "vsRegularClose": 0.8
+        "time": "2026-08-27T00:00:00.000Z",
+        "vsRegularClose": 1.84
       }
     },
     {
@@ -1089,10 +1089,10 @@
         "pct3y": 33.2
       },
       "extended": {
-        "price": 38.29,
+        "price": 38.35,
         "session": "post",
-        "time": "2026-08-26T23:06:03.000Z",
-        "vsRegularClose": 2.41
+        "time": "2026-08-26T23:59:57.000Z",
+        "vsRegularClose": 2.57
       }
     },
     {
@@ -1131,10 +1131,10 @@
         "pct3y": 418.73
       },
       "extended": {
-        "price": 27.64,
+        "price": 27.77,
         "session": "post",
-        "time": "2026-08-26T23:05:36.000Z",
-        "vsRegularClose": 2.87
+        "time": "2026-08-26T23:59:50.000Z",
+        "vsRegularClose": 3.35
       }
     },
     {
@@ -1173,10 +1173,10 @@
         "pct3y": 311.13
       },
       "extended": {
-        "price": 142.25,
+        "price": 142.88,
         "session": "post",
-        "time": "2026-08-26T23:06:02.000Z",
-        "vsRegularClose": 1.59
+        "time": "2026-08-26T23:59:56.000Z",
+        "vsRegularClose": 2.04
       }
     },
     {
@@ -1217,7 +1217,7 @@
       "extended": {
         "price": 312.88,
         "session": "post",
-        "time": "2026-08-26T22:46:01.000Z",
+        "time": "2026-08-26T23:53:40.000Z",
         "vsRegularClose": 2.15
       }
     },
@@ -1257,10 +1257,10 @@
         "pct3y": 157.29
       },
       "extended": {
-        "price": 281.1,
+        "price": 281.07,
         "session": "post",
-        "time": "2026-08-26T23:04:22.000Z",
-        "vsRegularClose": 0.57
+        "time": "2026-08-26T23:59:24.000Z",
+        "vsRegularClose": 0.55
       }
     },
     {
@@ -1299,10 +1299,10 @@
         "pct3y": 301.54
       },
       "extended": {
-        "price": 42.23,
+        "price": 42.34,
         "session": "post",
-        "time": "2026-08-26T23:06:04.000Z",
-        "vsRegularClose": 1.51
+        "time": "2026-08-26T23:59:58.000Z",
+        "vsRegularClose": 1.78
       }
     }
   ],
