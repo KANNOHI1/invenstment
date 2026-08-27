@@ -81,7 +81,10 @@ for (const ticker of tickers) {
       longTerm: buildLongTerm(longHist, price),
       // 時間外。日本時間の日中に注文を検討する際、これが唯一の生きた値になる。
       extended: buildExtended(series.extended, price),
-      history: shortHist
+      history: shortHist,
+      // 週足5年。20日窓だけだと基準日の入れ替わりで符号が反転し、大局を見失う
+      // （2026-08-24〜26に原油の20日変化が+3.0%→-3.1%と反転した）。トレンド判定用。
+      historyWeekly: longHist
     });
     process.stdout.write(".");
   } catch (e) {
@@ -90,6 +93,8 @@ for (const ticker of tickers) {
   }
 }
 }
+
+for (const r of rows) delete r.historyWeekly;
 
 const out = {
   fetchedAt: new Date().toISOString(),
@@ -130,7 +135,7 @@ try {
     process.stdout.write(`Scanning ${scanTickers.length} candidates\n`);
     await fetchInto(scanTickers, scanRows, scanErrors);
     // history は本編だけで足りるため、スキャン側は落としてファイルを軽くする。
-    for (const r of scanRows) delete r.history;
+    for (const r of scanRows) { delete r.history; delete r.historyWeekly; }
     const scanOut = {
       fetchedAt: new Date().toISOString(),
       source: "Yahoo Finance chart endpoint (GitHub Actions runner)",
