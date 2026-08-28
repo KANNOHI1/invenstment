@@ -14,7 +14,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 // SECはUser-Agentに連絡先を要求する（未設定だと403）。
-const UA = "invenstment-research/1.0 (contact via github.com/KANNOHI1/invenstment)";
+// SECはUser-Agentに「組織名＋連絡先」を要求する。形式が不正だと403を返す。
+const UA = "KANNOHI1-invenstment-research github.com/KANNOHI1/invenstment";
 const TICKERS = ["IREN", "POWL", "SIMO", "MOD", "MU"];
 
 // 取りに行くXBRLの概念。決算のたびに手で読み直さないための機械可読ソース。
@@ -39,12 +40,34 @@ const out = { fetchedAt: new Date().toISOString(), source: "SEC EDGAR (data.sec.
 
 // ティッカー→CIKの対応表もSECが公開している。手で埋めない。
 let tickerMap = {};
-try {
-  const raw = await get("https://www.sec.gov/files/company_tickers.json");
-  for (const v of Object.values(raw)) tickerMap[v.ticker.toUpperCase()] = String(v.cik_str).padStart(10, "0");
-} catch (e) {
-  out.errors.push({ step: "company_tickers", message: String(e.message ?? e) });
+// 対応表は2経路試す。片方が塞がってもCIKを解決できるようにする。
+const MAP_URLS = [
+  "https://www.sec.gov/files/company_tickers.json",
+  "https://www.sec.gov/files/company_tickers_exchange.json"
+];
+for (const url of MAP_URLS) {
+  try {
+    const raw = await get(url);
+    if (raw.data && raw.fields) {
+      // company_tickers_exchange.json は {fields:[...], data:[[cik,name,ticker,exchange],...]}
+      const iC = raw.fields.indexOf("cik"), iT = raw.fields.indexOf("ticker");
+      for (const row of raw.data) tickerMap[String(row[iT]).toUpperCase()] = String(row[iC]).padStart(10, "0");
+    } else {
+      for (const v of Object.values(raw)) {
+        if (!v || !v.ticker) continue;
+        tickerMap[String(v.ticker).toUpperCase()] = String(v.cik_str).padStart(10, "0");
+      }
+    }
+    if (Object.keys(tickerMap).length) {
+      console.log(`CIK対応表を取得: ${url}（${Object.keys(tickerMap).length}銘柄)`);
+      break;
+    }
+  } catch (e) {
+    console.error(`CIK対応表の取得に失敗: ${url} → ${e.message ?? e}`);
+    out.errors.push({ step: "company_tickers", url, message: String(e.message ?? e) });
+  }
 }
+if (!Object.keys(tickerMap).length) console.error("CIK対応表が空。以降のCIK解決は全て失敗する。");
 
 for (const t of TICKERS) {
   const cik = tickerMap[t];
