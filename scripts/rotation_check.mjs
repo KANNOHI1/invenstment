@@ -107,20 +107,33 @@ if (credit !== null) { ecoScore += credit > 0 ? 1 : -1; ecoWhy.push(`クレジ�
 
 // 縦軸=金利: 10年金利の20日変化＋原油の20日変化
 const tnx = pct(R["^TNX"], 20), oil = pct(R["CL=F"], 20);
+// 不感帯（デッドバンド）: ゼロ近傍の20日変化で象限ラベルが反転するのを防ぐ。
+// 2026-08-28、10年金利の20日変化が +0.21%→-0.42% とゼロを跨いだだけで
+// 判定が「業績相場」→「金融相場」へ反転した。同じ金利は60日+5.12%・52週+15.4%で
+// 上昇トレンドのままであり、趨勢は何も変わっていなかった。ラベルだけが動く誤報。
+const DEADBAND = 1.5; // %。これ未満の20日変化は「方向なし」として0点にする
 let rateScore = 0;
 const rateWhy = [];
-if (tnx !== null) { rateScore += tnx > 0 ? 1 : -1; rateWhy.push(`10年金利 ${f(tnx)}`); }
-if (oil !== null) { rateScore += oil > 0 ? 1 : -1; rateWhy.push(`原油 ${f(oil)}`); }
+const dbScore = (v) => (Math.abs(v) < DEADBAND ? 0 : v > 0 ? 1 : -1);
+if (tnx !== null) { rateScore += dbScore(tnx); rateWhy.push(`10年金利 ${f(tnx)}${Math.abs(tnx) < DEADBAND ? "（不感帯・方向なし）" : ""}`); }
+if (oil !== null) { rateScore += dbScore(oil); rateWhy.push(`原油 ${f(oil)}${Math.abs(oil) < DEADBAND ? "（不感帯・方向なし）" : ""}`); }
 
 const eco = ecoScore >= 0 ? "強い" : "弱い";
-const rate = rateScore >= 0 ? "上昇" : "低下";
-let quad;
-if (eco === "強い" && rate === "上昇") quad = "業績相場";
+// 不感帯で0点なら「判定不能」。ゼロ近傍を強引に上昇/低下へ丸めない。
+const rate = rateScore > 0 ? "上昇" : rateScore < 0 ? "低下" : "方向なし";
+let quad, quadNote = "";
+if (rate === "方向なし") {
+  // 20日では方向が出ない。週足の趨勢で代替する（大局を優先）。
+  const wTnx = wpct(R["^TNX"], 13);
+  const wDir = wTnx === null ? null : wTnx > 0 ? "上昇" : "低下";
+  quad = eco === "強い" ? (wDir === "低下" ? "金融相場" : "業績相場") : (wDir === "低下" ? "逆業績相場" : "逆金融相場");
+  quadNote = `（20日は不感帯。週足13週の金利${f(wTnx)}で代替判定）`;
+} else if (eco === "強い" && rate === "上昇") quad = "業績相場";
 else if (eco === "強い" && rate === "低下") quad = "金融相場";
 else if (eco === "弱い" && rate === "上昇") quad = "逆金融相場";
 else quad = "逆業績相場";
 
-out.push(`【象限判定】**${quad}**（景気=${eco} スコア${ecoScore >= 0 ? "+" : ""}${ecoScore} ／ 金利=${rate} スコア${rateScore >= 0 ? "+" : ""}${rateScore}）`);
+out.push(`【象限判定】**${quad}**${quadNote}（景気=${eco} スコア${ecoScore >= 0 ? "+" : ""}${ecoScore} ／ 金利=${rate} スコア${rateScore >= 0 ? "+" : ""}${rateScore}）`);
 out.push(`  景気の根拠: ${ecoWhy.join("、")}`);
 out.push(`  金利の根拠: ${rateWhy.join("、")}`);
 out.push(`  教科書の処方: ${PLAYBOOK[quad].note}`);
