@@ -18,7 +18,10 @@ import path from "node:path";
 // SECの規約: User-Agentに「組織名＋連絡先メール」が必要。欠けると403で弾かれる。
 // 個人メールは使わず、GitHubの公開用noreplyアドレスを連絡先にする。
 const UA = "invenstment-research 219152498+KANNOHI1@users.noreply.github.com";
-const TICKERS = ["IREN", "POWL", "SIMO", "MOD", "MU"];
+// www.sec.gov はGitHub Actionsのランナーから403で弾かれる（2026-08-28確認）。
+// APIホストの data.sec.gov は別扱いなので、CIKは設定ファイルから与える。
+// **番号を間違えると別会社のデータを取得してしまう**ため、expectで社名を必ず検証する。
+const CIK_PATH = path.join(process.cwd(), "watchlist", "cik.json");
 
 // 取りに行くXBRLの概念。決算のたびに手で読み直さないための機械可読ソース。
 const CONCEPTS = [
@@ -44,44 +47,25 @@ const get = async (url) => {
 const out = { fetchedAt: new Date().toISOString(), source: "SEC EDGAR (data.sec.gov / www.sec.gov)", companies: {}, errors: [] };
 
 // ティッカー→CIKの対応表もSECが公開している。手で埋めない。
-let tickerMap = {};
-// 対応表は2経路試す。片方が塞がってもCIKを解決できるようにする。
-const MAP_URLS = [
-  "https://www.sec.gov/files/company_tickers.json",
-  "https://www.sec.gov/files/company_tickers_exchange.json"
-];
-for (const url of MAP_URLS) {
-  try {
-    const raw = await get(url);
-    if (raw.data && raw.fields) {
-      // company_tickers_exchange.json は {fields:[...], data:[[cik,name,ticker,exchange],...]}
-      const iC = raw.fields.indexOf("cik"), iT = raw.fields.indexOf("ticker");
-      for (const row of raw.data) tickerMap[String(row[iT]).toUpperCase()] = String(row[iC]).padStart(10, "0");
-    } else {
-      for (const v of Object.values(raw)) {
-        if (!v || !v.ticker) continue;
-        tickerMap[String(v.ticker).toUpperCase()] = String(v.cik_str).padStart(10, "0");
-      }
-    }
-    if (Object.keys(tickerMap).length) {
-      console.log(`CIK対応表を取得: ${url}（${Object.keys(tickerMap).length}銘柄)`);
-      break;
-    }
-  } catch (e) {
-    console.error(`CIK対応表の取得に失敗: ${url} → ${e.message ?? e}`);
-    out.errors.push({ step: "company_tickers", url, message: String(e.message ?? e) });
-  }
+let CIKS = [];
+try {
+  CIKS = JSON.parse(await fs.readFile(CIK_PATH, "utf8"));
+} catch (e) {
+  out.errors.push({ step: "cik.json", message: String(e.message ?? e) });
 }
-if (!Object.keys(tickerMap).length) console.error("CIK対応表が空。以降のCIK解決は全て失敗する。");
+if (!CIKS.length) console.error("cik.json が読めない。取得できない。");
 
-for (const t of TICKERS) {
-  const cik = tickerMap[t];
-  if (!cik) { out.errors.push({ ticker: t, message: "CIK未解決" }); continue; }
+for (const entry of CIKS) {
+  const { ticker: t, cik, expect } = entry;
   const rec = { cik, latest: {}, recentFilings: [] };
   try {
     // 直近の提出書類（10-K/10-Q/8-K/20-F/6-K）へのリンク。原文を読みに行くための入口。
     const sub = await get(`https://data.sec.gov/submissions/CIK${cik}.json`);
     rec.name = sub.name;
+    // CIKの取り違えは「別会社の数字を自社の数字として使う」最悪の事故になる。必ず社名で検証する。
+    if (expect && !String(sub.name ?? "").toUpperCase().includes(String(expect).toUpperCase())) {
+      throw new Error(`社名不一致: CIK${cik} は "${sub.name}"（期待: "${expect}"）— cik.jsonを修正すること`);
+    }
     const r = sub.filings?.recent ?? {};
     for (let i = 0; i < (r.form?.length ?? 0) && rec.recentFilings.length < 8; i++) {
       if (!["10-K", "10-Q", "8-K", "20-F", "6-K"].includes(r.form[i])) continue;
