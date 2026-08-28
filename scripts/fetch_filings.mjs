@@ -5,7 +5,14 @@
 // そのため「一次資料で確認した」と称していたものが実際は全て記事の二次引用であり、
 // IRENの発行済株式数を37M株誤り（357M→実際394.06M）、
 // 希薄化率を年率14%と誤った（実際45.7%）事故が起きた。
-// GitHub Actionsのランナーは遮断の外側にあるため、株価と同じ方式で一次データを取る。
+//
+// **SECは断念した（2026-08-28）**: www.sec.gov も data.sec.gov も GitHub Actions の
+// ランナーIPに対して403を返す（SECはクラウド事業者のIPを広く遮断している）。4回試行して確認。
+// 代わりに、株価と同じ Yahoo Finance の機械可読エンドポイントから
+// 発行済株式数と主要財務を取る。**これは提出書類そのものではない（二次）。**
+// ただし毎回同じ経路・同じ形式・日付つきで取れるため、
+// 「記事によって357Mだったり394Mだったりする」問題は消える。
+// 提出書類の原文が要る判断のときは、SECのURLを人が開いて確認する（下記 secUrl）。
 //
 // **ローカルで実行しないこと。** 更新は watchlist/.price-refresh-trigger を押す。
 // 依存パッケージなし。Node 20+。
@@ -17,7 +24,7 @@ import path from "node:path";
 // SECはUser-Agentに「組織名＋連絡先」を要求する。形式が不正だと403を返す。
 // SECの規約: User-Agentに「組織名＋連絡先メール」が必要。欠けると403で弾かれる。
 // 個人メールは使わず、GitHubの公開用noreplyアドレスを連絡先にする。
-const UA = "invenstment-research 219152498+KANNOHI1@users.noreply.github.com";
+const UA = "Mozilla/5.0 invenstment-research/1.0";
 // www.sec.gov はGitHub Actionsのランナーから403で弾かれる（2026-08-28確認）。
 // APIホストの data.sec.gov は別扱いなので、CIKは設定ファイルから与える。
 // **番号を間違えると別会社のデータを取得してしまう**ため、expectで社名を必ず検証する。
@@ -44,87 +51,63 @@ const get = async (url) => {
   return res.json();
 };
 
-const out = { fetchedAt: new Date().toISOString(), source: "SEC EDGAR (data.sec.gov / www.sec.gov)", companies: {}, errors: [] };
+const MODULES = [
+  "defaultKeyStatistics", "financialData", "summaryDetail",
+  "incomeStatementHistory", "balanceSheetHistory", "calendarEvents"
+].join(",");
 
-// ティッカー→CIKの対応表もSECが公開している。手で埋めない。
+const out = { fetchedAt: new Date().toISOString(), source: "Yahoo Finance quoteSummary（GitHub Actions runner）", note: "提出書類そのものではない（二次）。ただし機械可読で日付つき。原文が要るときは secUrl を人が開く。", companies: {}, errors: [] };
+
 let CIKS = [];
-try {
-  CIKS = JSON.parse(await fs.readFile(CIK_PATH, "utf8"));
-} catch (e) {
-  out.errors.push({ step: "cik.json", message: String(e.message ?? e) });
-}
-if (!CIKS.length) console.error("cik.json が読めない。取得できない。");
+try { CIKS = JSON.parse(await fs.readFile(CIK_PATH, "utf8")); }
+catch (e) { out.errors.push({ step: "cik.json", message: String(e.message ?? e) }); }
 
 for (const entry of CIKS) {
-  const { ticker: t, expect } = entry;
-  const candidates = Array.isArray(entry.cik) ? entry.cik : [entry.cik];
-  let cik = null, sub = null;
-  const tried = [];
+  const t = entry.ticker;
+  const cik = Array.isArray(entry.cik) ? entry.cik[0] : entry.cik;
   try {
-    // CIKの取り違えは「別会社の数字を自社の数字として使う」最悪の事故。
-    // 候補を順に当たり、社名が期待と一致したものだけを採用する。
-    for (const c of candidates) {
-      try {
-        const s2 = await get(`https://data.sec.gov/submissions/CIK${c}.json`);
-        const name = String(s2.name ?? "");
-        tried.push(`${c}="${name}"`);
-        if (!expect || name.toUpperCase().includes(String(expect).toUpperCase())) { cik = c; sub = s2; break; }
-      } catch (e) {
-        tried.push(`${c}:${(e.message ?? e).toString().slice(0, 60)}`);
-      }
-    }
-    if (!sub) throw new Error(`社名が一致するCIKが無い（期待:"${expect}"）試行: ${tried.join(" / ")}`);
-    const rec = { cik, latest: {}, recentFilings: [] };
-    if (candidates.length > 1) rec.cikResolvedFrom = tried;
-    rec.name = sub.name;
-    const r = sub.filings?.recent ?? {};
-    for (let i = 0; i < (r.form?.length ?? 0) && rec.recentFilings.length < 8; i++) {
-      if (!["10-K", "10-Q", "8-K", "20-F", "6-K"].includes(r.form[i])) continue;
-      rec.recentFilings.push({
-        form: r.form[i],
-        filed: r.filingDate[i],
-        period: r.reportDate?.[i] ?? null,
-        url: `https://www.sec.gov/Archives/edgar/data/${Number(cik)}/${(r.accessionNumber[i] || "").replace(/-/g, "")}/${r.primaryDocument[i]}`
-      });
-    }
-    // XBRLの数値。「表紙の株数」を機械で読むのが最大の目的。
-    for (const [taxonomy, tag, label] of CONCEPTS) {
-      try {
-        const cc = await get(`https://data.sec.gov/api/xbrl/companyconcept/CIK${cik}/${taxonomy}/${tag}.json`);
-        const units = Object.values(cc.units ?? {})[0] ?? [];
-        if (!units.length) continue;
-        // 提出日が最も新しいものを採る（期間ではなく提出日で見ないと古い値を拾う）
-        const latest = units.slice().sort((a, b) => String(a.filed).localeCompare(String(b.filed))).pop();
-        rec.latest[label] = { value: latest.val, end: latest.end, filed: latest.filed, form: latest.form, fy: latest.fy, fp: latest.fp };
-      } catch { /* その会社に無い概念は飛ばす */ }
-    }
-    out.companies[t] = rec;
+    const url = `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(t)}?modules=${MODULES}`;
+    const j = await get(url);
+    const r = j.quoteSummary?.result?.[0];
+    if (!r) throw new Error("quoteSummaryが空");
+    const ks = r.defaultKeyStatistics ?? {}, fd = r.financialData ?? {}, sd = r.summaryDetail ?? {};
+    const inc = r.incomeStatementHistory?.incomeStatementHistory ?? [];
+    const bal = r.balanceSheetHistory?.balanceSheetStatements ?? [];
+    const v = (x) => (x && typeof x === "object" ? (x.raw ?? null) : (x ?? null));
+
+    out.companies[t] = {
+      cik,
+      // 判断に直結するのはここ。株数を人が記事から拾うのをやめる。
+      sharesOutstanding: v(ks.sharesOutstanding),
+      impliedSharesOutstanding: v(ks.impliedSharesOutstanding),
+      floatShares: v(ks.floatShares),
+      heldPercentInsiders: v(ks.heldPercentInsiders),
+      shortRatio: v(ks.shortRatio),
+      totalRevenue: v(fd.totalRevenue),
+      grossMargins: v(fd.grossMargins),
+      totalCash: v(fd.totalCash),
+      totalDebt: v(fd.totalDebt),
+      marketCap: v(sd.marketCap),
+      // 期別の推移。1期だけ見て「増えた/減った」を語らないため。
+      incomeHistory: inc.slice(0, 4).map((x) => ({ end: v(x.endDate), revenue: v(x.totalRevenue), netIncome: v(x.netIncome) })),
+      balanceHistory: bal.slice(0, 4).map((x) => ({ end: v(x.endDate), cash: v(x.cash), totalLiab: v(x.totalLiab), shares: v(x.commonStock) })),
+      nextEarnings: (r.calendarEvents?.earnings?.earningsDate ?? []).map((d) => v(d)),
+      secUrl: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${cik}&type=10-K&dateb=&owner=include&count=10`
+    };
     process.stdout.write(`${t} `);
   } catch (e) {
-    out.errors.push({ ticker: t, message: String(e.message ?? e) });
+    out.errors.push({ ticker: t, message: String(e.message ?? e).slice(0, 200) });
     process.stdout.write(`${t}:x `);
   }
 }
 
 const p = path.join(process.cwd(), "watchlist", "filings.json");
-
-// 全滅しても「なぜ失敗したか」はリポジトリに残す。
-// CIログを追わないと原因が分からない状態が、修正を2往復させた（2026-08-28）。
 if (Object.keys(out.companies).length === 0) {
-  let prev = null;
-  try { prev = JSON.parse(await fs.readFile(p, "utf8")); } catch { /* 初回 */ }
-  if (prev?.companies && Object.keys(prev.companies).length) {
-    // 良好なデータは潰さず、失敗の記録だけ足す
-    prev.lastFailure = { at: out.fetchedAt, errors: out.errors };
-    await fs.writeFile(p, JSON.stringify(prev, null, 2) + "\n", "utf8");
-    console.error("取得全滅。既存データを維持し lastFailure に記録した。");
-  } else {
-    out.note = "取得全滅。companiesが空。errorsに原因がある。";
-    await fs.writeFile(p, JSON.stringify(out, null, 2) + "\n", "utf8");
-    console.error("取得全滅。原因を filings.json の errors に記録した。");
-  }
+  out.note = "取得全滅。errorsに原因がある。";
+  await fs.writeFile(p, JSON.stringify(out, null, 2) + "\n", "utf8");
+  console.error("取得全滅。原因を filings.json に記録した。");
   console.error(JSON.stringify(out.errors, null, 2));
-  process.exit(0); // ファイルは書けたので後続のコミットを妨げない
+  process.exit(0);
 }
 await fs.writeFile(p, JSON.stringify(out, null, 2) + "\n", "utf8");
 console.log(`\nWrote ${p} (${Object.keys(out.companies).length} companies, ${out.errors.length} errors)`);
