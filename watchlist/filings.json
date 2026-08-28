@@ -1,0 +1,38 @@
+{
+  "fetchedAt": "2026-08-28T04:22:29.044Z",
+  "source": "SEC EDGAR (data.sec.gov / www.sec.gov)",
+  "companies": {},
+  "errors": [
+    {
+      "step": "company_tickers",
+      "url": "https://www.sec.gov/files/company_tickers.json",
+      "message": "HTTP 403 https://www.sec.gov/files/company_tickers.json :: <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-T"
+    },
+    {
+      "step": "company_tickers",
+      "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+      "message": "HTTP 403 https://www.sec.gov/files/company_tickers_exchange.json :: <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n<meta http-equiv=\"Content-T"
+    },
+    {
+      "ticker": "IREN",
+      "message": "CIK未解決"
+    },
+    {
+      "ticker": "POWL",
+      "message": "CIK未解決"
+    },
+    {
+      "ticker": "SIMO",
+      "message": "CIK未解決"
+    },
+    {
+      "ticker": "MOD",
+      "message": "CIK未解決"
+    },
+    {
+      "ticker": "MU",
+      "message": "CIK未解決"
+    }
+  ],
+  "note": "取得全滅。companiesが空。errorsに原因がある。"
+}
