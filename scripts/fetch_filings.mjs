@@ -56,16 +56,27 @@ try {
 if (!CIKS.length) console.error("cik.json が読めない。取得できない。");
 
 for (const entry of CIKS) {
-  const { ticker: t, cik, expect } = entry;
-  const rec = { cik, latest: {}, recentFilings: [] };
+  const { ticker: t, expect } = entry;
+  const candidates = Array.isArray(entry.cik) ? entry.cik : [entry.cik];
+  let cik = null, sub = null;
+  const tried = [];
   try {
-    // 直近の提出書類（10-K/10-Q/8-K/20-F/6-K）へのリンク。原文を読みに行くための入口。
-    const sub = await get(`https://data.sec.gov/submissions/CIK${cik}.json`);
-    rec.name = sub.name;
-    // CIKの取り違えは「別会社の数字を自社の数字として使う」最悪の事故になる。必ず社名で検証する。
-    if (expect && !String(sub.name ?? "").toUpperCase().includes(String(expect).toUpperCase())) {
-      throw new Error(`社名不一致: CIK${cik} は "${sub.name}"（期待: "${expect}"）— cik.jsonを修正すること`);
+    // CIKの取り違えは「別会社の数字を自社の数字として使う」最悪の事故。
+    // 候補を順に当たり、社名が期待と一致したものだけを採用する。
+    for (const c of candidates) {
+      try {
+        const s2 = await get(`https://data.sec.gov/submissions/CIK${c}.json`);
+        const name = String(s2.name ?? "");
+        tried.push(`${c}="${name}"`);
+        if (!expect || name.toUpperCase().includes(String(expect).toUpperCase())) { cik = c; sub = s2; break; }
+      } catch (e) {
+        tried.push(`${c}:${(e.message ?? e).toString().slice(0, 60)}`);
+      }
     }
+    if (!sub) throw new Error(`社名が一致するCIKが無い（期待:"${expect}"）試行: ${tried.join(" / ")}`);
+    const rec = { cik, latest: {}, recentFilings: [] };
+    if (candidates.length > 1) rec.cikResolvedFrom = tried;
+    rec.name = sub.name;
     const r = sub.filings?.recent ?? {};
     for (let i = 0; i < (r.form?.length ?? 0) && rec.recentFilings.length < 8; i++) {
       if (!["10-K", "10-Q", "8-K", "20-F", "6-K"].includes(r.form[i])) continue;

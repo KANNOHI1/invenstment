@@ -1,0 +1,7 @@
+[
+  { "ticker": "IREN", "cik": ["0001878848"], "expect": "IREN" },
+  { "ticker": "POWL", "cik": ["0000080420"], "expect": "POWELL INDUSTRIES" },
+  { "ticker": "SIMO", "cik": ["0001260041", "0001329394"], "expect": "SILICON MOTION" },
+  { "ticker": "MOD",  "cik": ["0000067347"], "expect": "MODINE" },
+  { "ticker": "MU",   "cik": ["0000723125"], "expect": "MICRON" }
+]
