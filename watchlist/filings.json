@@ -1,11 +1,27 @@
 {
-  "fetchedAt": "2026-08-28T04:24:44.366Z",
+  "fetchedAt": "2026-08-28T04:25:44.799Z",
   "source": "SEC EDGAR (data.sec.gov / www.sec.gov)",
   "companies": {},
   "errors": [
     {
-      "step": "cik.json",
-      "message": "ENOENT: no such file or directory, open '/home/runner/work/invenstment/invenstment/watchlist/cik.json'"
+      "ticker": "IREN",
+      "message": "社名が一致するCIKが無い（期待:\"IREN\"）試行: 0001878848:HTTP 403 https://data.sec.gov/submissions/CIK0001878848.json"
+    },
+    {
+      "ticker": "POWL",
+      "message": "社名が一致するCIKが無い（期待:\"POWELL INDUSTRIES\"）試行: 0000080420:HTTP 403 https://data.sec.gov/submissions/CIK0000080420.json"
+    },
+    {
+      "ticker": "SIMO",
+      "message": "社名が一致するCIKが無い（期待:\"SILICON MOTION\"）試行: 0001260041:HTTP 403 https://data.sec.gov/submissions/CIK0001260041.json / 0001329394:HTTP 403 https://data.sec.gov/submissions/CIK0001329394.json"
+    },
+    {
+      "ticker": "MOD",
+      "message": "社名が一致するCIKが無い（期待:\"MODINE\"）試行: 0000067347:HTTP 403 https://data.sec.gov/submissions/CIK0000067347.json"
+    },
+    {
+      "ticker": "MU",
+      "message": "社名が一致するCIKが無い（期待:\"MICRON\"）試行: 0000723125:HTTP 403 https://data.sec.gov/submissions/CIK0000723125.json"
     }
   ],
   "note": "取得全滅。companiesが空。errorsに原因がある。"
