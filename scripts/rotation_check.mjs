@@ -91,19 +91,26 @@ out.push("");
 
 // ── ②象限判定 ────────────────────────────────────────
 // 横軸=景気: 景気敏感セクター vs ディフェンシブの相対強度、小型/大型、クレジット
+// 不感帯（デッドバンド）: ゼロ近傍の20日変化で象限ラベルが反転するのを防ぐ。
+// 2026-08-28に金利軸で、2026-08-31に景気軸で、1日の微小な変化によるラベル反転が起きた。
+const DEADBAND = 1.5; // %。これ未満の20日変化は「方向なし」として0点にする
 const avg = (a) => { const v = a.filter((x) => x !== null); return v.length ? v.reduce((s, x) => s + x, 0) / v.length : null; };
 const cyc = avg(["XLI", "XLB", "XLY"].map((t) => pct(R[t], 20)));
 const def = avg(["XLP", "XLU", "XLV"].map((t) => pct(R[t], 20)));
 const iwmSpy = pct(R.IWM, 20) !== null && pct(R.SPY, 20) !== null ? pct(R.IWM, 20) - pct(R.SPY, 20) : null;
 
+// 景気軸にも金利軸と同じ不感帯を適用する。片方だけに入れたのは片手落ちだった
+// （2026-08-31、景気側が1日で+1.6%→-0.8%へ反転し象限が動いた）。
 let ecoScore = 0;
 const ecoWhy = [];
-if (cyc !== null && def !== null) {
-  ecoScore += cyc > def ? 1 : -1;
-  ecoWhy.push(`景気敏感${f(cyc)} vs ディフェンシブ${f(def)}`);
-}
-if (iwmSpy !== null) { ecoScore += iwmSpy > 0 ? 1 : -1; ecoWhy.push(`小型-大型 ${f(iwmSpy)}`); }
-if (credit !== null) { ecoScore += credit > 0 ? 1 : -1; ecoWhy.push(`クレジット ${f(credit)}`); }
+const ecoDb = (v, label) => {
+  const sc = Math.abs(v) < DEADBAND ? 0 : v > 0 ? 1 : -1;
+  ecoWhy.push(`${label}${Math.abs(v) < DEADBAND ? "（不感帯）" : ""}`);
+  return sc;
+};
+if (cyc !== null && def !== null) ecoScore += ecoDb(cyc - def, `景気敏感${f(cyc)} vs ディフェンシブ${f(def)}`);
+if (iwmSpy !== null) ecoScore += ecoDb(iwmSpy, `小型-大型 ${f(iwmSpy)}`);
+if (credit !== null) ecoScore += ecoDb(credit, `クレジット ${f(credit)}`);
 
 // 縦軸=金利: 10年金利の20日変化＋原油の20日変化
 const tnx = pct(R["^TNX"], 20), oil = pct(R["CL=F"], 20);
@@ -111,14 +118,13 @@ const tnx = pct(R["^TNX"], 20), oil = pct(R["CL=F"], 20);
 // 2026-08-28、10年金利の20日変化が +0.21%→-0.42% とゼロを跨いだだけで
 // 判定が「業績相場」→「金融相場」へ反転した。同じ金利は60日+5.12%・52週+15.4%で
 // 上昇トレンドのままであり、趨勢は何も変わっていなかった。ラベルだけが動く誤報。
-const DEADBAND = 1.5; // %。これ未満の20日変化は「方向なし」として0点にする
 let rateScore = 0;
 const rateWhy = [];
 const dbScore = (v) => (Math.abs(v) < DEADBAND ? 0 : v > 0 ? 1 : -1);
 if (tnx !== null) { rateScore += dbScore(tnx); rateWhy.push(`10年金利 ${f(tnx)}${Math.abs(tnx) < DEADBAND ? "（不感帯・方向なし）" : ""}`); }
 if (oil !== null) { rateScore += dbScore(oil); rateWhy.push(`原油 ${f(oil)}${Math.abs(oil) < DEADBAND ? "（不感帯・方向なし）" : ""}`); }
 
-const eco = ecoScore >= 0 ? "強い" : "弱い";
+const eco = ecoScore > 0 ? "強い" : ecoScore < 0 ? "弱い" : "方向なし";
 // 不感帯で0点なら「判定不能」。ゼロ近傍を強引に上昇/低下へ丸めない。
 const rate = rateScore > 0 ? "上昇" : rateScore < 0 ? "低下" : "方向なし";
 let quad, quadNote = "";
