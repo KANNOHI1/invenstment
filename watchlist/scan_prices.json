@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-01T23:08:07.744Z",
+  "fetchedAt": "2026-09-01T23:11:54.681Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
   "rows": [
@@ -207,10 +207,10 @@
         "pct3y": 73.78
       },
       "extended": {
-        "price": 23.79,
+        "price": 23.77,
         "session": "post",
-        "time": "2026-09-01T22:12:00.000Z",
-        "vsRegularClose": 0
+        "time": "2026-09-01T22:48:00.000Z",
+        "vsRegularClose": -0.08
       }
     },
     {
@@ -249,10 +249,10 @@
         "pct3y": -12.61
       },
       "extended": {
-        "price": 36.81,
+        "price": 36.85,
         "session": "post",
-        "time": "2026-09-01T23:05:47.000Z",
-        "vsRegularClose": 0.03
+        "time": "2026-09-01T23:09:32.000Z",
+        "vsRegularClose": 0.14
       }
     },
     {
@@ -392,16 +392,16 @@
       "fiftyTwoWeekHigh": 307.94,
       "fiftyTwoWeekLow": 144.14,
       "trajectory": {
-        "periodDays": 64,
+        "periodDays": 63,
         "lowDate": "2026-08-07",
         "lowClose": 256.87,
         "pctFromLow": 15.26,
         "highDate": "2026-08-20",
         "highClose": 302.25,
         "pctFromHigh": -2.05,
-        "pct5d": 3.19,
-        "pct20d": 12.58,
-        "direction": "5日で上昇"
+        "pct5d": 0.61,
+        "pct20d": 11.89,
+        "direction": "5日で横ばい"
       },
       "longTerm": {
         "periodWeeks": 263,
@@ -459,10 +459,10 @@
         "pct3y": 138.86
       },
       "extended": {
-        "price": 96.1,
+        "price": 96.85,
         "session": "post",
-        "time": "2026-09-01T22:53:43.000Z",
-        "vsRegularClose": -0.17
+        "time": "2026-09-01T23:09:14.000Z",
+        "vsRegularClose": 0.61
       }
     },
     {
@@ -501,10 +501,10 @@
         "pct3y": 115.43
       },
       "extended": {
-        "price": 11.62,
+        "price": 11.64,
         "session": "post",
-        "time": "2026-09-01T23:05:44.000Z",
-        "vsRegularClose": 0.26
+        "time": "2026-09-01T23:10:03.000Z",
+        "vsRegularClose": 0.43
       }
     },
     {
@@ -669,10 +669,10 @@
         "pct3y": 28.4
       },
       "extended": {
-        "price": 545.03,
+        "price": 545.13,
         "session": "post",
-        "time": "2026-09-01T23:07:12.000Z",
-        "vsRegularClose": 0.1
+        "time": "2026-09-01T23:10:37.000Z",
+        "vsRegularClose": 0.12
       }
     },
     {
@@ -753,10 +753,10 @@
         "pct3y": 237.95
       },
       "extended": {
-        "price": 49.54,
+        "price": 49.62,
         "session": "post",
-        "time": "2026-09-01T23:07:58.000Z",
-        "vsRegularClose": 0.41
+        "time": "2026-09-01T23:11:34.000Z",
+        "vsRegularClose": 0.57
       }
     },
     {
@@ -797,7 +797,7 @@
       "extended": {
         "price": 144.82,
         "session": "post",
-        "time": "2026-09-01T23:07:39.000Z",
+        "time": "2026-09-01T23:11:20.000Z",
         "vsRegularClose": 0.45
       }
     },
@@ -963,10 +963,10 @@
         "pct3y": 950.71
       },
       "extended": {
-        "price": 102.26,
+        "price": 102.6,
         "session": "post",
-        "time": "2026-09-01T23:07:57.000Z",
-        "vsRegularClose": -1.09
+        "time": "2026-09-01T23:11:26.000Z",
+        "vsRegularClose": -0.76
       }
     },
     {
@@ -1005,10 +1005,10 @@
         "pct3y": 1700.93
       },
       "extended": {
-        "price": 868.9,
+        "price": 868.8,
         "session": "post",
-        "time": "2026-09-01T23:07:45.000Z",
-        "vsRegularClose": -0.01
+        "time": "2026-09-01T23:10:47.000Z",
+        "vsRegularClose": -0.02
       }
     },
     {
@@ -1106,16 +1106,16 @@
       "fiftyTwoWeekHigh": 184.64,
       "fiftyTwoWeekLow": 87.16,
       "trajectory": {
-        "periodDays": 64,
+        "periodDays": 63,
         "lowDate": "2026-07-29",
         "lowClose": 133.61,
         "pctFromLow": 10.25,
         "highDate": "2026-06-22",
         "highClose": 184.34,
         "pctFromHigh": -20.09,
-        "pct5d": -2.76,
-        "pct20d": -9.21,
-        "direction": "5日で横ばい"
+        "pct5d": -3.95,
+        "pct20d": -7.6,
+        "direction": "5日で下落"
       },
       "longTerm": {
         "periodWeeks": 263,
@@ -1148,16 +1148,16 @@
       "fiftyTwoWeekHigh": 162.2,
       "fiftyTwoWeekLow": 92.98,
       "trajectory": {
-        "periodDays": 64,
+        "periodDays": 63,
         "lowDate": "2026-09-01",
         "lowClose": 135.75,
         "pctFromLow": 0,
         "highDate": "2026-06-25",
         "highClose": 160.17,
         "pctFromHigh": -15.25,
-        "pct5d": -1.99,
-        "pct20d": -11.11,
-        "direction": "5日で横ばい"
+        "pct5d": -3.56,
+        "pct20d": -9,
+        "direction": "5日で下落"
       },
       "longTerm": {
         "periodWeeks": 263,
@@ -1190,15 +1190,15 @@
       "fiftyTwoWeekHigh": 94.14,
       "fiftyTwoWeekLow": 53.75,
       "trajectory": {
-        "periodDays": 64,
+        "periodDays": 63,
         "lowDate": "2026-07-08",
         "lowClose": 68.92,
         "pctFromLow": 35.85,
         "highDate": "2026-08-11",
         "highClose": 93.87,
         "pctFromHigh": -0.26,
-        "pct5d": 0.01,
-        "pct20d": 0.11,
+        "pct5d": 0.15,
+        "pct20d": 0.09,
         "direction": "5日で横ばい"
       },
       "longTerm": {
@@ -1257,10 +1257,10 @@
         "pct3y": 570.61
       },
       "extended": {
-        "price": 255.92,
+        "price": 256,
         "session": "post",
-        "time": "2026-09-01T23:07:31.000Z",
-        "vsRegularClose": -0.02
+        "time": "2026-09-01T23:11:33.000Z",
+        "vsRegularClose": 0.01
       }
     },
     {
@@ -1299,10 +1299,10 @@
         "pct3y": 319.57
       },
       "extended": {
-        "price": 137.96,
+        "price": 137.99,
         "session": "post",
-        "time": "2026-09-01T23:06:54.000Z",
-        "vsRegularClose": -0.09
+        "time": "2026-09-01T23:10:50.000Z",
+        "vsRegularClose": -0.07
       }
     },
     {
@@ -1383,17 +1383,12 @@
         "pct3y": 154.99
       },
       "extended": {
-        "price": 279.72,
+        "price": 279.65,
         "session": "post",
-        "time": "2026-09-01T23:02:39.000Z",
-        "vsRegularClose": -0.21
+        "time": "2026-09-01T23:08:34.000Z",
+        "vsRegularClose": -0.24
       }
     }
   ],
-  "errors": [
-    {
-      "ticker": "CTRA",
-      "message": "short: HTTP 404"
-    }
-  ]
+  "errors": []
 }

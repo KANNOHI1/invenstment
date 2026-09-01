@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-01T23:07:58.402Z",
+  "fetchedAt": "2026-09-01T23:11:49.257Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
@@ -39,10 +39,10 @@
         "pct3y": 720.04
       },
       "extended": {
-        "price": 36.47,
+        "price": 36.42,
         "session": "post",
-        "time": "2026-09-01T23:07:37.000Z",
-        "vsRegularClose": -0.95
+        "time": "2026-09-01T23:11:44.000Z",
+        "vsRegularClose": -1.09
       },
       "history": [
         {
@@ -339,10 +339,10 @@
         "pct3y": 919.62
       },
       "extended": {
-        "price": 197.52,
+        "price": 197.71,
         "session": "post",
-        "time": "2026-09-01T23:07:53.000Z",
-        "vsRegularClose": -1.01
+        "time": "2026-09-01T23:11:41.000Z",
+        "vsRegularClose": -0.92
       },
       "history": [
         {
@@ -639,10 +639,10 @@
         "pct3y": 1235.78
       },
       "extended": {
-        "price": 929.29,
+        "price": 929.2,
         "session": "post",
-        "time": "2026-09-01T23:07:54.000Z",
-        "vsRegularClose": -0.44
+        "time": "2026-09-01T23:11:44.000Z",
+        "vsRegularClose": -0.45
       },
       "history": [
         {
@@ -1531,10 +1531,10 @@
         "pct3y": 104.62
       },
       "extended": {
-        "price": 81.15,
+        "price": 81.13,
         "session": "post",
-        "time": "2026-09-01T23:07:50.000Z",
-        "vsRegularClose": -0.86
+        "time": "2026-09-01T23:11:43.000Z",
+        "vsRegularClose": -0.88
       },
       "history": [
         {
@@ -2127,10 +2127,10 @@
         "pct3y": 4093.37
       },
       "extended": {
-        "price": 1529.4,
+        "price": 1529.7,
         "session": "post",
-        "time": "2026-09-01T23:07:51.000Z",
-        "vsRegularClose": -0.49
+        "time": "2026-09-01T23:11:42.000Z",
+        "vsRegularClose": -0.47
       },
       "history": [
         {
@@ -2427,10 +2427,10 @@
         "pct3y": 395.31
       },
       "extended": {
-        "price": 217.43,
+        "price": 217.42,
         "session": "post",
-        "time": "2026-09-01T23:07:55.000Z",
-        "vsRegularClose": 0
+        "time": "2026-09-01T23:11:38.000Z",
+        "vsRegularClose": -0.01
       },
       "history": [
         {
