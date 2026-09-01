@@ -151,6 +151,14 @@ const ranked = Object.keys(SECTORS)
   .map((t) => ({ t, name: SECTORS[t], d5: pct(R[t], 5), d20: pct(R[t], 20), d60: pct(R[t], 60) }))
   .sort((a, b) => (b.d20 ?? -999) - (a.d20 ?? -999));
 
+// セクターが黙って欠けると順位と主役判定が狂う。
+// 2026-09-01にXLE（前日の主役）とXLREがHTTP 400で取得できず、
+// 順位表から消えたまま「主役が交代した」と読みかねない状態になった。
+const missing = Object.keys(SECTORS).filter((t) => !R[t]);
+if (missing.length) {
+  out.push(`★★ 警告: セクターETFが${missing.length}件欠損（${missing.map((t) => SECTORS[t]).join("・")}）。`);
+  out.push("   順位と主役判定は不完全。欠損セクターが上位だった場合、判定が逆転しうる。再取得すること。");
+}
 out.push("【資金の所在】セクター相対強度（20日順）");
 out.push("  順  セクター      5日     20日    60日");
 ranked.forEach((s, i) => {
