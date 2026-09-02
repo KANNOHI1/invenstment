@@ -26,25 +26,20 @@ out.push(`quoteTime ${prices.rows[0]?.quoteTime ?? prices.fetchedAt}（fetched $
 out.push("");
 
 // ── 日次: 仮説C「7/29が市場全体の底」の反証3条件 ───────────────────
-out.push("【日次】仮説C 反証3条件");
+// 仮説C「7/29が底」は2026-08-24に崩壊済み。その反証条件をチェックし続けても意味がない。
+// ただし「7/29終値割れ」と「過半下落の連続日数」は市場の広がりを見る指標として有用なので、
+// 仮説のラベルを外して残す。NVDAの-10%ラインはCに固有だったため削除。
+out.push("【市場の広がり】※仮説Cは2026-08-24に崩壊済み。以下は指標として継続");
 
-// 条件1: いずれかの主要銘柄が7/29の安値を終値で下回る
+// 7/29（直近の主要な安値日）を終値で下回っている銘柄
 const breaches = [];
 for (const r of prices.rows) {
   const jul29 = (r.history ?? []).find((h) => h.date === L.jul29_reference_date);
   if (jul29 && r.price < jul29.close) breaches.push(`${r.ticker} ${r.price}<${jul29.close}`);
 }
-out.push(`  ①7/29終値割れ: ${breaches.length ? "★該当 " + breaches.join(", ") : "なし（9銘柄）"}`);
+out.push(`  7/29終値を下回る銘柄: ${breaches.length ? breaches.join(", ") : "なし（9銘柄）"}`);
 
-// 条件2: NVDAが2ヶ月高値から-10%以上
-const nvda = rows.NVDA;
-if (nvda) {
-  const d = pct(nvda.price, L.NVDA_thesisC_floor);
-  out.push(`  ②NVDA -10%ライン $${L.NVDA_thesisC_floor}: 現値$${nvda.price}、あと${f(d)} ${nvda.price <= L.NVDA_thesisC_floor ? "★該当" : ""}`);
-}
-
-// 条件3: 5営業日以上、監視銘柄の過半が下落を続ける
-// ここが代理指標に置き換わっていた箇所。登録条件そのものを計算する。
+// 過半下落の連続日数（市場全体が売られ続けているか）
 const dates = (prices.rows[0].history ?? []).map((h) => h.date);
 const majorityDown = [];
 for (const dt of dates) {
@@ -65,7 +60,7 @@ for (let i = majorityDown.length - 1; i >= 0; i--) {
   else break;
 }
 const last = majorityDown[majorityDown.length - 1];
-out.push(`  ③過半下落の連続日数: ${streak}/5日（直近${last.dt} ${last.down}/${last.total}下落）${streak >= 5 ? " ★該当" : ""}`);
+out.push(`  過半下落の連続日数: ${streak}日（直近${last.dt} ${last.down}/${last.total}下落）`);
 out.push("");
 
 // ── 距離（監視線） ─────────────────────────────────────────
