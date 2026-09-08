@@ -14,13 +14,11 @@ on:
       - "watchlist/.price-refresh-trigger"
       - "watchlist/.scan-tickers"
       - "watchlist/.rotation-tickers"
-  # 定時実行。エージェントが更新を忘れても常に鮮度が保たれる状態にする。
-  # 時刻はUTC。日本時間はUTC+9。
-  schedule:
-    - cron: "5 20 * * 1-5"   # 米国通常取引の終了直後（JST 翌05:05）
-    - cron: "5 0 * * 2-6"    # 米国時間外の終了後（JST 09:05）＝日本の朝
-    - cron: "0 4 * * 1-5"    # JST 13:00 ＝日本の昼
-    - cron: "0 12 * * 1-5"   # JST 21:00 ＝米国寄り付き前、日本の夜
+  # 定時実行は 2026-09-09 に停止した。ローカル移行に伴い、ローカルの取得と
+  # Actions の取得が同じブランチの同じJSONを二重に書き換えるのを避けるため。
+  # push起点（下の paths）は残してあるので、クラウド側からは
+  # watchlist/.price-refresh-trigger を更新して push すれば従来どおり取得できる。
+  # ローカル一本化が完了したらこのワークフロー自体を削除してよい。
 
 permissions:
   contents: write
