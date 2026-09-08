@@ -13,8 +13,6 @@ on:
       - "watchlist/**"
       - "research/**"
       - ".github/workflows/dashboard-pages.yml"
-  schedule:
-    - cron: "30 14 * * 1-5"
 
 permissions:
   contents: read

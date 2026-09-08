@@ -1,7 +1,7 @@
 // 保有・監視銘柄の株価を取得して watchlist/latest_prices.json に書き出す。
 // GitHub Actions のランナー上で実行する前提（実行環境のプロキシ制限を回避するため）。
 // **ローカル（Claude Codeのコンテナ）で実行しないこと。** egress遮断で全銘柄403になる。
-// 更新は watchlist/.price-refresh-trigger を書き換えて push する。
+// ローカルで `node scripts/fetch_prices.mjs` を直接実行して更新する（2026-09-08 ローカル一本化）。
 // 依存パッケージなし。Node 20+ の fetch を使用。
 
 import fs from "node:fs/promises";

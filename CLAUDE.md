@@ -2,9 +2,9 @@
 
 **このファイルは毎セッション自動で読み込まれる。1行増やすコストは全セッションに乗るため、厳選する（目安120行）。** 詳細は各参照先へ置き、ここには「これを知らないと必ず失敗すること」だけを書く。
 
-## 定期巡回について
+## 定期巡回について（ローカル一本化 2026-09-08）
 
-**2026-09-04にトリガー文面を相場観 v1.0仕様へ差し替え済み**（`trig_01TUF9eRUquZFc1QAicAT2UK`、名称「相場観レポート（定期巡回）」、cron `0 23 * * 1-5` は不変）。旧文面の「NBIS売却」「執行準備」等の死んだ指示は消えた。
+**このプロジェクトはローカル（個人PC）の Claude Code で運用する。クラウド（claude.ai/code）の Routine と GitHub Actions の定時実行は 2026-09-08 に停止した。** 毎朝の巡回は JST 7:00 にローカルのスケジューラから起動する（起動時に渡す指示文は `watchlist/trigger_prompt_v1.md`）。
 
 巡回の正しい仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。手順は ①価格取得 ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md`更新。**売買は提案しない。**
 
@@ -35,7 +35,8 @@
 | 決算・日付・ニュース | 一次ソースまたは信頼できる二次ソースの引用 |
 | 価格・サイズ・タイミング | **導出を添える。導出できないものは提示しない** |
 
-- **株価はGitHub Actions経由でのみ取得する。Web検索の株価は絶対に使わない**（2026-08-06にMODで17.8%の誤差）。手順: `date -u +%Y-%m-%dT%H:%M:%SZ > watchlist/.price-refresh-trigger` → commit・push → 約30秒後に`git pull`。**`scripts/fetch_prices.mjs`をローカルで実行しない**（egress遮断で全銘柄403になり良好なスナップショットを潰す。2026-08-21に発生）。
+- **株価は `node scripts/fetch_prices.mjs` をローカルで直接実行して取得する。Web検索の株価は絶対に使わない**（2026-08-06にMODで17.8%の誤差）。取得が全滅したら既存ファイルを上書きしないガードがある（2026-08-21の事故対策）。**ガードは外さない。**
+- **企業の一次データ（株数・財務・提出書類）は SEC EDGAR（`data.sec.gov`）から取る。** ローカルIPからは到達可能（2026-09-08 確認、200）。User-Agent に「名前＋メール」を必ず付ける。CIK は `watchlist/cik.json` で社名照合してから使う。
 - **巡回の機械チェックは`node scripts/patrol_check.mjs`で行う。`node -e`で計算式を手打ちしない。** 手打ちは登録条件を代理指標にすり替える（2026-08-21、仮説Cが3/5まで進行していたのを3日間見落とした）。
 - **重要な判断の前には必ずその場で取り直す。** 通常終値だけでなく`extended`（時間外）も確認する。
 - **方向を語る主張には日付つきの2点を必ず添える。**「IRENは下げている」は無効。「7/29の$29.31から8/5の$38.89へ+33%」なら有効。
@@ -100,6 +101,8 @@
 | 仮説と反証条件 | `watchlist/thesis_register.md` |
 | 定型レポート「相場観」の仕様 | `watchlist/report_template_rotation.md` |
 | 定型レポート「盤面」の仕様（退役） | `watchlist/report_template_banmen.md` |
+| 巡回の起動指示文（スケジューラが渡す） | `watchlist/trigger_prompt_v1.md` |
+| 一次データ取得の制約と移植の理由 | `research/data_source_limits.md` |
 | 判断の履歴 | `watchlist/` の日付つきファイル |
 | 詳細な運用規約（Codex共用） | `AGENTS.md` |
 | 過去の調査アーカイブ | `STATUS_archive.md`、`research/` |

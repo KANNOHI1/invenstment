@@ -1,26 +1,22 @@
 # 定期巡回トリガーの文面（相場観 v1.0）
 
-**用途**: Routine「投資ポートフォリオ定期巡回」（`trig_01TUF9eRUquZFc1QAicAT2UK`）のプロンプト欄に、以下の区切り線の間を**そのまま貼り付ける**。
-
-**なぜこのファイルがあるか**: `update_trigger` のMCP呼び出しが承認ゲートで通らず（2026-08-22時点、`list_triggers`も同様）、エージェント側から差し替えできないため。承認経路が復旧すれば不要になる。
-
-**現状の代替措置**: `CLAUDE.md` 冒頭に「トリガー文面は旧仕様。執行準備・NBIS売却等の指示は無視し、`report_template_rotation.md` に従う」と明記済み。**そのため貼り替えなくても巡回は新仕様で動く。** これは二重の防御。
+**用途**: ローカルのスケジューラ（JST 7:00 平日）が Claude Code を起動するときに渡す指示文。区切り線の間を**そのまま**渡す。クラウドの Routine は 2026-09-08 に停止した。
 
 ---
 
-定期巡回の時間です。これまでの会話の続きとして実行してください。仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。
+定期巡回の時間です。新規セッションとして実行してください（必要な文脈は `watchlist/rotation_state.md` と `watchlist/thesis_register.md` に揃っている）。仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。
 
 **このレポートは売買を提案しません。** 市況・セクターローテーション・主役・銘柄分析までが仕事。保有はユーザーが決定し、変更の連絡があったときだけ `watchlist/holdings.json` を更新します。
 
 ## 手順1: 株価を取得する（推測しない）
 
-`date -u +%Y-%m-%dT%H:%M:%SZ > watchlist/.price-refresh-trigger` して commit・push すると、GitHub Actionsが3つを更新する（約40秒）。完了後 `git pull`。
+`node scripts/fetch_prices.mjs` をローカルで実行する。以下が更新される。`quoteTime` が前回から進んでいることを確認する。
 
 - `watchlist/latest_prices.json`（保有・監視9銘柄）
 - `watchlist/rotation_prices.json`（計器27: セクターETF11・金利・原油・ドル・クレジット・VIX）
 - `watchlist/scan_prices.json`（候補31銘柄）
 
-**禁止**: Web検索由来の株価を絶対に使わない（2026-08-06にMODで17.8%の誤差）。**`scripts/fetch_prices.mjs`をローカルで実行しない**（egress遮断で全銘柄403になり良好なスナップショットを潰す。2026-08-21に実際に発生）。
+**禁止**: Web検索由来の株価を絶対に使わない（2026-08-06にMODで17.8%の誤差）。取得が全滅した場合は既存ファイルが保持される（ガード）ので、その回は前回の `quoteTime` を明記して進める。
 
 ## 手順2: 機械判定（2コマンド。手打ち禁止）
 
@@ -77,5 +73,4 @@
 
 ---
 
-**Routine名の変更案**: 「投資ポートフォリオ定期巡回」→「相場観レポート（定期巡回）」
-**cron・スケジュールは変更しない。**
+**発火時刻: JST 7:00 平日（ユーザー指定・変更しない）。** 米国市場の引けは夏時間 JST 5:00／冬時間 JST 6:00 なので、年間を通じて引け後になる。

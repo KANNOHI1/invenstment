@@ -14,7 +14,7 @@
 // 「記事によって357Mだったり394Mだったりする」問題は消える。
 // 提出書類の原文が要る判断のときは、SECのURLを人が開いて確認する（下記 secUrl）。
 //
-// **ローカルで実行しないこと。** 更新は watchlist/.price-refresh-trigger を押す。
+// ローカルで直接実行してよい（2026-09-08 ローカル一本化。SEC EDGAR も家庭用IPから到達可）。
 // 依存パッケージなし。Node 20+。
 
 import fs from "node:fs/promises";

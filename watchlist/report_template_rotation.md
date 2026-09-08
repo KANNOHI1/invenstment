@@ -22,8 +22,8 @@ v0.3の致命的な欠落を埋める: 2026-08-18〜20に金利上昇と原油�
 
 ## 生成手順
 
-1. `date -u +%Y-%m-%dT%H:%M:%SZ > watchlist/.price-refresh-trigger` → commit・push → 約40秒後 `git pull`。
-   **`scripts/fetch_prices.mjs`をローカルで実行しない**（egress遮断で全銘柄403）。
+1. `node scripts/fetch_prices.mjs` をローカルで実行する（2026-09-08 ローカル一本化。GitHub Actions経由は廃止）。
+   取得が全滅したら既存ファイルを上書きしないガードが入っている。`latest_prices.json` の `quoteTime` が更新されたことを確認する。
 2. **`node scripts/rotation_check.mjs`** — 象限・セクター序列・主役のズレ。
 3. **`node scripts/patrol_check.mjs`** — 保有の軌跡と仮説の反証チェック。
 4. 材料調査（下記の定型プロンプト）。
