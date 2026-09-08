@@ -48,6 +48,21 @@ def load_prompt() -> str:
     return "\n".join(lines[marks[0] + 1 : marks[1]]).strip()
 
 
+# このプロセスは `op run --env-file=...` 経由で起動されるため、環境変数に
+# Gmail のアプリパスワードが入っている。一方 claude -p は bypassPermissions で
+# 無人実行され、巡回の手順3で調査エージェントが外部のウェブページを読む。
+# 環境をそのまま継承させると「読んだページに書かれた指示」で認証情報を
+# 持ち出せる経路ができるため、子プロセスには秘密を渡さない。
+SECRET_ENV_KEYS = ("GMAIL_APP_PASSWORD",)
+
+
+def child_env() -> dict[str, str]:
+    env = os.environ.copy()
+    for key in SECRET_ENV_KEYS:
+        env.pop(key, None)
+    return env
+
+
 def run_claude(prompt: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         [
@@ -59,6 +74,7 @@ def run_claude(prompt: str) -> subprocess.CompletedProcess[str]:
             "text",
         ],
         cwd=ROOT,
+        env=child_env(),
         input=prompt,
         text=True,
         encoding="utf-8",
