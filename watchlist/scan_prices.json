@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T01:58:15.521Z",
+  "fetchedAt": "2026-09-08T04:19:10.424Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
   "rows": [
@@ -40,7 +40,7 @@
       },
       "extended": {
         "price": 199.24,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:57:57.000Z",
         "vsRegularClose": 0.01
       }
@@ -82,7 +82,7 @@
       },
       "extended": {
         "price": 48.11,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:58:00.000Z",
         "vsRegularClose": 0.1
       }
@@ -124,7 +124,7 @@
       },
       "extended": {
         "price": 66.22,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:45:58.000Z",
         "vsRegularClose": 2.25
       }
@@ -166,7 +166,7 @@
       },
       "extended": {
         "price": 59,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:54:12.000Z",
         "vsRegularClose": -0.25
       }
@@ -208,7 +208,7 @@
       },
       "extended": {
         "price": 23.58,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:45:46.000Z",
         "vsRegularClose": 0.94
       }
@@ -250,7 +250,7 @@
       },
       "extended": {
         "price": 37.07,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-05T00:00:00.000Z",
         "vsRegularClose": 0
       }
@@ -264,7 +264,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 113.15,
-      "fiftyTwoWeekLow": 60.84,
+      "fiftyTwoWeekLow": 60.24,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-20",
@@ -292,7 +292,7 @@
       },
       "extended": {
         "price": 95.88,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:03.000Z",
         "vsRegularClose": 0
       }
@@ -334,7 +334,7 @@
       },
       "extended": {
         "price": 21.39,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:55:42.000Z",
         "vsRegularClose": 0
       }
@@ -376,7 +376,7 @@
       },
       "extended": {
         "price": 279.93,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:48.000Z",
         "vsRegularClose": -4.13
       }
@@ -418,7 +418,7 @@
       },
       "extended": {
         "price": 290.05,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:07.000Z",
         "vsRegularClose": 0
       }
@@ -460,7 +460,7 @@
       },
       "extended": {
         "price": 100.8,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:51.000Z",
         "vsRegularClose": 0.06
       }
@@ -502,7 +502,7 @@
       },
       "extended": {
         "price": 11.54,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:43.000Z",
         "vsRegularClose": 0
       }
@@ -544,7 +544,7 @@
       },
       "extended": {
         "price": 173.85,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-05T00:00:00.000Z",
         "vsRegularClose": -0.02
       }
@@ -586,7 +586,7 @@
       },
       "extended": {
         "price": 204.7,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:58:22.000Z",
         "vsRegularClose": -0.01
       }
@@ -628,7 +628,7 @@
       },
       "extended": {
         "price": 37.46,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:58:58.000Z",
         "vsRegularClose": 1.33
       }
@@ -670,7 +670,7 @@
       },
       "extended": {
         "price": 526.82,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-05T00:00:00.000Z",
         "vsRegularClose": 0.29
       }
@@ -712,7 +712,7 @@
       },
       "extended": {
         "price": 132.63,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:57:20.000Z",
         "vsRegularClose": -0.32
       }
@@ -754,7 +754,7 @@
       },
       "extended": {
         "price": 48,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:48.000Z",
         "vsRegularClose": 0.38
       }
@@ -796,7 +796,7 @@
       },
       "extended": {
         "price": 146.25,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:29.000Z",
         "vsRegularClose": 1.11
       }
@@ -838,7 +838,7 @@
       },
       "extended": {
         "price": 145.72,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:03.000Z",
         "vsRegularClose": 0
       }
@@ -880,7 +880,7 @@
       },
       "extended": {
         "price": 270,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:58:16.000Z",
         "vsRegularClose": 0.74
       }
@@ -922,7 +922,7 @@
       },
       "extended": {
         "price": 75.16,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:18.000Z",
         "vsRegularClose": 0.97
       }
@@ -964,7 +964,7 @@
       },
       "extended": {
         "price": 105.65,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:58.000Z",
         "vsRegularClose": 0.11
       }
@@ -1006,7 +1006,7 @@
       },
       "extended": {
         "price": 879.9,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:58.000Z",
         "vsRegularClose": -0.15
       }
@@ -1020,7 +1020,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 1145,
-      "fiftyTwoWeekLow": 188,
+      "fiftyTwoWeekLow": 187.18,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-16",
@@ -1048,7 +1048,7 @@
       },
       "extended": {
         "price": 848,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:29.000Z",
         "vsRegularClose": -0.15
       }
@@ -1090,7 +1090,7 @@
       },
       "extended": {
         "price": 488.94,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:26.000Z",
         "vsRegularClose": 0.5
       }
@@ -1132,7 +1132,7 @@
       },
       "extended": {
         "price": 153.29,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:57:13.000Z",
         "vsRegularClose": -1.76
       }
@@ -1174,7 +1174,7 @@
       },
       "extended": {
         "price": 140.02,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:07.000Z",
         "vsRegularClose": 0
       }
@@ -1216,7 +1216,7 @@
       },
       "extended": {
         "price": 93.76,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:30:07.000Z",
         "vsRegularClose": 0
       }
@@ -1258,7 +1258,7 @@
       },
       "extended": {
         "price": 279.8,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:41.000Z",
         "vsRegularClose": -0.26
       }
@@ -1300,7 +1300,7 @@
       },
       "extended": {
         "price": 149.79,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:52.000Z",
         "vsRegularClose": 0.33
       }
@@ -1342,7 +1342,7 @@
       },
       "extended": {
         "price": 319,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:52:26.000Z",
         "vsRegularClose": 0.63
       }
@@ -1384,7 +1384,7 @@
       },
       "extended": {
         "price": 298.7,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:58:39.000Z",
         "vsRegularClose": -0.09
       }
@@ -1426,7 +1426,7 @@
       },
       "extended": {
         "price": 943.14,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:50.000Z",
         "vsRegularClose": 0.13
       }

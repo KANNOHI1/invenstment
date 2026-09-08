@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T01:57:59.785Z",
+  "fetchedAt": "2026-09-08T04:19:01.455Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
@@ -12,7 +12,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:01.000Z",
       "fiftyTwoWeekHigh": 76.87,
-      "fiftyTwoWeekLow": 25.38,
+      "fiftyTwoWeekLow": 27.05,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-29",
@@ -40,7 +40,7 @@
       },
       "extended": {
         "price": 44.45,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:55.000Z",
         "vsRegularClose": -0.51
       },
@@ -340,7 +340,7 @@
       },
       "extended": {
         "price": 225.3,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:58.000Z",
         "vsRegularClose": -0.48
       },
@@ -612,7 +612,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:01.000Z",
       "fiftyTwoWeekHigh": 1255,
-      "fiftyTwoWeekLow": 128.4,
+      "fiftyTwoWeekLow": 131.56,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-29",
@@ -640,7 +640,7 @@
       },
       "extended": {
         "price": 1014.95,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:58.000Z",
         "vsRegularClose": -0.16
       },
@@ -940,7 +940,7 @@
       },
       "extended": {
         "price": 256,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:54:35.000Z",
         "vsRegularClose": -0.08
       },
@@ -1240,7 +1240,7 @@
       },
       "extended": {
         "price": 195.54,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-05T00:00:00.000Z",
         "vsRegularClose": 0.45
       },
@@ -1540,7 +1540,7 @@
       },
       "extended": {
         "price": 89.07,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:45.000Z",
         "vsRegularClose": -0.32
       },
@@ -1812,7 +1812,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 328,
-      "fiftyTwoWeekLow": 89.26,
+      "fiftyTwoWeekLow": 89.9,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-09-02",
@@ -1840,7 +1840,7 @@
       },
       "extended": {
         "price": 182.31,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:54:58.000Z",
         "vsRegularClose": 0.63
       },
@@ -2112,7 +2112,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 2354.39,
-      "fiftyTwoWeekLow": 69.57,
+      "fiftyTwoWeekLow": 67.86,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-29",
@@ -2140,7 +2140,7 @@
       },
       "extended": {
         "price": 1734.01,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:58.000Z",
         "vsRegularClose": -0.34
       },
@@ -2440,7 +2440,7 @@
       },
       "extended": {
         "price": 229.5,
-        "session": "post",
+        "session": "pre",
         "time": "2026-09-04T23:59:59.000Z",
         "vsRegularClose": -0.37
       },
