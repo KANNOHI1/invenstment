@@ -4,7 +4,13 @@
 
 ## 定期巡回について（ローカル一本化 2026-09-08）
 
-**このプロジェクトはローカル（個人PC）の Claude Code で運用する。クラウド（claude.ai/code）の Routine と GitHub Actions の定時実行は 2026-09-08 に停止した。** 毎朝の巡回は JST 7:00 にローカルのスケジューラから起動する（起動時に渡す指示文は `watchlist/trigger_prompt_v1.md`）。
+**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 毎朝の巡回は JST 7:00 にローカルのスケジューラから起動する（起動時に渡す指示文は `watchlist/trigger_prompt_v1.md`）。
+
+**移行の進捗（2026-09-08）**: GitHub Actions の定時実行は停止済み（push起点は維持）。
+**クラウドの Routine「相場観レポート（定期巡回）」はまだ稼働している**（`trig_01TUF9eRUquZFc1QAicAT2UK`、平日 JST 08:03）。
+**ローカルのスケジューラが一度成功するまでは意図的に残す**——先に止めると巡回が空白になり、
+9/11のCPIという判断日を跨ぐため。**ローカルの自動実行が動いたら、クラウド側セッションから無効化する**
+（削除ではなく無効化。移行が失敗したときに戻せるようにするため）。
 
 巡回の正しい仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。手順は ①価格取得 ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md`更新。**売買は提案しない。**
 
