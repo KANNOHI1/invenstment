@@ -214,4 +214,41 @@ for (const [t, name] of [["SMH", "半導体"], ["IGV", "ソフトウェア"], ["
   if (R[t]) out.push(`  ${name.padEnd(10, "　")} ${f(pct(R[t], 20)).padStart(7)}`);
 }
 
+// ── ⑦待機資金の投下条件（2026-09-03 設定・09-09 に③を修正） ──────────
+// 文章で持っていると目視になり、見落とす（2026-08-21に仮説Cを3日見落とした）。
+// 価格で判定できるものはここで機械的に評価する。
+out.push("");
+out.push("【待機資金の投下条件】");
+
+// ① FOMC。価格からは判定できない。
+out.push("  ① FOMC利上げ見送り＋文言中立化 … 手動判定（FOMC当日以降に確認）");
+
+// ② 原油が20日・13週ともマイナス転換
+{
+  const cl = R["CL=F"];
+  const d20 = cl ? pct(cl, 20) : null;
+  const w13 = cl && cl.historyWeekly ? wpct(cl, 13) : null;
+  const fired = d20 !== null && w13 !== null && d20 < 0 && w13 < 0;
+  out.push(`  ② 原油が20日・13週ともマイナス … ${fired ? "★発火" : "未発火"}（20日 ${d20 === null ? "n/a" : f(d20)}／13週 ${w13 === null ? "n/a" : f(w13)}）`);
+}
+
+// ③ 公益が20日で上位3位。
+// 2026-09-09 修正: 素の条件は金利上昇下のリスク回避でも発火してしまう。
+// 意図は「利下げの先取り」なので、金利軸が上昇でないことを併せて要求する。
+{
+  const xluRank = ranked.findIndex((r) => r.t === "XLU") + 1;
+  const raw = xluRank >= 1 && xluRank <= 3;
+  const rateNotRising = rateScore <= 0;
+  out.push(`  ③ 公益が20日で上位3位 … ${raw ? "★発火" : "未発火"}（現在${xluRank || "?"}位）`);
+  out.push(`     └ 金利軸が上昇でない … ${rateNotRising ? "満たす" : `満たさない（金利スコア+${rateScore}）`}`);
+  out.push(`     └ 総合判定: ${raw && rateNotRising ? "★★投下条件③が成立" : raw ? "保留（公益は上位だが金利が上昇中＝利下げの先取りではなくリスク回避の可能性）" : "不成立"}`);
+}
+
+// ④ 時限。2026-09-08の判断で撤回を検討中。
+{
+  const deadline = new Date("2026-12-31T00:00:00Z");
+  const days = Math.ceil((deadline - new Date()) / 86400000);
+  out.push(`  ④ 時限 2026-12-31 … 残り${days}日 ※2026-09-08の判断で撤回/延長を検討中（金利ピークが2027年なら誤った象限での執行を強制する）`);
+}
+
 console.log(out.join("\n"));
