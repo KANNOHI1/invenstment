@@ -281,3 +281,59 @@ function buildExtended(result, regularPrice) {
     vsRegularClose: regularPrice ? round(((last / regularPrice) - 1) * 100) : null
   };
 }
+
+// ── 日次3年（保有・監視銘柄のみ）─────────────────────────────────────────
+// 決算発表の翌営業日にどう動いたか等、「特定の日付の前後」を見る問いに答えるため。
+// 本編の history は3ヶ月しかなく、1年以上前の決算に届かない。
+// latest_prices.json を膨らませないよう別ファイルへ出す。
+// 失敗しても本編の出力は壊さない（本編は既に書き終わっている）。
+try {
+  const dailyLong = {};
+  const dailyErrors = [];
+  process.stdout.write(`Fetching 3y daily for ${TICKERS.length} tickers\n`);
+  for (const ticker of TICKERS) {
+    try {
+      const url =
+        `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}` +
+        `?range=3y&interval=1d`;
+      const res = await fetch(url, {
+        headers: { "User-Agent": "Mozilla/5.0 price-snapshot/1.0", Accept: "application/json" }
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      const result = json.chart?.result?.[0];
+      if (!result) throw new Error(json.chart?.error?.description ?? "empty result");
+      const hist = toHist(result);
+      if (!hist.length) throw new Error("empty history");
+      dailyLong[ticker] = hist;
+      process.stdout.write(".");
+    } catch (e) {
+      dailyErrors.push({ ticker, message: e instanceof Error ? e.message : String(e) });
+      process.stdout.write("x");
+    }
+  }
+  const dailyPath = path.join(process.cwd(), "watchlist", "daily_long.json");
+  // 全滅時は既存ファイルを潰さない（latest_prices.json と同じ事故を繰り返さない）。
+  if (Object.keys(dailyLong).length === 0) {
+    console.error("\n日次3年が全滅したため daily_long.json を上書きしない。");
+  } else {
+    await fs.writeFile(
+      dailyPath,
+      JSON.stringify(
+        {
+          fetchedAt: new Date().toISOString(),
+          source: "Yahoo Finance chart endpoint (GitHub Actions runner)",
+          note: "日次3年。決算日前後の反応など、日付を指定して前後を見る用途。",
+          series: dailyLong,
+          errors: dailyErrors
+        },
+        null,
+        2
+      ) + "\n",
+      "utf8"
+    );
+    process.stdout.write(`\nWrote ${dailyPath} (${Object.keys(dailyLong).length} tickers, ${dailyErrors.length} errors)\n`);
+  }
+} catch (e) {
+  console.error("日次3年の取得でエラー:", e instanceof Error ? e.message : String(e));
+}
