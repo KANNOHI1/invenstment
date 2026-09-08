@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T00:11:50.196Z",
+  "fetchedAt": "2026-09-08T01:58:15.521Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "ゼロベース再スキャン用の候補宇宙。保有銘柄リストを投資宇宙にしないための装置。",
   "rows": [
@@ -264,7 +264,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 113.15,
-      "fiftyTwoWeekLow": 60.24,
+      "fiftyTwoWeekLow": 60.84,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-20",
@@ -432,7 +432,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:02.000Z",
       "fiftyTwoWeekHigh": 135.24,
-      "fiftyTwoWeekLow": 74.99,
+      "fiftyTwoWeekLow": 77.01,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-29",
@@ -810,7 +810,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:01.000Z",
       "fiftyTwoWeekHigh": 215.99,
-      "fiftyTwoWeekLow": 79.97,
+      "fiftyTwoWeekLow": 80.61,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-29",
@@ -1020,7 +1020,7 @@
       "currency": "USD",
       "quoteTime": "2026-09-04T20:00:00.000Z",
       "fiftyTwoWeekHigh": 1145,
-      "fiftyTwoWeekLow": 187.18,
+      "fiftyTwoWeekLow": 188,
       "trajectory": {
         "periodDays": 64,
         "lowDate": "2026-07-16",
@@ -1387,6 +1387,48 @@
         "session": "post",
         "time": "2026-09-04T23:58:39.000Z",
         "vsRegularClose": -0.09
+      }
+    },
+    {
+      "ticker": "GEV",
+      "price": 941.95,
+      "previousClose": 941.84,
+      "change": 0.11,
+      "changePct": 0.01,
+      "currency": "USD",
+      "quoteTime": "2026-09-04T20:00:02.000Z",
+      "fiftyTwoWeekHigh": 1195.94,
+      "fiftyTwoWeekLow": 530.16,
+      "trajectory": {
+        "periodDays": 64,
+        "lowDate": "2026-06-10",
+        "lowClose": 867.09,
+        "pctFromLow": 8.63,
+        "highDate": "2026-06-30",
+        "highClose": 1174.86,
+        "pctFromHigh": -19.82,
+        "pct5d": 3.29,
+        "pct20d": -4.88,
+        "direction": "5日で上昇"
+      },
+      "longTerm": {
+        "periodWeeks": 129,
+        "low5y": 122.7,
+        "low5yDate": "2024-04-01",
+        "high5y": 1149.19,
+        "high5yDate": "2026-04-20",
+        "pctFrom5yLow": 667.69,
+        "pctFrom5yHigh": -18.03,
+        "rangePosition": 79.81,
+        "pct1y": 50.58,
+        "pct2y": 317.55,
+        "pct3y": 588.81
+      },
+      "extended": {
+        "price": 943.14,
+        "session": "post",
+        "time": "2026-09-04T23:59:50.000Z",
+        "vsRegularClose": 0.13
       }
     }
   ],
