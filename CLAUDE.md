@@ -6,11 +6,12 @@
 
 **このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 JST 7:00）が `scripts/run_patrol.cmd` を実行し、**固定セッション（ID はその .cmd 内）を `--resume` して同じ会話に追記する**。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。**巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
 
-**移行の進捗（2026-09-08）**: GitHub Actions の定時実行は停止済み（push起点は維持）。
-**クラウドの Routine「相場観レポート（定期巡回）」はまだ稼働している**（`trig_01TUF9eRUquZFc1QAicAT2UK`、平日 JST 08:03）。
-**ローカルのスケジューラが一度成功するまでは意図的に残す**——先に止めると巡回が空白になり、
-9/11のCPIという判断日を跨ぐため。**ローカルの自動実行が動いたら、クラウド側セッションから無効化する**
-（削除ではなく無効化。移行が失敗したときに戻せるようにするため）。
+**★移行完了（2026-09-10）。ローカル一本化済み。**
+2026-09-10 07:09 JST、Task Scheduler の時刻トリガーが自力で発火し、巡回が完走・コミットまで到達した
+（`75c8885`）。これを確認して**クラウドの Routine を無効化**した
+（`trig_01TUF9eRUquZFc1QAicAT2UK`、`enabled: false`。削除はしていないので戻せる）。
+GitHub Actions の定時実行も停止済み（push起点のみ維持）。
+**巡回はローカルからのみ出る。クラウド側からは出ない。**
 
 巡回の正しい仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。手順は ①価格取得 ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md`更新。**売買は提案しない。**
 
