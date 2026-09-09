@@ -75,7 +75,7 @@ out.push("");
 // ── ①マクロ座標 ────────────────────────────────────────
 out.push("【マクロ座標】現値（20日変化）");
 const macro = [
-  ["^TNX", "10年金利"], ["^TYX", "30年金利"], ["CL=F", "WTI原油"],
+  ["^TNX", "10年金利"], ["^TYX", "30年金利"], ["CL=F", "WTI原油"], ["BZ=F", "ブレント原油"],
   ["DX-Y.NYB", "ドル指数"], ["^VIX", "VIX"], ["GC=F", "金"]
 ];
 for (const [t, name] of macro) {
@@ -193,7 +193,7 @@ out.push("");
 // 短期の窓だけを見ると、数日の戦争・決算のボラで趨勢を見失う。
 out.push("【大局】週足の趨勢（13週=約3ヶ月／52週=1年／40週線=約200日線）");
 out.push("  計器          13週     52週  40週線との位置");
-for (const [t, name] of [["^TNX", "10年金利"], ["^TYX", "30年金利"], ["CL=F", "WTI原油"], ["DX-Y.NYB", "ドル指数"], ["^VIX", "VIX"], ["GC=F", "金"]]) {
+for (const [t, name] of [["^TNX", "10年金利"], ["^TYX", "30年金利"], ["CL=F", "WTI原油"], ["BZ=F", "ブレント原油"], ["DX-Y.NYB", "ドル指数"], ["^VIX", "VIX"], ["GC=F", "金"]]) {
   const r = R[t];
   if (!r || !r.historyWeekly) continue;
   const tr = trendOf(r);
