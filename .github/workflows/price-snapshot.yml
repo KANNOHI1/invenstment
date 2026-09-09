@@ -5,20 +5,14 @@ name: Price snapshot
 # 更新したいときは watchlist/.price-refresh-trigger を更新して push する。
 
 on:
+  # 2026-09-10 ローカル一本化に伴い、自動起動を全て止めた。
+  # - 定時実行(cron): 2026-09-09 に停止（ローカルの取得と二重になるため）
+  # - push起点: 2026-09-10 に停止。クラウドの巡回Routineを無効化したため用途が無くなった一方、
+  #   監視対象に .scan-tickers / .rotation-tickers が含まれており、
+  #   月初のゼロベース再構築でローカルが編集した瞬間に発火して
+  #   株価JSONを二重に書き換える事故になる。
+  # 手動実行だけ残す（ローカルが動かないときの退避経路）。
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/price-snapshot.yml"
-      - "scripts/fetch_prices.mjs"
-      - "scripts/fetch_filings.mjs"
-      - "watchlist/.price-refresh-trigger"
-      - "watchlist/.scan-tickers"
-      - "watchlist/.rotation-tickers"
-  # 定時実行は 2026-09-09 に停止した。ローカル移行に伴い、ローカルの取得と
-  # Actions の取得が同じブランチの同じJSONを二重に書き換えるのを避けるため。
-  # push起点（下の paths）は残してあるので、クラウド側からは
-  # watchlist/.price-refresh-trigger を更新して push すれば従来どおり取得できる。
-  # ローカル一本化が完了したらこのワークフロー自体を削除してよい。
 
 permissions:
   contents: write
