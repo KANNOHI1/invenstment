@@ -2,7 +2,7 @@
 
 ## 現在地（2026-09-08・recallはここだけ読めば復元できる）
 
-**2026-09-08 ローカル一本化を実行中（作業ブランチ `claude/project-status-review-gretkk`）。** 巡回の自動実行は `scripts/run_patrol.ps1`→`op run`→`scripts/patrol_daily.py`（`claude -p` 起動＋Gmail SMTP 配信、ClaudeHarnessWeekly と同じ骨格）を実装済み。**未実施**: 試走（メール1通送信）→ `setup_task_scheduler.ps1` 登録 → ローカル初回成功後にクラウド Routine を無効化（9/11 CPI を跨ぐ空白を避けるため先に止めない）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）と SEC EDGAR（`data.sec.gov` 200）の到達を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` はクラウド側の変更を採用し push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
+**2026-09-10 ローカル一本化ほぼ完了（作業ブランチ `claude/project-status-review-gretkk`）。** 毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッション `36358243…` を `--resume` する対話 claude。Remote Control 経由でスマホの「Morning patrol」スレッドに毎朝追記され、そこで返信できる。初回作成は 9/10 00:26 に成功。**残り**: 9/10 07:00 の追記を確認 → クラウド Routine を無効化（それまで残す）。メール配信案・デスクトップ scheduled task 案は不採用（経緯は `HANDOVER_TO_LOCAL.md` §4 ★）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）と SEC EDGAR（`data.sec.gov` 200）の到達を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` はクラウド側の変更を採用し push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
 
 **フェーズ**: 再投下の構造が完成（8/13約定で5銘柄体制成立）。目標は総資産の非対称な3倍以上。銘柄数は増やさない。
 

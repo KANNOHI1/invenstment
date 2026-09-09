@@ -4,7 +4,7 @@
 
 ## 定期巡回について（ローカル一本化 2026-09-08）
 
-**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 毎朝の巡回は JST 7:00 にローカルのスケジューラから起動する（起動時に渡す指示文は `watchlist/trigger_prompt_v1.md`）。
+**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 JST 7:00）が `scripts/run_patrol.cmd` を実行し、**固定セッション（ID はその .cmd 内）を `--resume` して同じ会話に追記する**。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。**巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
 
 **移行の進捗（2026-09-08）**: GitHub Actions の定時実行は停止済み（push起点は維持）。
 **クラウドの Routine「相場観レポート（定期巡回）」はまだ稼働している**（`trig_01TUF9eRUquZFc1QAicAT2UK`、平日 JST 08:03）。
