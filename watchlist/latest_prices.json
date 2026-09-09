@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T22:01:29.330Z",
+  "fetchedAt": "2026-09-09T23:50:35.652Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "取得失敗した銘柄は errors に入る。rows に無い銘柄の株価を推測で埋めないこと。",
   "rows": [
@@ -39,10 +39,10 @@
         "pct3y": 1084.6
       },
       "extended": {
-        "price": 45.05,
+        "price": 45.15,
         "session": "post",
-        "time": "2026-09-09T22:01:13.000Z",
-        "vsRegularClose": -0.71
+        "time": "2026-09-09T23:50:17.000Z",
+        "vsRegularClose": -0.48
       },
       "history": [
         {
@@ -335,10 +335,10 @@
         "pct3y": 1128.16
       },
       "extended": {
-        "price": 237.01,
+        "price": 236.4,
         "session": "post",
-        "time": "2026-09-09T22:01:15.000Z",
-        "vsRegularClose": -1.39
+        "time": "2026-09-09T23:50:30.000Z",
+        "vsRegularClose": -1.64
       },
       "history": [
         {
@@ -631,10 +631,10 @@
         "pct3y": 1392.12
       },
       "extended": {
-        "price": 1025.84,
+        "price": 1024,
         "session": "post",
-        "time": "2026-09-09T22:01:13.000Z",
-        "vsRegularClose": -0.19
+        "time": "2026-09-09T23:50:27.000Z",
+        "vsRegularClose": -0.37
       },
       "history": [
         {
@@ -927,10 +927,10 @@
         "pct3y": 437.03
       },
       "extended": {
-        "price": 276.01,
+        "price": 278.06,
         "session": "post",
-        "time": "2026-09-09T21:58:56.000Z",
-        "vsRegularClose": -0.61
+        "time": "2026-09-09T23:41:08.000Z",
+        "vsRegularClose": 0.13
       },
       "history": [
         {
@@ -1223,10 +1223,10 @@
         "pct3y": 322.37
       },
       "extended": {
-        "price": 183,
+        "price": 185.97,
         "session": "post",
-        "time": "2026-09-09T20:41:02.000Z",
-        "vsRegularClose": -1.6
+        "time": "2026-09-09T21:55:46.000Z",
+        "vsRegularClose": 0
       },
       "history": [
         {
@@ -1519,10 +1519,10 @@
         "pct3y": 137.35
       },
       "extended": {
-        "price": 92.55,
+        "price": 92.05,
         "session": "post",
-        "time": "2026-09-09T22:01:19.000Z",
-        "vsRegularClose": -2.52
+        "time": "2026-09-09T23:50:23.000Z",
+        "vsRegularClose": -3.04
       },
       "history": [
         {
@@ -1815,10 +1815,10 @@
         "pct3y": 605.52
       },
       "extended": {
-        "price": 180.27,
+        "price": 179.65,
         "session": "post",
-        "time": "2026-09-09T21:30:00.000Z",
-        "vsRegularClose": 0.01
+        "time": "2026-09-09T23:42:48.000Z",
+        "vsRegularClose": -0.34
       },
       "history": [
         {
@@ -2111,10 +2111,10 @@
         "pct3y": 4713.56
       },
       "extended": {
-        "price": 1763.46,
+        "price": 1760.5,
         "session": "post",
-        "time": "2026-09-09T22:01:18.000Z",
-        "vsRegularClose": -0.04
+        "time": "2026-09-09T23:50:31.000Z",
+        "vsRegularClose": -0.21
       },
       "history": [
         {
@@ -2407,10 +2407,10 @@
         "pct3y": 437.54
       },
       "extended": {
-        "price": 223.64,
+        "price": 223.51,
         "session": "post",
-        "time": "2026-09-09T22:01:23.000Z",
-        "vsRegularClose": -0.01
+        "time": "2026-09-09T23:50:33.000Z",
+        "vsRegularClose": -0.07
       },
       "history": [
         {
