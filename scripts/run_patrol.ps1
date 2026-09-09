@@ -1,31 +1,34 @@
-# 毎朝の相場観巡回（Task Scheduler から呼ばれる）
-# ask-anything-local-01/harness/tools/run_weekly.ps1 と同じ骨格:
-#   op run --env-file → python → SMTP 送信。秘密は 1Password から注入し、ファイルには置かない。
+﻿# 毎朝の相場観巡回（Task Scheduler から呼ばれる）
+# 対話モードの claude を固定セッションで起動する。remoteControlAtStartup=true により
+# セッションは Remote Control に自動で載り、claude.ai/code とスマホアプリから開いて返信できる。
+# 毎朝同じセッションに追記する（初回は --session-id、2回目以降は --resume）。
 $ErrorActionPreference = "Stop"
 
 $Root = "C:\Users\c6341\Documents\Projects\invenstment"
+$SessionId = "e29a7f82-710f-4361-bf95-44b9f682c127"
+$Claude = "C:\Users\c6341\AppData\Roaming\npm\claude.cmd"
 $LogDir = Join-Path $Root "claude_logs\patrol"
+$PidFile = Join-Path $LogDir "patrol.pid"
+$RunLog = Join-Path $LogDir "run_patrol.log"
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
-$LogPath = Join-Path $LogDir "run_patrol.stderr.log"
-
-# GMAIL_APP_PASSWORD の参照は ClaudeHarnessWeekly と同じ env ファイルを共用する（秘密の正は1箇所）
-$EnvFile = "C:\Users\c6341\Documents\Projects\ask-anything-local-01\harness\tools\harness_secrets.env"
 
 Set-Location -LiteralPath $Root
+git pull --ff-only -q 2>&1 | Out-Null
 
-$StartInfo = [System.Diagnostics.ProcessStartInfo]::new()
-$StartInfo.FileName = "C:\Users\c6341\AppData\Local\Programs\op\op.exe"
-$StartInfo.Arguments = "run --env-file=`"$EnvFile`" -- python scripts\patrol_daily.py $args"
-$StartInfo.WorkingDirectory = $Root
-$StartInfo.UseShellExecute = $false
-$StartInfo.RedirectStandardError = $true
-
-$Process = [System.Diagnostics.Process]::Start($StartInfo)
-$StdErr = $Process.StandardError.ReadToEnd()
-$Process.WaitForExit()
-
-if ($StdErr) {
-    Add-Content -LiteralPath $LogPath -Encoding UTF8 -Value ("[" + (Get-Date -Format "yyyy-MM-dd HH:mm:ss") + "] " + $StdErr.TrimEnd())
+# 前回起動したウィンドウが残っていれば閉じる（同じセッションを二重に開かない）
+if (Test-Path $PidFile) {
+    $old = Get-Content -LiteralPath $PidFile | Select-Object -First 1
+    if ($old -match '^\d+$') { cmd /c "taskkill /PID $old /T /F >nul 2>&1" }
+    Remove-Item -LiteralPath $PidFile -Force
 }
 
-exit $Process.ExitCode
+$Jsonl = Join-Path $env:USERPROFILE ".claude\projects\C--Users-c6341-Documents-Projects-invenstment\$SessionId.jsonl"
+if (Test-Path $Jsonl) { $SessArg = "--resume $SessionId" } else { $SessArg = "--session-id $SessionId" }
+
+# 指示の正は watchlist/trigger_prompt_v1.md（ASCII だけで渡し、文字化けを避ける）
+$Prompt = "Morning patrol. Open watchlist/trigger_prompt_v1.md and execute exactly the instructions between the two --- lines. Write the report in Japanese in this session."
+
+$CmdLine = "/k cd /d `"$Root`" && `"$Claude`" $SessArg --dangerously-skip-permissions `"$Prompt`""
+$Proc = Start-Process -FilePath "cmd.exe" -ArgumentList $CmdLine -WorkingDirectory $Root -PassThru
+Set-Content -LiteralPath $PidFile -Value $Proc.Id -Encoding ASCII
+Add-Content -LiteralPath $RunLog -Encoding UTF8 -Value ("[" + (Get-Date -Format "yyyy-MM-dd HH:mm:ss") + "] started pid=" + $Proc.Id + " " + $SessArg)

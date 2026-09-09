@@ -1,4 +1,4 @@
-# 相場観レポート（定期巡回）を Windows Task Scheduler に登録する。平日 JST 7:00。
+﻿# 相場観レポート（定期巡回）を Windows Task Scheduler に登録する。平日 JST 7:00。
 # 実行: powershell -ExecutionPolicy Bypass -File scripts\setup_task_scheduler.ps1
 $ErrorActionPreference = "Stop"
 
@@ -17,7 +17,7 @@ $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoi
 $Principal = New-ScheduledTaskPrincipal -UserId $User -LogonType Interactive -RunLevel Limited
 
 Register-ScheduledTask -TaskName $TaskName -Trigger $Trigger -Action $Action -Settings $Settings -Principal $Principal `
-    -Description "相場観レポート（定期巡回）。平日 JST 7:00 にローカル Claude Code を起動し claude_logs/patrol/ に出力する。"
+    -Description "相場観レポート（定期巡回）。平日 JST 7:00 にローカル Claude Code を固定セッションで起動する（Remote Control 経由でスマホから開ける）。"
 
 $Info = Get-ScheduledTaskInfo -TaskName $TaskName
 Write-Host "TaskName: $TaskName"
