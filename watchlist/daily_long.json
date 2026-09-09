@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T23:06:38.977Z",
+  "fetchedAt": "2026-09-09T23:50:49.292Z",
   "source": "Yahoo Finance chart endpoint (GitHub Actions runner)",
   "note": "日次3年。決算日前後の反応など、日付を指定して前後を見る用途。",
   "series": {
