@@ -5,7 +5,7 @@
 $ErrorActionPreference = "Stop"
 
 $Root = "C:\Users\c6341\Documents\Projects\invenstment"
-$SessionId = "e29a7f82-710f-4361-bf95-44b9f682c127"
+$SessionId = "36358243-ef8c-4c8b-ba08-30112934c274"
 $Claude = "C:\Users\c6341\AppData\Roaming\npm\claude.cmd"
 $LogDir = Join-Path $Root "claude_logs\patrol"
 $PidFile = Join-Path $LogDir "patrol.pid"
