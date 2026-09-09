@@ -22,8 +22,12 @@ if (Test-Path $PidFile) {
     Remove-Item -LiteralPath $PidFile -Force
 }
 
-$Jsonl = Join-Path $env:USERPROFILE ".claude\projects\C--Users-c6341-Documents-Projects-invenstment\$SessionId.jsonl"
-if (Test-Path $Jsonl) { $SessArg = "--resume $SessionId" } else { $SessArg = "--session-id $SessionId" }
+# 対話セッションはフラット .jsonl ではなくディレクトリで保存される。
+# どちらか一方でも既存なら「作成済み」とみなして --resume（同じ会話に追記）する。
+$ProjDir = Join-Path $env:USERPROFILE ".claude\projects\C--Users-c6341-Documents-Projects-invenstment"
+$Jsonl = Join-Path $ProjDir "$SessionId.jsonl"
+$SessDir = Join-Path $ProjDir $SessionId
+if ((Test-Path $Jsonl) -or (Test-Path $SessDir)) { $SessArg = "--resume $SessionId" } else { $SessArg = "--session-id $SessionId" }
 
 # 指示の正は watchlist/trigger_prompt_v1.md（ASCII だけで渡し、文字化けを避ける）
 $Prompt = "Morning patrol. Open watchlist/trigger_prompt_v1.md and execute exactly the instructions between the two --- lines. Write the report in Japanese in this session."
