@@ -17,8 +17,10 @@ if ($ExistingTask) { Unregister-ScheduledTask -TaskName $TaskName -Confirm:$fals
 
 $Trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -At 07:00
 $Action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/k `"$RunScript`"" -WorkingDirectory $Root
+# MultipleInstances Parallel: yesterday's window is still open at 07:00 (the session stays alive for
+# replies), and the default IgnoreNew would silently skip the new run. run_patrol.cmd closes the old window itself.
 $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable `
-    -ExecutionTimeLimit ([TimeSpan]::Zero)
+    -ExecutionTimeLimit ([TimeSpan]::Zero) -MultipleInstances Parallel
 $Principal = New-ScheduledTaskPrincipal -UserId $User -LogonType Interactive -RunLevel Limited
 
 Register-ScheduledTask -TaskName $TaskName -Trigger $Trigger -Action $Action -Settings $Settings -Principal $Principal `
