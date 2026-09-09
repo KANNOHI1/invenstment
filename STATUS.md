@@ -1,8 +1,10 @@
-﻿# 投資戦略 STATUS
+# 投資戦略 STATUS
 
-## 現在地（2026-09-08・recallはここだけ読めば復元できる）
+## 現在地（2026-09-10・recallはここだけ読めば復元できる）
 
-**2026-09-10 ローカル一本化ほぼ完了（作業ブランチ `claude/project-status-review-gretkk`）。** 毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッション `36358243…` を `--resume` する対話 claude。Remote Control 経由でスマホの「Morning patrol」スレッドに毎朝追記され、そこで返信できる。初回作成は 9/10 00:26 に成功。**残り**: 9/10 07:00 の追記を確認 → クラウド Routine を無効化（それまで残す）。メール配信案・デスクトップ scheduled task 案は不採用（経緯は `HANDOVER_TO_LOCAL.md` §4 ★）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）と SEC EDGAR（`data.sec.gov` 200）の到達を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` はクラウド側の変更を採用し push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
+**2026-09-10 ローカル一本化ほぼ完了。巡回の初回レポートは本セッション（固定セッション `36358243…`）で JST 00:29 に産出済み**（手動トリガー。07:00 の自動追記の確認はこれから）。**相場観: 逆金融相場7日連続・象限移動なし・主役エネルギーで教科書と一致7日連続。**景気スコアが -1→-2 へ深化（小型-大型 -2.1% が不感帯を抜けた）、VIX の20日変化が +2.9%→+14.0% へ跳ね、**9/8 に発火した待機資金の投下条件③（公益が20日上位3位）は公益が3位→7位へ後退して1日で消滅**——9/8 に「逃避先であって利下げの先取りではない」として保留にした判断が実地で裏取りされた。保有は評価 $14,449（9/8終値 $14,638 から -1.3%、9/9 場中値）。**9/11 の8月CPIが 9/16 FOMC の単独の決定要因**で、それまでは待ち。詳細は `watchlist/rotation_state.md` の 2026-09-10 追記。
+
+**巡回インフラ**: Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッションを `--resume` する対話 claude。Remote Control 経由でスマホの「Morning patrol」スレッドに追記され、そこで返信できる。**残り**: 9/10 07:00 の追記を確認 → クラウド Routine `trig_01TUF9eRUquZFc1QAicAT2UK` を無効化（それまで残す）。メール配信案・デスクトップ scheduled task 案は不採用（経緯は `HANDOVER_TO_LOCAL.md` §4 ★）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）と SEC EDGAR（`data.sec.gov` 200）の到達を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` は push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
 
 **フェーズ**: 再投下の構造が完成（8/13約定で5銘柄体制成立）。目標は総資産の非対称な3倍以上。銘柄数は増やさない。
 
