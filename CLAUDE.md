@@ -7,8 +7,8 @@
 **このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 巡回は固定セッション（ID は `scripts/run_patrol.cmd` 内）に出る。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。
 
 **発火は2系統（2026-09-10 に窓キル廃止）。**
-1. **セッション内 cron（主）** — 固定セッションの窓が開いていれば、その中の CronCreate ジョブ（平日 07:00）が巡回プロンプトを自分に投げる。**窓は殺されない。作業中の会話がそのまま続く。** ジョブは**セッション記録に残り `--resume` で戻る**（「窓が閉じれば消える」は不正確。プロセスが動いていない時間帯に発火しないだけ）。**7日で自動失効**するため、巡回のたびに `CronList` で存在を確認し無ければ張り直す。**保険が resume した直後に、取りこぼした 07:00 分が即時発火して重複巡回になる**（2026-09-11 に発生）ので、cron の prompt は冒頭で「`latest_prices.json` が当日更新済みなら1行でスキップ」と判定する。この自己更新とスキップ判定は `trigger_prompt_v1.md` ではなく cron ジョブの prompt 側に書いてある。
-2. **Task Scheduler（保険）** — `InvestmentMorningPatrol`（平日 07:00）は**窓が生きていたら何もしない**。`InvestmentMorningPatrolSafety`（平日 07:25）は `latest_prices.json` が当日でないときだけ起動し、邪魔な窓があれば落として `--resume` する。つまり**窓を閉じていても・再起動していても・cron が失効していても巡回は落ちない。**
+1. **セッション内 cron（主）** — 固定セッションの窓が開いていれば、その中の CronCreate ジョブ（月〜土 07:00、cron `0 7 * * 1-6`）が巡回プロンプトを自分に投げる。**窓は殺されない。作業中の会話がそのまま続く。** ジョブは**セッション記録に残り `--resume` で戻る**（「窓が閉じれば消える」は不正確。プロセスが動いていない時間帯に発火しないだけ）。**7日で自動失効**するため、巡回のたびに `CronList` で存在を確認し無ければ張り直す。**保険が resume した直後に、取りこぼした 07:00 分が即時発火して重複巡回になる**（2026-09-11 に発生）ので、cron の prompt は冒頭で「`latest_prices.json` が当日更新済みなら1行でスキップ」と判定する。この自己更新とスキップ判定は `trigger_prompt_v1.md` ではなく cron ジョブの prompt 側に書いてある。
+2. **Task Scheduler（保険）** — `InvestmentMorningPatrol`（月〜土 07:00）は**窓が生きていたら何もしない**。`InvestmentMorningPatrolSafety`（月〜土 07:25）は `latest_prices.json` が当日でないときだけ起動し、邪魔な窓があれば落として `--resume` する。つまり**窓を閉じていても・再起動していても・cron が失効していても巡回は落ちない。**
 
 **巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
 **`run_patrol.cmd` は CRLF 必須**（LF だと `rem` が `em` として実行され壊れる）。**`for /f` の中でパイプを使わない**（`^|` がそのまま渡る。`.Where({})` を使う）。**`%date%` は `2026/09/10 (木)` で `)` を含むため `if (...)` ブロック内で echo しない**（goto で外に出す）。
