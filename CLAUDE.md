@@ -12,6 +12,8 @@
 （`trig_01TUF9eRUquZFc1QAicAT2UK`、`enabled: false`。削除はしていないので戻せる）。
 GitHub Actions の定時実行も停止済み（push起点のみ維持）。
 **巡回はローカルからのみ出る。クラウド側からは出ない。**
+**ローカルが復旧不能になったときの巻き戻し手順は `RESTORE_CLOUD.md`。**
+Routineを有効化するだけでは完走しない（株価の取得経路も止めてあるため）。必ずあのファイルの順番で戻す。
 
 巡回の正しい仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。手順は ①価格取得 ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md`更新。**売買は提案しない。**
 
@@ -110,6 +112,8 @@ GitHub Actions の定時実行も停止済み（push起点のみ維持）。
 | 定型レポート「盤面」の仕様（退役） | `watchlist/report_template_banmen.md` |
 | 巡回の起動指示文（スケジューラが渡す） | `watchlist/trigger_prompt_v1.md` |
 | 一次データ取得の制約と移植の理由 | `research/data_source_limits.md` |
+| クラウド巡回への巻き戻し手順 | `RESTORE_CLOUD.md` |
+| ローカル移植の全体像 | `HANDOVER_TO_LOCAL.md` |
 | 判断の履歴 | `watchlist/` の日付つきファイル |
 | 詳細な運用規約（Codex共用） | `AGENTS.md` |
 | 過去の調査アーカイブ | `STATUS_archive.md`、`research/` |
