@@ -52,7 +52,7 @@ Routineを有効化するだけでは完走しない（株価の取得経路も�
 | 価格・サイズ・タイミング | **導出を添える。導出できないものは提示しない** |
 
 - **株価は `node scripts/fetch_prices.mjs` をローカルで直接実行して取得する。Web検索の株価は絶対に使わない**（2026-08-06にMODで17.8%の誤差）。取得が全滅したら既存ファイルを上書きしないガードがある（2026-08-21の事故対策）。**ガードは外さない。**
-- **企業の一次データ（株数・財務・提出書類）は SEC EDGAR（`data.sec.gov`）から取る。** ローカルIPからは到達可能（2026-09-08 確認、200）。User-Agent に「名前＋メール」を必ず付ける。CIK は `watchlist/cik.json` で社名照合してから使う。
+- **企業の一次データ（株数・財務・提出書類）は SEC EDGAR（`data.sec.gov`）から取る。** ローカルIPからは到達可能（2026-09-08 確認、200）。User-Agent に「名前＋メール」を必ず付ける。CIK は `watchlist/cik.json` で社名照合してから使う。**取得は `node scripts/fetch_filings.mjs`、読むのは `node scripts/filing_check.mjs`（companyfacts は 1 社数 MB。会話に入れない）。10-K 表紙の株数が XBRL に入らない会社がある（IREN）ので、株数は 10-K 本文の表紙と突き合わせる。**
 - **巡回の機械チェックは`node scripts/patrol_check.mjs`で行う。`node -e`で計算式を手打ちしない。** 手打ちは登録条件を代理指標にすり替える（2026-08-21、仮説Cが3/5まで進行していたのを3日間見落とした）。
 - **重要な判断の前には必ずその場で取り直す。** 通常終値だけでなく`extended`（時間外）も確認する。
 - **方向を語る主張には日付つきの2点を必ず添える。**「IRENは下げている」は無効。「7/29の$29.31から8/5の$38.89へ+33%」なら有効。
@@ -111,6 +111,7 @@ Routineを有効化するだけでは完走しない（株価の取得経路も�
 | 現在地・保有・執行待ち | `STATUS.md`（冒頭の現在地ブロック） |
 | 保有・予算の機械可読ソース | `watchlist/holdings.json` |
 | 巡回の機械チェック／保有外スキャン | `scripts/patrol_check.mjs`／`scripts/scan_rank.mjs` |
+| 企業の一次データ（SEC EDGAR） | `node scripts/fetch_filings.mjs` → `watchlist/filings.json` → `node scripts/filing_check.mjs [TICKER]`。CIK と社名照合は `watchlist/cik.json` |
 | 相場観の差分基準 | `watchlist/rotation_state.md` |
 | ローテの機械判定 | `scripts/rotation_check.mjs`（計器は`watchlist/.rotation-tickers`） |
 | 盤面の差分基準（退役） | `watchlist/banmen_state.md` |

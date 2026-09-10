@@ -26,7 +26,8 @@
 |---|---|---|
 | 1 | `git pull --rebase` | 認証情報の隔離修正（`f0e351e`）が入ること |
 | 2 | **セッション型で実装済み（2026-09-10 00:26 初回実行が成功、下記★）** | 済 |
-| 3 | 平日 JST 7:00 に登録 | 済（Task Scheduler `InvestmentMorningPatrol`、action は `cmd.exe /k scriptsun_patrol.cmd`） |
+| 3 | 平日 JST 7:00 に登録 | 済（Task Scheduler `InvestmentMorningPatrol`、action は `cmd.exe /k scripts
+un_patrol.cmd`） |
 | 4 | 追記の実証 | **済（9/10 00:39、Task Scheduler から 2 回目起動 → 同じ記録に 2 本目の "Morning patrol" ターンが追記、新規セッションなし）**。07:00 は時刻トリガーの確認のみ |
 | 5 | 4 が通ったらクラウド側が Routine を無効化。ローカルは何もしない | — |
 
@@ -138,28 +139,13 @@ node scripts/fetch_prices.mjs
 **注意**: `fetch_prices.mjs` には「取得が全滅したら既存ファイルを上書きしない」ガードが入っている。
 これはローカルでも有用なので**残すこと**（2026-08-21に良好なスナップショットを空データで潰した事故の対策）。
 
-### 2-2. SEC EDGARからの一次データ取得を作る（最優先の宿題）
+### 2-2. SEC EDGARからの一次データ取得を作る（**完了 2026-09-10**）
 
-**クラウドではSECがIPを403で遮断していて不可能だった。ローカル（家庭用IP）なら開ける。**
-
-まず到達性を確認:
-```bash
-curl -s -o /dev/null -w "%{http_code}\n" \
-  -A "your-name your-email@example.com" \
-  "https://data.sec.gov/submissions/CIK0001878848.json"
-```
-200が返れば使える。**SECはUser-Agentに「名前＋連絡先メール」を要求する**（無いと403）。
-
-`scripts/fetch_filings.mjs` に途中まで書いた実装がある（Yahoo版に書き換わっているので、
-SEC版はgit履歴の `決算の一次データをSEC EDGARから取得する仕組みを追加` コミットを参照）。
-`watchlist/cik.json` にCIK番号と社名の照合データがある。**社名照合は必ず残すこと**——
-番号を1桁間違えると別会社のデータを自社のものとして使う事故になる。
-
-取りたいXBRL概念:
-`dei:EntityCommonStockSharesOutstanding`（表紙の株数）、`us-gaap:Revenues`、
-`us-gaap:NetIncomeLoss`、`us-gaap:AssetImpairmentCharges`、
-`us-gaap:CashAndCashEquivalentsAtCarryingValue`、
-`us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding`
+`scripts/fetch_filings.mjs` を SEC 版に復元した。`watchlist/cik.json` の社名照合（`expect`）は必須で、一致しない CIK は採用しない。
+- 実行: `node scripts/fetch_filings.mjs`（全銘柄）→ `watchlist/filings.json` → `node scripts/filing_check.mjs [TICKER]` で要約
+- 出所: data.sec.gov の submissions（提出書類一覧と URL）と companyfacts（XBRL）。表紙の株数・売上・純損益・営業CF・現金・長期債務・転換社債・債務満期（1〜3年目）・減損・希薄化後株数、推移 8 点
+- User-Agent は「名前＋メール」。cik.json は IREN / POWL / SIMO / MOD / MU ＋ VST / TLN / CEG
+- 癖と対処は `research/sec_edgar_findings_2026-09-10.md` 末尾（タグ割れ・旧通貨・放棄タグ・10-K 表紙が XBRL に入らない）
 
 ### 2-3. 銘柄ごとの調査ファイルを作る（未着手）
 
@@ -238,7 +224,8 @@ SEC版はgit履歴の `決算の一次データをSEC EDGARから取得する仕
   - `~/.claude/settings.json` の `remoteControlAtStartup: true` により、PC で起動した対話セッションは
     全部 Remote Control に載り、claude.ai/code とスマホアプリから開いて返信できる。菅野さんが
     「他のセッション」で使っていたのはこれ（デスクトップアプリのスケジュール機能ではない）
-  - Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `cmd.exe /k scriptsun_patrol.cmd`
+  - Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `cmd.exe /k scripts
+un_patrol.cmd`
     → `claude --resume <固定ID> --dangerously-skip-permissions "<起動指示>"`。
     **毎朝、同じ 1 セッション（固定 ID `36358243-ef8c-4c8b-ba08-30112934c274`）に追記する**。
     初回だけ `--session-id` で作成（2026-09-10 00:26 実施済み）
@@ -330,30 +317,28 @@ SEC版はgit履歴の `決算の一次データをSEC EDGARから取得する仕
 
 ---
 
-## 7. 未解決の宿題（クラウドでは解けなかった）
+## 7. 未解決の宿題
 
-1. **IREN Q4売上のコンセンサス**が$132M説と$157.1M説で食い違い、決着していない
-2. **MODのGoogle $4B冷却契約** — 会社は顧客名非開示。Hunterbrook Mediaの流出資料報道のみ
-3. **Apple対米上院の中国メモリ回答**（8/21期限）— 公式回答が確認できないまま
-4. **IRENの減損$450.4Mの一次確認** — マイニング設備の廃止によるものと二次ソースは言うが未検証
-5. **IRENの転換社債の条件**（転換価格・キャップドコール）の一次確認
-6. **IRENのATM枠$6Bが実際にどれだけ執行されたか** — 発行済株式数の推移で希薄化を実測する。
-   基準は394,058,648株（FY26の10-K表紙）。次の四半期報告で取る
-7. **MUの現金・営業CFの絶対額** — 出所により桁が食い違い、未検証のまま
+**2026-09-10 に SEC EDGAR で 1〜9 を点検した。証拠と出所は `research/sec_edgar_findings_2026-09-10.md`。**
 
-8. **2026-09-08の電力4社調査は5本すべて一次資料に到達できていない。**
-   SEC EDGAR・各社IR・主要金融メディアが全てegressプロキシで遮断され、
-   **エージェントが「一次」と表記した数字も実際は報道の要約。**
-   取り直すべきもの: VST/TLN/CEGの発行済株式数と2027年末までの満期額、CEGの契約比率の具体値、
-   MUの四半期実績（MUの株数のみ10-Q表紙の値を取得済み）
-9. **金融相場用の`.scan-tickers`をゼロベースで作る**（2026-09-08の決定③）。
-   現在のリストは逆金融相場用。象限の移動は速く、移ってから探すのでは間に合わない
+解決（SEC 一次で確認済み）:
+- **4. IREN 減損 $450.4M** = Q4 FY26 単四半期。FY26 通期 $638.8M。中身はマイニング機と空冷DCの改装で除却した設備（10-K MD&A、監査上の重要事項）
+- **5. IREN 転換社債** 6 シリーズの転換価格 $13.64 / $16.81 / $85.63 / $51.40 / $51.40 / $73.07。2033(Dec) のキャップ価格 $110.30（8-K 2026-05-14）
+- **6. IREN ATM** $6B 枠のうち 47,165,838 株 / $2,492.1M を執行（2026-08-14 時点、残枠約 $3.5B）。株数 283.5M（2025-10-31）→ 394.06M（2026-08-14）＝ +39%。基準は 394,058,648 株
+- **7. MU 現金 $25.00B（2026-05-28）、営業CF FY26 9 か月 $45.70B**（Q3 単四半期 $25.39B）
+- **8.（一部）** VST 335,635,195 株 / TLN 47,914,259 株 / CEG 354,307,379 株（2026 年 8 月の 10-Q 表紙）。2027 年末までの満期: VST $4,636M / TLN $58M / CEG $758M（FY2025 10-K）。MU 四半期売上 Q1 $13.64B → Q2 $23.86B → Q3 $41.46B
 
-**1〜9はすべてSEC提出書類か会社IRを直接読めば解ける。ローカルの最初の仕事にすること。**
+半分解決:
+- **1. IREN Q4 売上** 実績は **$137.2M**（8-K 2026-08-27 Ex.99.1）。コンセンサス（$132M か $157.1M か）は SEC には無く未決着。どちらでも未達
+- **2. MOD の $4B 契約** 顧客名は 10-Q にも無い。2026 年 3 月に「戦略的DC顧客 1 社」と長期契約、前受金 $165.0M を受領（10-Q 2026-07-30）。Google の裏取りは SEC では不可
+
+SEC では解けない（残る）:
+- **3. Apple の上院回答** — SEC 提出物に含まれない
+- **8.（残り）CEG の契約比率** — 10-K / 10-Q に「発電量の何％ヘッジ済み」は無い。会社 IR の決算スライドを人が開く
+- **9. 金融相場用 `.scan-tickers` のゼロベース再構築**（2026-09-08 の決定③）— SEC の仕事ではない。未着手
 
 **解決済み（2026-09-05）**: IRENのBlue Owl $24億の性格。
 Blue Owl公式リリース（8/28）とIRENの8-Kで確認し、**株式ではなく金利9%・満期2.5年の担保付債務**と判明。
-→ クラウドからでも会社IRのプレスリリース経由なら取れる場合がある。SECが403でも諦めずIRを当たること。
 
 ---
 

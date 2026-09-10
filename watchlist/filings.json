@@ -1,0 +1,5049 @@
+{
+  "fetchedAt": "2026-09-10T00:08:22.483Z",
+  "source": "SEC EDGAR (data.sec.gov submissions + companyfacts)",
+  "companies": {
+    "IREN": {
+      "cik": "0001878848",
+      "name": "IREN Ltd",
+      "fiscalYearEnd": "0630",
+      "cikResolvedFrom": [
+        "0001878848=\"IREN Ltd\""
+      ],
+      "recentFilings": [
+        {
+          "form": "10-K",
+          "filed": "2026-08-27",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-27",
+          "period": "2026-08-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000051/iren-20260827.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-13",
+          "period": "2026-08-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126032638/ef20080141_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-04",
+          "period": "2026-08-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126031053/ny20079234x2_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-20",
+          "period": "2026-07-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126028871/ef20078253_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-01",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126027202/ef20077190_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-01",
+          "period": "2026-05-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126023427/ef20075181_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-26",
+          "period": "2026-05-19",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000030/iren-20260519.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-14",
+          "period": "2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126021285/ef20073507_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-12",
+          "period": "2026-05-12",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126020669/ef20073131_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-11",
+          "period": "2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126020370/ef20072983_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-11",
+          "period": "2026-05-08",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000028/iren-20260508.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 357378674,
+          "start": null,
+          "end": "2026-04-30",
+          "filed": "2026-05-08",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q1I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 707007000,
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": -702621000,
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026",
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "資産減損": {
+          "value": 638800000,
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026",
+          "tag": "us-gaap:AssetImpairmentCharges",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 5895591000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 2100418000,
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026",
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 7592944000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebt",
+          "unit": "USD"
+        },
+        "転換社債": {
+          "value": 3687832000,
+          "start": null,
+          "end": "2026-03-31",
+          "filed": "2026-05-08",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q1I",
+          "tag": "us-gaap:ConvertibleNotesPayable",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 177362000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 269927000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 194181000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 316123145,
+          "start": "2025-07-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-27",
+          "form": "10-K",
+          "fy": 2026,
+          "fp": "FY",
+          "frame": "CY2026",
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 357378674,
+              "start": null,
+              "end": "2026-04-30",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 332280383,
+              "start": null,
+              "end": "2026-01-30",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 283465490,
+              "start": null,
+              "end": "2025-10-31",
+              "filed": "2025-11-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 707007000,
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026"
+            },
+            {
+              "value": 501023000,
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 187192000,
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 569782000,
+              "start": "2025-07-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 144795000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 313731000,
+              "start": "2024-07-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 144823000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 424987000,
+              "start": "2025-07-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": -702621000,
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026"
+            },
+            {
+              "value": 86941000,
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": -28920000,
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": -18622000,
+              "start": "2025-07-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": -247827000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": -155407000,
+              "start": "2025-10-01",
+              "end": "2025-12-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q4"
+            },
+            {
+              "value": 384611000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3"
+            },
+            {
+              "value": -89735000,
+              "start": "2024-07-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 5895591000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 564526000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 2213274000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 3260589000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 1032263000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2025-11-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 404601000,
+              "start": null,
+              "end": "2024-06-30",
+              "filed": "2025-08-28",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q2I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 2100418000,
+              "start": "2025-07-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2026"
+            },
+            {
+              "value": 245886000,
+              "start": "2024-07-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 52219000,
+              "start": "2023-07-01",
+              "end": "2024-06-30",
+              "filed": "2026-08-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 289326000,
+              "start": "2025-07-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 142745000,
+              "start": "2024-07-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 214004000,
+              "start": "2025-07-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 49641000,
+              "start": "2024-07-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 142353000,
+              "start": "2025-07-01",
+              "end": "2025-09-30",
+              "filed": "2025-11-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q3"
+            }
+          ]
+        }
+      }
+    },
+    "POWL": {
+      "cik": "0000080420",
+      "name": "POWELL INDUSTRIES INC",
+      "fiscalYearEnd": "0930",
+      "cikResolvedFrom": [
+        "0000080420=\"POWELL INDUSTRIES INC\""
+      ],
+      "recentFilings": [
+        {
+          "form": "10-Q",
+          "filed": "2026-08-04",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000107/powl-20260630.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-03",
+          "period": "2026-08-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000103/powl-20260803.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-06",
+          "period": "2026-07-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000095/powl-20260701.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000070/powl-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-05",
+          "period": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000067/powl-20260505.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-04",
+          "period": "2026-05-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000063/powl-20260504.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-31",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000054/powl-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-18",
+          "period": "2026-02-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000028/powl-20260218.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-02-04",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000015/powl-20251231.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-03",
+          "period": "2026-02-03",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000013/powl-20260203.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-01-06",
+          "period": "2026-01-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000009/powl-20260102.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2025-11-19",
+          "period": "2025-09-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042025000152/powl-20250930.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 36432564,
+          "start": null,
+          "end": "2026-08-03",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 36432564,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 859539000,
+          "start": "2025-10-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 139437000,
+          "start": "2025-10-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 633561000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 195038000,
+          "start": "2025-10-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 36566000,
+          "start": "2025-10-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-04",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 36432564,
+              "start": null,
+              "end": "2026-08-03",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 36431649,
+              "start": null,
+              "end": "2026-05-04",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 12142283,
+              "start": null,
+              "end": "2026-02-02",
+              "filed": "2026-02-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 12092083,
+              "start": null,
+              "end": "2025-11-17",
+              "filed": "2025-11-19",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 12068548,
+              "start": null,
+              "end": "2025-08-04",
+              "filed": "2025-08-06",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 12068223,
+              "start": null,
+              "end": "2025-05-05",
+              "filed": "2025-05-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 12064723,
+              "start": null,
+              "end": "2025-02-03",
+              "filed": "2025-02-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 12018448,
+              "start": null,
+              "end": "2024-11-18",
+              "filed": "2024-11-20",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": null
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 859539000,
+              "start": "2025-10-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 311740000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 806335000,
+              "start": "2024-10-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 286273000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 547799000,
+              "start": "2025-10-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 296615000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 520062000,
+              "start": "2024-10-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 278631000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q1"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 139437000,
+              "start": "2025-10-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 52160000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 45887000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 41390000,
+              "start": "2025-10-01",
+              "end": "2025-12-31",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q4"
+            },
+            {
+              "value": 129327000,
+              "start": "2024-10-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 48234000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 46330000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 34763000,
+              "start": "2024-10-01",
+              "end": "2024-12-31",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2024Q4"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 633561000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 450739000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 537712000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 490631000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-02-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 315331000,
+              "start": null,
+              "end": "2024-09-30",
+              "filed": "2025-11-19",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q3I"
+            },
+            {
+              "value": 398466000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-08-06",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 359542000,
+              "start": null,
+              "end": "2025-03-31",
+              "filed": "2025-05-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 325598000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2024Q4I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 195038000,
+              "start": "2025-10-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 106862000,
+              "start": "2024-10-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 94811000,
+              "start": "2025-10-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 59480000,
+              "start": "2024-10-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 43638000,
+              "start": "2025-10-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4"
+            },
+            {
+              "value": 37072000,
+              "start": "2024-10-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-04",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2024Q4"
+            },
+            {
+              "value": 167937000,
+              "start": "2024-10-01",
+              "end": "2025-09-30",
+              "filed": "2025-11-19",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 108661000,
+              "start": "2023-10-01",
+              "end": "2024-09-30",
+              "filed": "2025-11-19",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        }
+      }
+    },
+    "SIMO": {
+      "cik": "0001329394",
+      "name": "Silicon Motion Technology CORP",
+      "fiscalYearEnd": "1231",
+      "cikResolvedFrom": [
+        "0001329394=\"Silicon Motion Technology CORP\""
+      ],
+      "recentFilings": [
+        {
+          "form": "6-K",
+          "filed": "2026-08-14",
+          "period": "2026-08-13",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526349730/d149638d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-08-11",
+          "period": "2026-08-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526343271/d160732d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-08-10",
+          "period": "2026-08-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526341199/d124768d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-07-30",
+          "period": "2026-07-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526324391/d114913d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-07-24",
+          "period": "2026-07-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526316249/d142224d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-07-08",
+          "period": "2026-07-08",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526298518/d62292d6k.htm"
+        },
+        {
+          "form": "20-F",
+          "filed": "2026-04-30",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526197184/d17718d20f.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-04-29",
+          "period": "2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526188049/d285401d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-04-24",
+          "period": "2026-04-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526177249/d102873d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-04-10",
+          "period": "2026-04-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526151276/d128966d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-02-04",
+          "period": "2026-02-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526036180/d10809d6k.htm"
+        },
+        {
+          "form": "6-K",
+          "filed": "2026-02-02",
+          "period": "2026-02-02",
+          "url": "https://www.sec.gov/Archives/edgar/data/1329394/000119312526033637/d104079d6k.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 134244840,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 134245000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 885627000,
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 122635000,
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025",
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 201842000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 61360000,
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025",
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 134718000,
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "filed": "2026-04-30",
+          "form": "20-F",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025",
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 134244840,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 134764480,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-04-30",
+              "form": "20-F",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 133675940,
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2024-04-30",
+              "form": "20-F",
+              "fy": 2023,
+              "fp": "FY",
+              "frame": "CY2023Q4I"
+            },
+            {
+              "value": 132215732,
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2023-04-28",
+              "form": "20-F",
+              "fy": 2022,
+              "fp": "FY",
+              "frame": "CY2022Q4I"
+            },
+            {
+              "value": 139763928,
+              "start": null,
+              "end": "2021-12-31",
+              "filed": "2022-04-25",
+              "form": "20-F",
+              "fy": 2021,
+              "fp": "FY",
+              "frame": "CY2021Q4I"
+            },
+            {
+              "value": 138167852,
+              "start": null,
+              "end": "2020-12-31",
+              "filed": "2021-05-12",
+              "form": "20-F",
+              "fy": 2020,
+              "fp": "FY",
+              "frame": "CY2020Q4I"
+            },
+            {
+              "value": 139109484,
+              "start": null,
+              "end": "2019-12-31",
+              "filed": "2020-06-12",
+              "form": "20-F",
+              "fy": 2019,
+              "fp": "FY",
+              "frame": "CY2019Q4I"
+            },
+            {
+              "value": 144679404,
+              "start": null,
+              "end": "2018-12-31",
+              "filed": "2019-05-15",
+              "form": "20-F",
+              "fy": 2018,
+              "fp": "FY",
+              "frame": "CY2018Q4I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 885627000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 803552000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 639142000,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 945921000,
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-04-30",
+              "form": "20-F",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2022"
+            },
+            {
+              "value": 922100000,
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "filed": "2024-04-30",
+              "form": "20-F",
+              "fy": 2023,
+              "fp": "FY",
+              "frame": "CY2021"
+            },
+            {
+              "value": 539521000,
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "filed": "2023-04-28",
+              "form": "20-F",
+              "fy": 2022,
+              "fp": "FY",
+              "frame": "CY2020"
+            },
+            {
+              "value": 457253000,
+              "start": "2019-01-01",
+              "end": "2019-12-31",
+              "filed": "2022-04-25",
+              "form": "20-F",
+              "fy": 2021,
+              "fp": "FY",
+              "frame": "CY2019"
+            },
+            {
+              "value": 530348000,
+              "start": "2018-01-01",
+              "end": "2018-12-31",
+              "filed": "2021-05-12",
+              "form": "20-F",
+              "fy": 2020,
+              "fp": "FY",
+              "frame": "CY2018"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 122635000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 89249000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 52873000,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 172510000,
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-04-30",
+              "form": "20-F",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2022"
+            },
+            {
+              "value": 200002000,
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "filed": "2024-04-30",
+              "form": "20-F",
+              "fy": 2023,
+              "fp": "FY",
+              "frame": "CY2021"
+            },
+            {
+              "value": 79746000,
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "filed": "2023-04-28",
+              "form": "20-F",
+              "fy": 2022,
+              "fp": "FY",
+              "frame": "CY2020"
+            },
+            {
+              "value": 64398000,
+              "start": "2019-01-01",
+              "end": "2019-12-31",
+              "filed": "2022-04-25",
+              "form": "20-F",
+              "fy": 2021,
+              "fp": "FY",
+              "frame": "CY2019"
+            },
+            {
+              "value": 98070000,
+              "start": "2018-01-01",
+              "end": "2018-12-31",
+              "filed": "2021-05-12",
+              "form": "20-F",
+              "fy": 2020,
+              "fp": "FY",
+              "frame": "CY2018"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 201842000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 276068000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 314302000,
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-04-30",
+              "form": "20-F",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2023Q4I"
+            },
+            {
+              "value": 232179000,
+              "start": null,
+              "end": "2022-12-31",
+              "filed": "2024-04-30",
+              "form": "20-F",
+              "fy": 2023,
+              "fp": "FY",
+              "frame": "CY2022Q4I"
+            },
+            {
+              "value": 360082000,
+              "start": null,
+              "end": "2021-12-31",
+              "filed": "2023-04-28",
+              "form": "20-F",
+              "fy": 2022,
+              "fp": "FY",
+              "frame": "CY2021Q4I"
+            },
+            {
+              "value": 342961000,
+              "start": null,
+              "end": "2020-12-31",
+              "filed": "2022-04-25",
+              "form": "20-F",
+              "fy": 2021,
+              "fp": "FY",
+              "frame": "CY2020Q4I"
+            },
+            {
+              "value": 323166000,
+              "start": null,
+              "end": "2019-12-31",
+              "filed": "2021-05-12",
+              "form": "20-F",
+              "fy": 2020,
+              "fp": "FY",
+              "frame": "CY2019Q4I"
+            },
+            {
+              "value": 284989000,
+              "start": null,
+              "end": "2018-12-31",
+              "filed": "2020-06-12",
+              "form": "20-F",
+              "fy": 2019,
+              "fp": "FY",
+              "frame": "CY2018Q4I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 61360000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 77095000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 149083000,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2026-04-30",
+              "form": "20-F",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 83892000,
+              "start": "2022-01-01",
+              "end": "2022-12-31",
+              "filed": "2025-04-30",
+              "form": "20-F",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2022"
+            },
+            {
+              "value": 174698000,
+              "start": "2021-01-01",
+              "end": "2021-12-31",
+              "filed": "2024-04-30",
+              "form": "20-F",
+              "fy": 2023,
+              "fp": "FY",
+              "frame": "CY2021"
+            },
+            {
+              "value": 117229000,
+              "start": "2020-01-01",
+              "end": "2020-12-31",
+              "filed": "2023-04-28",
+              "form": "20-F",
+              "fy": 2022,
+              "fp": "FY",
+              "frame": "CY2020"
+            },
+            {
+              "value": 77695000,
+              "start": "2019-01-01",
+              "end": "2019-12-31",
+              "filed": "2022-04-25",
+              "form": "20-F",
+              "fy": 2021,
+              "fp": "FY",
+              "frame": "CY2019"
+            },
+            {
+              "value": 108242000,
+              "start": "2018-01-01",
+              "end": "2018-12-31",
+              "filed": "2021-05-12",
+              "form": "20-F",
+              "fy": 2020,
+              "fp": "FY",
+              "frame": "CY2018"
+            }
+          ]
+        }
+      }
+    },
+    "MOD": {
+      "cik": "0000067347",
+      "name": "MODINE MANUFACTURING CO",
+      "fiscalYearEnd": "0331",
+      "cikResolvedFrom": [
+        "0000067347=\"MODINE MANUFACTURING CO\""
+      ],
+      "recentFilings": [
+        {
+          "form": "8-K",
+          "filed": "2026-08-21",
+          "period": "2026-08-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926099432/mod-20260820x8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-07-30",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926088569/mod-20260630x10q.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-29",
+          "period": "2026-07-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926088230/mod-20260729x8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-24",
+          "period": "2026-07-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926086644/mod-20260724x8k.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-05-27",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926066795/mod-20260331x10k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-26",
+          "period": "2026-05-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926066291/mod-20260526x8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-05",
+          "period": "2026-04-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926055654/mod-20260430x8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-17",
+          "period": "2026-02-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926015568/tm266551d1_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-02-05",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926010790/mod-20251231x10q.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-04",
+          "period": "2026-02-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926010338/mod-20260204x8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-01-29",
+          "period": "2026-01-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465926008087/mod-20260129x8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2025-12-29",
+          "period": "2025-12-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/67347/000110465925124872/mod-20251223x8k.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 53112708,
+          "start": null,
+          "end": "2026-07-24",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 874100000,
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2",
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 73900000,
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2",
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 95300000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 41400000,
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2",
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 476200000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 35600000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 35500000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 10100000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 54000000,
+          "start": "2026-04-01",
+          "end": "2026-06-30",
+          "filed": "2026-07-30",
+          "form": "10-Q",
+          "fy": 2027,
+          "fp": "Q1",
+          "frame": "CY2026Q2",
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 53112708,
+              "start": null,
+              "end": "2026-07-24",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 52815785,
+              "start": null,
+              "end": "2026-05-22",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 52731197,
+              "start": null,
+              "end": "2026-01-30",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 52648568,
+              "start": null,
+              "end": "2025-10-24",
+              "filed": "2025-10-29",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 52490229,
+              "start": null,
+              "end": "2025-07-25",
+              "filed": "2025-07-31",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 52391883,
+              "start": null,
+              "end": "2025-05-16",
+              "filed": "2025-05-21",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 52574000,
+              "start": null,
+              "end": "2025-01-31",
+              "filed": "2025-02-05",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 52503083,
+              "start": null,
+              "end": "2024-10-25",
+              "filed": "2024-10-30",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2024Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 874100000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 682800000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 3181100000,
+              "start": "2025-04-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 2583500000,
+              "start": "2024-04-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 2407800000,
+              "start": "2023-04-01",
+              "end": "2024-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 2226700000,
+              "start": "2025-04-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 805000000,
+              "start": "2025-10-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q4"
+            },
+            {
+              "value": 1936300000,
+              "start": "2024-04-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 73900000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 51200000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 121500000,
+              "start": "2025-04-01",
+              "end": "2026-03-31",
+              "filed": "2026-07-10",
+              "form": "DEF 14A",
+              "fy": null,
+              "fp": null,
+              "frame": "CY2025"
+            },
+            {
+              "value": 184000000,
+              "start": "2024-04-01",
+              "end": "2025-03-31",
+              "filed": "2026-07-10",
+              "form": "DEF 14A",
+              "fy": null,
+              "fp": null,
+              "frame": "CY2024"
+            },
+            {
+              "value": 161500000,
+              "start": "2023-04-01",
+              "end": "2024-03-31",
+              "filed": "2026-07-10",
+              "form": "DEF 14A",
+              "fy": null,
+              "fp": null,
+              "frame": "CY2023"
+            },
+            {
+              "value": 153100000,
+              "start": "2022-04-01",
+              "end": "2023-03-31",
+              "filed": "2026-07-10",
+              "form": "DEF 14A",
+              "fy": null,
+              "fp": null,
+              "frame": "CY2022"
+            },
+            {
+              "value": 85200000,
+              "start": "2021-04-01",
+              "end": "2022-03-31",
+              "filed": "2026-07-10",
+              "form": "DEF 14A",
+              "fy": null,
+              "fp": null,
+              "frame": "CY2021"
+            },
+            {
+              "value": 48200000,
+              "start": "2025-04-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 95300000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 73500000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 71600000,
+              "start": null,
+              "end": "2025-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 98700000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 83800000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2025-10-29",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 124500000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-07-31",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 60100000,
+              "start": null,
+              "end": "2024-03-31",
+              "filed": "2025-05-21",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q1I"
+            },
+            {
+              "value": 83800000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2025-02-05",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2024Q4I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 41400000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 27700000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-07-30",
+              "form": "10-Q",
+              "fy": 2027,
+              "fp": "Q1",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 248700000,
+              "start": "2025-04-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 213300000,
+              "start": "2024-04-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 214600000,
+              "start": "2023-04-01",
+              "end": "2024-03-31",
+              "filed": "2026-05-27",
+              "form": "10-K",
+              "fy": 2026,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 53800000,
+              "start": "2025-04-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 158500000,
+              "start": "2024-04-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 29100000,
+              "start": "2025-04-01",
+              "end": "2025-09-30",
+              "filed": "2025-10-29",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            }
+          ]
+        }
+      }
+    },
+    "MU": {
+      "cik": "0000723125",
+      "name": "MICRON TECHNOLOGY INC",
+      "fiscalYearEnd": "0903",
+      "cikResolvedFrom": [
+        "0000723125=\"MICRON TECHNOLOGY INC\""
+      ],
+      "recentFilings": [
+        {
+          "form": "8-K",
+          "filed": "2026-08-26",
+          "period": "2026-08-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926101067/tm2624017d1_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-06-25",
+          "period": "2026-05-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-24",
+          "period": "2026-06-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000013/mu-20260624.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-09",
+          "period": "2026-06-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926071845/tm2617112d1_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-04-01",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926038249/tm2610810d1_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-25",
+          "period": "2026-03-25",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926034174/tm269755d1_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-03-19",
+          "period": "2026-02-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000006/mu-20260226.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-18",
+          "period": "2026-03-18",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/mu-20260318.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-01-21",
+          "period": "2026-01-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465926005366/tm263707d1_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2025-12-18",
+          "period": "2025-11-27",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000046/mu-20251127.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2025-12-17",
+          "period": "2025-12-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000044/mu-20251217.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2025-10-21",
+          "period": "2025-10-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000110465925101237/tm2529116d1_8k.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 1129393151,
+          "start": null,
+          "end": "2026-06-17",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 1129000000,
+          "start": null,
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 78959000000,
+          "start": "2025-08-29",
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 47268000000,
+          "start": "2025-08-29",
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 24995000000,
+          "start": null,
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 45702000000,
+          "start": "2025-08-29",
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 5140000000,
+          "start": null,
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 0,
+          "start": null,
+          "end": "2025-11-27",
+          "filed": "2025-12-18",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q1",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 0,
+          "start": null,
+          "end": "2025-11-27",
+          "filed": "2025-12-18",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q1",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 700000000,
+          "start": null,
+          "end": "2025-11-27",
+          "filed": "2025-12-18",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q1",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 1142000000,
+          "start": "2025-08-29",
+          "end": "2026-05-28",
+          "filed": "2026-06-25",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q3",
+          "frame": null,
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 1129393151,
+              "start": null,
+              "end": "2026-06-17",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 1127734051,
+              "start": null,
+              "end": "2026-03-11",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 1125509261,
+              "start": null,
+              "end": "2025-12-10",
+              "filed": "2025-12-18",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 1122466035,
+              "start": null,
+              "end": "2025-09-26",
+              "filed": "2025-10-03",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 1119125101,
+              "start": null,
+              "end": "2025-06-18",
+              "filed": "2025-06-26",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 1117571525,
+              "start": null,
+              "end": "2025-03-13",
+              "filed": "2025-03-21",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 1114171932,
+              "start": null,
+              "end": "2024-12-12",
+              "filed": "2024-12-19",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 1108742682,
+              "start": null,
+              "end": "2024-09-27",
+              "filed": "2024-10-04",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2024Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 78959000000,
+              "start": "2025-08-29",
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 41456000000,
+              "start": "2026-02-27",
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 26063000000,
+              "start": "2024-08-30",
+              "end": "2025-05-29",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 9301000000,
+              "start": "2025-02-28",
+              "end": "2025-05-29",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 37503000000,
+              "start": "2025-08-29",
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 23860000000,
+              "start": "2025-11-28",
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 16762000000,
+              "start": "2024-08-30",
+              "end": "2025-02-27",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 8053000000,
+              "start": "2024-11-29",
+              "end": "2025-02-27",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q1"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 47268000000,
+              "start": "2025-08-29",
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 28243000000,
+              "start": "2026-02-27",
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 5338000000,
+              "start": "2024-08-30",
+              "end": "2025-05-29",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 1885000000,
+              "start": "2025-02-28",
+              "end": "2025-05-29",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 19025000000,
+              "start": "2025-08-29",
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 13785000000,
+              "start": "2025-11-28",
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 3453000000,
+              "start": "2024-08-30",
+              "end": "2025-02-27",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 1583000000,
+              "start": "2024-11-29",
+              "end": "2025-02-27",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q1"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 24995000000,
+              "start": null,
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 9642000000,
+              "start": null,
+              "end": "2025-08-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 13908000000,
+              "start": null,
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 9731000000,
+              "start": null,
+              "end": "2025-11-27",
+              "filed": "2025-12-18",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 7041000000,
+              "start": null,
+              "end": "2024-08-29",
+              "filed": "2025-10-03",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q3I"
+            },
+            {
+              "value": 10163000000,
+              "start": null,
+              "end": "2025-05-29",
+              "filed": "2025-06-26",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 7552000000,
+              "start": null,
+              "end": "2025-02-27",
+              "filed": "2025-03-21",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 6693000000,
+              "start": null,
+              "end": "2024-11-28",
+              "filed": "2024-12-19",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2024Q4I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 45702000000,
+              "start": "2025-08-29",
+              "end": "2026-05-28",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 11795000000,
+              "start": "2024-08-30",
+              "end": "2025-05-29",
+              "filed": "2026-06-25",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q3",
+              "frame": null
+            },
+            {
+              "value": 20314000000,
+              "start": "2025-08-29",
+              "end": "2026-02-26",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 7186000000,
+              "start": "2024-08-30",
+              "end": "2025-02-27",
+              "filed": "2026-03-19",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 8411000000,
+              "start": "2025-08-29",
+              "end": "2025-11-27",
+              "filed": "2025-12-18",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q4"
+            },
+            {
+              "value": 3244000000,
+              "start": "2024-08-30",
+              "end": "2024-11-28",
+              "filed": "2025-12-18",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2024Q4"
+            },
+            {
+              "value": 17525000000,
+              "start": "2024-08-30",
+              "end": "2025-08-28",
+              "filed": "2025-10-03",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 8507000000,
+              "start": "2023-09-01",
+              "end": "2024-08-29",
+              "filed": "2025-10-03",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        }
+      }
+    },
+    "VST": {
+      "cik": "0001692819",
+      "name": "Vistra Corp.",
+      "fiscalYearEnd": "1231",
+      "cikResolvedFrom": [
+        "0001692819=\"Vistra Corp.\""
+      ],
+      "recentFilings": [
+        {
+          "form": "10-Q",
+          "filed": "2026-08-10",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000019/vistra-20260630.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-07",
+          "period": "2026-08-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000017/vistra-20260807.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-16",
+          "period": "2026-07-10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126028619/ef20077984_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-14",
+          "period": "2026-07-14",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126028454/ef20077988_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-30",
+          "period": "2026-06-24",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126026944/ef20077059_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-08",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000014/vistra-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-07",
+          "period": "2026-05-07",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000011/vistra-20260507.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-04",
+          "period": "2026-04-29",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126018872/ef20072328_8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-04-28",
+          "period": "2026-04-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126017445/ef20071492_8k.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-02-27",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000006/vistra-20251231.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-26",
+          "period": "2026-02-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000119312526073364/d21122d8k.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-01-27",
+          "period": "2026-01-22",
+          "url": "https://www.sec.gov/Archives/edgar/data/1692819/000119312526024837/d102638d8k.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 335635195,
+          "start": null,
+          "end": "2026-08-03",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 335961328,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 9402000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 1334000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "資産減損": {
+          "value": 0,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsHeldForUse",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 435000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 2222000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 19595000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebt",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 1201000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-27",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 3435000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-27",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 786000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-27",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 340541176,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-10",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 335635195,
+              "start": null,
+              "end": "2026-08-03",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 337182468,
+              "start": null,
+              "end": "2026-05-01",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 336954256,
+              "start": null,
+              "end": "2026-02-18",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 338825490,
+              "start": null,
+              "end": "2025-10-31",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 338820324,
+              "start": null,
+              "end": "2025-08-01",
+              "filed": "2025-08-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 339331954,
+              "start": null,
+              "end": "2025-05-02",
+              "filed": "2025-05-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 338963642,
+              "start": null,
+              "end": "2025-02-24",
+              "filed": "2025-02-28",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 340226219,
+              "start": null,
+              "end": "2024-11-04",
+              "filed": "2024-11-08",
+              "form": "10-Q",
+              "fy": 2024,
+              "fp": "Q3",
+              "frame": "CY2024Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 9402000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 4401000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 8003000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 3753000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 5001000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 4250000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 17586000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 14761000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 1334000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 305000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 59000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 327000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 1029000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": -268000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 944000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 2659000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 435000000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 785000000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 634000000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 1188000000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 602000000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 458000000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-08-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 561000000,
+              "start": null,
+              "end": "2025-03-31",
+              "filed": "2025-05-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 3485000000,
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2025-02-28",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2023Q4I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 2222000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 1171000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-10",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 1199000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 599000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-08",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 4070000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 4563000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 5453000000,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2026-02-27",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 2638000000,
+              "start": "2025-01-01",
+              "end": "2025-09-30",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": null
+            }
+          ]
+        }
+      }
+    },
+    "TLN": {
+      "cik": "0001622536",
+      "name": "Talen Energy Corp",
+      "fiscalYearEnd": "1231",
+      "cikResolvedFrom": [
+        "0001622536=\"Talen Energy Corp\""
+      ],
+      "recentFilings": [
+        {
+          "form": "10-Q",
+          "filed": "2026-08-05",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000066/tln-20260630.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-05",
+          "period": "2026-08-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000065/tln-20260805.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-14",
+          "period": "2026-07-14",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000058/tln-20260714.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-15",
+          "period": "2026-06-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000048/tln-20260615.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-21",
+          "period": "2026-05-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000042/tln-20260520.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-07",
+          "period": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000039/tln-20260505.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-05",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000036/tln-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-05",
+          "period": "2026-05-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000035/tln-20260505.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-04-17",
+          "period": "2026-04-17",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000030/tln-20260417.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-02-26",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000017/tln-20251231.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-02-26",
+          "period": "2026-02-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000014/tln-20260226.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-01-15",
+          "period": "2026-01-15",
+          "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000004/tln-20260115.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 47914259,
+          "start": null,
+          "end": "2026-08-05",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 47900355,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 2462000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": -29000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "資産減損": {
+          "value": 0,
+          "start": "2025-01-01",
+          "end": "2025-12-31",
+          "filed": "2026-02-26",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025",
+          "tag": "us-gaap:ImpairmentOfLongLivedAssetsHeldForUse",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 231000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 27000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 9572000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebt",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 29000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-26",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 29000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-26",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 29000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-26",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 45759000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-05",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 47914259,
+              "start": null,
+              "end": "2026-08-05",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 45395007,
+              "start": null,
+              "end": "2026-05-05",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": null
+            },
+            {
+              "value": 45695007,
+              "start": null,
+              "end": "2026-02-26",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 45687828,
+              "start": null,
+              "end": "2025-11-05",
+              "filed": "2025-11-05",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 45685316,
+              "start": null,
+              "end": "2025-08-07",
+              "filed": "2025-08-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 45509780,
+              "start": null,
+              "end": "2025-05-08",
+              "filed": "2025-05-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": null
+            },
+            {
+              "value": 45961910,
+              "start": null,
+              "end": "2025-02-27",
+              "filed": "2025-02-28",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 50855417,
+              "start": null,
+              "end": "2024-11-14",
+              "filed": "2024-11-14",
+              "form": "10-Q",
+              "fy": 2024,
+              "fp": "Q3",
+              "frame": "CY2024Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 2462000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 894000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 1063000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 409000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 1568000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 654000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 2518000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 1574000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": -29000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": -92000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": -63000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 72000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": -219000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 998000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 134000000,
+              "start": "2023-05-18",
+              "end": "2023-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 479000000,
+              "start": "2023-01-01",
+              "end": "2023-05-17",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023Q2"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 231000000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 689000000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 1025000000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 328000000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 169000000,
+              "start": null,
+              "end": "2023-05-17",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023Q2I"
+            },
+            {
+              "value": 497000000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2025-11-05",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 122000000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2025-08-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 295000000,
+              "start": null,
+              "end": "2025-03-31",
+              "filed": "2025-05-08",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2025Q1I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 27000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": -65000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 461000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 119000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-05",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 704000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 256000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": 402000000,
+              "start": "2023-05-18",
+              "end": "2023-12-31",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": null
+            },
+            {
+              "value": 462000000,
+              "start": "2023-01-01",
+              "end": "2023-05-17",
+              "filed": "2026-02-26",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023Q2"
+            }
+          ]
+        }
+      }
+    },
+    "CEG": {
+      "cik": "0001868275",
+      "name": "Constellation Energy Corp",
+      "fiscalYearEnd": "1231",
+      "cikResolvedFrom": [
+        "0001868275=\"Constellation Energy Corp\""
+      ],
+      "recentFilings": [
+        {
+          "form": "10-Q",
+          "filed": "2026-08-06",
+          "period": "2026-06-30",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000104/ceg-20260630.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-06",
+          "period": "2026-08-06",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000097/ceg-20260806.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-08-05",
+          "period": "2026-08-04",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000089/ceg-20260804.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-07-14",
+          "period": "2026-07-14",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000080/ceg-20260714.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-06-02",
+          "period": "2026-06-01",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000110465926069482/tm2616531d1_8k.htm"
+        },
+        {
+          "form": "10-Q",
+          "filed": "2026-05-11",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000067/ceg-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-11",
+          "period": "2026-05-11",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000063/ceg-20260511.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-05-01",
+          "period": "2026-04-28",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000050/ceg-20260428.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-31",
+          "period": "2026-03-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000045/ceg-20260331.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-26",
+          "period": "2026-03-23",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000041/ceg-20260323.htm"
+        },
+        {
+          "form": "8-K",
+          "filed": "2026-03-20",
+          "period": "2026-03-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000037/ceg-20260320.htm"
+        },
+        {
+          "form": "10-K",
+          "filed": "2026-02-24",
+          "period": "2025-12-31",
+          "url": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000032/ceg-20251231.htm"
+        }
+      ],
+      "latest": {
+        "発行済株式数(表紙)": {
+          "value": 354307379,
+          "start": null,
+          "end": "2026-07-31",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "発行済株式数(BS)": {
+          "value": 355000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CommonStockSharesOutstanding",
+          "unit": "shares"
+        },
+        "売上": {
+          "value": 13384000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD"
+        },
+        "純損益": {
+          "value": 2103000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD"
+        },
+        "現金及び現金同等物": {
+          "value": 697000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD"
+        },
+        "営業CF": {
+          "value": 1553000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD"
+        },
+        "長期債務": {
+          "value": 19111000000,
+          "start": null,
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": "CY2026Q2I",
+          "tag": "us-gaap:LongTermDebtNoncurrent",
+          "unit": "USD"
+        },
+        "債務満期(12か月以内)": {
+          "value": 92000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-24",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+          "unit": "USD"
+        },
+        "債務満期(2年目)": {
+          "value": 666000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-24",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+          "unit": "USD"
+        },
+        "債務満期(3年目)": {
+          "value": 828000000,
+          "start": null,
+          "end": "2025-12-31",
+          "filed": "2026-02-24",
+          "form": "10-K",
+          "fy": 2025,
+          "fp": "FY",
+          "frame": "CY2025Q4I",
+          "tag": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+          "unit": "USD"
+        },
+        "希薄化後加重平均株数": {
+          "value": 357000000,
+          "start": "2026-01-01",
+          "end": "2026-06-30",
+          "filed": "2026-08-06",
+          "form": "10-Q",
+          "fy": 2026,
+          "fp": "Q2",
+          "frame": null,
+          "tag": "us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding",
+          "unit": "shares"
+        }
+      },
+      "history": {
+        "発行済株式数(表紙)": {
+          "tag": "dei:EntityCommonStockSharesOutstanding",
+          "unit": "shares",
+          "rows": [
+            {
+              "value": 354307379,
+              "start": null,
+              "end": "2026-07-31",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 361190063,
+              "start": null,
+              "end": "2026-04-30",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 361990335,
+              "start": null,
+              "end": "2026-02-01",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 312290080,
+              "start": null,
+              "end": "2025-10-31",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            },
+            {
+              "value": 312405579,
+              "start": null,
+              "end": "2025-07-31",
+              "filed": "2025-08-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 313417370,
+              "start": null,
+              "end": "2025-04-30",
+              "filed": "2025-05-06",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q1",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 312847257,
+              "start": null,
+              "end": "2025-01-31",
+              "filed": "2025-02-18",
+              "form": "10-K",
+              "fy": 2024,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 312766599,
+              "start": null,
+              "end": "2024-10-31",
+              "filed": "2024-11-04",
+              "form": "10-Q",
+              "fy": 2024,
+              "fp": "Q3",
+              "frame": "CY2024Q3I"
+            }
+          ]
+        },
+        "売上": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 13384000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 5843000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 11267000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 5161000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 7541000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 6106000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 22663000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 18964000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        },
+        "純損益": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 2103000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 513000000,
+              "start": "2026-04-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2"
+            },
+            {
+              "value": 957000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 839000000,
+              "start": "2025-04-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2"
+            },
+            {
+              "value": 1590000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 118000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 2319000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": 3749000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            }
+          ]
+        },
+        "現金及び現金同等物": {
+          "tag": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 697000000,
+              "start": null,
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2026Q2I"
+            },
+            {
+              "value": 3641000000,
+              "start": null,
+              "end": "2025-12-31",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q4I"
+            },
+            {
+              "value": 1974000000,
+              "start": null,
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": "CY2025Q2I"
+            },
+            {
+              "value": 800000000,
+              "start": null,
+              "end": "2026-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1I"
+            },
+            {
+              "value": 1846000000,
+              "start": null,
+              "end": "2025-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1I"
+            },
+            {
+              "value": 3022000000,
+              "start": null,
+              "end": "2024-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024Q4I"
+            },
+            {
+              "value": 368000000,
+              "start": null,
+              "end": "2023-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023Q4I"
+            },
+            {
+              "value": 3959000000,
+              "start": null,
+              "end": "2025-09-30",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": "CY2025Q3I"
+            }
+          ]
+        },
+        "営業CF": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "unit": "USD",
+          "rows": [
+            {
+              "value": 1553000000,
+              "start": "2026-01-01",
+              "end": "2026-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 1584000000,
+              "start": "2025-01-01",
+              "end": "2025-06-30",
+              "filed": "2026-08-06",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q2",
+              "frame": null
+            },
+            {
+              "value": 425000000,
+              "start": "2026-01-01",
+              "end": "2026-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2026Q1"
+            },
+            {
+              "value": 107000000,
+              "start": "2025-01-01",
+              "end": "2025-03-31",
+              "filed": "2026-05-11",
+              "form": "10-Q",
+              "fy": 2026,
+              "fp": "Q1",
+              "frame": "CY2025Q1"
+            },
+            {
+              "value": 4237000000,
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2025"
+            },
+            {
+              "value": -2464000000,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2024"
+            },
+            {
+              "value": -5301000000,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "filed": "2026-02-24",
+              "form": "10-K",
+              "fy": 2025,
+              "fp": "FY",
+              "frame": "CY2023"
+            },
+            {
+              "value": 3432000000,
+              "start": "2025-01-01",
+              "end": "2025-09-30",
+              "filed": "2025-11-07",
+              "form": "10-Q",
+              "fy": 2025,
+              "fp": "Q3",
+              "frame": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "errors": []
+}
