@@ -4,7 +4,14 @@
 
 ## 定期巡回について（ローカル一本化 2026-09-08）
 
-**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 JST 7:00）が `scripts/run_patrol.cmd` を実行し、**固定セッション（ID はその .cmd 内）を `--resume` して同じ会話に追記する**。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。**巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
+**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 巡回は固定セッション（ID は `scripts/run_patrol.cmd` 内）に出る。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。
+
+**発火は2系統（2026-09-10 に窓キル廃止）。**
+1. **セッション内 cron（主）** — 固定セッションの窓が開いていれば、その中の CronCreate ジョブ（平日 07:00）が巡回プロンプトを自分に投げる。**窓は殺されない。作業中の会話がそのまま続く。** ただし session-only（窓が閉じれば消える）かつ**7日で自動失効**するため、**巡回のたびに `CronList` で存在を確認し、無ければ張り直す**（この自己更新は `trigger_prompt_v1.md` ではなく cron ジョブの prompt 側に書いてある）。
+2. **Task Scheduler（保険）** — `InvestmentMorningPatrol`（平日 07:00）は**窓が生きていたら何もしない**。`InvestmentMorningPatrolSafety`（平日 07:25）は `latest_prices.json` が当日でないときだけ起動し、邪魔な窓があれば落として `--resume` する。つまり**窓を閉じていても・再起動していても・cron が失効していても巡回は落ちない。**
+
+**巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
+**`run_patrol.cmd` は CRLF 必須**（LF だと `rem` が `em` として実行され壊れる）。**`for /f` の中でパイプを使わない**（`^|` がそのまま渡る。`.Where({})` を使う）。**`%date%` は `2026/09/10 (木)` で `)` を含むため `if (...)` ブロック内で echo しない**（goto で外に出す）。
 
 **★移行完了（2026-09-10）。ローカル一本化済み。**
 2026-09-10 07:09 JST、Task Scheduler の時刻トリガーが自力で発火し、巡回が完走・コミットまで到達した
