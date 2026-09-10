@@ -6,9 +6,11 @@
 
 **相場観（9/9終値 quoteTime 2026-09-09T20:00:01Z）: 逆金融相場7日連続・象限移動なし・主役エネルギーで教科書と一致7日連続。**景気スコアが -1→-2 へ深化（小型-大型 -2.4% が不感帯を抜けた）。**クレジット選好が信用回避側へ反転（HYG-LQD 20日差 -0.0%）**——不感帯内だが 8/31 以降ずっと「景気に強気」だった唯一の指標の符号が変わった。**9/8 に発火した待機資金の投下条件③（公益が20日上位3位）は公益が3位→7位へ後退して1日で消滅**し、9/8 に「逃避先であって利下げの先取りではない」として保留にした判断が実地で裏取りされた。資本財は -7.5% で最下位7日連続（POWL・MOD の層）、情報技術は5日 +2.3% で最強（MU・SIMO の層）。保有は評価 **$14,478**（9/8終値 $14,638 から -1.1%）。**7月コアCPI は BLS 一次ソースで 2.5% と決着**（9/8 に記録した「+3.1% で60bp跳ね上がり」は予想値側の出所誤りの公算）。**9/11 の8月CPIが 9/16 FOMC の単独の決定要因**で、それまでは待ち。詳細は `watchlist/rotation_state.md` の 2026-09-10 追記。
 
-**巡回インフラ**: Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッションを `--resume` する対話 claude。Remote Control 経由でスマホの「Morning patrol」スレッドに追記され、そこで返信できる。クラウド Routine は 9/10 に無効化済み（07:00 の追記も同日に実証）。メール配信案・デスクトップ scheduled task 案は不採用（経緯は `HANDOVER_TO_LOCAL.md` §4 ★）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）と SEC EDGAR（`data.sec.gov` 200）の到達を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` は push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
+**巡回インフラ**: Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッションを `--resume` する対話 claude。Remote Control 経由でスマホの「Morning patrol」スレッドに追記され、そこで返信できる。クラウド Routine は 9/10 に無効化済み（07:00 の追記も同日に実証）。メール配信案・デスクトップ scheduled task 案は不採用（経緯は `HANDOVER_TO_LOCAL.md` §4 ★）。ローカルで `fetch_prices.mjs`（4ファイル更新・0エラー）を確認済み。GitHub Actions の定時実行は3本とも停止（`price-snapshot.yml` は push 起点のみ維持）。相場観・保有・決定の最新は `HANDOVER_TO_LOCAL.md` §3・§6 と `watchlist/handan_denryoku_2026-09-08.md`。以下の8/22時点の記述は歴史。
 
-最新リモート同期: 2026-09-10 09:02 JST — origin/claude/project-status-review-gretkk = HEAD (ahead 0 / behind 0)
+**SEC EDGAR 一次データ（2026-09-10 完了）**: `node scripts/fetch_filings.mjs` → `watchlist/filings.json` → `node scripts/filing_check.mjs [TICKER]`。保有5社＋VST/TLN/CEG の 8 社で 0 エラー。社名照合（`cik.json` の `expect`）を通らない CIK は拒否する（誤 CIK に Apple を渡して拒否を実証）。HANDOVER §7 の未解決 9 件は SEC で 4 件解決（IREN 減損 $450.4M＝Q4 単四半期／転換社債 6 シリーズの転換価格／ATM は $6B 枠中 $2,492.1M・47.2M 株執行、株数 394,058,648（8/14）／MU 現金 $25.00B・営業CF 9 か月 $45.70B）、2 件半分（IREN Q4 売上実績 $137.2M・MOD は顧客名非開示だが前受金 $165.0M の契約あり）、3 件は SEC 外（Apple 上院回答・CEG ヘッジ比率・`.scan-tickers` 再構築）。証拠は `research/sec_edgar_findings_2026-09-10.md`。
+
+最新リモート同期: 2026-09-10 09:16 JST — ahead 1 commit (56bbb95) → push 未実施
 
 ---
 
@@ -26,10 +28,12 @@
 - 2026-07-08: `TSLA`/`PLTR`は全売却して爆益エンジン再構築の原資とする。追加入金はしない前提。`GMBL`は同時売却して特定口座の損益通算に使う。
 - 2026-09-10: 運用はローカル一本化。毎朝の巡回は Task Scheduler `InvestmentMorningPatrol`（平日 07:00）→ `scripts/run_patrol.cmd` → 固定セッションへ `--resume` 追記。レポートはチャット（スマホの「Morning patrol」）で受け取り、そこで続きの会話をする。メール・ファイル出力・デスクトップアプリの定期実行は不採用（経緯 `HANDOVER_TO_LOCAL.md` §4★） [Claude]
 - 2026-09-10: 株価は `node scripts/fetch_prices.mjs` をローカル直接実行、企業一次データは SEC EDGAR（`data.sec.gov`、UA に氏名＋メール必須）から取る。GitHub Actions 経由は廃止 [Claude]
-- 2026-09-10: §2-2（SEC EDGAR 取得の実装）と §7 の未解決 9 件は、このプロジェクトの新しいローカルセッションで行う。Morning patrol には持ち込まない [Claude]
+- 2026-09-10: SEC EDGAR は companyfacts（XBRL）を機械可読ソースとし、10-K/10-Q 本文は `filings.json` の URL から取って grep する。Web 検索の財務数字は使わない。CEG のヘッジ比率のように SEC に無いものは「SEC 外」と明記して会社 IR を人が開く [Claude]
+- 2026-09-10: §7 の残り（Apple 上院回答・CEG ヘッジ比率・金融相場用 `.scan-tickers`）は SEC では解けない。次の一次データ更新は IREN Q1 FY27 10-Q（11 月上旬）と MU FY26 10-K（10 月） [Claude]
 
 ## 教訓・繰り返し注意点
 
+- **XBRL（companyfacts）は 10-K 表紙の株数を落とすことがある。** IREN FY26 10-K の 394,058,648 株は `dei:EntityCommonStockSharesOutstanding` に入っておらず、`filing_check.mjs` は 10-Q の 357.38M（4/30）を最新として出す。株数は 10-K 本文の表紙行と必ず突き合わせる。同様に、会社がタグを替えると旧タグの最終提出日が古いまま残る（SIMO の TWD 建て純利益・POWL の 2022 年止まりの長期債務）ので、`fetch_filings.mjs` は候補タグ中で最新提出のものを採り 550 日超は捨てる [Claude]
 - **口座の構造（NISA/特定の別、残枠）は一度示されたら記録し、二度と聞かない。** 2026-08-12、NISA残枠と全保有がNISAである事実は既にスクリーンショットで示されていたのに記録しておらず、聞き直した上に「特定口座で損益通算」という誤った前提で助言しかけた。**ユーザー画面で示された数字は、その場でSTATUS.mdに転記する。**
 - **ユーザーが繰り返し示した事実を聞き直さない。** 2026-08-12、SBI証券であることを何度もスクリーンショットで示されていたのに「どの証券会社か」を前提に置かず、時間外執行を前提とした指示を出した。顧客の時間を奪う失敗であり、確定事項は`CLAUDE.md`に刻んで二度と問い直さない。
 - **サブエージェントの生ログを開かない。** 2026-08-12、完了通知に結果が全文入っていたにもかかわらず`tasks/*.output`（97,000トークンのJSONL）を開いた。完全に不要な消費だった。追加で知りたいことがあれば同じエージェントに聞き直す。
