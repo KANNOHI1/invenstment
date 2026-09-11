@@ -43,8 +43,11 @@ echo [%date% %time%] skip: window alive, its in-session cron owns the patrol>> "
 exit /b 0
 
 :safety
+rem Freshness = a PATROL completed today, keyed off the completion marker the patrol
+rem writes at its end. Do NOT use latest_prices.json mtime: a mid-session manual price
+rem fetch poisons it and makes safety wrongly skip (nearly missed 2026-09-12 CPI Saturday).
 set FRESH=0
-for /f %%A in ('powershell -NoProfile -Command "if ((Get-Item '%ROOT%\watchlist\latest_prices.json').LastWriteTime.Date -eq (Get-Date).Date) { 1 } else { 0 }"') do set FRESH=%%A
+for /f %%A in ('powershell -NoProfile -Command "$m='%LOGDIR%\last_patrol.txt'; if ((Test-Path $m) -and ((Get-Content $m -TotalCount 1).Trim() -eq (Get-Date).ToString('yyyy-MM-dd'))) { 1 } else { 0 }"') do set FRESH=%%A
 if "%FRESH%"=="1" goto skipfresh
 echo [%date% %time%] SAFETY: patrol did not run today, taking over>> "%LOGDIR%\run_patrol.log"
 if "%ALIVE%"=="1" powershell -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { $_.Name -like 'claude*' -and $_.CommandLine -like '*%SID%*' } | ForEach-Object { taskkill /PID $_.ParentProcessId /T /F 2>$null | Out-Null }"
