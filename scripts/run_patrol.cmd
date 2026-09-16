@@ -67,4 +67,4 @@ if exist "%PROJ%\%SID%.jsonl" (
 )
 
 echo [%date% %time%] start %SESS% mode=%MODE%>> "%LOGDIR%\run_patrol.log"
-call "%CLAUDE%" %SESS% --dangerously-skip-permissions "Morning patrol. Open watchlist/trigger_prompt_v1.md and execute exactly the instructions between the two --- lines. Write the report in Japanese in this session."
+call "%CLAUDE%" %SESS% --dangerously-skip-permissions "Morning patrol. First read claude_logs/patrol/last_patrol.txt. If it holds today JST date (yyyy-MM-dd), reply in one Japanese line that today patrol is already done and this window was relaunched, then wait for input. Otherwise open watchlist/trigger_prompt_v1.md and execute exactly the instructions between the two --- lines. Write the report in Japanese in this session."
