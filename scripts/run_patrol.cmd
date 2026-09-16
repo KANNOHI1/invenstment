@@ -49,9 +49,19 @@ rem fetch poisons it and makes safety wrongly skip (nearly missed 2026-09-12 CPI
 set FRESH=0
 for /f %%A in ('powershell -NoProfile -Command "$m='%LOGDIR%\last_patrol.txt'; if ((Test-Path $m) -and ((Get-Content $m -TotalCount 1).Trim() -eq (Get-Date).ToString('yyyy-MM-dd'))) { 1 } else { 0 }"') do set FRESH=%%A
 if "%FRESH%"=="1" goto skipfresh
+rem In-progress = a start marker written within the last 45 min (the patrol writes it
+rem as its step 0). Without this, safety killed a patrol launched at 07:00 that was
+rem still gathering news at 07:25 and started it again (near miss 2026-09-16).
+set INPROG=0
+for /f %%A in ('powershell -NoProfile -Command "$s='%LOGDIR%\last_patrol_start.txt'; if ((Test-Path $s) -and (((Get-Date) - (Get-Item $s).LastWriteTime).TotalMinutes -lt 45)) { 1 } else { 0 }"') do set INPROG=%%A
+if "%INPROG%"=="1" goto skipinprog
 echo [%date% %time%] SAFETY: patrol did not run today, taking over>> "%LOGDIR%\run_patrol.log"
 if "%ALIVE%"=="1" powershell -NoProfile -Command "Get-CimInstance Win32_Process | Where-Object { $_.Name -like 'claude*' -and $_.CommandLine -like '*%SID%*' } | ForEach-Object { taskkill /PID $_.ParentProcessId /T /F 2>$null | Out-Null }"
 goto launch
+
+:skipinprog
+echo [%date% %time%] skip: patrol started within 45 min, still in progress>> "%LOGDIR%\run_patrol.log"
+exit /b 0
 
 :skipfresh
 echo [%date% %time%] skip: patrol already ran today>> "%LOGDIR%\run_patrol.log"
