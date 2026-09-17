@@ -13,7 +13,7 @@
 **巡回インフラ**: セッション内 cron（月〜土 07:00）が主、Task Scheduler `InvestmentMorningPatrol`（07:00）と `Safety`（07:25）が保険。判定は完了マーカー `claude_logs/patrol/last_patrol.txt`。ニュース監視の cron（`51c9ea20` 06:35・`327e6d74` 22:05）は保険なし＝窓を閉じると止まる・7日で失効するので実行のたびに張り直す（9/16 深夜にセッション再開で2本が同時に再発火したが、マーカーで二重実行は回避）。9/17 の 06:35 は 07:05 に遅延発火し巡回の読み込みに間に合わなかった。クラウド Routine は無効化済み（巻き戻しは `RESTORE_CLOUD.md`）。HANDOVER §7 の SEC 外 3 件は未着手。未追跡 `dashboard/data/arkk-tsla-*.local.json` 2 件は放置中。
 
 ---
-最新リモート同期: 2026-09-17 07:40 JST — ahead 1 commit (c54eb1e) → push 未実施
+最新リモート同期: 2026-09-17 12:22 JST — origin/claude/project-status-review-gretkk = HEAD (ahead 0 / behind 0)
 
 ---
 
