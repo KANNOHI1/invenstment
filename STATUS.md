@@ -74,6 +74,7 @@
 - **巡回窓が黙って閉じられることがある**（2026-09-16 22:25 頃、両 Task Scheduler ジョブの終了コード 0xC000013A＝コンソール終了。再起動なし・時間制限なし・原因不明）。検知は `ListAgents` の「Morning Patrol · offline」か SID を含む claude プロセスの不在。復旧は `Start-ScheduledTask InvestmentMorningPatrol`（起動プロンプトが完了マーカーを見るので当日済みなら待機する）。同じ SID を2プロセスで開かない——開き直す前に既存窓を落とす [Claude]
 
 - **`/save` の Step 1「`ls -t ~/.claude/tmp/cmd_timer_*` でセッション ID を取る」は複数セッション同時稼働だと別セッションを掴む。** `cmd_timer_*` は全セッション共有のディレクトリにあり、`ls -t` は「直近にプロンプトを投げたセッション」を返すだけ。2026-09-16 の `/save` で監督セッションの ID（`564a7ef9…`）を掴み、jsonl が見つからず失敗した。**このプロジェクトの巡回は SID が `36358243-ef8c-4c8b-ba08-30112934c274` で固定**（`scripts/run_patrol.cmd` の `SID=`）なので、迷ったらそれを直接使う。`ls ~/.claude/tmp/cmd_timer_<自分のSID>` で自分の state の存在だけ確認すればよい [Claude]
+- **Git Bash で `TZ=Asia/Tokyo date` は UTC を返す**（`/usr/share/zoneinfo` が無く地名形式の TZ を解決できない）。2026-09-18 にニュース監視が完了マーカー判定でこれを使い「実施済み」と誤判定して 06:35 分をスキップした。日付判定は素の `date`（システムローカル＝JST）を使う。どうしても明示するなら POSIX 形式 `TZ=JST-9`。監督が同環境で再現確認済み [Claude]
 
 ## 更新履歴
 
