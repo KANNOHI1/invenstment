@@ -15,7 +15,7 @@
 **セッション**: 監督 = `投資（監督） [d78e80]`（旧 `invenstment-c7`）。`ListAgents` の表示名は変わるので連絡不能時は引き直す。未追跡 `dashboard/data/arkk-tsla-*.local.json` 2 件は放置中。
 
 ---
-最新リモート同期: SYNC_PLACEHOLDER
+最新リモート同期: 2026-09-18 11:58 JST — origin/claude/project-status-review-gretkk = HEAD (ahead 0 / behind 0)
 
 ---
 
