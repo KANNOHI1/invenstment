@@ -2,27 +2,13 @@
 
 **このファイルは毎セッション自動で読み込まれる。1行増やすコストは全セッションに乗るため、厳選する（目安120行）。** 詳細は各参照先へ置き、ここには「これを知らないと必ず失敗すること」だけを書く。
 
-## 定期巡回について（ローカル一本化 2026-09-08）
+## 定期巡回は停止した（2026-09-18 ユーザー決定）
 
-**このプロジェクトはローカル（個人PC）の Claude Code で運用する。** 巡回は固定セッション（ID は `scripts/run_patrol.cmd` 内）に出る。Remote Control 経由でスマホの「Morning patrol」から読んで返信できる。起動時の指示文は `watchlist/trigger_prompt_v1.md`。
+**毎朝の自動巡回は廃止。相場観・銘柄分析は監督セッションが菅野さんに聞かれたときに出す。** 理由: 固定セッションを `--resume` で使い回す設計のため履歴が肥大し、1ターン 612K トークン読み込み・1日 7,000 万トークンの cache read に達した（8日で 2.4 倍）。
 
-**発火は2系統（2026-09-10 に窓キル廃止）。**
-1. **セッション内 cron（主）** — 固定セッションの窓が開いていれば、その中の CronCreate ジョブ（月〜土 07:00、cron `0 7 * * 1-6`）が巡回プロンプトを自分に投げる。**窓は殺されない。作業中の会話がそのまま続く。** ジョブは**セッション記録に残り `--resume` で戻る**（「窓が閉じれば消える」は不正確。プロセスが動いていない時間帯に発火しないだけ）。**7日で自動失効**するため、巡回のたびに `CronList` で存在を確認し無ければ張り直す。**保険が resume した直後に、取りこぼした 07:00 分が即時発火して重複巡回になる**（2026-09-11 に発生）ので、cron の prompt は冒頭で完了マーカー `claude_logs/patrol/last_patrol.txt`（当日 JST 日付なら実施済み）を見て1行でスキップする。**`latest_prices.json` の mtime では判定しない**——場中の手動取得が誤陽性を出し、07:25 保険ごと当日の巡回を取りこぼしかけた（2026-09-12 CPI土曜）。マーカーは巡回完了時に `trigger_prompt_v1.md` の最終手順が書く（ローカルのみ・gitignore）。cron の自己更新とスキップ判定は cron ジョブの prompt 側にある。
-2. **Task Scheduler（保険）** — `InvestmentMorningPatrol`（月〜土 07:00）は**窓が生きていたら何もしない**。`InvestmentMorningPatrolSafety`（月〜土 07:25）は**完了マーカー `claude_logs/patrol/last_patrol.txt` が当日でないときだけ**起動し、邪魔な窓があれば落として `--resume` する（2026-09-12 に判定を `latest_prices.json` の mtime から変更）。つまり**窓を閉じていても・再起動していても・cron が失効していても巡回は落ちない。**
+停止時の状態: Task Scheduler `InvestmentMorningPatrol` / `InvestmentMorningPatrolSafety` は無効化（削除していない）。巡回セッション `36358243…` のセッション内 cron は削除済み。クラウド Routine も無効のまま。`scripts/run_patrol.cmd`・`watchlist/trigger_prompt_v1.md`・`RESTORE_CLOUD.md` は参照用に残す。**再開するなら固定セッションではなく毎朝新規セッションで起動する**（文脈は `rotation_state.md` 冒頭ブロックと `thesis_register.md` に揃っている）。
 
-**巡回セッションを Claude Code のセッション内のツールや PowerShell `Start-Process` から起動しない**（会話記録が残らず翌朝の `--resume` が失敗する。検証は `Start-ScheduledTask InvestmentMorningPatrol` で行う）。
-**`run_patrol.cmd` は CRLF 必須**（LF だと `rem` が `em` として実行され壊れる）。**`for /f` の中でパイプを使わない**（`^|` がそのまま渡る。`.Where({})` を使う）。**`%date%` は `2026/09/10 (木)` で `)` を含むため `if (...)` ブロック内で echo しない**（goto で外に出す）。
-
-**★移行完了（2026-09-10）。ローカル一本化済み。**
-2026-09-10 07:09 JST、Task Scheduler の時刻トリガーが自力で発火し、巡回が完走・コミットまで到達した
-（`75c8885`）。これを確認して**クラウドの Routine を無効化**した
-（`trig_01TUF9eRUquZFc1QAicAT2UK`、`enabled: false`。削除はしていないので戻せる）。
-GitHub Actions の定時実行も停止済み（push起点のみ維持）。
-**巡回はローカルからのみ出る。クラウド側からは出ない。**
-**ローカルが復旧不能になったときの巻き戻し手順は `RESTORE_CLOUD.md`。**
-Routineを有効化するだけでは完走しない（株価の取得経路も止めてあるため）。必ずあのファイルの順番で戻す。
-
-巡回の正しい仕様は `watchlist/report_template_rotation.md`（相場観 v1.0）。手順は ①価格取得 ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md`更新。**売買は提案しない。**
+**「盤面」「相場観」と言われたら** `watchlist/report_template_rotation.md`（相場観 v1.0）の仕様で監督が出す。手順は ①`node scripts/fetch_prices.mjs` ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md` 冒頭ブロック更新。**売買は提案しない。** ニュース監視セッション（毎日 06:35、`claude_logs/news/YYYY-MM-DD.md`）は継続中で、バケツ4はそのファイルを読む。
 
 ## 役割
 
@@ -118,15 +104,15 @@ Routineを有効化するだけでは完走しない（株価の取得経路も�
 | 仮説と反証条件 | `watchlist/thesis_register.md` |
 | 定型レポート「相場観」の仕様 | `watchlist/report_template_rotation.md` |
 | 定型レポート「盤面」の仕様（退役） | `watchlist/report_template_banmen.md` |
-| 巡回の起動指示文（スケジューラが渡す） | `watchlist/trigger_prompt_v1.md` |
+| 旧・巡回の起動指示文（停止済み・参照用） | `watchlist/trigger_prompt_v1.md` |
 | 一次データ取得の制約と移植の理由 | `research/data_source_limits.md` |
-| クラウド巡回への巻き戻し手順 | `RESTORE_CLOUD.md` |
+| 旧・クラウド巡回への巻き戻し手順（停止済み） | `RESTORE_CLOUD.md` |
 | ローカル移植の全体像 | `HANDOVER_TO_LOCAL.md` |
 | 判断の履歴 | `watchlist/` の日付つきファイル |
 | 詳細な運用規約（Codex共用） | `AGENTS.md` |
 | 過去の調査アーカイブ | `STATUS_archive.md`、`research/` |
 
-**「盤面」と発話されたら**`watchlist/report_template_rotation.md`（相場観 v1.0）の仕様でレポートを出す。毎朝の定期巡回はその差分版、土曜は注目銘柄の深掘りつき。
+**「盤面」と発話されたら**`watchlist/report_template_rotation.md`（相場観 v1.0）の仕様で監督がレポートを出す（冒頭「定期巡回は停止した」の手順）。
 
 ## 安全境界
 
