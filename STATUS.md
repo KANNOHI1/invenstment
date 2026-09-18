@@ -17,7 +17,7 @@
 **セッション**: 監督 = `投資（監督） [d78e80]`。未追跡 `dashboard/data/arkk-tsla-*.local.json` 2 件は放置中。
 
 ---
-最新リモート同期: SYNC_PLACEHOLDER
+最新リモート同期: 2026-09-18 22:15 JST — origin/claude/project-status-review-gretkk = HEAD (ahead 0 / behind 0)
 
 ---
 
