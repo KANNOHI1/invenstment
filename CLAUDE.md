@@ -2,13 +2,13 @@
 
 **このファイルは毎セッション自動で読み込まれる。1行増やすコストは全セッションに乗るため、厳選する（目安120行）。** 詳細は各参照先へ置き、ここには「これを知らないと必ず失敗すること」だけを書く。
 
-## 定期巡回は停止した（2026-09-18 ユーザー決定）
+## 定期巡回・ニュース監視は停止した（2026-09-18 ユーザー決定）
 
-**毎朝の自動巡回は廃止。相場観・銘柄分析は監督セッションが菅野さんに聞かれたときに出す。** 理由: 固定セッションを `--resume` で使い回す設計のため履歴が肥大し、1ターン 612K トークン読み込み・1日 7,000 万トークンの cache read に達した（8日で 2.4 倍）。
+**毎朝の自動巡回と毎日のニュース監視（06:35）は廃止。相場観・銘柄分析・保有銘柄の材料は監督セッションが菅野さんに聞かれたときに調べて出す。** 理由: 固定セッションを `--resume` で使い回す設計のため履歴が肥大し、1ターン 612K トークン読み込み・1日 7,000 万トークンの cache read に達した（8日で 2.4 倍）。
 
-停止時の状態: Task Scheduler `InvestmentMorningPatrol` / `InvestmentMorningPatrolSafety` は無効化（削除していない）。巡回セッション `36358243…` のセッション内 cron は削除済み。クラウド Routine も無効のまま。`scripts/run_patrol.cmd`・`watchlist/trigger_prompt_v1.md`・`RESTORE_CLOUD.md` は参照用に残す。**再開するなら固定セッションではなく毎朝新規セッションで起動する**（文脈は `rotation_state.md` 冒頭ブロックと `thesis_register.md` に揃っている）。
+停止時の状態: Task Scheduler `InvestmentMorningPatrol` / `InvestmentMorningPatrolSafety` は無効化（削除していない）。巡回セッション `36358243…` とニュース監視セッションのセッション内 cron は削除済み。クラウド Routine も無効のまま。`scripts/run_patrol.cmd`・`watchlist/trigger_prompt_v1.md`・`watchlist/news_watch_prompt_v1.md`・`RESTORE_CLOUD.md` は参照用に残す。**再開するなら固定セッションではなく毎朝新規セッションで起動する**（文脈は `rotation_state.md` 冒頭ブロックと `thesis_register.md` に揃っている）。
 
-**「盤面」「相場観」と言われたら** `watchlist/report_template_rotation.md`（相場観 v1.0）の仕様で監督が出す。手順は ①`node scripts/fetch_prices.mjs` ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md` 冒頭ブロック更新。**売買は提案しない。** ニュース監視セッション（毎日 06:35、`claude_logs/news/YYYY-MM-DD.md`）は継続中で、バケツ4はそのファイルを読む。
+**「盤面」「相場観」と言われたら** `watchlist/report_template_rotation.md`（相場観 v1.0）の仕様で監督が出す。手順は ①`node scripts/fetch_prices.mjs` ②`node scripts/rotation_check.mjs` と `node scripts/patrol_check.mjs` ③材料調査4バケツ ④5層レポート ⑤`rotation_state.md` 冒頭ブロック更新。**売買は提案しない。** バケツ4（保有銘柄の材料）は監督が `news_watch_prompt_v1.md` の手順1〜2（一次ソースで裏取り・確認段階3段階・|日次|>8% は深掘り）で自分で調べる。過去分は `claude_logs/news/`。
 
 ## 役割
 
